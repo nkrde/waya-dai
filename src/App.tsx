@@ -3266,9 +3266,9 @@ Alternatively, how can I advise you on specific investment choices today?`;
               window.innerWidth >= 768
                 ? {
                     left: isPortfolioOpen
-                      ? (isSidebarOpen ? 'calc(30% + 312px)' : 'calc(30% + 80px)')
-                      : (isSidebarOpen ? '296px' : '64px'),
-                    right: isFaqOpen ? 'calc(30% + 16px)' : '0px',
+                      ? (isSidebarOpen ? 'calc(30% + 296px)' : 'calc(30% + 64px)')
+                      : (isSidebarOpen ? '288px' : '56px'),
+                    right: isFaqOpen ? 'calc(30% + 8px)' : '0px',
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     bottom: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     height: (isFaqOpen || isPortfolioOpen) ? 'calc(100vh - 16px)' : '100vh',
@@ -3599,9 +3599,9 @@ Alternatively, how can I advise you on specific investment choices today?`;
               window.innerWidth >= 768
                 ? {
                     left: isPortfolioOpen
-                      ? (isSidebarOpen ? 'calc(30% + 312px)' : 'calc(30% + 80px)')
-                      : (isSidebarOpen ? '296px' : '64px'),
-                    right: isFaqOpen ? 'calc(30% + 16px)' : '0px',
+                      ? (isSidebarOpen ? 'calc(30% + 296px)' : 'calc(30% + 64px)')
+                      : (isSidebarOpen ? '288px' : '56px'),
+                    right: isFaqOpen ? 'calc(30% + 8px)' : '0px',
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     bottom: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     height: (isFaqOpen || isPortfolioOpen) ? 'calc(100vh - 16px)' : '100vh',
@@ -4080,7 +4080,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
         }`}
         style={{
           left: window.innerWidth >= 768
-            ? (isSidebarOpen ? '296px' : '64px')
+            ? (isSidebarOpen ? '288px' : '56px')
             : '0px',
           backdropFilter: isPortfolioOpen ? 'blur(32px) saturate(180%)' : undefined,
           WebkitBackdropFilter: isPortfolioOpen ? 'blur(32px) saturate(180%)' : undefined,
@@ -4101,8 +4101,34 @@ Alternatively, how can I advise you on specific investment choices today?`;
               onAddStockManual={handleManualAddStock}
             />
           </motion.div>
+
+
         )}
       </motion.div>
+
+      {/* Floating FAQ Trigger Button (Icon + Text) */}
+      {!isFaqOpen && (
+        <motion.div
+          key="collapsed-faq-trigger"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 20 }}
+          className="hidden md:flex fixed top-3 right-0 z-[990] p-1.5 items-center justify-center rounded-l-xl border border-r-0 border-white/5 bg-[#12131a]/85 backdrop-blur-md shadow-2xl hover:bg-[#12131a] transition-all hover:scale-105 active:scale-95"
+        >
+          <button
+            onClick={() => {
+              setIsFaqOpen(true);
+              setIsPortfolioOpen(false);
+              setIsSidebarOpen(false);
+            }}
+            className="h-8 px-3.5 rounded-lg flex items-center justify-center gap-2 transition-all duration-200 text-slate-400 hover:text-white hover:bg-[#5B6BFF]/10 border border-transparent hover:border-[#5B6BFF]/25 hover:shadow-[0_0_12px_rgba(91,107,255,0.15)] cursor-pointer"
+            title="Open FAQ Panel"
+          >
+            <HelpCircle className="w-4 h-4 text-[#5B6BFF]" />
+            <span className="text-[11px] font-bold tracking-wide uppercase font-sans">FAQ</span>
+          </button>
+        </motion.div>
+      )}
 
 
       </>
