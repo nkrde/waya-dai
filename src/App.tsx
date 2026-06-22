@@ -3120,6 +3120,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
         isOpen={isSidebarOpen}
         isRightPanelOpen={isFaqOpen || isPortfolioOpen}
         isPortfolioOpen={isPortfolioOpen}
+        isFaqOpen={isFaqOpen}
         onChangeProfile={saveProfileToLocalStorage}
         onSelectChat={handleSelectChat}
         onCreateNewChat={handleCreateNewChat}
@@ -3129,6 +3130,11 @@ Alternatively, how can I advise you on specific investment choices today?`;
         onTogglePortfolio={() => {
           setIsPortfolioOpen(!isPortfolioOpen);
           setIsFaqOpen(false);
+          setIsSidebarOpen(false);
+        }}
+        onToggleFaq={() => {
+          setIsFaqOpen(!isFaqOpen);
+          setIsPortfolioOpen(false);
           setIsSidebarOpen(false);
         }}
         theme={theme}
@@ -3260,7 +3266,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
               window.innerWidth >= 768
                 ? {
                     left: isPortfolioOpen
-                      ? 'calc(30% + 16px)'
+                      ? (isSidebarOpen ? 'calc(30% + 312px)' : 'calc(30% + 80px)')
                       : (isSidebarOpen ? '296px' : '64px'),
                     right: isFaqOpen ? 'calc(30% + 16px)' : '0px',
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
@@ -3593,7 +3599,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
               window.innerWidth >= 768
                 ? {
                     left: isPortfolioOpen
-                      ? 'calc(30% + 16px)'
+                      ? (isSidebarOpen ? 'calc(30% + 312px)' : 'calc(30% + 80px)')
                       : (isSidebarOpen ? '296px' : '64px'),
                     right: isFaqOpen ? 'calc(30% + 16px)' : '0px',
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
@@ -4047,12 +4053,6 @@ Alternatively, how can I advise you on specific investment choices today?`;
               onToggle={() => setIsFaqOpen(false)}
               onQuestionClick={handleFaqClick}
               theme={theme}
-              isPortfolioOpen={isPortfolioOpen}
-              onTogglePortfolio={() => {
-                setIsPortfolioOpen(true);
-                setIsFaqOpen(false);
-                setIsSidebarOpen(false);
-              }}
             />
           </motion.div>
         )}
@@ -4075,10 +4075,13 @@ Alternatively, how can I advise you on specific investment choices today?`;
         }}
         className={`fixed z-[1010] flex select-none overflow-hidden transition-all duration-300 ${
           isPortfolioOpen
-            ? 'bg-[#12131a] border border-white/5 shadow-[0_8px_40px_rgba(0,0,0,0.5)] flex-col top-0 left-0 bottom-0 h-screen rounded-none border-y-0 border-l-0 md:top-2 md:left-2 md:bottom-2 md:h-[calc(100vh-16px)] md:rounded-xl md:border'
+            ? 'bg-[#12131a] border border-white/5 shadow-[0_8px_40px_rgba(0,0,0,0.5)] flex-col top-0 left-0 bottom-0 h-screen rounded-none border-y-0 border-l-0 md:top-2 md:bottom-2 md:h-[calc(100vh-16px)] md:rounded-xl md:border'
             : 'hidden'
         }`}
         style={{
+          left: window.innerWidth >= 768
+            ? (isSidebarOpen ? '296px' : '64px')
+            : '0px',
           backdropFilter: isPortfolioOpen ? 'blur(32px) saturate(180%)' : undefined,
           WebkitBackdropFilter: isPortfolioOpen ? 'blur(32px) saturate(180%)' : undefined,
         }}
@@ -4096,39 +4099,12 @@ Alternatively, how can I advise you on specific investment choices today?`;
               stocks={portfolioStocks}
               onRemoveStock={handleRemovePortfolioStock}
               onAddStockManual={handleManualAddStock}
-              isFaqOpen={isFaqOpen}
-              onToggleFaq={() => {
-                setIsFaqOpen(true);
-                setIsPortfolioOpen(false);
-                setIsSidebarOpen(false);
-              }}
             />
           </motion.div>
         )}
       </motion.div>
 
-      {/* Collapsed floating right toggle button for FAQ */}
-      {!isFaqOpen && (
-        <motion.div
-          key="collapsed-faq-trigger"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 20 }}
-          className="hidden md:flex fixed top-3 right-0 z-[990] p-1.5 items-center justify-center rounded-l-xl border border-r-0 border-white/5 bg-[#12131a]/80 backdrop-blur-md shadow-lg"
-        >
-          <button
-            onClick={() => {
-              setIsFaqOpen(true);
-              setIsPortfolioOpen(false);
-              setIsSidebarOpen(false);
-            }}
-            className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 text-slate-400 hover:text-white hover:bg-[#5B6BFF]/10 active:scale-95 cursor-pointer"
-            title="Open FAQ Panel"
-          >
-            <HelpCircle className="w-4 h-4 text-[#5B6BFF]" />
-          </button>
-        </motion.div>
-      )}
+
       </>
       )}
     </div>

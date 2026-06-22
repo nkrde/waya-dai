@@ -25,6 +25,8 @@ interface SidebarProps {
   onGoHome?: () => void;
   isPortfolioOpen?: boolean;
   onTogglePortfolio?: () => void;
+  isFaqOpen?: boolean;
+  onToggleFaq?: () => void;
 }
 
 export default function Sidebar({
@@ -44,7 +46,9 @@ export default function Sidebar({
   onSignOut,
   onGoHome,
   isPortfolioOpen = false,
-  onTogglePortfolio
+  onTogglePortfolio,
+  isFaqOpen = false,
+  onToggleFaq
 }: SidebarProps) {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -199,6 +203,19 @@ export default function Sidebar({
                 >
                   <Wallet className="w-4 h-4 text-[#2BE08C]" />
                   Portfolio
+                </button>
+
+                <button
+                  onClick={onToggleFaq}
+                  className={`w-full py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 rounded-xl border transition-all cursor-pointer shadow-sm select-none ${
+                    isFaqOpen
+                      ? 'border-[#5B6BFF] bg-[#5B6BFF]/15 text-white font-bold'
+                      : 'border-halo-border bg-white/[0.04] text-halo-on-surface hover:text-white hover:bg-[#5B6BFF]/10 hover:border-[#5B6BFF]/20'
+                  }`}
+                  title="Open FAQ Panel"
+                >
+                  <HelpCircle className="w-4 h-4 text-[#5B6BFF]" />
+                  FAQ
                 </button>
 
                 {/* Search */}
@@ -469,6 +486,19 @@ export default function Sidebar({
                   title="Portfolio"
                 >
                   <Wallet className="w-4 h-4 text-[#2BE08C]" />
+                </button>
+
+                {/* 3.6. FAQ Button */}
+                <button
+                  onClick={onToggleFaq}
+                  className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer ${
+                    isFaqOpen
+                      ? 'bg-[#5B6BFF] text-white shadow-md'
+                      : 'text-slate-400 hover:text-white hover:bg-white/[0.04]'
+                  }`}
+                  title="FAQ"
+                >
+                  <HelpCircle className="w-4 h-4 text-[#5B6BFF]" />
                 </button>
               </div>
 

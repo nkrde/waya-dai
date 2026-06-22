@@ -9,8 +9,6 @@ interface PortfolioPanelProps {
   stocks: PortfolioStock[];
   onRemoveStock: (ticker: string) => void;
   onAddStockManual: (stock: Omit<PortfolioStock, 'id'>) => void;
-  isFaqOpen?: boolean;
-  onToggleFaq?: () => void;
 }
 
 export default function PortfolioPanel({
@@ -18,9 +16,7 @@ export default function PortfolioPanel({
   onClose,
   stocks,
   onRemoveStock,
-  onAddStockManual,
-  isFaqOpen = false,
-  onToggleFaq
+  onAddStockManual
 }: PortfolioPanelProps) {
   const [newTicker, setNewTicker] = useState('');
   const [newName, setNewName] = useState('');
@@ -66,25 +62,9 @@ export default function PortfolioPanel({
     <div className="flex flex-col h-full w-full overflow-hidden">
       {/* Header */}
       <div className="p-4 flex items-center justify-between border-b border-halo-border bg-halo-surface flex-shrink-0">
-        <div className="flex items-center gap-1">
-          {/* Tab Buttons */}
-          <div className="flex items-center gap-1 p-1 rounded-xl border border-halo-border bg-halo-surface/80">
-            <button
-              onClick={onToggleFaq}
-              className="h-7 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all text-halo-on-surface-muted hover:text-white hover:bg-white/[0.06] cursor-pointer"
-              title="Switch to FAQ Panel"
-            >
-              <HelpCircle className="w-3.5 h-3.5" />
-              <span className="text-[11px] tracking-wide uppercase">FAQ</span>
-            </button>
-            <button
-              className="h-7 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all bg-[#2BE08C]/15 border border-[#2BE08C]/30 text-white font-semibold cursor-default"
-              title="Active: Portfolio Panel"
-            >
-              <Wallet className="w-3.5 h-3.5 text-[#2BE08C]" />
-              <span className="text-[11px] tracking-wide uppercase">Portfolio</span>
-            </button>
-          </div>
+        <div className="flex items-center gap-2">
+          <Briefcase className="w-4 h-4 text-[#2BE08C]" />
+          <span className="font-bold tracking-tight text-sm text-halo-on-surface uppercase">Portfolio</span>
         </div>
         <button
           onClick={onClose}
