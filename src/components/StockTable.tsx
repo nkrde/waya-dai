@@ -218,6 +218,7 @@ export default function StockTable({ stocks, onAddToPortfolio }: StockTableProps
             <thead>
               <tr className="border-b text-[10px] tracking-widest font-extrabold uppercase font-sans bg-halo-elevated border-halo-border text-halo-on-surface-muted">
                 <th className="py-3.5 px-4 text-center w-14 font-extrabold font-mono opacity-80">#</th>
+                <th className="py-3.5 px-4 text-center w-24 font-extrabold">Portfolio</th>
                 <th className="py-3.5 px-4 min-w-[220px] font-extrabold">Company / Symbol</th>
                 <th className="py-3.5 px-4 text-center font-extrabold w-32">Call Action</th>
                 <th className="py-3.5 px-4 text-center font-extrabold">Trigger Zone</th>
@@ -226,7 +227,6 @@ export default function StockTable({ stocks, onAddToPortfolio }: StockTableProps
                 <th className="py-3.5 px-4 text-center font-extrabold min-w-[130px]">Target Upside</th>
                 <th className="py-3.5 px-4 text-center font-extrabold">Horizon Tenure</th>
                 <th className="py-3.5 px-4 text-center w-32 font-extrabold">Details</th>
-                <th className="py-3.5 px-4 text-center w-24 font-extrabold">Portfolio</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[var(--color-halo-border)] text-[12.5px] text-halo-on-surface">
@@ -243,7 +243,23 @@ export default function StockTable({ stocks, onAddToPortfolio }: StockTableProps
                         {String(index + 1).padStart(2, '0')}
                       </td>
                       
-                      {/* 2. Company / Symbol */}
+                      {/* 2. Add to Portfolio Button */}
+                      <td className="py-4.5 px-5 text-center">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (onAddToPortfolio) {
+                              onAddToPortfolio(stock);
+                            }
+                          }}
+                          className="inline-flex items-center justify-center p-1.5 rounded-xl border border-halo-border bg-halo-surface hover:bg-halo-elevated text-[#5B6BFF] hover:text-white transition-all hover:scale-105 active:scale-95 cursor-pointer mx-auto"
+                          title="Add to Portfolio"
+                        >
+                          <Plus className="w-3.5 h-3.5" />
+                        </button>
+                      </td>
+
+                      {/* 3. Company / Symbol */}
                       <td className="py-4.5 px-5">
                         <div className="flex flex-col">
                           <span className="font-semibold tracking-tight text-[13.5px] font-sans text-halo-on-surface">
@@ -255,7 +271,7 @@ export default function StockTable({ stocks, onAddToPortfolio }: StockTableProps
                         </div>
                       </td>
 
-                      {/* 3. Call Action */}
+                      {/* 4. Call Action */}
                       <td className="py-4.5 px-5 text-center">
                         {isBuy ? (
                           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-extrabold tracking-widest border bg-white/[0.06] text-halo-success border-halo-success/25 shadow-[0_0_12px_rgba(43,224,140,0.05)]">
@@ -270,22 +286,22 @@ export default function StockTable({ stocks, onAddToPortfolio }: StockTableProps
                         )}
                       </td>
 
-                      {/* 4. Trigger Zone */}
+                      {/* 5. Trigger Zone */}
                       <td className="py-4.5 px-5 text-center font-mono font-semibold text-halo-info">
                         {stock.priceRange}
                       </td>
 
-                      {/* 5. Target Price */}
+                      {/* 6. Target Price */}
                       <td className="py-4.5 px-5 text-center font-mono font-bold text-halo-success">
                         {stock.targetPrice}
                       </td>
 
-                      {/* 6. Protective SL */}
+                      {/* 7. Protective SL */}
                       <td className="py-4.5 px-5 text-center font-mono font-semibold text-halo-error">
                         {stock.stopLoss}
                       </td>
 
-                      {/* 7. Target Upside */}
+                      {/* 8. Target Upside */}
                       <td className="py-4.5 px-5 text-center">
                         {stock.targetUpside.includes('-') ? (
                           <div className="inline-flex items-center justify-center gap-1.5 px-3 py-1 rounded-xl font-bold font-mono border bg-white/[0.06] text-halo-error border-halo-error/25">
@@ -300,12 +316,12 @@ export default function StockTable({ stocks, onAddToPortfolio }: StockTableProps
                         )}
                       </td>
 
-                      {/* 8. Horizon Tenure */}
+                      {/* 9. Horizon Tenure */}
                       <td className="py-4.5 px-5 text-center font-mono font-semibold text-[11px] text-halo-on-surface-muted">
                         {stock.tenure}
                       </td>
 
-                      {/* 9. Details Toggle */}
+                      {/* 10. Details Toggle */}
                       <td className="py-4.5 px-5 text-center">
                         <button
                           onClick={() => toggleExpand(stockId)}
@@ -317,22 +333,6 @@ export default function StockTable({ stocks, onAddToPortfolio }: StockTableProps
                         >
                           <span>{isExpanded ? 'Hide' : 'Analyze'}</span>
                           {isExpanded ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
-                        </button>
-                      </td>
-
-                      {/* 10. Add to Portfolio Button */}
-                      <td className="py-4.5 px-5 text-center">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            if (onAddToPortfolio) {
-                              onAddToPortfolio(stock);
-                            }
-                          }}
-                          className="inline-flex items-center justify-center p-1.5 rounded-xl border border-halo-border bg-halo-surface hover:bg-halo-elevated text-[#5B6BFF] hover:text-white transition-all hover:scale-105 active:scale-95 cursor-pointer"
-                          title="Add to Portfolio"
-                        >
-                          <Plus className="w-3.5 h-3.5" />
                         </button>
                       </td>
                     </tr>
