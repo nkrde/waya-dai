@@ -3042,16 +3042,14 @@ Alternatively, how can I advise you on specific investment choices today?`;
           </div>
         </div>
 
-        {/* Emerging Questions Panel - Absolutely positioned */}
-        <div className={`w-full absolute left-0 right-0 z-30 ${
-          (isFaqOpen || isPortfolioOpen) ? 'bottom-full mb-3.5' : 'top-full mt-2'
-        }`}>
+        {/* Emerging Questions Panel - Always opens upward to keep footer fixed */}
+        <div className="w-full absolute left-0 right-0 z-30 bottom-full mb-3.5">
           <AnimatePresence>
             {isQuestionsOpen && activeTab && (
               <motion.div
-                initial={{ opacity: 0, y: (isFaqOpen || isPortfolioOpen) ? 10 : -10, height: 0 }}
+                initial={{ opacity: 0, y: 10, height: 0 }}
                 animate={{ opacity: 1, y: 0, height: 'auto' }}
-                exit={{ opacity: 0, y: (isFaqOpen || isPortfolioOpen) ? 10 : -10, height: 0 }}
+                exit={{ opacity: 0, y: 10, height: 0 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="w-full max-w-full rounded-xl p-3 border mt-1 border-halo-border bg-halo-surface text-halo-on-surface overflow-hidden"
               >
@@ -3821,7 +3819,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
               </div>
             </div>
 
-            <footer className="relative w-full md:max-w-[1100px] mx-auto p-3 md:p-3.5 z-20 select-none pb-[calc(16px+env(safe-area-inset-bottom))] md:pb-3.5 border-t md:border border-white/5 bg-[#0e1017]/65 backdrop-blur-[12px] rounded-none md:rounded-[26px] shadow-[0_-8px_32px_rgba(0,0,0,0.25)] text-halo-on-surface mb-4 md:mb-6">
+            <footer className="relative w-full md:max-w-[1100px] mx-auto p-3 md:p-3.5 z-20 select-none pb-[calc(16px+env(safe-area-inset-bottom))] md:pb-3.5 border-t md:border border-white/5 bg-[#0e1017]/65 backdrop-blur-[12px] rounded-none md:rounded-[26px] shadow-[0_-8px_32px_rgba(0,0,0,0.25)] text-halo-on-surface mb-4 md:mb-6 flex-shrink-0">
               <div className="w-full max-w-full mx-auto space-y-4">
                 {(() => {
                   const activeSurveyMsg = messages.length > 0 && messages[messages.length - 1].isSurvey 
