@@ -6,6 +6,11 @@
 
 This repository contains the complete frontend client code for WayaX, a premium SEBI-guided financial AI advisor dashboard. It has been built with **React**, **Vite**, **TypeScript**, **Framer Motion**, and **Tailwind CSS**.
 
+| Environment | URL |
+|---|---|
+| 🖥️ Local Dev | [http://localhost:5175](http://localhost:5175) |
+| 🌐 Netlify Live | [https://wayax-dai.netlify.app](https://wayax-dai.netlify.app) |
+
 ---
 
 ## 🚀 One-Click Launch (Windows)

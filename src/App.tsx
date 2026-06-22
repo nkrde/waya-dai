@@ -1500,6 +1500,10 @@ export default function App() {
   };
 
   const handleGoHome = () => {
+    // Always close any open panels first
+    setIsPortfolioOpen(false);
+    setIsFaqOpen(false);
+    // Then navigate to main page
     const emptyChat = chatHistories.find(c => c.messages.length === 0);
     if (emptyChat) {
       setActiveChatId(emptyChat.id);
