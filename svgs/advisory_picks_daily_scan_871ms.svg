@@ -1,0 +1,219 @@
+<svg width="920" height="680" viewBox="0 0 920 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT COMPREHENSIVE DAILY BUY TRIGGERS LIST SCREEN (920px x 680px)
+    Beautiful liquid glass container holding 5 custom SEBI advisory picks:
+    GOKULAGRO, SKMEGGPROD, ROUTE, CEINSYS, and DSSL with updated 871 ms badge.
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Liquid glass specularity and border gradients -->
+    <linearGradient id="glass-border-grad-871" x1="0" y1="0" x2="900" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+
+    <!-- Drop shadows -->
+    <filter id="panel-shadow-871" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== SECTION 1: WAYA AVATAR AND HEADER INTRO ==================== -->
+  <g transform="translate(10, 12)">
+    <!-- Waya premium frosted insignia avatar -->
+    <rect width="38" height="38" rx="11" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="8" y="8" width="22" height="22" filter="brightness(1.15)"/>
+
+    <text x="52" y="16" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10" fill="#64748b" letter-spacing="0.02em">WAYAX • AUTOMATED DAILY SCAN</text>
+    
+    <!-- Multi-line detailed explanation containing Moderate Risk references -->
+    <text x="52" y="36" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">
+      Based on WayaX's automated daily scan of BSE/NSE equities, we have discovered several companies crossing
+    </text>
+    <text x="52" y="52" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">
+      critical visual buy triggers. These correspond to solid RDX structures. Picks match your <tspan fill="#818cf8" font-weight="700">Moderate Risk</tspan> memory.
+    </text>
+  </g>
+
+  <!-- ==================== SECTION 2: THE LIQUID GLASS DATA TABLE CONTAINER ==================== -->
+  <g id="buy-triggers-table-871" transform="translate(10, 85)" filter="url(#panel-shadow-871)">
+    <!-- Liquid glass backdrop -->
+    <rect width="900" height="385" rx="18" fill="#0c0d12" fill-opacity="0.5" stroke="url(#glass-border-grad-871)" stroke-width="1.2"/>
+    <rect x="0.5" y="0.5" width="899" height="384" rx="17.5" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+
+    <!-- Table Header block (Y = 0 to 45) -->
+    <g>
+      <rect width="900" height="44" rx="17" fill="rgba(255, 255, 255, 0.022)"/>
+      <line x1="0" y1="44" x2="900" y2="44" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      
+      <!-- Headers label -->
+      <text x="24" y="27" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="9" fill="#818cf8" opacity="0.9">#</text>
+      <text x="56" y="27" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#818cf8" opacity="0.9">COMPANY / SYMBOL</text>
+      <text x="310" y="27" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#818cf8" opacity="0.9" text-anchor="middle">CALL ACTION</text>
+      <text x="440" y="27" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#818cf8" opacity="0.9" text-anchor="middle">TRIGGER ZONE</text>
+      <text x="560" y="27" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#818cf8" opacity="0.9" text-anchor="middle">TARGET PRICE</text>
+      <text x="660" y="27" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#818cf8" opacity="0.9" text-anchor="middle">PROTECTIVE SL</text>
+      <text x="760" y="27" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#818cf8" opacity="0.9" text-anchor="middle">TARGET UPSIDE</text>
+      <text x="850" y="27" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#818cf8" opacity="0.9" text-anchor="middle">TENURE</text>
+    </g>
+
+    <!-- ROW 1: Gokul Agro Resources Ltd (GOKULAGRO) (Y = 44) -->
+    <g transform="translate(0, 44)">
+      <line x1="0" y1="65" x2="900" y2="65" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+      <text x="24" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#475569">01</text>
+      <g transform="translate(56, 15)">
+        <text x="0" y="12" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="#ffffff">Gokul Agro Resources Ltd</text>
+        <rect x="0" y="20" width="80" height="15" rx="3.5" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
+        <text x="40" y="31" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="8.5" fill="#64748b" text-anchor="middle">GOKULAGRO</text>
+      </g>
+      <g transform="translate(310, 20)" text-anchor="middle">
+        <rect x="-32" y="0" width="64" height="22" rx="11" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+        <circle cx="-18" cy="11" r="2.5" fill="#10b981"/>
+        <text x="6" y="15" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#34d399" letter-spacing="0.05em">BUY</text>
+      </g>
+      <text x="440" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#6bb6f3" text-anchor="middle">₹234.88 – ₹239.62</text>
+      <text x="560" y="38" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#10b981" text-anchor="middle">₹308.43</text>
+      <text x="660" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#f43f5e" text-anchor="middle">₹166.08</text>
+      <g transform="translate(760, 20)" text-anchor="middle">
+        <rect x="-30" y="0" width="60" height="22" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1"/>
+        <text x="0" y="15" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="10" fill="#34d399">30%</text>
+      </g>
+      <text x="850" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#cbd5e1" text-anchor="middle">3mo – 6mo</text>
+    </g>
+
+    <!-- ROW 2: SKM Egg Products Export (India) Ltd (Y = 109) -->
+    <g transform="translate(0, 109)">
+      <line x1="0" y1="65" x2="900" y2="65" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+      <text x="24" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#475569">02</text>
+      <g transform="translate(56, 15)">
+        <text x="0" y="12" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="#ffffff">SKM Egg Products Export (India) Ltd</text>
+        <rect x="0" y="20" width="90" height="15" rx="3.5" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
+        <text x="45" y="31" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="8.5" fill="#64748b" text-anchor="middle">SKMEGGPROD</text>
+      </g>
+      <g transform="translate(310, 20)" text-anchor="middle">
+        <rect x="-32" y="0" width="64" height="22" rx="11" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+        <circle cx="-18" cy="11" r="2.5" fill="#10b981"/>
+        <text x="6" y="15" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#34d399" letter-spacing="0.05em">BUY</text>
+      </g>
+      <text x="440" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#6bb6f3" text-anchor="middle">₹194.63 – ₹198.57</text>
+      <text x="560" y="38" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#10b981" text-anchor="middle">₹255.58</text>
+      <text x="660" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#f43f5e" text-anchor="middle">₹137.62</text>
+      <g transform="translate(760, 20)" text-anchor="middle">
+        <rect x="-30" y="0" width="60" height="22" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1"/>
+        <text x="0" y="15" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="10" fill="#34d399">30%</text>
+      </g>
+      <text x="850" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#cbd5e1" text-anchor="middle">6mo – 1.0y</text>
+    </g>
+
+    <!-- ROW 3: Route Mobile Ltd (Y = 174) -->
+    <g transform="translate(0, 174)">
+      <line x1="0" y1="65" x2="900" y2="65" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+      <text x="24" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#475569">03</text>
+      <g transform="translate(56, 15)">
+        <text x="0" y="12" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="#ffffff">Route Mobile Ltd</text>
+        <rect x="0" y="20" width="56" height="15" rx="3.5" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
+        <text x="28" y="31" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="8.5" fill="#64748b" text-anchor="middle">ROUTE</text>
+      </g>
+      <g transform="translate(310, 20)" text-anchor="middle">
+        <rect x="-32" y="0" width="64" height="22" rx="11" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+        <circle cx="-18" cy="11" r="2.5" fill="#10b981"/>
+        <text x="6" y="15" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#34d399" letter-spacing="0.05em">BUY</text>
+      </g>
+      <text x="440" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#6bb6f3" text-anchor="middle">₹515.44 – ₹525.86</text>
+      <text x="560" y="38" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#10b981" text-anchor="middle">₹676.85</text>
+      <text x="660" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#f43f5e" text-anchor="middle">₹364.46</text>
+      <g transform="translate(760, 20)" text-anchor="middle">
+        <rect x="-30" y="0" width="60" height="22" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1"/>
+        <text x="0" y="15" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="10" fill="#34d399">30%</text>
+      </g>
+      <text x="850" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#cbd5e1" text-anchor="middle">3mo – 6mo</text>
+    </g>
+
+    <!-- ROW 4: Ceinsys Tech Ltd (Y = 239) -->
+    <g transform="translate(0, 239)">
+      <line x1="0" y1="65" x2="900" y2="65" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+      <text x="24" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#475569">04</text>
+      <g transform="translate(56, 15)">
+        <text x="0" y="12" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="#ffffff">Ceinsys Tech Ltd</text>
+        <rect x="0" y="20" width="60" height="15" rx="3.5" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
+        <text x="30" y="31" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="8.5" fill="#64748b" text-anchor="middle">CEINSYS</text>
+      </g>
+      <g transform="translate(310, 20)" text-anchor="middle">
+        <rect x="-32" y="0" width="64" height="22" rx="11" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+        <circle cx="-18" cy="11" r="2.5" fill="#10b981"/>
+        <text x="6" y="15" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#34d399" letter-spacing="0.05em">BUY</text>
+      </g>
+      <text x="440" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#6bb6f3" text-anchor="middle">₹907.29 – ₹925.61</text>
+      <text x="560" y="38" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#10b981" text-anchor="middle">₹1,191.39</text>
+      <text x="660" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#f43f5e" text-anchor="middle">₹641.52</text>
+      <g transform="translate(760, 20)" text-anchor="middle">
+        <rect x="-30" y="0" width="60" height="22" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1"/>
+        <text x="0" y="15" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="10" fill="#34d399">30%</text>
+      </g>
+      <text x="850" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#cbd5e1" text-anchor="middle">3mo – 6mo</text>
+    </g>
+
+    <!-- ROW 5: Dynacons Systems & Solutions Ltd (Y = 304) -->
+    <g transform="translate(0, 304)">
+      <text x="24" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#475569">05</text>
+      <g transform="translate(56, 15)">
+        <text x="0" y="12" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="#ffffff">Dynacons Systems &amp; Solutions Ltd</text>
+        <rect x="0" y="20" width="46" height="15" rx="3.5" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
+        <text x="23" y="31" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="8.5" fill="#64748b" text-anchor="middle">DSSL</text>
+      </g>
+      <g transform="translate(310, 20)" text-anchor="middle">
+        <rect x="-32" y="0" width="64" height="22" rx="11" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+        <circle cx="-18" cy="11" r="2.5" fill="#10b981"/>
+        <text x="6" y="15" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#34d399" letter-spacing="0.05em">BUY</text>
+      </g>
+      <text x="440" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#6bb6f3" text-anchor="middle">₹1,536.73 – ₹1,567.77</text>
+      <text x="560" y="38" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#10b981" text-anchor="middle">₹2,017.93</text>
+      <text x="660" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#f43f5e" text-anchor="middle">₹1,086.57</text>
+      <g transform="translate(760, 20)" text-anchor="middle">
+        <rect x="-30" y="0" width="60" height="22" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1"/>
+        <text x="0" y="15" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="10" fill="#34d399">30%</text>
+      </g>
+      <text x="850" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#cbd5e1" text-anchor="middle">3mo – 6mo</text>
+    </g>
+  </g>
+
+  <!-- ==================== SECTION 3: METADATA CHIPS AND SYSTEM BADGES ==================== -->
+  <g transform="translate(10, 488)">
+    <!-- ANSWER Label badge -->
+    <g transform="translate(0, 0)">
+      <rect width="66" height="20" rx="4" fill="rgba(16, 23, 223, 0.15)" stroke="rgba(99, 102, 241, 0.25)" stroke-width="1"/>
+      <text x="33" y="13" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="8.5" fill="#818cf8" text-anchor="middle" letter-spacing="0.08em">ANSWER</text>
+    </g>
+
+    <!-- ADVISORY Label badge -->
+    <g transform="translate(74, 0)">
+      <rect width="78" height="20" rx="4" fill="rgba(5, 45, 28, 0.35)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+      <text x="39" y="13" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="8.5" fill="#34d399" text-anchor="middle" letter-spacing="0.08em">ADVISORY</text>
+    </g>
+
+    <!-- Custom Execution duration indicator (Updated to exactly 871 ms) -->
+    <g transform="translate(160, 0)">
+      <rect width="64" height="20" rx="4" fill="rgba(30, 41, 59, 0.3)" stroke="rgba(71, 85, 105, 0.15)" stroke-width="1"/>
+      <text x="32" y="13" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="8.5" fill="#94a3b8" text-anchor="middle">871 ms</text>
+    </g>
+  </g>
+
+  <!-- ==================== SECTION 4: COMPLIANCE FOOTER DISCLAIMER ==================== -->
+  <g transform="translate(10, 522)">
+    <rect width="900" height="135" rx="12" fill="#07080c" stroke="rgba(24, 35, 53, 0.45)" stroke-width="1.2"/>
+    <g transform="translate(450, 24)" text-anchor="middle">
+      <text y="0" font-family="'Inter', sans-serif" font-weight="500" font-size="10.5" fill="#475569">
+        All recommendations are generated automatically based on market volatility and structural support points.
+      </text>
+      <text y="18" font-family="'Inter', sans-serif" font-weight="500" font-size="10.5" fill="#475569">
+        Investment carries risk. Strictly execute through your SEBI-registered terminal under personal discretion.
+      </text>
+      <text y="42" font-family="'JetBrains Mono', 'Fira Code', monospace" font-weight="800" font-size="10" fill="#64748b" letter-spacing="0.04em">
+        WAYA FINANCIAL TECHNOLOGIES | SEBI RA: INH00010876 | PMS: INP000008987
+      </text>
+    </g>
+  </g>
+</svg>

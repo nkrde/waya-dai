@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* ── Grid Custom Properties ── */
+  --color-grid-dot: color-mix(in srgb, var(--color-halo-on-surface) 2.5%, var(--color-halo-bg));
+  --color-grid-line: color-mix(in srgb, var(--color-halo-on-surface) 10%, var(--color-halo-bg));
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-halo-bg: #0A0B0F;
+  --color-halo-surface: #14151C;
+  --color-halo-elevated: #1E2029;
+  --color-halo-border: #2A2D38;
+  --color-halo-border-strong: #3A3D4A;
+  
+  --color-halo-on-surface: #F2F4F8;
+  --color-halo-on-surface-muted: #AEB5C5;
+  --color-halo-on-surface-faint: #727A8E;
+  
+  --color-halo-primary: #5B6BFF;
+  --color-halo-primary-hover: #7886FF;
+  --color-halo-primary-pressed: #4A59E6;
+  
+  --color-halo-secondary: #3DD7E5;
+  --color-halo-tertiary: #F5D547;
+  
+  --color-halo-success: #2BE08C;
+  --color-halo-warning: #F5D547;
+  --color-halo-info: #3DD7E5;
+  --color-halo-error: #FF3A5C;
+
+  --color-halo-on-primary: #FFFFFF;
+  --color-halo-chat-user-bg: #5B6BFF;
+  --color-halo-chat-user-text: #FFFFFF;
+  --color-halo-chat-ai-bg: #1E2029;
+  --color-halo-chat-ai-text: #F2F4F8;
+  --color-halo-chat-ai-border: #2A2D38;
+  --color-halo-interactive-hover: #FFFFFF;
+  
+  --radius-halo-none: 0px;
+  --radius-halo-sm: 6px;
+  --radius-halo-md: 10px;
+  --radius-halo-lg: 16px;
+  --radius-halo-xl: 24px;
+}
+
+html, body, #root {
+  background-color: var(--color-halo-bg);
+  color: var(--color-halo-on-surface);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================= */
+/* KEYFRAMES & MICRO-ANIMATIONS                 */
+/* ============================================= */
+
+@keyframes smoothReveal {
+  0% { 
+    opacity: 0; 
+    transform: translateY(8px);
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
+.animate-smooth-reveal {
+  animation: smoothReveal 200ms cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
+}
+
+@keyframes cursorBlink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.animate-cursor-blink {
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 4px 12px rgba(91, 107, 255, 0.15));
+  }
+  50% {
+    transform: scale(1.025);
+    filter: drop-shadow(0 8px 24px rgba(91, 107, 255, 0.3));
+  }
+}
+
+.animate-logo-pulse {
+  animation: logoPulse 4s ease-in-out infinite;
+}
+
+/* Floating animation for welcome screen elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ============================================= */
+/* MINIMALIST BACKGROUND GRIDS & TEXTURES        */
+/* ============================================= */
+
+/* Quiet deep-space grid substrate */
+.bg-dotted-grid {
+  background-color: var(--color-halo-bg);
+  background-image: radial-gradient(var(--color-grid-dot) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.bg-line-grid {
+  background-color: var(--color-halo-bg);
+  background-image: 
+    radial-gradient(circle, transparent 20%, var(--color-halo-bg) 80%),
+    linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
+  background-repeat: no-repeat, repeat, repeat;
+}
+
+/* ============================================= */
+/* COMPONENT STYLING SYSTEM                      */
+/* ============================================= */
+
+/* Primary Button: electric indigo fill, top inset highlight */
+.halo-btn-primary {
+  background-color: var(--color-halo-primary);
+  color: #FFFFFF;
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 1px 2px rgba(0,0,0,0.3);
+  transition: background-color 120ms cubic-bezier(0.2, 0.6, 0.2, 1), transform 120ms;
+}
+.halo-btn-primary:hover {
+  background-color: var(--color-halo-primary-hover);
+}
+.halo-btn-primary:active {
+  background-color: var(--color-halo-primary-pressed);
+  transform: translateY(0.5px);
+}
+.halo-btn-primary:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Secondary Button: surface tile with a 1px strong border */
+.halo-btn-secondary {
+  background-color: var(--color-halo-surface);
+  color: var(--color-halo-on-surface);
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 18px;
+  border: 1px solid var(--color-halo-border-strong);
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 120ms cubic-bezier(0.2, 0.6, 0.2, 1), border-color 120ms, color 120ms;
+}
+.halo-btn-secondary:hover {
+  background-color: var(--color-halo-elevated);
+  border-color: #5B6BFF;
+}
+.halo-btn-secondary:active {
+  background-color: var(--color-halo-surface);
+}
+
+/* Tertiary Button: text-only with a surface hover tint */
+.halo-btn-tertiary {
+  background-color: transparent;
+  color: var(--color-halo-on-surface-muted);
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 120ms cubic-bezier(0.2, 0.6, 0.2, 1), color 120ms;
+}
+.halo-btn-tertiary:hover {
+  background-color: var(--color-halo-surface);
+  color: var(--color-halo-on-surface);
+}
+
+/* Danger Button: swaps primary indigo for the magenta error token */
+.halo-btn-danger {
+  background-color: #FF3A5C;
+  color: #FFFFFF;
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 120ms cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.halo-btn-danger:hover {
+  background-color: #FF5A7C;
+}
+
+/* Input Fields: sit on the surface tier with a 1px border */
+.halo-input {
+  background-color: var(--color-halo-surface);
+  color: var(--color-halo-on-surface);
+  border-radius: 10px;
+  border: 1px solid var(--color-halo-border);
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  transition: border-color 120ms cubic-bezier(0.2, 0.6, 0.2, 1), box-shadow 120ms;
+}
+.halo-input::placeholder {
+  color: var(--color-halo-on-surface-faint);
+}
+.halo-input:focus {
+  outline: none;
+  border-color: #5B6BFF;
+  box-shadow: 0 0 0 3px rgba(91, 107, 255, 0.35);
+}
+.halo-input-error {
+  border-color: #FF3A5C !important;
+}
+.halo-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(255, 58, 92, 0.35) !important;
+}
+
+/* Segmented Tab Container & Controls */
+.halo-tabs-container {
+  background-color: var(--color-halo-surface);
+  border: 1px solid var(--color-halo-border);
+  border-radius: 999px;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.halo-tabs-active {
+  background-color: var(--color-halo-elevated);
+  color: var(--color-halo-on-surface);
+  border: 1px solid #5B6BFF;
+  border-radius: 999px;
+  height: 32px;
+  padding: 0 14px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 120ms cubic-bezier(0.2, 0.6, 0.2, 1);
+  cursor: default;
+}
+
+.halo-tabs-inactive {
+  background-color: transparent;
+  color: var(--color-halo-on-surface-muted);
+  border-radius: 999px;
+  height: 32px;
+  padding: 0 14px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 120ms cubic-bezier(0.2, 0.6, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.halo-tabs-inactive:hover {
+  background-color: var(--color-halo-elevated);
+  color: var(--color-halo-on-surface);
+}
+
+/* Stat Tile: compact metric cards with a 2px top hairline accent */
+.halo-stat-tile {
+  background-color: var(--color-halo-surface);
+  color: var(--color-halo-on-surface);
+  border-radius: 16px;
+  border: 1px solid var(--color-halo-border);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.halo-stat-tile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--stat-accent, var(--color-halo-border));
+}
+
+.halo-card {
+  background-color: var(--color-halo-surface);
+  color: var(--color-halo-on-surface);
+  border-radius: 16px;
+  border: 1px solid var(--color-halo-border);
+  padding: 24px;
+}
+
+.halo-card-elevated {
+  background-color: var(--color-halo-elevated);
+  color: var(--color-halo-on-surface);
+  border-radius: 16px;
+  border: 1px solid var(--color-halo-border-strong);
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45), 0 1px 0 rgba(255,255,255,0.03) inset;
+}
+
+.halo-chip {
+  background-color: rgba(91, 107, 255, 0.12);
+  color: #7886FF;
+  border-radius: 999px;
+  height: 24px;
+  padding: 0 10px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================= */
+/* TYPOGRAPHY UTILITIES                          */
+/* ============================================= */
+
+.halo-display {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+}
+
+.halo-headline-lg {
+  font-family: "Inter", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.halo-headline-md {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.halo-title-md {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.halo-body-md {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: 1.55;
+}
+
+.halo-body-sm {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+.halo-label-sm {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.halo-mono-sm {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.halo-metric {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* ============================================= */
+/* SCROLLBAR STYLING                             */
+/* ============================================= */
+
+/* Global custom scrollbars styled to elegant semi-transparent white */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 99px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 99px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+/* Voice input wave animations */
+@keyframes voice-bar-pulse {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1.8); }
+}
+
+.animate-voice-bar-1 { animation: voice-bar-pulse 0.8s ease-in-out infinite alternate; transform-origin: bottom; }
+.animate-voice-bar-2 { animation: voice-bar-pulse 0.6s ease-in-out infinite alternate 0.15s; transform-origin: bottom; }
+.animate-voice-bar-3 { animation: voice-bar-pulse 0.9s ease-in-out infinite alternate 0.3s; transform-origin: bottom; }
+.animate-voice-bar-4 { animation: voice-bar-pulse 0.7s ease-in-out infinite alternate 0.1s; transform-origin: bottom; }
+.animate-voice-bar-5 { animation: voice-bar-pulse 0.8s ease-in-out infinite alternate 0.25s; transform-origin: bottom; }
+
+/* Custom mask to mask out outline glows if needed */
+.mask-gradient-glow {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glass scrollbar — styled to elegant semi-transparent white */
+.glass-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+.glass-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.glass-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 99px;
+}
+.glass-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 99px;
+  transition: background 200ms ease;
+}
+.glass-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+.glass-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+

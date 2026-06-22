@@ -1,0 +1,746 @@
+<svg width="3200" height="2400" viewBox="0 0 3200 2400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles for premium vector layout and high fidelity editing in Figma -->
+  <style>
+    .brand-title { font-family: 'Outfit', 'Sora', 'Inter', system-ui, sans-serif; font-weight: 900; fill: #ffffff; letter-spacing: -0.04em; }
+    .brand-subtitle { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; fill: #64748b; font-size: 16px; }
+    
+    .header-section { font-family: 'Outfit', 'Sora', sans-serif; font-weight: 800; fill: #ffffff; font-size: 26px; letter-spacing: -0.02em; }
+    .header-sub { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-weight: 700; font-size: 11px; fill: #6366f1; letter-spacing: 0.2em; }
+    
+    /* Document/Guidelines Typography */
+    .doc-heading { font-family: 'Outfit', 'Sora', sans-serif; font-weight: 700; font-size: 14px; fill: #f8fafc; }
+    .doc-bullet { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 10px; fill: #818cf8; }
+    .doc-body { font-family: 'Inter', system-ui, sans-serif; font-weight: 400; font-size: 12px; fill: #cbd5e1; line-height: 1.6; }
+    .doc-code { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 11px; fill: #77F2E4; }
+    
+    .doc-green { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 12px; fill: #10b981; }
+    .doc-red { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 12px; fill: #ef4444; }
+    
+    /* Mock components styling */
+    .mock-title { font-family: 'Sora', 'Inter', sans-serif; font-weight: 700; font-size: 13px; fill: #ffffff; }
+    .mock-caption { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: #64748b; font-weight: bold; }
+    .mock-table-header { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 10px; fill: #a5b4fc; letter-spacing: 0.08em; }
+
+    /* Frosted Glass UI Styles mapping exactly to .liquid-glass-panel in CSS */
+    .glass-backing {
+      fill: url(#glass-gradient);
+      stroke: rgba(255, 255, 255, 0.09);
+      stroke-width: 1;
+    }
+  </style>
+
+  <!-- Master Definitions (Glows, Gradients, and Dotted Patterns) -->
+  <defs>
+    <!-- Pitch black base canvas backing with subtle geometric dot grid -->
+    <pattern id="dot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(255, 255, 255, 0.06)"/>
+    </pattern>
+
+    <!-- Liquid Glass linear fill representing .liquid-glass-panel gradient in index.css -->
+    <linearGradient id="glass-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.035)"/>
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.01)"/>
+    </linearGradient>
+
+    <!-- Premium Refraction Logo Glow - Dual Stop (Salted Camel Removed) -->
+    <linearGradient id="wayax-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#77F2E4"/>
+      <stop offset="100%" stop-color="#6BB6F3"/>
+    </linearGradient>
+    
+    <filter id="huge-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="130"/>
+    </filter>
+
+    <!-- Soft Ambient Accent Glow circles behind panels to create realistic frosted glass refractions -->
+    <radialGradient id="corner-radial" cx="0%" cy="0%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Deep Specular Drop Shadows for frosted glass cards elevation -->
+    <filter id="panel-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#000000" flood-opacity="0.65"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+
+    <!-- Pulsing active badges emerald/rose glow -->
+    <filter id="emerald-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Refractive blurs for the Exact Logo Container Underlay -->
+    <filter id="logo-blur-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <filter id="logo-blur-blue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+  </defs>
+
+  <!-- Background dot grid grounding -->
+  <rect width="3200" height="2400" fill="#07080b"/>
+  <rect width="3200" height="2400" fill="url(#dot-grid)"/>
+
+  <!-- Sub-Surface Refraction Caustics: Under-glass colored glows behind card panels -->
+  <circle cx="580" cy="720" r="380" fill="#77F2E4" opacity="0.07" filter="url(#huge-glow)"/>
+  <circle cx="1600" cy="720" r="420" fill="#6366F1" opacity="0.08" filter="url(#huge-glow)"/>
+  <circle cx="2620" cy="720" r="380" fill="#6BB6F3" opacity="0.07" filter="url(#huge-glow)"/>
+  <circle cx="580" cy="1760" r="380" fill="#6BB6F3" opacity="0.06" filter="url(#huge-glow)"/>
+  <circle cx="1600" cy="1760" r="420" fill="#77F2E4" opacity="0.06" filter="url(#huge-glow)"/>
+  <circle cx="2620" cy="1760" r="380" fill="#6366F1" opacity="0.08" filter="url(#huge-glow)"/>
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <g transform="translate(100, 80)">
+    <!-- WayaX Brand Logo Container (Exact Glass/Ellipses/Insignia sandwich) -->
+    <rect width="80" height="80" rx="16" class="glass-backing" filter="url(#panel-shadow)"/>
+    <mask id="logo-mask-figma">
+      <rect width="80" height="80" rx="16" fill="#ffffff"/>
+    </mask>
+    <g mask="url(#logo-mask-figma)">
+      <ellipse cx="28" cy="40" rx="25" ry="12" fill="#77F2E4" opacity="0.8" filter="url(#logo-blur-cyan)"/>
+      <ellipse cx="52" cy="41" rx="22" ry="13" fill="#6BB6F3" opacity="0.8" filter="url(#logo-blur-blue)"/>
+      <line x1="0" y1="1" x2="80" y2="1" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1"/>
+    </g>
+    <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="16" y="16" width="48" height="48" pointer-events="none"/>
+    <rect x="0.5" y="0.5" width="79" height="79" rx="15.5" fill="none" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1"/>
+    
+    <text x="110" y="38" class="brand-title" font-size="44">WayaX Organised Design System</text>
+    <text x="110" y="66" class="brand-subtitle">Arranged in 2x3 Unified Pages matching the "Organising Design Systems" Figma Directory Template</text>
+  </g>
+
+  <!-- ==================== COLUMN 1: DIRECTORY & FOUNDATIONS ==================== -->
+  
+  <!-- FIGMA PAGE 1: WELCOME, STATUS & PRINCIPLES -->
+  <g transform="translate(100, 220)">
+    <rect width="960" height="1000" rx="28" class="glass-backing" filter="url(#panel-shadow)"/>
+    <line x1="28" y1="1" x2="932" y2="1" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.5"/>
+    
+    <g transform="translate(40, 50)">
+      <text x="0" y="0" class="header-sub">FIGMA PAGE 01 // WELCOME &amp; PRINCIPLES</text>
+      <text x="0" y="28" class="header-section">1. Welcome, Status &amp; Directory</text>
+      <line x1="0" y1="44" x2="880" y2="44" stroke="#1e293b" stroke-width="1.5"/>
+      
+      <!-- System Principles -->
+      <g transform="translate(0, 70)">
+        <text x="0" y="0" class="doc-heading" font-size="16">DESIGN SYSTEM PHILOSOPHY</text>
+        <text x="0" y="26" class="doc-body" font-weight="700" fill="#ffffff">Refractive Specularity: Framing Compliance with Physical Glass</text>
+        <text x="0" y="48" class="doc-body" width="880">WayaX rejects flat, cold block layouts. In regulated financial spaces, trust is visual. The system emulates a real, thick glass lens layer resting over quantitative data tables, providing tactile safety margins and audit-ready scannability.</text>
+      </g>
+      
+      <!-- Components Status Table -->
+      <g transform="translate(0, 180)">
+        <text x="0" y="0" class="doc-heading" font-size="16">COMPONENT MATRIX &amp; STATUS TRACKER</text>
+        
+        <!-- Status Table structure -->
+        <g transform="translate(0, 20)">
+          <rect width="880" height="280" rx="16" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.06)"/>
+          
+          <!-- Header -->
+          <rect width="880" height="42" rx="16" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)"/>
+          <text x="24" y="26" class="mock-table-header">COMPONENT</text>
+          <text x="320" y="26" class="mock-table-header">STATUS</text>
+          <text x="480" y="26" class="mock-table-header">FIGMA PAGE</text>
+          <text x="680" y="26" class="mock-table-header">REACT STATUS</text>
+          
+          <!-- Row 1 (Buttons) -->
+          <g transform="translate(0, 42)">
+            <line x1="0" y1="0" x2="880" y2="0" stroke="rgba(255,255,255,0.06)"/>
+            <text x="24" y="28" class="mock-title" font-size="13">Frosted Buttons Suite</text>
+            <rect x="320" y="12" width="70" height="20" rx="6" fill="rgba(16, 185, 129, 0.15)"/>
+            <text x="355" y="26" font-family="'Inter'" font-size="9.5" fill="#10B981" font-weight="extrabold" text-anchor="middle">READY</text>
+            <text x="480" y="28" class="doc-body" fill="#94a3b8">03. Component Library</text>
+            <text x="680" y="28" class="doc-code">.liquid-glass-button</text>
+          </g>
+
+          <!-- Row 2 (Inputs) -->
+          <g transform="translate(0, 92)">
+            <line x1="0" y1="0" x2="880" y2="0" stroke="rgba(255,255,255,0.06)"/>
+            <text x="24" y="28" class="mock-title" font-size="13">Recessed Search Wells</text>
+            <rect x="320" y="12" width="70" height="20" rx="6" fill="rgba(16, 185, 129, 0.15)"/>
+            <text x="355" y="26" font-family="'Inter'" font-size="9.5" fill="#10B981" font-weight="extrabold" text-anchor="middle">READY</text>
+            <text x="480" y="28" class="doc-body" fill="#94a3b8">03. Component Library</text>
+            <text x="680" y="28" class="doc-code">.liquid-glass-input</text>
+          </g>
+
+          <!-- Row 3 (Stock Table) -->
+          <g transform="translate(0, 142)">
+            <line x1="0" y1="0" x2="880" y2="0" stroke="rgba(255,255,255,0.06)"/>
+            <text x="24" y="28" class="mock-title" font-size="13">Advisory Stock Table</text>
+            <rect x="320" y="12" width="70" height="20" rx="6" fill="rgba(16, 185, 129, 0.15)"/>
+            <text x="355" y="26" font-family="'Inter'" font-size="9.5" fill="#10B981" font-weight="extrabold" text-anchor="middle">READY</text>
+            <text x="480" y="28" class="doc-body" fill="#94a3b8">05. Organisms Spec</text>
+            <text x="680" y="28" class="doc-code">&lt;StockTable /&gt;</text>
+          </g>
+
+          <!-- Row 4 (Presets Card) -->
+          <g transform="translate(0, 192)">
+            <line x1="0" y1="0" x2="880" y2="0" stroke="rgba(255,255,255,0.06)"/>
+            <text x="24" y="28" class="mock-title" font-size="13">Presets Category Row</text>
+            <rect x="320" y="12" width="70" height="20" rx="6" fill="rgba(16, 185, 129, 0.15)"/>
+            <text x="355" y="26" font-family="'Inter'" font-size="9.5" fill="#10B981" font-weight="extrabold" text-anchor="middle">READY</text>
+            <text x="480" y="28" class="doc-body" fill="#94a3b8">06. Presets &amp; Sandbox</text>
+            <text x="680" y="28" class="doc-code">max-h-[132px] restricted</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- SEBI Compliant advisory note card -->
+      <g transform="translate(0, 520)">
+        <rect width="880" height="370" rx="20" fill="rgba(99,102,241,0.03)" stroke="rgba(99,102,241,0.12)"/>
+        <line x1="16" y1="1" x2="864" y2="1" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        <g transform="translate(24, 28)">
+          <text x="0" y="12" class="doc-heading" font-size="15" fill="#a5b4fc">01 // ADVISORY SYSTEM PRINCIPLES &amp; RULES</text>
+          
+          <text x="0" y="44" class="doc-bullet">LAW 01 </text>
+          <text x="80" y="44" class="doc-body" fill="#ffffff"><tspan font-weight="700">Sub-pixel Alignment</tspan>: specularity borders must follow physical 8px grid alignments.</text>
+
+          <text x="0" y="68" class="doc-bullet">LAW 02 </text>
+          <text x="80" y="68" class="doc-body" fill="#ffffff"><tspan font-weight="700">Color Integrity</tspan>: Swatches must cleanly isolate Success Emerald from Protective Rose.</text>
+
+          <text x="0" y="92" class="doc-bullet">LAW 03 </text>
+          <text x="80" y="92" class="doc-body" fill="#ffffff"><tspan font-weight="700">Audit-Ready Grids</tspan>: Table rows vertical paddings remain locked at py-4.5 (18px).</text>
+          
+          <text x="0" y="116" class="doc-bullet">LAW 04 </text>
+          <text x="80" y="116" class="doc-body" fill="#ffffff"><tspan font-weight="700">Kinetic Micro-feedback</tspan>: Element states trigger subtle spring translations and shimmers.</text>
+
+          <text x="0" y="150" class="doc-heading" font-size="12" fill="#64748b">ORGANISATION STRUCTURE DIRECTORY</text>
+          <text x="0" y="180" class="doc-body">This SVG acts as your single source of truth library structure. Each frosted card on this board maps directly to one dedicated page inside the organized Figma library file, ensuring 100% parity between design groups and developers variables.</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- FIGMA PAGE 2: FOUNDATIONS & DESIGN TOKENS -->
+  <g transform="translate(100, 1260)">
+    <rect width="960" height="1020" rx="28" class="glass-backing" filter="url(#panel-shadow)"/>
+    <line x1="28" y1="1" x2="932" y2="1" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.5"/>
+    
+    <g transform="translate(40, 50)">
+      <text x="0" y="0" class="header-sub">FIGMA PAGE 02 // FOUNDATIONS &amp; TOKENS</text>
+      <text x="0" y="28" class="header-section">2. Foundations: Colors, Typography &amp; Ratios</text>
+      <line x1="0" y1="44" x2="880" y2="44" stroke="#1e293b" stroke-width="1.5"/>
+      
+      <!-- Primary 2-Stop Brand Gradient visual -->
+      <g transform="translate(0, 70)">
+        <rect width="880" height="110" rx="16" fill="url(#wayax-glow)" stroke="rgba(255,255,255,0.1)"/>
+        <rect x="8" y="8" width="864" height="94" rx="12" fill="#07080b" fill-opacity="0.8"/>
+        <text x="24" y="42" class="doc-heading">Premium Refraction Gradient (Salted Camel Removed)</text>
+        <text x="24" y="68" class="doc-code">linear-gradient(90deg, #77F2E4 0%, #6BB6F3 100%)</text>
+      </g>
+
+      <!-- Color Swatches Row -->
+      <g transform="translate(0, 210)">
+        <!-- Teal -->
+        <g transform="translate(0, 0)">
+          <rect width="150" height="85" rx="12" fill="#77F2E4"/>
+          <text x="0" y="106" class="doc-heading" font-size="12">Teal Momentum</text>
+          <text x="0" y="122" class="doc-code" font-size="10.5">#77F2E4</text>
+          <text x="0" y="136" class="mock-caption">Primary Gradient Stop</text>
+        </g>
+        <!-- Blue -->
+        <g transform="translate(180, 0)">
+          <rect width="150" height="85" rx="12" fill="#6BB6F3"/>
+          <text x="0" y="106" class="doc-heading" font-size="12">Sky Blue Flow</text>
+          <text x="0" y="122" class="doc-code" font-size="10.5">#6BB6F3</text>
+          <text x="0" y="136" class="mock-caption">Primary Gradient Stop</text>
+        </g>
+        <!-- Active Indigo -->
+        <g transform="translate(360, 0)">
+          <rect width="150" height="85" rx="12" fill="#6366F1"/>
+          <text x="0" y="106" class="doc-heading" font-size="12">Active Indigo</text>
+          <text x="0" y="122" class="doc-code" font-size="10.5">#6366F1</text>
+          <text x="0" y="136" class="mock-caption">Active Brand Color</text>
+        </g>
+        <!-- Emerald -->
+        <g transform="translate(540, 0)">
+          <rect width="150" height="85" rx="12" fill="#10B981"/>
+          <text x="0" y="106" class="doc-heading" font-size="12" fill="#10B981">Success Emerald</text>
+          <text x="0" y="122" class="doc-code" font-size="10.5">#10B981</text>
+          <text x="0" y="136" class="mock-caption">BUY / Upside Metrics</text>
+        </g>
+        <!-- Rose -->
+        <g transform="translate(720, 0)">
+          <rect width="150" height="85" rx="12" fill="#EF4444"/>
+          <text x="0" y="106" class="doc-heading" font-size="12" fill="#EF4444">Protective Rose</text>
+          <text x="0" y="122" class="doc-code" font-size="10.5">#EF4444</text>
+          <text x="0" y="136" class="mock-caption">SHORT / Stop Loss bounds</text>
+        </g>
+      </g>
+
+      <!-- Typography scale list inside a card -->
+      <g transform="translate(0, 390)">
+        <rect width="880" height="230" rx="20" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.04)"/>
+        <g transform="translate(24, 24)">
+          <text x="0" y="12" class="brand-title" font-size="28">Welcome Header Title (28px)</text>
+          <text x="500" y="12" class="doc-code">text-[28px] font-extrabold (Sora)</text>
+          
+          <text x="0" y="52" class="brand-title" font-size="20">Overlay Dropdown Menu Header (20px)</text>
+          <text x="500" y="52" class="doc-code">text-[20px] font-extrabold (Sora)</text>
+
+          <text x="0" y="92" class="brand-title" font-size="17">Mobile Welcome Header (17px)</text>
+          <text x="500" y="92" class="doc-code">text-[17px] font-extrabold (Sora)</text>
+
+          <text x="0" y="132" class="doc-heading" font-size="13" fill="#cbd5e1">Advisory streamed answer text body (13px)</text>
+          <text x="500" y="132" class="doc-code">text-[13px] font-medium (Inter)</text>
+          
+          <text x="0" y="172" font-family="'JetBrains Mono'" font-size="10" font-weight="bold" fill="#a5b4fc" letter-spacing="0.1em">TICKER / EXPLICIT TABLE HEADERS (10px)</text>
+          <text x="500" y="172" class="doc-code">text-[10px] font-extrabold (Mono)</text>
+        </g>
+      </g>
+
+      <!-- Grid spacing and shadows specification notes -->
+      <g transform="translate(0, 650)">
+        <rect width="880" height="230" rx="20" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.04)"/>
+        <g transform="translate(24, 28)">
+          <text x="0" y="12" class="doc-heading">BASE GRID &amp; SHADOW SPECIFICATION</text>
+          
+          <text x="0" y="44" class="doc-bullet">8PX GRID</text>
+          <text x="120" y="44" class="doc-body" fill="#cbd5e1">Symmetric metrics increments: 4px, 8px, 12px, 16px, 20px, 24px, 32px.</text>
+
+          <text x="0" y="68" class="doc-bullet">MOBILE  </text>
+          <text x="120" y="68" class="doc-body" fill="#cbd5e1">Outer viewport padding pt-[72px], combined categories rounded-2xl cards p-4.5.</text>
+
+          <text x="0" y="92" class="doc-bullet">DESKTOP </text>
+          <text x="120" y="92" class="doc-body" fill="#cbd5e1">Outer viewport padding pt-[88px], spacious panels p-6, table row paddings py-4.5 px-5.</text>
+          
+          <text x="0" y="128" class="doc-bullet">SHADOWS </text>
+          <text x="120" y="128" class="doc-code">box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 16px 48px rgba(0,0,0,0.65)</text>
+          <text x="120" y="144" class="mock-caption">Specular top reflection edge stroke + ambient high-blur dark backdrop shadows elevation.</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 2: COMPONENT LIBRARY & GUIDELINES ==================== -->
+  
+  <!-- FIGMA PAGE 3: COMPONENT LIBRARY -->
+  <g transform="translate(1120, 220)">
+    <rect width="960" height="1000" rx="28" class="glass-backing" filter="url(#panel-shadow)"/>
+    <line x1="28" y1="1" x2="932" y2="1" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.5"/>
+    
+    <g transform="translate(40, 50)">
+      <text x="0" y="0" class="header-sub">FIGMA PAGE 03 // COMPONENT LIBRARY</text>
+      <text x="0" y="28" class="header-section">3. Atoms &amp; Molecules Component Spec</text>
+      <line x1="0" y1="44" x2="880" y2="44" stroke="#1e293b" stroke-width="1.5"/>
+      
+      <!-- BUTTON BLUEPRINTS -->
+      <g transform="translate(0, 70)">
+        <text x="0" y="0" class="doc-heading" font-size="16">FROSTED GLASS BUTTON blueprINTS</text>
+        
+        <g transform="translate(0, 24)">
+          <!-- Primary Action Button blueprint -->
+          <g transform="translate(0, 0)">
+            <rect width="250" height="50" rx="16" fill="#6366F1" stroke="#4f46e5" stroke-width="1.5"/>
+            <text x="125" y="30" font-family="'Sora'" font-weight="bold" font-size="13" fill="#ffffff" text-anchor="middle">Primary Button</text>
+            <text x="0" y="70" class="mock-caption">PRIMARY DEFAULT STATE</text>
+            <text x="0" y="84" class="doc-code">bg-indigo-600 font-sans shadow-lg</text>
+          </g>
+
+          <!-- Primary Active Button blueprint -->
+          <g transform="translate(290, 0)">
+            <rect width="250" height="50" rx="16" fill="#4f46e5" stroke="#4338ca" stroke-width="1.5" transform="scale(0.96) translate(5, 2)"/>
+            <text x="125" y="30" font-family="'Sora'" font-weight="bold" font-size="13" fill="#ffffff" text-anchor="middle" transform="scale(0.96) translate(5, 2)">Primary Active</text>
+            <text x="0" y="70" class="mock-caption">PRIMARY CLICK STATE (scale-95)</text>
+            <text x="0" y="84" class="doc-code">scale-95 bg-indigo-750 transition-all</text>
+          </g>
+
+          <!-- Secondary Frosted Button blueprint -->
+          <g transform="translate(580, 0)">
+            <rect width="250" height="50" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+            <line x1="16" y1="1" x2="234" y2="1" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+            <text x="125" y="30" font-family="'Sora'" font-weight="bold" font-size="13" fill="#ffffff" text-anchor="middle">Secondary Glass</text>
+            <text x="0" y="70" class="mock-caption">SECONDARY GLASS STATE</text>
+            <text x="0" y="84" class="doc-code">.liquid-glass-button / backdrop-blur</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- RECESSED INPUT WELLS BLUEPRINTS -->
+      <g transform="translate(0, 310)">
+        <text x="0" y="0" class="doc-heading" font-size="16">RECESSED SEARCH INPUT WELL BLUEPRINTS</text>
+        
+        <g transform="translate(0, 24)">
+          <!-- Input Well Default -->
+          <g transform="translate(0, 0)">
+            <rect width="410" height="60" rx="20" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+            <text x="24" y="35" font-family="'Inter'" font-size="13" fill="#64748b">Search entry zone limits...</text>
+            <text x="0" y="82" class="mock-caption">INPUT RECESSED DEFAULT WELL</text>
+            <text x="0" y="96" class="doc-code">bg-black/25 border-white/7 shadow-[inset_0_2px_4px]</text>
+          </g>
+
+          <!-- Input Well Focus (Outline breathing active) -->
+          <g transform="translate(470, 0)">
+            <rect width="410" height="60" rx="20" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.25)" stroke-width="2" filter="url(#emerald-glow)"/>
+            <text x="24" y="35" font-family="'Inter'" font-size="13" fill="#cbd5e1">Tata Motors</text>
+            <line x1="96" y1="20" x2="96" y2="40" stroke="#77F2E4" stroke-width="2"/>
+            <text x="0" y="82" class="mock-caption">INPUT ACTIVE FOCUS STATE</text>
+            <text x="0" y="96" class="doc-code">.liquid-glass-input:focus / outline-breathing</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- PRESETS DROPDOWN SPEC SHEET -->
+      <g transform="translate(0, 540)">
+        <rect width="880" height="350" rx="20" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.04)"/>
+        <g transform="translate(24, 28)">
+          <text x="0" y="12" class="doc-heading" font-size="15" fill="#a5b4fc">03 // FORMS, DROPDOWNS &amp; SCROLL LAYOUTS</text>
+          
+          <text x="0" y="44" class="doc-bullet">DROPDOWNS</text>
+          <text x="120" y="44" class="doc-body">Must render as absolute layered overlays above conversational fields.</text>
+
+          <text x="0" y="68" class="doc-bullet">HEIGHT RULE</text>
+          <text x="120" y="68" class="doc-body" fill="#cbd5e1"><tspan font-weight="700" fill="#ffffff">Strict max-height constraint</tspan>: Max-height restricted strictly to exactly <tspan font-weight="700" fill="#77F2E4">3.5 items</tspan> (exactly 3 questions with a 30% faded hint of the 4th item) to trigger standard scrollability without causing page overflow or layout viewport jumps on mobile.</text>
+
+          <text x="0" y="112" class="doc-bullet">SCROLLBARS</text>
+          <text x="120" y="112" class="doc-body">Hover scroll thumb uses a custom premium frosted glass element (`.glass-scrollbar`).</text>
+
+          <text x="0" y="140" class="doc-bullet">CARDS WRAP</text>
+          <text x="120" y="140" class="doc-code">.liquid-glass-panel { blur-32px saturate-185% opacity-0.018 turbulence }</text>
+          
+          <text x="0" y="174" class="doc-heading" font-size="12" fill="#64748b">MODAL SPECIFICATION</text>
+          <text x="0" y="204" class="doc-body">FAQ Slideout drawers use fixed right alignments starting at `top-[76px]` to sit symmetrically below the floating top bar capsule, with widths constrained to `340px`/`360px` to maintain side alignments without overlapping chat fields.</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- FIGMA PAGE 4: PATTERN GUIDELINES & DEV HANDOFF -->
+  <g transform="translate(1120, 1260)">
+    <rect width="960" height="1020" rx="28" class="glass-backing" filter="url(#panel-shadow)"/>
+    <line x1="28" y1="1" x2="932" y2="1" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.5"/>
+    
+    <g transform="translate(40, 50)">
+      <text x="0" y="0" class="header-sub">FIGMA PAGE 04 // PATTERN GUIDELINES</text>
+      <text x="0" y="28" class="header-section">4. Pattern Guidelines: Green &amp; Red Data Laws</text>
+      <line x1="0" y1="44" x2="880" y2="44" stroke="#1e293b" stroke-width="1.5"/>
+      
+      <!-- Green Emerald Law Summary card -->
+      <g transform="translate(0, 70)">
+        <rect width="880" height="190" rx="20" fill="rgba(16,185,129,0.03)" stroke="rgba(16,185,129,0.12)"/>
+        <line x1="16" y1="1" x2="864" y2="1" stroke="rgba(16,185,129,0.25)" stroke-width="1"/>
+        <g transform="translate(24, 28)">
+          <rect width="18" height="18" rx="5" fill="#10B981" filter="url(#emerald-glow)"/>
+          <text x="30" y="14" class="doc-green" font-size="14">THE EMERALD GREEN DATA LAW (ACTION &amp; GROWTH)</text>
+          <text x="0" y="44" class="doc-bullet">Rule 2.1.1</text>
+          <text x="100" y="44" class="doc-body" fill="#cbd5e1"><tspan font-weight="700" fill="#ffffff">BUY Call Badges</tspan>: Styled in a green capsule (`bg-emerald-500/10 text-emerald-400 border border-emerald-500/20`) containing an active green pulsing status indicator dot (`bg-emerald-500 animate-pulse`).</text>
+          <text x="0" y="68" class="doc-bullet">Rule 2.1.2</text>
+          <text x="100" y="68" class="doc-body" fill="#cbd5e1"><tspan font-weight="700" fill="#ffffff">Target Prices</tspan>: Bold monospaced figures styled in `text-emerald-500` representing target bounds.</text>
+          <text x="0" y="92" class="doc-bullet">Rule 2.1.3</text>
+          <text x="100" y="92" class="doc-body" fill="#cbd5e1"><tspan font-weight="700" fill="#ffffff">Upside Trend tags</tspan>: Encased in a green capsule alongside a `TrendingUp` icon (e.g. `30%`).</text>
+          <text x="0" y="116" class="doc-bullet">Rule 2.1.4</text>
+          <text x="100" y="116" class="doc-body" fill="#cbd5e1"><tspan font-weight="700" fill="#ffffff">Wealth Metrics</tspan>: Positive trailing returns, ROE %, ROCE %, and CAGRCAGR growth is styled green.</text>
+        </g>
+      </g>
+
+      <!-- Red Rose Law Summary card -->
+      <g transform="translate(0, 290)">
+        <rect width="880" height="190" rx="20" fill="rgba(239,68,68,0.03)" stroke="rgba(239,68,68,0.12)"/>
+        <line x1="16" y1="1" x2="864" y2="1" stroke="rgba(239,68,68,0.25)" stroke-width="1"/>
+        <g transform="translate(24, 28)">
+          <rect width="18" height="18" rx="5" fill="#EF4444"/>
+          <text x="30" y="14" class="doc-red" font-size="14">THE PROTECTIVE ROSE DATA LAW (RISK &amp; PROTECTION)</text>
+          <text x="0" y="44" class="doc-bullet">Rule 2.2.1</text>
+          <text x="100" y="44" class="doc-body" fill="#cbd5e1"><tspan font-weight="700" fill="#ffffff">SHORT Call Badges</tspan>: Styled in a red capsule (`bg-rose-500/10 text-rose-400 border border-rose-500/20`) containing an active red pulsing status indicator dot (`bg-rose-500 animate-pulse`).</text>
+          <text x="0" y="68" class="doc-bullet">Rule 2.2.2</text>
+          <text x="100" y="68" class="doc-body" fill="#cbd5e1"><tspan font-weight="700" fill="#ffffff">Protective Stop Loss (SL)</tspan>: Bold monospace warning text styled in `text-rose-400` representing critical protection guiding exits.</text>
+          <text x="0" y="92" class="doc-bullet">Rule 2.2.3</text>
+          <text x="100" y="92" class="doc-body" fill="#cbd5e1"><tspan font-weight="700" fill="#ffffff">Leverage Alert warnings</tspan>: Debt-to-Equity is highlighted red if it surpasses critical boundaries (`Debt/Equity > 1.50`).</text>
+          <text x="0" y="116" class="doc-bullet">Rule 2.2.4</text>
+          <text x="100" y="116" class="doc-body" fill="#cbd5e1"><tspan font-weight="700" fill="#ffffff">Volatility / Risk</tspan>: Volatility index (30D) or negative return periods are colored red to isolate risk vectors.</text>
+        </g>
+      </g>
+
+      <!-- Guidelines Do's & Don'ts -->
+      <g transform="translate(0, 510)">
+        <rect width="880" height="370" rx="20" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.04)"/>
+        <g transform="translate(24, 28)">
+          <text x="0" y="12" class="doc-heading">DESIGN DO'S &amp; DON'TS SPEC SHEET</text>
+          
+          <!-- Do's column -->
+          <g transform="translate(0, 40)">
+            <text x="0" y="0" font-family="'Inter'" font-size="12" font-weight="bold" fill="#10B981">✓ DO'S</text>
+            <text x="0" y="24" class="doc-body">•  Ensure all table row indices are padded with leading zeros (e.g. 01, 02) and centered.</text>
+            <text x="0" y="44" class="doc-body">•  Lock bottom answer view snapping coordinates block: 'start' when bot streams bubbles.</text>
+            <text x="0" y="64" class="doc-body">•  Keep spacing tokens mathematically constrained within 8px/4px base indexes.</text>
+            <text x="0" y="84" class="doc-body">•  Isolate the expandable table row drawer details using 3-column accordion alignments.</text>
+          </g>
+
+          <!-- Don'ts column -->
+          <g transform="translate(0, 160)">
+            <text x="0" y="0" font-family="'Inter'" font-size="12" font-weight="bold" fill="#EF4444">✗ DON'TS</text>
+            <text x="0" y="24" class="doc-body">•  Do NOT make categories row checkboxes or search Wells overflow vertical viewports.</text>
+            <text x="0" y="44" class="doc-body">•  Do NOT inject the deprecated Salted Camel (#D5AD76) color stops inside active cards.</text>
+            <text x="0" y="64" class="doc-body">•  Do NOT allow expandable tables to render without the (.liquid-glass-panel) backing layers.</text>
+            <text x="0" y="84" class="doc-body">•  Do NOT let custom scrollbar components render without a translucent frosted glass thumb.</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 3: ORGANISMS & FIGMA SANDBOX ==================== -->
+  
+  <!-- FIGMA PAGE 5: STOCK TABLE ORGANISM SPEC -->
+  <g transform="translate(2140, 220)">
+    <rect width="960" height="1000" rx="28" class="glass-backing" filter="url(#panel-shadow)"/>
+    <line x1="28" y1="1" x2="932" y2="1" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.5"/>
+    
+    <g transform="translate(40, 50)">
+      <text x="0" y="0" class="header-sub">FIGMA PAGE 05 // ORGANISMS ASSEMBLY</text>
+      <text x="0" y="28" class="header-section">5. Organism: Frosted Stock Table Component</text>
+      <line x1="0" y1="44" x2="880" y2="44" stroke="#1e293b" stroke-width="1.5"/>
+      
+      <!-- Component Badge -->
+      <g transform="translate(0, 60)">
+        <text x="0" y="12" class="doc-heading" font-size="14" fill="#ffffff">FROSTED GLASS STOCK TABLE DRAWING (DESKTOP BLUEPRINT)</text>
+        <text x="0" y="28" class="mock-caption">Fully Vector Grouped Elements — Scale-Ready for Figma Canvas</text>
+      </g>
+
+      <!-- Vector Table Frame -->
+      <g transform="translate(0, 110)">
+        <!-- Table border wrap -->
+        <rect width="880" height="340" rx="16" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+        
+        <!-- Table thead -->
+        <rect width="880" height="42" rx="16" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <text x="24" y="26" class="mock-table-header">#</text>
+        <text x="80" y="26" class="mock-table-header">COMPANY / SYMBOL</text>
+        <text x="280" y="26" class="mock-table-header">CALL ACTION</text>
+        <text x="420" y="26" class="mock-table-header">TRIGGER ZONE</text>
+        <text x="560" y="26" class="mock-table-header">TARGET PRICE</text>
+        <text x="700" y="26" class="mock-table-header">PROTECTIVE SL</text>
+        <text x="820" y="26" class="mock-table-header">UPSIDE</text>
+
+        <!-- Table Row 1 (GOKUL) -->
+        <g transform="translate(0, 42)">
+          <line x1="0" y1="0" x2="880" y2="0" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          
+          <text x="24" y="44" font-family="'JetBrains Mono'" font-size="12" fill="#64748b" font-weight="bold">01</text>
+          
+          <text x="80" y="38" class="mock-title" font-size="13">Gokul Agro Resources Ltd</text>
+          <!-- Ticker badge -->
+          <rect x="80" y="48" width="84" height="18" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <text x="122" y="60" font-family="'JetBrains Mono'" font-size="9" fill="#cbd5e1" font-weight="bold" text-anchor="middle">GOKULAGRO</text>
+
+          <!-- Action BUY badge -->
+          <rect x="260" y="26" width="72" height="24" rx="12" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1" filter="url(#emerald-glow)"/>
+          <circle cx="276" cy="38" r="3" fill="#10B981"/>
+          <text x="304" y="42" font-family="'Inter'" font-weight="800" font-size="9" fill="#10B981" text-anchor="middle">BUY</text>
+
+          <!-- Trigger range -->
+          <text x="460" y="40" font-family="'JetBrains Mono'" font-size="11.5" fill="#6BB6F3" font-weight="bold" text-anchor="middle">₹234.88 – ₹239.62</text>
+          
+          <!-- Target Price (Green) -->
+          <text x="600" y="40" font-family="'JetBrains Mono'" font-size="11.5" fill="#10B981" font-weight="extrabold" text-anchor="middle">₹308.43</text>
+
+          <!-- Stop Loss (Red) -->
+          <text x="740" y="40" font-family="'JetBrains Mono'" font-size="11.5" fill="#EF4444" font-weight="bold" text-anchor="middle">₹166.08</text>
+
+          <!-- Upside badge -->
+          <rect x="800" y="26" width="60" height="24" rx="8" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1"/>
+          <text x="830" y="42" font-family="'JetBrains Mono'" font-size="10" fill="#10B981" font-weight="extrabold" text-anchor="middle">30%</text>
+        </g>
+
+        <!-- Table Row 2 (Tata Short) -->
+        <g transform="translate(0, 132)">
+          <line x1="0" y1="0" x2="880" y2="0" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          
+          <text x="24" y="44" font-family="'JetBrains Mono'" font-size="12" fill="#64748b" font-weight="bold">02</text>
+          
+          <text x="80" y="38" class="mock-title" font-size="13">Heavy Industry Corp</text>
+          <rect x="80" y="48" width="54" height="18" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <text x="107" y="60" font-family="'JetBrains Mono'" font-size="9" fill="#cbd5e1" font-weight="bold" text-anchor="middle">HVIC</text>
+
+          <!-- Action SHORT badge -->
+          <rect x="260" y="26" width="80" height="24" rx="12" fill="rgba(239, 68, 68, 0.1)" stroke="rgba(239, 68, 68, 0.2)" stroke-width="1"/>
+          <circle cx="276" cy="38" r="3" fill="#EF4444"/>
+          <text x="308" y="42" font-family="'Inter'" font-weight="800" font-size="9" fill="#EF4444" text-anchor="middle">SHORT</text>
+
+          <!-- Trigger range -->
+          <text x="460" y="40" font-family="'JetBrains Mono'" font-size="11.5" fill="#6BB6F3" font-weight="bold" text-anchor="middle">₹450.20 – ₹458.10</text>
+          
+          <!-- Target Price (Green) -->
+          <text x="600" y="40" font-family="'JetBrains Mono'" font-size="11.5" fill="#10B981" font-weight="extrabold" text-anchor="middle">₹315.00</text>
+
+          <!-- Stop Loss (Red) -->
+          <text x="740" y="40" font-family="'JetBrains Mono'" font-size="11.5" fill="#EF4444" font-weight="bold" text-anchor="middle">₹510.40</text>
+
+          <!-- Upside badge -->
+          <rect x="800" y="26" width="60" height="24" rx="8" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1"/>
+          <text x="830" y="42" font-family="'JetBrains Mono'" font-size="10" fill="#10B981" font-weight="extrabold" text-anchor="middle">30%</text>
+        </g>
+
+        <!-- Row 3: Accordion Thesis reveal state -->
+        <g transform="translate(0, 222)">
+          <line x1="0" y1="0" x2="880" y2="0" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <rect width="880" height="80" rx="1" fill="rgba(255,255,255,0.015)"/>
+          
+          <!-- Thesis Accordion text -->
+          <text x="24" y="28" font-family="'JetBrains Mono'" font-size="9" fill="#f59e0b" font-weight="extrabold" letter-spacing="0.1em">▲ INVESTMENT THESIS</text>
+          <text x="24" y="52" font-family="'Inter'" font-style="italic" font-size="11.5" fill="#cbd5e1">"Negative earnings surprise and extensive short builds in futures open interest. Trading well below weekly 200 EMA."</text>
+        </g>
+      </g>
+
+      <!-- Spacing instructions details for developer handoff -->
+      <g transform="translate(0, 480)">
+        <rect width="880" height="420" rx="20" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.04)"/>
+        <g transform="translate(24, 28)">
+          <text x="0" y="12" class="doc-heading" font-size="15" fill="#a5b4fc">05 // CHAT BOX STOCK TABLE GRID LAWS</text>
+          
+          <text x="0" y="44" class="doc-bullet">FROSTED WRAPPER</text>
+          <text x="150" y="44" class="doc-body">Tables compile inside a responsive relative grid with border-collapse.</text>
+          
+          <text x="0" y="68" class="doc-bullet">ROW SPACING</text>
+          <text x="150" y="68" class="doc-body" fill="#ffffff"><tspan font-weight="700">Strict vertical py-4.5 (18px) cell height</tspan> and horizontal px-5 (20px).</text>
+
+          <text x="0" y="92" class="doc-bullet">COLUMN METRICS</text>
+          <text x="150" y="92" class="doc-body" fill="#cbd5e1">Index (`w-14` / centered) | Company (`min-w-[220px]`) | Action badge (`w-32`) | Blue Trigger Zone | Target Price monospace | Stop Loss monospace | Upside Trend container | Horizon Tenure | Details capsule.</text>
+
+          <text x="0" y="136" class="doc-bullet">HOVER SHIFTS</text>
+          <text x="150" y="136" class="doc-body">Transitions are 300ms cubic-bezier ease.</text>
+          <text x="150" y="152" class="doc-code">Dark Hover: hover:bg-white/[0.035]  |  Active Expanded Row: bg-white/[0.015]</text>
+          <text x="150" y="168" class="doc-code">Light Hover: hover:bg-slate-50      |  Active Expanded Row: bg-indigo-50/15</text>
+
+          <text x="0" y="204" class="doc-bullet">EXPAND DRAWERS</text>
+          <text x="150" y="204" class="doc-body">Toggling expands a details accordion row. Inside: grid-cols-3 divided into Technical indicator parameters matrix, Fundamental ratios parameters shield, and italics-styled analyst thesis statement.</text>
+
+          <text x="0" y="250" class="doc-bullet">MOBILE SCALE</text>
+          <text x="150" y="250" class="doc-body">Viewports &lt;768px instantly collapse row grids into stacked floating card list elements (rounded-2xl, p-4.5) using double-column subgrids to keep metrics readable.</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- FIGMA PAGE 6: PRESETS CARD, SANDBOX & CHANGELOG -->
+  <g transform="translate(2140, 1260)">
+    <rect width="960" height="1020" rx="28" class="glass-backing" filter="url(#panel-shadow)"/>
+    <line x1="28" y1="1" x2="932" y2="1" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.5"/>
+    
+    <g transform="translate(40, 50)">
+      <text x="0" y="0" class="header-sub">FIGMA PAGE 06 // SANDBOX PLAYGROUND</text>
+      <text x="0" y="28" class="header-section">6. Specialized Organisms &amp; Release Sandbox</text>
+      <line x1="0" y1="44" x2="880" y2="44" stroke="#1e293b" stroke-width="1.5"/>
+      
+      <!-- Component Badge -->
+      <g transform="translate(0, 60)">
+        <text x="0" y="12" class="doc-heading" font-size="14" fill="#ffffff">CHAT PRESETS CARD ASSEMBLY (ORGANISM BLUEPRINT)</text>
+        <text x="0" y="28" class="mock-caption">Responsive wrapper containing categories rows and aligned triggers</text>
+      </g>
+
+      <!-- Vector presets card drawing shape -->
+      <g transform="translate(0, 110)">
+        <!-- Frosted card body -->
+        <rect width="880" height="340" rx="28" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/>
+        
+        <!-- Search bar input mock -->
+        <g transform="translate(24, 20)">
+          <rect width="832" height="100" rx="20" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.08)"/>
+          <text x="20" y="28" font-family="'Inter'" font-weight="800" font-size="10" fill="#818cf8" letter-spacing="0.1em">ASK WAYAX</text>
+          <text x="20" y="58" font-family="'Inter'" font-size="13" fill="#64748b">Ask WayaX about entry zones, stocks to buy...</text>
+          <!-- Expander toggle button at bottom center -->
+          <rect x="356" y="70" width="120" height="20" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+          <text x="416" y="83" font-family="'Inter'" font-weight="700" font-size="9.5" fill="#a5b4fc" text-anchor="middle">Hide Presets ▲</text>
+        </g>
+
+        <!-- Presets area below input -->
+        <g transform="translate(24, 136)">
+          <line x1="0" y1="0" x2="832" y2="0" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          
+          <!-- Preset Header -->
+          <g transform="translate(0, 12)">
+            <text x="0" y="16" font-family="'Inter'" font-weight="800" font-size="11" fill="#818cf8" letter-spacing="0.15em">CHAT PRESET</text>
+            
+            <!-- Check all questions button -->
+            <rect x="662" y="0" width="170" height="26" rx="13" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+            <text x="747" y="16" font-family="'Inter'" font-weight="800" font-size="9" fill="#a5b4fc" text-anchor="middle">CHECK ALL QUESTIONS</text>
+          </g>
+
+          <!-- Categories items row (exactly matching mobile px-2 py-0.5) -->
+          <g transform="translate(0, 52)">
+            <!-- Item 1 (BUY - Active) -->
+            <rect width="130" height="26" rx="13" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)"/>
+            <text x="65" y="16" font-family="'Inter'" font-weight="700" font-size="9.5" fill="#ffffff" text-anchor="middle">▲ Stocks to Buy</text>
+
+            <!-- Item 2 (Short) -->
+            <g transform="translate(146, 0)">
+              <rect width="130" height="26" rx="13" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)"/>
+              <text x="65" y="16" font-family="'Inter'" font-weight="700" font-size="9.5" fill="#94a3b8" text-anchor="middle">⚠ Short selling</text>
+            </g>
+
+            <!-- Item 3 (Long) -->
+            <g transform="translate(292, 0)">
+              <rect width="130" height="26" rx="13" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)"/>
+              <text x="65" y="16" font-family="'Inter'" font-weight="700" font-size="9.5" fill="#94a3b8" text-anchor="middle">✦ Long term picks</text>
+            </g>
+
+            <!-- Item 4 (Track) -->
+            <g transform="translate(438, 0)">
+              <rect width="130" height="26" rx="13" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)"/>
+              <text x="65" y="16" font-family="'Inter'" font-weight="700" font-size="9.5" fill="#94a3b8" text-anchor="middle">🔍 Track record</text>
+            </g>
+
+            <!-- Item 5 (About) -->
+            <g transform="translate(584, 0)">
+              <rect width="130" height="26" rx="13" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)"/>
+              <text x="65" y="16" font-family="'Inter'" font-weight="700" font-size="9.5" fill="#94a3b8" text-anchor="middle">▾ About Waya</text>
+            </g>
+          </g>
+
+          <!-- Question list nested inside, constrained to exactly 3 items + hint of 4th -->
+          <g transform="translate(0, 94)">
+            <line x1="0" y1="0" x2="832" y2="0" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            
+            <!-- Questions rows (vertical stack) -->
+            <g transform="translate(0, 10)">
+              <rect width="800" height="22" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)"/>
+              <text x="12" y="14" font-family="'Inter'" font-size="10.5" fill="#cbd5e1">Give me list of stocks I can buy</text>
+              
+              <rect y="26" width="800" height="22" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)"/>
+              <text x="12" y="40" font-family="'Inter'" font-size="10.5" fill="#cbd5e1">Give me list of stocks that can give 10% returns in 30 days</text>
+              
+              <rect y="52" width="800" height="22" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)"/>
+              <text x="12" y="66" font-family="'Inter'" font-size="10.5" fill="#cbd5e1">Give me 3 stocks in IT sector I can buy today</text>
+
+              <!-- 4th item (Hint State) -->
+              <rect y="78" width="800" height="22" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" opacity="0.3"/>
+              <text x="12" y="92" font-family="'Inter'" font-size="10.5" fill="#cbd5e1" opacity="0.3">Show me Pharma stocks currently in the BUY zone</text>
+
+              <!-- Nested Glass Scrollbar -->
+              <rect x="816" y="2" width="4" height="96" rx="2" fill="rgba(255,255,255,0.01)"/>
+              <rect x="816" y="10" width="4" height="35" rx="2" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <!-- Sandbox & Changelog area -->
+      <g transform="translate(0, 480)">
+        <rect width="880" height="420" rx="20" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.04)"/>
+        <g transform="translate(24, 28)">
+          <text x="0" y="12" class="doc-heading" font-size="15" fill="#a5b4fc">06 // SANDBOX WORKSPACE &amp; RELEASE CHANGELOG</text>
+          
+          <text x="0" y="44" class="doc-body" fill="#ffffff"><tspan font-weight="700">Sandbox Playground</tspan>: This column serves as a testing playground area. Developers and designers can duplicate the visual component frames, drag them here, and experiment with customized margin grids or alternate color ratios without affecting the master tokens library.</text>
+
+          <text x="0" y="120" class="doc-heading" font-size="12" fill="#64748b">RELEASE CHANGELOG LOGS</text>
+          
+          <!-- Changelog items -->
+          <g transform="translate(0, 140)">
+            <text x="0" y="16" class="doc-bullet">v2.1.0  </text>
+            <text x="80" y="16" class="doc-body" fill="#ffffff"><tspan font-weight="700">Frosted Glass Theme Refactoring</tspan>: Re-aligned the design board itself to use caustics refraction circles, a mathematical background dotted grid pattern, and specular top highlights edges.</text>
+
+            <text x="0" y="44" class="doc-bullet">v2.0.4  </text>
+            <text x="80" y="44" class="doc-body" fill="#ffffff"><tspan font-weight="700">Figma Community Sync</tspan>: Re-arranged the entire visual canvas into a 2x3 grid mapping exactly to the 6 standard directories of the "Organising Design Systems" community template.</text>
+
+            <text x="0" y="72" class="doc-bullet">v2.0.0  </text>
+            <text x="80" y="72" class="doc-body" fill="#ffffff"><tspan font-weight="700">Salted Camel Deprecated</tspan>: Deprecated color hex `#D5AD76` from all color Stops. Gradientstops updated cleanly to a Teal-to-Blue stops config (`#77F2E4` and `#6BB6F3`).</text>
+
+            <text x="0" y="100" class="doc-bullet">v1.8.2  </text>
+            <text x="80" y="100" class="doc-body" fill="#ffffff"><tspan font-weight="700">Exact Logo Integration</tspan>: Re-created the brand symbol to exactly use the 3-layered glass logo underlay refraction blurs and golden insignia image asset.</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

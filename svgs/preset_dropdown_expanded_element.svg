@@ -1,0 +1,175 @@
+<svg width="860" height="300" viewBox="0 0 860 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT CHAT PRESET PILLS ROW - EXPANDED STATE (860px x 300px)
+    Strictly extracted and compiled from the provided React DOM HTML snippet:
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    - Frosted glass panel backdrop with active "Stocks to Buy" category highlighted
+    - Expanded scrollable questions dropdown displaying SEBI-guided advisory list
+    - Premium "Select ->" hover indicator details styled in monospace next to custom indigo dots
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Light leak glowing border gradient -->
+    <linearGradient id="exp-leak-border" x1="0" y1="0" x2="860" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.3"/>
+      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Glowing backlight for active buttons -->
+    <filter id="exp-btn-glow" x="-10%" y="-15%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ffffff" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Overall panel shadow -->
+    <filter id="exp-panel-shadow" x="-5%" y="-10%" width="110%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== LAYER 1: GLASS CONSOLE CONTAINER ==================== -->
+  <rect x="0" y="4" width="860" height="292" rx="16" fill="#0d0e12" fill-opacity="0.4" stroke="url(#exp-leak-border)" stroke-width="1.2" filter="url(#exp-panel-shadow)"/>
+  
+  <!-- Specular inner edge highlight -->
+  <rect x="0.5" y="4.5" width="859" height="291" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- ==================== LAYER 2: HEADER ROWS ==================== -->
+  
+  <!-- Left Header Group: mini logo & "CHAT PRESET" Label -->
+  <g transform="translate(16, 18)">
+    <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="0" y="0" width="16" height="16" filter="brightness(1.1)"/>
+    <text x="22" y="12" font-family="'JetBrains Mono', 'Fira Code', monospace" font-weight="800" font-size="10" fill="#a5b4fc" letter-spacing="0.12em">CHAT PRESET</text>
+  </g>
+
+  <!-- Right Header Group: "CHECK ALL QUESTIONS" Button Capsule -->
+  <g transform="translate(668, 12)">
+    <rect width="176" height="26" rx="13" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    
+    <!-- lucide-circle-question-mark -->
+    <g transform="translate(10, 6)" stroke="#818cf8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="7" cy="7" r="6"/>
+      <path d="M5.3 5.3a2 2 0 0 1 3.4 0c0 1.2-1.7 1.8-1.7 1.8"/>
+      <line x1="7" y1="9.8" x2="7.01" y2="9.8"/>
+    </g>
+    <text x="96" y="17" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#cbd5e1" text-anchor="middle">CHECK ALL QUESTIONS</text>
+  </g>
+
+  <!-- Horizontal divider line separating headers from category pills -->
+  <line x1="0" y1="48" x2="860" y2="48" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+
+  <!-- ==================== LAYER 3: CATEGORIES HORIZONTAL PILLS ROW ==================== -->
+  
+  <g transform="translate(16, 60)">
+    
+    <!-- PILL 1: Stocks to Buy (Active Highlighted State) -->
+    <g transform="translate(0, 0)">
+      <!-- Specular white border for active selection -->
+      <rect width="146" height="34" rx="17" fill="rgba(255, 255, 255, 0.15)" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1" filter="url(#exp-btn-glow)"/>
+      
+      <!-- lucide-trending-up (solid white) -->
+      <g transform="translate(14, 9)" stroke="#ffffff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5h4v4"/>
+        <path d="m16 5-6.5 6.5-3.5-3.5L2 13"/>
+      </g>
+      
+      <text x="80" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff" text-anchor="middle">Stocks to Buy</text>
+      
+      <!-- lucide-chevron-down (Active rotated-180 and solid white) -->
+      <path d="M129 18l-3.5-3.5-3.5 3.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+
+    <!-- PILL 2: Short selling -->
+    <g transform="translate(156, 0)">
+      <rect width="144" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <g transform="translate(14, 9)" stroke="#94a3b8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m14.5 12-5.3-9.3a1.3 1.3 0 0 0-2.3 0L1.5 12a1.3 1.3 0 0 0 1.1 2h10.8a1.3 1.3 0 0 0 1.1-2z"/>
+        <line x1="8" y1="6" x2="8" y2="9"/>
+        <line x1="8" y1="11.5" x2="8.01" y2="11.5"/>
+      </g>
+      <text x="80" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Short selling</text>
+      <path d="M120 15l3.5 3.5 3.5-3.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+
+    <!-- PILL 3: Long term picks -->
+    <g transform="translate(310, 0)">
+      <rect width="154" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <g transform="translate(12, 9)" stroke="#94a3b8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m7.3 1.8 1 3.7c.1.3.3.5.5.6l3.7 1a.6.6 0 0 1 0 1.3l-3.7 1a.8.8 0 0 0-.5.6l-1 3.7a.6.6 0 0 1-1.3 0l-1-3.7a.8.8 0 0 0-.5-.6l-3.7-1a.6.6 0 0 1 0-1.3l3.7-1a.8.8 0 0 0 .5-.6l1-3.7a.6.6 0 0 1 1.3 0z"/>
+        <path d="M13.3 1.3v2.6"/>
+        <path d="M14.6 2.6H12"/>
+      </g>
+      <text x="82" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Long term picks</text>
+      <path d="M128 15l3.5 3.5 3.5-3.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+
+    <!-- PILL 4: Track record -->
+    <g transform="translate(474, 0)">
+      <rect width="144" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <g transform="translate(14, 9)" stroke="#94a3b8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="6" cy="6" r="4.5"/>
+        <line x1="9.5" y1="9.5" x2="13" y2="13"/>
+      </g>
+      <text x="80" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Track record</text>
+      <path d="M120 15l3.5 3.5 3.5-3.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+
+    <!-- PILL 5: About Waya -->
+    <g transform="translate(628, 0)">
+      <rect width="138" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="12" y="10" width="14" height="14"/>
+      <text x="76" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">About Waya</text>
+      <path d="M114 15l3.5 3.5 3.5-3.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+
+  </g>
+
+  <!-- Top divider line for the dropdown drawer list (border-white/5) -->
+  <line x1="0" y1="108" x2="860" y2="108" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+
+  <!-- ==================== LAYER 4: EXPANDED QUESTIONS LIST ==================== -->
+  
+  <g transform="translate(16, 118)">
+    
+    <!-- Question Button 1 (Hover state simulated with indigo border) -->
+    <g transform="translate(0, 0)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1.2"/>
+      
+      <!-- Bullet indicator with breathing glow -->
+      <circle cx="16" cy="17" r="3" fill="#818cf8"/>
+      
+      <!-- Question Title -->
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#ffffff">Give me list of stocks I can buy</text>
+      
+      <!-- Right Side "Select ->" Action indicator -->
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="9" fill="#818cf8" text-anchor="end" letter-spacing="0.05em">Select →</text>
+    </g>
+
+    <!-- Question Button 2 -->
+    <g transform="translate(0, 42)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Give me list of stocks that can give 10% returns in 30 days</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- Question Button 3 -->
+    <g transform="translate(0, 84)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Give me 3 stocks in IT sector I can buy today</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- Question Button 4 -->
+    <g transform="translate(0, 126)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Show me Pharma stocks currently in the BUY zone</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+  </g>
+</svg>

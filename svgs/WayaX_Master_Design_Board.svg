@@ -1,0 +1,601 @@
+<svg width="3600" height="2000" viewBox="0 0 3600 2000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX MASTER VECTOR BLUEPRINT DESIGN BOARD (3600px x 2000px)
+    ======================================================================
+    A unified grand canvas aggregating all 19 handcrafted, high-fidelity,
+    liquid-glass UI kit components. 
+    
+    COMPILER SPECIFICATIONS:
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    - Grounded Canvas with gridlines, title labels, and precise groupings
+    - Drag-and-drop compatible for instant Figma asset extraction
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Background Space Theme Gradients -->
+    <radialGradient id="board-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a0c10"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </radialGradient>
+
+    <!-- Header Logo / Title Accent Glows -->
+    <linearGradient id="header-accent" x1="0" y1="0" x2="3600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#77F2E4"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Component Title Label Styles -->
+    <linearGradient id="label-text-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <pattern id="board-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Import all component dependencies to prevent overlap -->
+    <linearGradient id="glow-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#77F2E4"/>
+      <stop offset="100%" stop-color="#6BB6F3"/>
+    </linearGradient>
+
+    <linearGradient id="text-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <linearGradient id="glass-fill-y" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+
+    <linearGradient id="glass-border-y" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Blurs -->
+    <filter id="blur-75-main" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="75"/>
+    </filter>
+    <filter id="blur-35-main" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+    <filter id="glass-sub-blur-main" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <filter id="card-shadow-main" x="-5%" y="-15%" width="110%" height="135%">
+      <feDropShadow dx="0" dy="12" stdDeviation="32" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="presets-leak-shadow-main" x="-5%" y="-20%" width="110%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="onboard-shadow-main" x="-10%" y="-5%" width="120%" height="110%">
+      <feDropShadow dx="0" dy="16" stdDeviation="32" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="onboard-glow-main" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ffffff" flood-opacity="0.1"/>
+    </filter>
+
+    <radialGradient id="dots-mask-main" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.39"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="dots-mask-el-main">
+      <rect x="0" y="0" width="880" height="260" fill="url(#dots-mask-main)"/>
+    </mask>
+    <pattern id="dots-pattern-main" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- ==================== LAYER 1: GRAND CANVAS GRID BACKDROP ==================== -->
+  <rect width="3600" height="2000" fill="url(#board-bg)"/>
+  <rect width="3600" height="2000" fill="url(#board-grid)"/>
+
+  <!-- ==================== LAYER 2: DESIGN SYSTEM HEADER TITLE ==================== -->
+  <g transform="translate(100, 80)">
+    <!-- Grand Accent Title -->
+    <text y="0" font-family="'Sora', 'Outfit', sans-serif" font-weight="900" font-size="42" fill="url(#header-accent)">WayaX Design System</text>
+    <text y="32" font-family="'Inter', sans-serif" font-weight="600" font-size="14" fill="#64748b" letter-spacing="0.05em">1:1 EXACT LIQUID GLASS VECTOR BLUEPRINTS — FIGMA DRAG-AND-DROP COMPATIBLE</text>
+    <!-- Dividing line -->
+    <line x1="0" y1="54" x2="3400" y2="54" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1.5"/>
+  </g>
+
+  <!-- ======================================================================
+       COLUMN 1: NAVIGATION & FLIGHT CONTROLS (X = 100)
+       ====================================================================== -->
+  
+  <g transform="translate(100, 180)">
+    <!-- Section Label -->
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="12" fill="url(#label-text-grad)" letter-spacing="0.1em">01 • LAYOUT &amp; INTERACTIVE TOGGLES</text>
+    
+    <!-- left side-chat panel placement (x=0, y=40, w=280, h=540) -->
+    <g transform="translate(0, 40)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">LEFT SIDE-CHAT HISTORY PANEL</text>
+      <!-- Nested Side-Chat Panel SVG contents -->
+      <rect width="280" height="540" rx="16" fill="#111318" fill-opacity="0.94" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+      <!-- Header -->
+      <g transform="translate(16, 14)">
+        <rect width="32" height="32" rx="8" fill="#0d121d" stroke="rgba(51, 65, 85, 0.3)" stroke-width="1"/>
+        <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="6" y="6" width="20" height="20"/>
+        <text x="42" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="14" fill="#ffffff">WayaX</text>
+      </g>
+      <g transform="translate(232, 14)">
+        <rect width="32" height="32" rx="8" fill="none" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+        <rect x="10" y="10" width="12" height="12" rx="1.5" stroke="#64748b" stroke-width="1.5" fill="none"/>
+        <line x1="14" y1="10" x2="14" y2="22" stroke="#64748b" stroke-width="1.5"/>
+      </g>
+      <line x1="0" y1="60" x2="280" y2="60" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      <!-- Controls -->
+      <g transform="translate(12, 72)">
+        <rect width="256" height="38" rx="11" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+        <path d="M102 19h12M108 13v12" stroke="#6366f1" stroke-width="1.8" stroke-linecap="round"/>
+        <text x="124" y="23" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#ffffff">New Advisory Chat</text>
+        <g transform="translate(0, 48)">
+          <rect width="256" height="34" rx="10" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+          <circle cx="18" cy="17" r="4.5" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+          <line x1="21.5" y1="20.5" x2="25" y2="24" stroke="#94a3b8" stroke-width="1.2"/>
+          <text x="36" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#475569">Search conversations...</text>
+        </g>
+      </g>
+      <!-- History item -->
+      <g transform="translate(12, 172)">
+        <text x="8" y="14" font-family="'Inter', sans-serif" font-weight="700" font-size="9.5" fill="#475569" letter-spacing="0.08em">ADVISORY HISTORY</text>
+        <g transform="translate(0, 26)">
+          <rect width="256" height="38" rx="11" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(99,102,241,0.2)" stroke-width="1.2"/>
+          <rect x="10" y="11" width="14" height="16" rx="2" fill="#6366f1"/>
+          <text x="38" y="23" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#ffffff">Initial Advisory Consult</text>
+        </g>
+      </g>
+      <!-- Profile Footer -->
+      <g transform="translate(0, 484)">
+        <line x1="0" y1="0" x2="280" y2="0" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <rect width="28" height="28" rx="8" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+          <circle cx="14" cy="11" r="4.5" stroke="#a855f7" stroke-width="1.2" fill="none"/>
+          <path d="M8 22c0-3 3-5 6-5s6 2 6 5" stroke="#a855f7" stroke-width="1.2" fill="none"/>
+          <text x="38" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1">Profile</text>
+          <g transform="translate(80, 5)">
+            <rect width="38" height="14" rx="3.5" fill="rgba(99, 102, 241, 0.1)" stroke="rgba(99, 102, 241, 0.2)" stroke-width="0.8"/>
+            <text x="19" y="10.5" font-family="'Inter', sans-serif" font-weight="800" font-size="8" fill="#818cf8" text-anchor="middle">ACTIVE</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- sidebar toggle button placement (x=0, y=620, w=132, h=48) -->
+    <g transform="translate(0, 620)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">SIDEBAR TOGGLE BUTTON</text>
+      <rect width="124" height="40" rx="12" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+      <g transform="translate(6, 6)">
+        <rect width="28" height="28" rx="8" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+        <rect x="8" y="8" width="12" height="12" rx="1.5" stroke="#cbd5e1" stroke-width="1.5" fill="none"/>
+      </g>
+      <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="42" y="10" width="20" height="20"/>
+      <text x="68" y="24" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#e2e8f0">WayaX</text>
+    </g>
+
+    <!-- floating action bar placement (x=0, y=710, w=176, h=48) -->
+    <g transform="translate(0, 710)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">TOP-RIGHT FLOATING ACTION BAR</text>
+      <rect width="168" height="40" rx="20" fill="#0d0e12" fill-opacity="0.6" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <g transform="translate(4, 4)">
+        <!-- Sun, FAQ, Refresh, Reset -->
+        <circle cx="16" cy="16" r="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+        <circle cx="10" cy="10" r="5" stroke="#818cf8" stroke-width="1.5" fill="none" transform="translate(6,6)"/>
+        <circle cx="52" cy="16" r="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+        <circle cx="52" cy="16" r="4" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+        <circle cx="88" cy="16" r="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+        <path d="M84 12l8 8m0-8l-8 8" stroke="#77f2e4" stroke-width="1.8"/>
+        <circle cx="124" cy="16" r="16" fill="rgba(255,75,75,0.04)" stroke="rgba(255,75,75,0.15)"/>
+        <path d="M120 12l8 8m0-8l-8 8" stroke="#f43f5e" stroke-width="1.8"/>
+      </g>
+    </g>
+
+    <!-- timeline player placement (x=0, y=800, w=260, h=48) -->
+    <g transform="translate(0, 800)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">INTRO ANIMATION TIMELINE PLAYER</text>
+      <rect width="252" height="40" rx="20" fill="#000000" fill-opacity="0.4" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+      <g transform="translate(4, 4)">
+        <circle cx="16" cy="16" r="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.05)"/>
+        <path d="M13 10l8 6-8 6z" fill="#ffffff"/>
+        <rect x="44" y="14" width="80" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+        <circle cx="44" cy="16" r="5" fill="#ffffff" stroke="#818cf8" stroke-width="1.5"/>
+        <text x="134" y="20" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10" fill="#94a3b8">1/5</text>
+        <g transform="translate(168, 0)">
+          <rect width="72" height="32" rx="16" fill="rgba(99,102,241,0.2)" stroke="rgba(99,102,241,0.2)"/>
+          <text x="24" y="20" font-family="'Inter', sans-serif" font-weight="700" font-size="10" fill="#cbd5e1">SKIP</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ======================================================================
+       COLUMN 2: WELCOME PANEL, INPUT WELLS & CHAT PRESETS (X = 420)
+       ====================================================================== -->
+  
+  <g transform="translate(420, 180)">
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="12" fill="url(#label-text-grad)" letter-spacing="0.1em">02 • WELCOME PANEL, INPUTS &amp; PRESETS</text>
+
+    <!-- welcome panel placement (x=0, y=40, w=640, h=300) -->
+    <g transform="translate(0, 40)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">CENTER WELCOME PANEL GREETINGS</text>
+      
+      <!-- rotating glows -->
+      <g transform="translate(320, 90)">
+        <ellipse cx="0" cy="0" rx="260" ry="90" fill="url(#glow-grad)" fill-opacity="0.12" filter="url(#blur-75-main)"/>
+        <ellipse cx="0" cy="0" rx="130" ry="50" fill="url(#glow-grad)" fill-opacity="0.08" filter="url(#blur-35-main)"/>
+      </g>
+      <rect x="0" y="0" width="640" height="200" fill="url(#dots-pattern-main)" mask="url(#dots-mask-el-main)" opacity="0.6"/>
+      <g transform="translate(280, 50)">
+        <rect width="80" height="80" rx="16" fill="url(#main-glass-fill)" stroke="url(#main-glass-border)" stroke-width="1.5"/>
+        <g transform="translate(20, 20) scale(0.333)" fill="#ffffff">
+          <path d="M0 24 C0 10.7, 10.7 0, 24 0 H26 C29.3 0, 32 2.7, 32 6 V96 C32 109.3, 21.3 120, 8 120 H4 C1.8 120, 0 118.2, 0 116.0 V24 Z" />
+          <path d="M44 32 C44 27.6, 47.6 24, 52 24 H68 C72.4 24, 76 27.6, 76 32 V72 C76 89.7, 61.7 104, 44 104 C44 104, 44 96, 44 72 V32 Z" />
+          <path d="M88 0 C101.3 0, 120 10.7, 120 24 V116 C120 118.2, 118.2 120, 116 120 H112 C98.7 120, 88 109.3, 88 96 V0 Z" />
+        </g>
+      </g>
+      <text x="320" y="172" font-family="'Sora', sans-serif" font-weight="800" font-size="28" fill="#ffffff" text-anchor="middle">Welcome to WayaX, <tspan fill="url(#text-grad)">Amit</tspan></text>
+      <text x="320" y="208" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#94a3b8" text-anchor="middle">Select a preset below or enter a custom query to research breakouts.</text>
+    </g>
+
+    <!-- compact search capsule placement (x=0, y=300, w=860, h=52) -->
+    <g transform="translate(0, 300)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">COMPACT CONSOLE INPUT WELL CAPSULE</text>
+      <rect width="852" height="40" rx="20" fill="#0d0e12" fill-opacity="0.5" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1.2"/>
+      <path d="m28.5 17.5-3.5 3.5a1.1 1.1 0 0 1-1.5-1.5l3.5-3.5" stroke="#94a3b8" stroke-width="1.8"/>
+      <text x="44" y="25" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#475569">Ask WayaX about stocks, entry zones, F&amp;O, portfolio advisory...</text>
+      <g transform="translate(816, 5)" opacity="0.25">
+        <rect width="30" height="30" rx="9" fill="#151c2f"/>
+      </g>
+    </g>
+
+    <!-- chat preset panel placement (x=0, y=380, w=860, h=110) -->
+    <g transform="translate(0, 380)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">CHAT PRESETS CARD CONSOLE</text>
+      <rect width="860" height="110" rx="16" fill="#0d0e12" fill-opacity="0.4" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+      <g transform="translate(16, 14)">
+        <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="0" y="0" width="16" height="16"/>
+        <text x="22" y="12" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="10" fill="#a5b4fc" letter-spacing="0.12em">CHAT PRESET</text>
+      </g>
+      <g transform="translate(668, 8)">
+        <rect width="176" height="26" rx="13" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)"/>
+        <text x="96" y="17" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#cbd5e1" text-anchor="middle">CHECK ALL QUESTIONS</text>
+      </g>
+      <line x1="0" y1="44" x2="860" y2="44" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <g transform="translate(16, 56)">
+        <!-- Pill row -->
+        <rect width="146" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)"/>
+        <text x="73" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Stocks to Buy</text>
+      </g>
+    </g>
+
+    <!-- preset dropdown expanded state (x=0, y=520, w=860, h=300) -->
+    <g transform="translate(0, 520)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">EXPANDED DROPDOWN DRAWER CONSOLE</text>
+      <rect width="860" height="300" rx="16" fill="#0d0e12" fill-opacity="0.4" stroke="rgba(255,255,255,0.08)" stroke-width="1.2"/>
+      <g transform="translate(16, 60)">
+        <rect width="146" height="34" rx="17" fill="rgba(255, 255, 255, 0.15)" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1"/>
+        <text x="73" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff" text-anchor="middle">Stocks to Buy</text>
+        <path d="M129 18l-3.5-3.5-3.5 3.5" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+      </g>
+      <line x1="0" y1="108" x2="860" y2="108" stroke="rgba(255, 255, 255, 0.05)"/>
+      <g transform="translate(16, 118)">
+        <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1.2"/>
+        <circle cx="16" cy="17" r="3.2" fill="#818cf8"/>
+        <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#ffffff">Give me list of stocks I can buy</text>
+        <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="9" fill="#818cf8" text-anchor="end">Select →</text>
+      </g>
+    </g>
+
+    <!-- preset expanded 10-query board placement (x=0, y=850, w=860, h=430) -->
+    <g transform="translate(0, 850)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">FULL 10-ITEM ADVISORY QUERY STACK BOARD</text>
+      <rect width="860" height="422" rx="16" fill="#0d0e12" fill-opacity="0.4" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+      <g transform="translate(16, 18)">
+        <!-- Stack multiple questions with fading scrolling layouts -->
+        <g transform="translate(0, 0)">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1.2"/>
+          <circle cx="16" cy="15" r="3" fill="#818cf8"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#ffffff">Give me list of stocks I can buy</text>
+        </g>
+        <g transform="translate(0, 36)" opacity="0.9">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)"/>
+          <circle cx="16" cy="15" r="3" fill="#6366f1"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">Give me list of stocks that can give 10% returns in 30 days</text>
+        </g>
+        <g transform="translate(0, 72)" opacity="0.9">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">Give me 3 stocks in IT sector I can buy today</text>
+        </g>
+        <g transform="translate(0, 108)" opacity="0.8">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">Show me Pharma stocks currently in the BUY zone</text>
+        </g>
+        <g transform="translate(0, 144)" opacity="0.8">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">Which Capital Goods stocks are in the BUY zone right now?</text>
+        </g>
+        <g transform="translate(0, 180)" opacity="0.7">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">Give me 2 Chemicals stocks to buy this week</text>
+        </g>
+        <g transform="translate(0, 216)" opacity="0.7">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">Show me FMCG stocks in the BUY zone</text>
+        </g>
+        <g transform="translate(0, 252)" opacity="0.6">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">Which Metals stocks can I buy right now?</text>
+        </g>
+        <g transform="translate(0, 288)" opacity="0.4">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">Give me a diversified portfolio of 10 stocks for 1 year</text>
+        </g>
+        <g transform="translate(0, 324)" opacity="0.25">
+          <rect width="828" height="30" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)"/>
+          <text x="28" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">Give me 5 Small Cap stocks with high growth potential</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ======================================================================
+       COLUMN 3: CHAT VIEWPORT, SYSTEM DISCLAIMERS & RECOMMENDATIONS (X = 1320)
+       ====================================================================== -->
+  
+  <g transform="translate(1320, 180)">
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="12" fill="url(#label-text-grad)" letter-spacing="0.1em">03 • DIALOGUE &amp; ANALYTICAL METRICS</text>
+
+    <!-- conversation viewport layout placement (x=0, y=40, w=860, h=480) -->
+    <g transform="translate(0, 40)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">CONVERSATION VIEWPORT &amp; COMPLIANCE FOOTER</text>
+      <rect width="860" height="480" rx="20" fill="rgba(15,20,30,0.4)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+      
+      <!-- user query bubble inside -->
+      <g transform="translate(16, 20)">
+        <text x="772" y="14" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="9" fill="#475569" text-anchor="end">AMIT • 11:30 AM</text>
+        <path d="M424 34 C424 27.3 429.3 22 436 22 H768 C774 22 776 22 776 22 L776 78 C776 84.6 770.6 90 764 90 H440 C431.1 90 424 82.8 424 74 V34 Z" fill="url(#glow-grad)" fill-opacity="0.2" stroke="#6366f1" stroke-width="1.2"/>
+        <text x="444" y="60" font-family="'Inter', sans-serif" font-weight="600" font-size="12.5" fill="#f1f5f9">Give me list of stocks I can buy</text>
+        <g transform="translate(788, 22)">
+          <rect width="36" height="36" rx="10" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+          <text x="18" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="11" fill="#818cf8" text-anchor="middle">AM</text>
+        </g>
+      </g>
+
+      <!-- footer dashboard console area inside at y="130" -->
+      <g transform="translate(0, 130)">
+        <rect width="860" height="350" rx="20" fill="rgba(0, 0, 0, 0.2)" stroke="url(#footer-border-spec)" stroke-width="1"/>
+        <g id="survey-capsule-nested" transform="translate(16, 16)">
+          <rect width="828" height="194" rx="16" fill="#0d0e12" fill-opacity="0.8" stroke="url(#survey-border-spec)" stroke-width="1.2"/>
+          <g transform="translate(16, 16)">
+            <text x="0" y="14" font-family="'Inter', sans-serif" font-weight="700" font-size="12" fill="#ffffff">Before I dive in — how long are you thinking of staying invested?</text>
+          </g>
+        </g>
+        <g id="search-capsule-nested" transform="translate(16, 226)">
+          <rect width="828" height="38" rx="19" fill="#0d0e12" fill-opacity="0.5" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1.2"/>
+          <text x="44" y="24" font-family="'Inter', sans-serif" font-weight="650" font-size="11" fill="#475569">Ask WayaX about stocks, entry zones, F&amp;O, portfolio advisory...</text>
+        </g>
+        <g transform="translate(430, 292)" text-anchor="middle">
+          <text font-family="'Inter', sans-serif" font-weight="550" font-size="9.5" fill="#475569" letter-spacing="0.02em">
+            Enter to send · Shift+Enter for new line  |  ADVISORY ONLY — NOT DIRECT FINANCIAL ADVICE
+          </text>
+        </g>
+      </g>
+    </g>
+
+    <!-- advisory recommendations table placement (x=0, y=550, w=920, h=680) -->
+    <g transform="translate(0, 550)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">SEBI-APPROVED ADVISORY METRICS TABLE</text>
+      
+      <!-- Recreate Table components -->
+      <rect width="900" height="380" rx="16" fill="#0d0e12" fill-opacity="0.4" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+      <g transform="translate(0, 0)">
+        <rect width="900" height="42" rx="15" fill="rgba(255, 255, 255, 0.025)"/>
+        <line x1="0" y1="42" x2="900" y2="42" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+        <text x="24" y="26" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="9" fill="#a5b4fc" opacity="0.8">#</text>
+        <text x="56" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#a5b4fc" opacity="0.8">COMPANY / SYMBOL</text>
+        <text x="310" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#a5b4fc" opacity="0.8" text-anchor="middle">CALL ACTION</text>
+        <text x="440" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#a5b4fc" opacity="0.8" text-anchor="middle">TRIGGER ZONE</text>
+        <text x="560" y="26" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#a5b4fc" opacity="0.8" text-anchor="middle">TARGET PRICE</text>
+      </g>
+      
+      <!-- 2 exact rows representation -->
+      <g transform="translate(0, 42)">
+        <line x1="0" y1="64" x2="900" y2="64" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <text x="24" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#475569">01</text>
+        <g transform="translate(56, 16)">
+          <text x="0" y="12" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="#ffffff">Gokul Agro Resources Ltd</text>
+        </g>
+        <g transform="translate(310, 20)" text-anchor="middle">
+          <rect x="-32" y="0" width="64" height="22" rx="11" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+          <text x="0" y="15" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#34d399" text-anchor="middle">BUY</text>
+        </g>
+        <text x="440" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#6bb6f3" text-anchor="middle">₹234.88 – ₹239.62</text>
+        <text x="560" y="38" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#34d399" text-anchor="middle">₹308.43</text>
+      </g>
+      <g transform="translate(0, 106)">
+        <line x1="0" y1="64" x2="900" y2="64" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <text x="24" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#475569">02</text>
+        <g transform="translate(56, 16)">
+          <text x="0" y="12" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="#ffffff">SKM Egg Products Export (India) Ltd</text>
+        </g>
+        <g transform="translate(310, 20)" text-anchor="middle">
+          <rect x="-32" y="0" width="64" height="22" rx="11" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+          <text x="0" y="15" font-family="'Inter', sans-serif" font-weight="800" font-size="9" fill="#34d399" text-anchor="middle">BUY</text>
+        </g>
+        <text x="440" y="38" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11.5" fill="#6bb6f3" text-anchor="middle">₹194.63 – ₹198.57</text>
+        <text x="560" y="38" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#34d399" text-anchor="middle">₹255.58</text>
+      </g>
+
+      <!-- Disclaimer warning box below table inside this column -->
+      <g transform="translate(0, 390)">
+        <rect width="900" height="90" rx="10" fill="#070b13" stroke="rgba(24, 35, 53, 0.4)" stroke-width="1.2"/>
+        <g transform="translate(450, 24)" text-anchor="middle">
+          <text y="0" font-family="'Inter', sans-serif" font-weight="500" font-size="10.5" fill="#475569">All recommendations are for informational purposes only. Past performance does not guarantee future results.</text>
+          <text y="22" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="10" fill="#64748b">WAYA FINANCIAL TECHNOLOGIES | SEBI RA: INH00010876</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- horizon survey card placement (x=0, y=1050, w=680, h=340) -->
+    <g transform="translate(0, 1050)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">INVESTMENT HORIZON QUESTIONNAIRE CARD</text>
+      <rect x="4" y="4" width="672" height="200" rx="20" fill="#0d0e12" fill-opacity="0.8" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+      <g transform="translate(16, 16)">
+        <text x="0" y="16" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff">Before I dive in — how long are you thinking of staying invested?</text>
+        <g transform="translate(0, 36)">
+          <rect width="640" height="30" rx="8" fill="rgba(255, 255, 255, 0.01)" stroke="rgba(255, 255, 255, 0.05)"/>
+          <text x="16" y="18" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#cbd5e1">Short Term — quick wins, under 3 months</text>
+        </g>
+        <g transform="translate(0, 72)">
+          <rect width="640" height="30" rx="8" fill="rgba(255, 255, 255, 0.01)" stroke="rgba(255, 255, 255, 0.05)"/>
+          <text x="16" y="18" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#cbd5e1">Medium Term — steady growth, 3 to 12 months</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ======================================================================
+       COLUMN 4: ONBOARDING FLOATING DRAWER CONTROLS & BRANDING (X = 2270)
+       ====================================================================== -->
+  
+  <g transform="translate(2270, 180)">
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="12" fill="url(#label-text-grad)" letter-spacing="0.1em">04 • USER ONBOARDING &amp; BRAND SPLASH</text>
+
+    <!-- large splash page branding placement (x=0, y=40, w=680, h=440) -->
+    <g transform="translate(0, 40)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">LARGE SPLASH LANDING PRESENTATION WELL</text>
+      
+      <g transform="translate(340, 180)">
+        <g transform="rotate(204.087) scale(1.04176)">
+          <ellipse cx="0" cy="0" rx="300" ry="130" fill="url(#glow-grad)" fill-opacity="0.15" filter="url(#blur-75-main)"/>
+        </g>
+      </g>
+      <rect x="0" y="40" width="680" height="280" fill="url(#dots-pattern-main)" mask="url(#dots-mask-el-main)" opacity="0.6"/>
+      <g transform="translate(240, 60) scale(1.66)" fill="#ffffff">
+        <path d="M0 24 C0 10.7, 10.7 0, 24 0 H26 C29.3 0, 32 2.7, 32 6 V96 C32 109.3, 21.3 120, 8 120 H4 C1.8 120, 0 118.2, 0 116.0 V24 Z" />
+        <path d="M44 32 C44 27.6, 47.6 24, 52 24 H68 C72.4 24, 76 27.6, 76 32 V72 C76 89.7, 61.7 104, 44 104 C44 104, 44 96, 44 72 V32 Z" />
+        <path d="M88 0 C101.3 0, 120 10.7, 120 24 V116 C120 118.2, 118.2 120, 116 120 H112 C98.7 120, 88 109.3, 88 96 V0 Z" />
+      </g>
+      <text x="340" y="328" font-family="'Sora', sans-serif" font-weight="800" font-size="32" fill="#ffffff" text-anchor="middle">WayaX</text>
+      <text x="340" y="365" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#cbd5e1" text-anchor="middle">Amit SEBI-compliant AI research assistant</text>
+      <text x="340" y="385" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#818cf8" text-anchor="middle">RA: INH000010876</text>
+    </g>
+
+    <!-- onboarding OTP state placement (x=0, y=520, w=380, h=380) -->
+    <g transform="translate(0, 520)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">ONBOARDING WELL - OTP ENTER SCREEN</text>
+      <rect x="10" y="10" width="360" height="340" rx="24" fill="url(#onboarding-name-glass)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1.2"/>
+      <g transform="translate(190, 42)" text-anchor="middle">
+        <text y="0" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#ffffff">Get Started</text>
+        <text y="20" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#94a3b8">Access your personalized advisory.</text>
+      </g>
+      <g transform="translate(30, 114)">
+        <rect width="320" height="38" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <text x="14" y="23" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#ffffff">j</text>
+        <g transform="translate(0, 44)">
+          <rect width="320" height="38" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+          <text x="14" y="23" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#475569">Enter OTP</text>
+        </g>
+      </g>
+      <g transform="translate(30, 212)" opacity="0.35">
+        <rect width="320" height="38" rx="10" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)"/>
+        <text x="160" y="23" font-family="'Inter', sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle">Verify OTP &amp; Continue</text>
+      </g>
+    </g>
+
+    <!-- onboarding memory setup state placement (x=0, y=940, w=380, h=490) -->
+    <g transform="translate(0, 940)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">ONBOARDING WELL - RISK &amp; PORTFOLIO SETUP</text>
+      <rect x="10" y="10" width="360" height="410" rx="24" fill="url(#onboarding-name-glass)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1.2"/>
+      <g transform="translate(190, 48)" text-anchor="middle">
+        <text y="0" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#ffffff">Configure Memory</text>
+        <text y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Hi <tspan fill="#818cf8" font-weight="700">Amit</tspan>! Set your guidelines.</text>
+      </g>
+      <!-- Risk tolerance blocks -->
+      <g transform="translate(30, 94)">
+        <text x="4" y="10" font-family="'Inter', sans-serif" font-weight="800" font-size="9.5" fill="#64748b">RISK TOLERANCE</text>
+        <g transform="translate(0, 20)">
+          <rect width="154" height="28" rx="8" fill="rgba(0, 0, 0, 0.25)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+          <text x="77" y="18" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#64748b" text-anchor="middle">Low</text>
+          <g transform="translate(166, 0)">
+            <rect width="154" height="28" rx="8" fill="rgba(255, 255, 255, 0.1)" stroke="rgba(255, 255, 255, 0.2)"/>
+            <text x="77" y="18" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#ffffff" text-anchor="middle">Moderate</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- onboarding name state placement (x=400, y=520, w=380, h=340) -->
+    <g transform="translate(400, 520)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">ONBOARDING WELL - USER NAME SCREEN</text>
+      <rect x="10" y="10" width="360" height="260" rx="24" fill="url(#onboarding-name-glass)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1.2"/>
+      <g transform="translate(190, 48)" text-anchor="middle">
+        <text y="0" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#ffffff">What should I call you?</text>
+        <text y="22" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1">This helps me personalize your investment.</text>
+      </g>
+      <g transform="translate(30, 114)">
+        <rect width="320" height="38" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)"/>
+        <text x="14" y="23" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#475569">Enter your name</text>
+      </g>
+      <g transform="translate(30, 172)" opacity="0.35">
+        <rect width="320" height="38" rx="10" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)"/>
+        <text x="160" y="23" font-family="'Inter', sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle">Continue</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ======================================================================
+       COLUMN 5: FAQ BLUEPRINTS & BRANDS INSIGNIAS (X = 3120)
+       ====================================================================== -->
+  
+  <g transform="translate(3120, 180)">
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="12" fill="url(#label-text-grad)" letter-spacing="0.1em">05 • FAQ DETAILS &amp; INSIGNIAS</text>
+
+    <!-- right faq panel placement (x=0, y=40, w=360, h=600) -->
+    <g transform="translate(0, 40)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">RIGHT SIDEPANEL ADVISORY FAQ CONSOLE</text>
+      <rect width="360" height="600" rx="16" fill="#0d0e12" fill-opacity="0.85" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+      <g transform="translate(16, 16)">
+        <circle cx="8" cy="8" r="6.5" stroke="#6366f1" stroke-width="1.8" fill="none"/>
+        <text x="24" y="12" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#ffffff">FREQUENTLY ASKED</text>
+      </g>
+      <line x1="0" y1="54" x2="360" y2="54" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      <g transform="translate(0, 54)">
+        <rect width="360" height="36" fill="rgba(255, 255, 255, 0.02)"/>
+        <text x="36" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#94a3b8">Tap any query below to run instant SEBI-guided analysis</text>
+        <line x1="0" y1="36" x2="360" y2="36" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      </g>
+      <g id="stocks-buy-faq-inside" transform="translate(16, 206)">
+        <text x="18" y="10" font-family="'Inter', sans-serif" font-weight="700" font-size="9.5" fill="#94a3b8">STOCKS TO BUY</text>
+        <g transform="translate(0, 20)">
+          <rect width="328" height="32" rx="9" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          <text x="12" y="19" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#cbd5e1">Give me list of stocks I can buy</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- branding insignia placement (x=0, y=690, w=256, h=256) -->
+    <g transform="translate(0, 690)">
+      <text x="0" y="-12" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#475569">CENTRAL WayaX SHIELD INSIGNIA</text>
+      <!-- Base Shield contents -->
+      <rect width="256" height="256" rx="64" fill="#07080b" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1.5"/>
+      <ellipse cx="96" cy="128" rx="80" ry="40" fill="#77F2E4" fill-opacity="0.25" filter="url(#blur-35-main)"/>
+      <ellipse cx="160" cy="128" rx="72" ry="42" fill="#6BB6F3" fill-opacity="0.25" filter="url(#blur-35-main)"/>
+      <rect x="24" y="24" width="208" height="208" rx="52" fill="url(#main-glass-fill)" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1.5"/>
+      <g transform="translate(68, 64)" fill="#ffffff" fill-opacity="0.95">
+        <path d="M0 24 C0 10.7, 10.7 0, 24 0 H26 C29.3 0, 32 2.7, 32 6 V96 C32 109.3, 21.3 120, 8 120 H4 C1.8 120, 0 118.2, 0 116.0 V24 Z" />
+        <path d="M44 32 C44 27.6, 47.6 24, 52 24 H68 C72.4 24, 76 27.6, 76 32 V72 C76 89.7, 61.7 104, 44 104 C44 104, 44 96, 44 72 V32 Z" />
+        <path d="M88 0 C101.3 0, 120 10.7, 120 24 V116 C120 118.2, 118.2 120, 116 120 H112 C98.7 120, 88 109.3, 88 96 V0 Z" />
+      </g>
+    </g>
+  </g>
+</svg>

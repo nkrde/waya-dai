@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="100%">
+  <defs>
+    <!-- Imports Google Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@700;800&amp;display=swap');
+      
+      .title-text {
+        font-family: 'Sora', -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 52px;
+        letter-spacing: -1px;
+      }
+      .body-text {
+        font-family: 'Inter', -apple-system, sans-serif;
+      }
+      .pill-text {
+        font-family: 'Inter', -apple-system, sans-serif;
+        font-weight: 500;
+        font-size: 14.5px;
+        fill: #A0A5B5;
+        transition: fill 0.2s ease;
+      }
+      .pill-container:hover .pill-text {
+        fill: #FFFFFF;
+      }
+      .pill-container {
+        cursor: pointer;
+      }
+    </style>
+
+    <!-- Background Glow Gradient -->
+    <radialGradient id="bg-glow" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#1E1233" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#08090C" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#050608" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Welcome Title Gradient (King) -->
+    <linearGradient id="king-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="60%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+
+    <!-- Search Box Border Gradient -->
+    <linearGradient id="search-border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="35%" stop-color="#7C3AED"/>
+      <stop offset="70%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Search Box Inner Dark Fill -->
+    <linearGradient id="search-bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F0F16" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#07080C" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="450" fill="url(#bg-glow)"/>
+
+  <!-- Subtle grid pattern overlay for texture -->
+  <g opacity="0.04">
+    <path d="M0,50 H1200 M0,100 H1200 M0,150 H1200 M0,200 H1200 M0,250 H1200 M0,300 H1200 M0,350 H1200 M0,400 H1200" stroke="#FFFFFF" stroke-width="1"/>
+    <path d="M100,0 V450 M200,0 V450 M300,0 V450 M400,0 V450 M500,0 V450 M600,0 V450 M700,0 V450 M800,0 V450 M900,0 V450 M1000,0 V450 M1100,0 V450" stroke="#FFFFFF" stroke-width="1"/>
+  </g>
+
+  <!-- Header Title -->
+  <text x="600" y="95" text-anchor="middle" class="title-text" xml:space="preserve">
+    <tspan fill="#FFFFFF">Welcome to WayaX, </tspan><tspan fill="url(#king-grad)">King</tspan>
+  </text>
+
+  <!-- Search Bar Container -->
+  <g transform="translate(100, 140)">
+    <!-- Glow behind the search bar -->
+    <rect x="-2" y="-2" width="1004" height="68" rx="34" fill="url(#search-border-grad)" opacity="0.4" filter="blur(6px)"/>
+    
+    <!-- Outer Border -->
+    <rect x="-1" y="-1" width="1002" height="66" rx="33" fill="url(#search-border-grad)"/>
+    
+    <!-- Inner Box -->
+    <rect x="1" y="1" width="1000" height="64" rx="32" fill="url(#search-bg-grad)"/>
+
+    <!-- Placeholder text -->
+    <text x="25" y="38" fill="#585D6E" class="body-text" font-size="17" font-weight="500">Ask W</text>
+
+    <!-- Cursor Line (flashing effect representation) -->
+    <line x1="78" y1="21" x2="78" y2="41" stroke="#8B5CF6" stroke-width="2"/>
+
+    <!-- Action Buttons Group (Right-aligned) -->
+    <g transform="translate(900, 11)">
+      <!-- Microphone Button -->
+      <g class="pill-container">
+        <rect x="0" y="0" width="40" height="42" rx="10" fill="#15161D" stroke="#252733" stroke-width="1.2"/>
+        <!-- Mic Icon -->
+        <g transform="translate(10, 11)" stroke="#8A8F9E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+          <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
+          <line x1="12" y1="18" x2="12" y2="21"/>
+        </g>
+      </g>
+
+      <!-- Send/Up Arrow Button -->
+      <g transform="translate(48, 0)" class="pill-container">
+        <rect x="0" y="0" width="40" height="42" rx="10" fill="#1C183A" stroke="#372F6A" stroke-width="1.2"/>
+        <!-- Up Arrow Icon -->
+        <g transform="translate(10, 11)" stroke="#A78BFA" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="10" y1="17" x2="10" y2="3"/>
+          <polyline points="4 9 10 3 16 9"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Presets Section Divider -->
+  <g transform="translate(0, 260)">
+    <line x1="100" y1="0" x2="480" y2="0" stroke="#161822" stroke-width="1.5"/>
+    <text x="600" y="4" text-anchor="middle" fill="#5E6275" font-family="'Inter', sans-serif" font-weight="600" font-size="10.5" letter-spacing="2.5">EXPLORE CHAT PRESETS</text>
+    <line x1="720" y1="0" x2="1100" y2="0" stroke="#161822" stroke-width="1.5"/>
+  </g>
+
+  <!-- 5 Preset Pills (Horizontal Grid) -->
+  <g transform="translate(138, 290)">
+    <!-- Pill 1: Stocks to Buy -->
+    <g class="pill-container" transform="translate(0, 0)">
+      <rect width="170" height="42" rx="21" fill="#0C0D12" stroke="#1C1D26" stroke-width="1.2"/>
+      <!-- Icon (Trending Up) -->
+      <g transform="translate(18, 12)" stroke="#A78BFA" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+        <polyline points="16 7 22 7 22 13"/>
+      </g>
+      <text x="50" y="26" class="pill-text">Stocks to Buy</text>
+      <!-- Down Chevron -->
+      <path d="M146 19.5 L150 23.5 L154 19.5" stroke="#4B5163" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Pill 2: Short selling -->
+    <g class="pill-container" transform="translate(185, 0)">
+      <rect width="160" height="42" rx="21" fill="#0C0D12" stroke="#1C1D26" stroke-width="1.2"/>
+      <!-- Icon (Alert Triangle) -->
+      <g transform="translate(16, 12)" stroke="#A0A5B5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </g>
+      <text x="45" y="26" class="pill-text">Short selling</text>
+      <!-- Down Chevron -->
+      <path d="M136 19.5 L140 23.5 L144 19.5" stroke="#4B5163" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Pill 3: Long term picks -->
+    <g class="pill-container" transform="translate(360, 0)">
+      <rect width="185" height="42" rx="21" fill="#0C0D12" stroke="#1C1D26" stroke-width="1.2"/>
+      <!-- Icon (Sparkle/Stars) -->
+      <g transform="translate(18, 12)" stroke="#A0A5B5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.5 6.5l2.5 2.5M15 15l2.5 2.5M15 9l2.5-2.5M6.5 17.5l2.5-2.5" opacity="0.6"/>
+        <path d="M12 8a4 4 0 0 0 4 4 4 4 0 0 0-4 4 4 4 0 0 0-4-4 4 4 0 0 0 4-4z" fill="#A0A5B5" stroke="none"/>
+      </g>
+      <text x="48" y="26" class="pill-text">Long term picks</text>
+      <!-- Down Chevron -->
+      <path d="M161 19.5 L165 23.5 L169 19.5" stroke="#4B5163" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Pill 4: Track record -->
+    <g class="pill-container" transform="translate(560, 0)">
+      <rect width="165" height="42" rx="21" fill="#0C0D12" stroke="#1C1D26" stroke-width="1.2"/>
+      <!-- Icon (Search) -->
+      <g transform="translate(18, 12)" stroke="#A0A5B5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </g>
+      <text x="48" y="26" class="pill-text">Track record</text>
+      <!-- Down Chevron -->
+      <path d="M141 19.5 L145 23.5 L149 19.5" stroke="#4B5163" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Pill 5: About Waya -->
+    <g class="pill-container" transform="translate(740, 0)">
+      <rect width="160" height="42" rx="21" fill="#0C0D12" stroke="#1C1D26" stroke-width="1.2"/>
+      <!-- Icon (Waya Badge / Shield) -->
+      <g transform="translate(18, 12)" stroke="#A0A5B5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </g>
+      <text x="48" y="26" class="pill-text">About Waya</text>
+      <!-- Down Chevron -->
+      <path d="M136 19.5 L140 23.5 L144 19.5" stroke="#4B5163" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

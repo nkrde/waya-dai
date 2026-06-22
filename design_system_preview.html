@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WayaX Design System - Interactive Specification Dashboard</title>
+  <!-- Sora & Inter & JetBrains Mono Fonts from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset & Theme Variables */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    :root {
+      /* Typography */
+      --font-display: 'Sora', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      /* Color Primitives */
+      --color-teal-momentum: #77F2E4;
+      --color-sky-blue-flow: #6BB6F3;
+      --color-active-indigo: #6366F1;
+      --color-success-emerald: #10B981;
+      --color-protective-rose: #EF4444;
+      --color-canvas-black: #000000;
+      --color-glass-backing: #0D0E12;
+      
+      /* Spacing Scale */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      
+      /* Radii */
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+    }
+
+    body {
+      background-color: var(--color-canvas-black);
+      color: #e2e8f0;
+      font-family: var(--font-body);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Moving Caustics & Glowing Backlight Background Simulation */
+    .caustic-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      background: radial-gradient(circle at 10% 20%, rgba(13, 14, 18, 1) 0%, rgba(0, 0, 0, 1) 90%);
+      overflow: hidden;
+    }
+
+    .caustic-ray-right {
+      position: absolute;
+      top: -10%;
+      right: -10%;
+      width: 60vw;
+      height: 60vh;
+      background: radial-gradient(circle, rgba(107, 182, 243, 0.15) 0%, rgba(99, 102, 241, 0.05) 50%, transparent 100%);
+      filter: blur(80px);
+      animation: causticRayRight 15s ease-in-out infinite;
+    }
+
+    .caustic-ray-left {
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+      width: 55vw;
+      height: 55vh;
+      background: radial-gradient(circle, rgba(119, 242, 228, 0.12) 0%, rgba(99, 102, 241, 0.04) 50%, transparent 100%);
+      filter: blur(80px);
+      animation: causticRayLeft 18s ease-in-out infinite;
+    }
+
+    .bg-dotted-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+      opacity: 0.85;
+    }
+
+    @keyframes causticRayRight {
+      0%   { transform: translateY(-3%) rotate(-14deg) scale(1); opacity: 0.6; }
+      50%  { transform: translateY(3%) rotate(-5deg) scale(1.15); opacity: 0.8; }
+      100% { transform: translateY(-3%) rotate(-14deg) scale(1); opacity: 0.6; }
+    }
+
+    @keyframes causticRayLeft {
+      0%   { transform: translateY(4%) rotate(12deg) scale(1.1); opacity: 0.5; }
+      50%  { transform: translateY(-3%) rotate(18deg) scale(0.9); opacity: 0.7; }
+      100% { transform: translateY(4%) rotate(12deg) scale(1.1); opacity: 0.5; }
+    }
+
+    /* Core Layout */
+    .app-container {
+      display: flex;
+      min-height: 100vh;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    /* Left Sidebar Navigation */
+    .sidebar {
+      width: 280px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(13, 14, 18, 0.4);
+      backdrop-filter: blur(20px);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: var(--space-xl);
+    }
+
+    .logo-graphic {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--color-teal-momentum), var(--color-sky-blue-flow));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #000;
+      font-family: var(--font-display);
+      font-size: 18px;
+      box-shadow: 0 0 15px rgba(119, 242, 228, 0.4);
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .sidebar-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      padding: 12px var(--space-md);
+      border-radius: var(--radius-md);
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      font-family: var(--font-display);
+      font-size: 14px;
+    }
+
+    .sidebar-link:hover, .sidebar-link.active {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transform: translateX(4px);
+    }
+
+    .sidebar-link.active {
+      border-color: rgba(99, 102, 241, 0.3);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      font-size: 11px;
+      color: #475569;
+      font-family: var(--font-mono);
+    }
+
+    /* Main Content Workspace */
+    .main-workspace {
+      flex: 1;
+      padding: var(--space-xl);
+      overflow-y: auto;
+    }
+
+    /* Title Block */
+    .header-panel {
+      margin-bottom: var(--space-xl);
+    }
+
+    .sebi-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: var(--color-sky-blue-flow);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      letter-spacing: 0.5px;
+    }
+
+    .welcome-title {
+      font-family: var(--font-display);
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-bottom: var(--space-sm);
+      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .welcome-subtitle {
+      color: #94a3b8;
+      font-size: 16px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    /* Liquid Glass Card Styling */
+    .liquid-glass-card {
+      background: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.018'/%3E%3C/svg%3E"),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.01) 100%);
+      backdrop-filter: blur(32px) saturate(185%);
+      -webkit-backdrop-filter: blur(32px) saturate(185%);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius-lg);
+      box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+        inset 0 -1px 2px 0 rgba(0, 0, 0, 0.4),
+        0 16px 48px -12px rgba(0, 0, 0, 0.65),
+        0 2px 8px 0 rgba(0, 0, 0, 0.15);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-xl);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Grid layout for Tokens catalog */
+    .tokens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .token-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .token-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .token-color-preview {
+      height: 80px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-end;
+      padding: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: #000;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .token-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .token-value {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    /* Typography Specimens */
+    .typo-specimen {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .typo-row {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      align-items: center;
+    }
+
+    .typo-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* Component Showcases */
+    .component-sandbox {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: var(--space-md);
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .sandbox-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 200px;
+    }
+
+    .sandbox-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    /* Buttons specification style */
+    .btn-primary {
+      font-family: var(--font-display);
+      font-weight: 700;
+      background: var(--color-active-indigo);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-primary:hover {
+      background: #4f46e5;
+      transform: translateY(-1.5px);
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.96);
+    }
+
+    .btn-glass {
+      font-family: var(--font-display);
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      color: #f1f5f9;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      backdrop-filter: blur(12px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-glass::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+      transform: skewX(-25deg);
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1.5px);
+    }
+
+    .btn-glass:hover::after {
+      left: 150%;
+      transition: all 0.6s ease-in-out;
+    }
+
+    .btn-glass:active {
+      transform: scale(0.97);
+    }
+
+    .input-recessed {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 13px;
+      width: 100%;
+      outline: none;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .input-recessed:focus {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.45);
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.04);
+    }
+
+    /* SEBI Monospace Ratios Table Layout */
+    .stock-grid-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(13, 14, 18, 0.4);
+    }
+
+    .stock-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+    }
+
+    .stock-table th {
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 10px;
+      font-weight: 800;
+      color: #818cf8;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .stock-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #cbd5e1;
+    }
+
+    .stock-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Mathematical color coding status indicators */
+    .status-capsule {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .status-buy {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      color: #34d399;
+    }
+
+    .status-buy .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--color-success-emerald);
+      border-radius: 99px;
+      box-shadow: 0 0 8px var(--color-success-emerald);
+      animation: pulseGlow 1.5s infinite;
+    }
+
+    .status-short {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      color: #f87171;
+    }
+
+    .status-short .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--color-protective-rose);
+      border-radius: 99px;
+      box-shadow: 0 0 8px var(--color-protective-rose);
+      animation: pulseGlow 1.5s infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    .val-emerald {
+      color: #34d399;
+      font-weight: 700;
+    }
+
+    .val-rose {
+      color: #f87171;
+      font-weight: 700;
+    }
+
+    /* Clipboard Copy Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(99, 102, 241, 0.9);
+      color: white;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 10000;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Shifting caustics backgrounds -->
+  <div class="caustic-backdrop">
+    <div class="caustic-ray-right"></div>
+    <div class="caustic-ray-left"></div>
+  </div>
+  <div class="bg-dotted-grid"></div>
+
+  <div class="app-container">
+    
+    <!-- Left Navigation -->
+    <aside class="sidebar">
+      <div class="logo-container">
+        <div class="logo-graphic">W</div>
+        <div class="logo-text">WayaX Studio</div>
+      </div>
+      
+      <ul class="sidebar-menu">
+        <li><a href="#welcome" class="sidebar-link active">🏛️ Overview</a></li>
+        <li><a href="#tokens" class="sidebar-link">🎨 Design Tokens</a></li>
+        <li><a href="#typography" class="sidebar-link">📝 Typography Scales</a></li>
+        <li><a href="#components" class="sidebar-link">⚙️ Component Atoms</a></li>
+        <li><a href="#patterns" class="sidebar-link">🟢 Data Styling Laws</a></li>
+        <li><a href="#governance" class="sidebar-link">🚀 Governance & Code</a></li>
+      </ul>
+      
+      <div class="sidebar-footer">
+        WayaX DS v2.1.0<br>
+        SEBI REG NO: INH00010876
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-workspace">
+      
+      <!-- Welcome Header -->
+      <section id="welcome" class="header-panel">
+        <div class="sebi-badge">SEBI REGISTERED RESEARCH ANALYST No. INH00010876</div>
+        <h1 class="welcome-title">Liquid Glass Design System</h1>
+        <p class="welcome-subtitle">
+          The tactical visual infrastructure for WayaX AI Investment Advisory. A premium, math-grounded design language designed to communicate analytical precision, SEBI compliance, and visceral trust through high-stakes financial data.
+        </p>
+      </section>
+
+      <!-- Section: Tokens -->
+      <section id="tokens" class="liquid-glass-card">
+        <h2 class="section-title">🎨 Brand Color Tokens & Sub-Pixels</h2>
+        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">
+          Click any card to instantly copy the design token CSS custom property to your clipboard.
+        </p>
+        
+        <div class="tokens-grid">
+          <!-- Teal Momentum -->
+          <div class="token-card" onclick="copyToken('--color-teal-momentum', '#77F2E4')">
+            <div class="token-color-preview" style="background: #77F2E4;">#77F2E4</div>
+            <div class="token-name">Teal Momentum</div>
+            <div class="token-value">var(--color-teal-momentum)</div>
+          </div>
+
+          <!-- Sky Blue Flow -->
+          <div class="token-card" onclick="copyToken('--color-sky-blue-flow', '#6BB6F3')">
+            <div class="token-color-preview" style="background: #6BB6F3;">#6BB6F3</div>
+            <div class="token-name">Sky Blue Flow</div>
+            <div class="token-value">var(--color-sky-blue-flow)</div>
+          </div>
+
+          <!-- Active Indigo -->
+          <div class="token-card" onclick="copyToken('--color-active-indigo', '#6366F1')">
+            <div class="token-color-preview" style="background: #6366F1; color: white;">#6366F1</div>
+            <div class="token-name">Active Indigo</div>
+            <div class="token-value">var(--color-active-indigo)</div>
+          </div>
+
+          <!-- Success Emerald -->
+          <div class="token-card" onclick="copyToken('--color-success-emerald', '#10B981')">
+            <div class="token-color-preview" style="background: #10B981; color: white;">#10B981</div>
+            <div class="token-name">Success Emerald</div>
+            <div class="token-value">var(--color-success-emerald)</div>
+          </div>
+
+          <!-- Protective Rose -->
+          <div class="token-card" onclick="copyToken('--color-protective-rose', '#EF4444')">
+            <div class="token-color-preview" style="background: #EF4444; color: white;">#EF4444</div>
+            <div class="token-name">Protective Rose</div>
+            <div class="token-value">var(--color-protective-rose)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Typography -->
+      <section id="typography" class="liquid-glass-card">
+        <h2 class="section-title">📝 Typographic Specification Scales</h2>
+        <div class="typo-specimen">
+          <!-- Sora heading -->
+          <div class="typo-row">
+            <div class="typo-label">Sora Bold (28px)<br>Dashboard Header</div>
+            <div style="font-family: var(--font-display); font-size: 28px; font-weight: 800; color: #fff;">
+              WayaX Premium Advice Portal
+            </div>
+          </div>
+
+          <!-- Inter Body -->
+          <div class="typo-row">
+            <div class="typo-label">Inter Medium (13px)<br>Advisory Answers</div>
+            <div style="font-family: var(--font-body); font-size: 13px; font-weight: 500; color: #cbd5e1; line-height: 1.6;">
+              Based on strict SEBI compliance guidelines, Option strategy executions must stay locked to designated entry ranges.
+            </div>
+          </div>
+
+          <!-- JetBrains Mono -->
+          <div class="typo-row">
+            <div class="typo-label">JetBrains Mono (12.5px)<br>Financial Tickers / Data</div>
+            <div style="font-family: var(--font-mono); font-size: 12.5px; font-weight: 700; color: var(--color-teal-momentum);">
+              INR 14,850.75 | TARGET UPSIDE: +32.4%
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Components Sandbox -->
+      <section id="components" class="liquid-glass-card">
+        <h2 class="section-title">⚙️ Interactive Component Atoms & Wells</h2>
+        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">
+          Live visual component blocks utilizing absolute tokens, multi-layered specularity, and micro-hover states.
+        </p>
+
+        <div class="component-sandbox">
+          <!-- Primary Action Button -->
+          <div class="sandbox-item">
+            <span class="sandbox-label">Primary Action (Sora)</span>
+            <button class="btn-primary">Execute Analysis</button>
+          </div>
+
+          <!-- Secondary Glass Button -->
+          <div class="sandbox-item">
+            <span class="sandbox-label">Secondary Glass Button</span>
+            <button class="btn-glass">Compare Stock</button>
+          </div>
+
+          <!-- Recessed Input Well -->
+          <div class="sandbox-item" style="flex: 1; min-width: 250px;">
+            <span class="sandbox-label">Recessed Search Input Well</span>
+            <input type="text" class="input-recessed" placeholder="Query active tickers e.g., RELIANCE, TATA...">
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Mathematical Styling Laws -->
+      <section id="patterns" class="liquid-glass-card">
+        <h2 class="section-title">🟢 High-Scannability Data Styling Grid</h2>
+        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">
+          Under SEBI audit guidelines, numeric parameters must map exclusively to active color logic to isolate volatile leverage risk immediately.
+        </p>
+
+        <div class="stock-grid-wrap">
+          <table class="stock-table">
+            <thead>
+              <tr>
+                <th style="width: 70px;">Index</th>
+                <th>Ticker Code</th>
+                <th>Call Type</th>
+                <th>Target Price</th>
+                <th>Stop Loss (SL)</th>
+                <th>Target Upside</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td style="font-weight: 700;">HDFCBANK</td>
+                <td>
+                  <span class="status-capsule status-buy">
+                    <span class="dot"></span> BUY CALL
+                  </span>
+                </td>
+                <td class="val-emerald">1,820.00</td>
+                <td>1,510.50</td>
+                <td class="val-emerald">+21.3%</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td style="font-weight: 700;">TCS</td>
+                <td>
+                  <span class="status-capsule status-short">
+                    <span class="dot"></span> SHORT CALL
+                  </span>
+                </td>
+                <td>3,450.00</td>
+                <td class="val-rose">3,890.00</td>
+                <td class="val-rose">-8.4%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section: Governance & Code -->
+      <section id="governance" class="liquid-glass-card">
+        <h2 class="section-title">🚀 Automation Handoff & Governance</h2>
+        <p style="color: #cbd5e1; font-size: 14.5px; line-height: 1.6; margin-bottom: var(--space-md);">
+          The WayaX design system acts as a living product. Direct vector-porting ensures design-code parity at all times.
+        </p>
+        <div style="background: rgba(0,0,0,0.3); border-radius: var(--radius-md); padding: 16px; font-family: var(--font-mono); font-size: 12px; color: #a5b4fc; border: 1px solid rgba(255,255,255,0.05); line-height: 1.5;">
+          /* Live Handoff Handshake Variables */<br>
+          .liquid-glass-panel {<br>
+          &nbsp;&nbsp;background: linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.01) 100%);<br>
+          &nbsp;&nbsp;backdrop-filter: blur(32px) saturate(185%);<br>
+          &nbsp;&nbsp;border: 1px solid rgba(255, 255, 255, 0.09);<br>
+          &nbsp;&nbsp;box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12);<br>
+          }
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Token copied to clipboard successfully!</div>
+
+  <script>
+    function copyToken(name, val) {
+      const tokenString = `var(${name})`;
+      navigator.clipboard.writeText(tokenString).then(() => {
+        const toast = document.getElementById('toast');
+        toast.textContent = `Token "${name}" copied successfully!`;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2200);
+      });
+    }
+
+    // Scroll active link behavior
+    const links = document.querySelectorAll('.sidebar-link');
+    links.forEach(link => {
+      link.addEventListener('click', function() {
+        links.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

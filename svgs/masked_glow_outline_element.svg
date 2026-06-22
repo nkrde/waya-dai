@@ -1,0 +1,28 @@
+<svg width="880" height="176" viewBox="0 0 880 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT MASKED GRADIENT GLOW OUTLINE COMPONENT (880px x 176px)
+    Strictly extracted from the provided HTML/CSS mask-gradient-glow code.
+    - Represents the -inset-[3px] p-[3px] 3px thick outline border
+    - 0% <style> Blocks
+    - 0% foreignObject Tags (Figma native compatible)
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Linear gradient exactly matching linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04)) -->
+    <linearGradient id="mask-glow-stroke-gradient" x1="440" y1="3" x2="440" y2="173" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 
+    3px Thick Outline Border representing the CSS masked border:
+    - Positioned at x="1.5" y="1.5" (half of the stroke width to prevent clipping)
+    - Width is 877px, Height is 173px (ensures outer bounds align exactly to 880x176)
+    - rx="27" (matching rounded-[27px] on desktop)
+    - stroke-width="3" (representing p-[3px] padding)
+  -->
+  <rect x="1.5" y="1.5" width="877" height="173" rx="27" fill="none" stroke="url(#mask-glow-stroke-gradient)" stroke-width="3"/>
+</svg>

@@ -1,0 +1,286 @@
+<svg width="880" height="480" viewBox="0 0 880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT COMPREHENSIVE MAIN ADVISORY CONSOLE (880px x 480px)
+    Strictly compiled and nested from the provided React DOM HTML snippet:
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    - Dual Rotating Header Backlights
+    - Specular Frosted Shield with Native Emblem Wing Paths
+    - Sora & Inter Typography for "Welcome to WayaX, Amit"
+    - "Ask WayaX" Search Container well displaying "Sh"
+    - Bottom Actions: Plus upload buttons, "Hide Presets" button, Send ArrowUp button
+    - Exact horizontal scrollable Preset Pills Row below Search container
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Background Linear Glow Gradient (Cyan-to-Blue) -->
+    <linearGradient id="main-glow-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#77F2E4"/>
+      <stop offset="100%" stop-color="#6BB6F3"/>
+    </linearGradient>
+
+    <!-- Welcome Greeting "Amit" Text Gradient (Blue-to-Indigo) -->
+    <linearGradient id="main-text-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <!-- Glass Panel Specular Highlight Gradient -->
+    <linearGradient id="main-glass-fill" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+
+    <linearGradient id="main-glass-border" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Backlight Blur Filters -->
+    <filter id="main-blur-75" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="75"/>
+    </filter>
+    <filter id="main-blur-35" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+
+    <!-- Glass Subsurface Blur Filters -->
+    <filter id="main-glass-sub-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+
+    <!-- Radial Mask for Dotted Grid (Fade to edges) -->
+    <radialGradient id="main-grid-mask" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.39"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <mask id="main-grid-mask-el">
+      <rect x="0" y="0" width="880" height="260" fill="url(#main-grid-mask)"/>
+    </mask>
+
+    <!-- Dotted Grid Pattern definition -->
+    <pattern id="main-dots-pattern" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.2"/>
+    </pattern>
+
+    <!-- Box-shadow filters for console containers -->
+    <filter id="main-card-shadow" x="-5%" y="-15%" width="110%" height="135%">
+      <feDropShadow dx="0" dy="12" stdDeviation="32" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="presets-leak-shadow" x="-5%" y="-20%" width="110%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== SECTION 1: HEADER & ROTATING BACKLIGHTS ==================== -->
+  
+  <!-- Backlight Glow 1 (520px x 180px, Scale 1.07841, Rotate 7.11818deg) -->
+  <g transform="translate(440, 80)">
+    <g transform="rotate(7.11818) scale(1.07841)">
+      <ellipse cx="0" cy="0" rx="260" ry="90" fill="url(#main-glow-grad)" fill-opacity="0.16" filter="url(#main-blur-75)"/>
+    </g>
+  </g>
+
+  <!-- Backlight Glow 2 (260px x 100px, Scale 1.06741, Rotate 80.2125deg) -->
+  <g transform="translate(440, 80)">
+    <g transform="rotate(80.2125) scale(1.06741)">
+      <ellipse cx="0" cy="0" rx="130" ry="50" fill="url(#main-glow-grad)" fill-opacity="0.1152" filter="url(#main-blur-35)"/>
+    </g>
+  </g>
+
+  <!-- Dotted Grid pattern -->
+  <rect x="100" y="0" width="680" height="160" fill="url(#main-dots-pattern)" mask="url(#main-grid-mask-el)" opacity="0.6"/>
+
+  <!-- Centered Frosted Brand Insignia Shield (80px x 80px) -->
+  <g transform="translate(400, 10)">
+    <!-- Shield Container -->
+    <rect width="80" height="80" rx="16" fill="url(#main-glass-fill)" stroke="url(#main-glass-border)" stroke-width="1.5"/>
+
+    <!-- Subsurface inner glows -->
+    <g mask="url(#main-glass-inner-clip)">
+      <ellipse cx="15" cy="45" rx="20" ry="10" fill="#77F2E4" fill-opacity="0.25" filter="url(#main-glass-sub-blur)"/>
+      <ellipse cx="65" cy="45" rx="18" ry="11" fill="#6BB6F3" fill-opacity="0.25" filter="url(#main-glass-sub-blur)"/>
+    </g>
+
+    <!-- Specular highlight line chamfer on glass frame -->
+    <path d="M1 20 C 1 8, 12 1, 24 1 H 56 C 68 1, 79 8, 79 20" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1" stroke-linecap="round" fill="none"/>
+
+    <!-- Exact Vector Brand Insignia scaled perfectly inside -->
+    <g transform="translate(20, 20) scale(0.333)" fill="#ffffff" fill-opacity="0.95">
+      <path d="M0 24 C0 10.7, 10.7 0, 24 0 H26 C29.3 0, 32 2.7, 32 6 V96 C32 109.3, 21.3 120, 8 120 H4 C1.8 120, 0 118.2, 0 116.0 V24 Z" />
+      <path d="M44 32 C44 27.6, 47.6 24, 52 24 H68 C72.4 24, 76 27.6, 76 32 V72 C76 89.7, 61.7 104, 44 104 C44 104, 44 96, 44 72 V32 Z" />
+      <path d="M88 0 C101.3 0, 120 10.7, 120 24 V116 C120 118.2, 118.2 120, 116 120 H112 C98.7 120, 88 109.3, 88 96 V0 Z" />
+    </g>
+
+    <!-- Clip path helper for glass inner blurs -->
+    <clipPath id="main-glass-inner-clip">
+      <rect x="1" y="1" width="78" height="78" rx="15"/>
+    </clipPath>
+  </g>
+
+  <!-- Welcome Greeting Headers -->
+  <text x="440" y="112" font-family="'Sora', 'Outfit', sans-serif" font-weight="800" font-size="20" fill="#ffffff" text-anchor="middle">
+    Welcome to WayaX, <tspan fill="url(#main-text-gradient)">Amit</tspan>
+  </text>
+  <text x="440" y="128" font-family="'Inter', sans-serif" font-weight="500" font-size="10.5" fill="#94a3b8" text-anchor="middle">
+    Select a preset below or enter a custom query to research breakouts.
+  </text>
+
+  <!-- ==================== SECTION 2: ASK WAYAX SEARCH CARD CONTAINER ==================== -->
+  
+  <g id="search-container" transform="translate(10, 148)" filter="url(#main-card-shadow)">
+    <!-- Base search well background -->
+    <rect width="860" height="170" rx="24" fill="#0d0e12" fill-opacity="0.5" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.2"/>
+    
+    <!-- Specular inner edge highlight shadow [inset_0_1px_1px_rgba(255,255,255,0.1)] -->
+    <rect x="0.5" y="0.5" width="859" height="169" rx="23.5" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+
+    <!-- Search Text Title Header inside -->
+    <g transform="translate(20, 18)">
+      <text x="0" y="10" font-family="'JetBrains Mono', 'Fira Code', monospace" font-weight="800" font-size="9" fill="#a5b4fc" letter-spacing="0.1em">ASK WAYAX</text>
+      <!-- Gradient dividing lines -->
+      <line x1="72" y1="6" x2="120" y2="6" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1"/>
+    </g>
+
+    <!-- Typing display showing value "Sh" -->
+    <g transform="translate(20, 48)">
+      <text x="0" y="12" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#ffffff">Sh</text>
+      <!-- Typing blinking cursor simulation -->
+      <rect x="16" y="-1" width="1.2" height="15" fill="#818cf8"/>
+    </g>
+
+    <!-- Horizontal divider line separating input from bottom controls (border-white/10) -->
+    <line x1="20" y1="120" x2="840" y2="120" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+
+    <!-- BOTTOM CONTROLS SECTION -->
+    <g transform="translate(20, 130)">
+      <!-- Left side: Plus upload icon button -->
+      <g transform="translate(0, 0)">
+        <circle cx="14" cy="14" r="14" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+        <path d="M10 14h8M14 10v8" stroke="#cbd5e1" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+
+      <!-- Centered: "Hide Presets" toggle capsule button -->
+      <g transform="translate(348, 0)">
+        <rect width="112" height="28" rx="14" fill="rgba(255, 255, 255, 0.15)" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1"/>
+        
+        <!-- lucide-circle-question-mark inside -->
+        <g transform="translate(10, 7)" stroke="#6366f1" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="7" cy="7" r="6"/>
+          <path d="M5.3 5.3a2 2 0 0 1 3.4 0c0 1.2-1.7 1.8-1.7 1.8"/>
+          <line x1="7" y1="9.8" x2="7.01" y2="9.8"/>
+        </g>
+        
+        <text x="56" y="18" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#ffffff" text-anchor="middle">Hide Presets</text>
+        
+        <!-- ChevronUp indicator rotated 180 -->
+        <path d="M92 18l3.5-3.5 3.5 3.5" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+
+      <!-- Right side: Send ArrowUp Button Well (Disabled: Scale scale-100 opacity-30) -->
+      <g transform="translate(792, 0)" opacity="0.3">
+        <circle cx="14" cy="14" r="14" fill="#151c2f"/>
+        <!-- lucide-arrow-up -->
+        <g transform="translate(7, 7)" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="7" y1="12" x2="7" y2="2"/>
+          <path d="m3 6 4-4 4 4"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== SECTION 3: CHAT PRESET CARDS CONSOLE ==================== -->
+  
+  <g id="presets-panel" transform="translate(10, 344)" filter="url(#presets-leak-shadow)">
+    <!-- Base background panel -->
+    <rect width="860" height="110" rx="16" fill="#0d0e12" fill-opacity="0.4" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2"/>
+    
+    <!-- Specular highlight line chamfer inside card -->
+    <rect x="0.5" y="0.5" width="859" height="109" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+    <!-- Left Header Group: mini logo & "CHAT PRESET" Label -->
+    <g transform="translate(16, 14)">
+      <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="0" y="0" width="16" height="16" filter="brightness(1.1)"/>
+      <text x="22" y="12" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="10" fill="#a5b4fc" letter-spacing="0.12em">CHAT PRESET</text>
+    </g>
+
+    <!-- Right Header Group: "CHECK ALL QUESTIONS" Button Capsule -->
+    <g transform="translate(668, 8)">
+      <rect width="176" height="26" rx="13" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      
+      <!-- Vector Reconstructed lucide-circle-question-mark -->
+      <g transform="translate(10, 6)" stroke="#818cf8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="7" cy="7" r="6"/>
+        <path d="M5.3 5.3a2 2 0 0 1 3.4 0c0 1.2-1.7 1.8-1.7 1.8"/>
+        <line x1="7" y1="9.8" x2="7.01" y2="9.8"/>
+      </g>
+      <text x="96" y="17" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#cbd5e1" text-anchor="middle">CHECK ALL QUESTIONS</text>
+    </g>
+
+    <!-- Divider line border-white/10 -->
+    <line x1="0" y1="44" x2="860" y2="44" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+
+    <!-- CATEGORY PILLS HORIZONTAL ROW -->
+    <g transform="translate(16, 56)">
+      
+      <!-- PILL 1: Stocks to Buy -->
+      <g transform="translate(0, 0)">
+        <rect width="146" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <g transform="translate(14, 9)" stroke="#94a3b8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5h4v4"/>
+          <path d="m16 5-6.5 6.5-3.5-3.5L2 13"/>
+        </g>
+        <text x="80" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Stocks to Buy</text>
+        <path d="M122 15l3.5 3.5 3.5-3.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+
+      <!-- PILL 2: Short selling -->
+      <g transform="translate(156, 0)">
+        <rect width="144" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <g transform="translate(14, 9)" stroke="#94a3b8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m14.5 12-5.3-9.3a1.3 1.3 0 0 0-2.3 0L1.5 12a1.3 1.3 0 0 0 1.1 2h10.8a1.3 1.3 0 0 0 1.1-2z"/>
+          <line x1="8" y1="6" x2="8" y2="9"/>
+          <line x1="8" y1="11.5" x2="8.01" y2="11.5"/>
+        </g>
+        <text x="80" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Short selling</text>
+        <path d="M120 15l3.5 3.5 3.5-3.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+
+      <!-- PILL 3: Long term picks -->
+      <g transform="translate(310, 0)">
+        <rect width="154" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <g transform="translate(12, 9)" stroke="#94a3b8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m7.3 1.8 1 3.7c.1.3.3.5.5.6l3.7 1a.6.6 0 0 1 0 1.3l-3.7 1a.8.8 0 0 0-.5.6l-1 3.7a.6.6 0 0 1-1.3 0l-1-3.7a.8.8 0 0 0-.5-.6l-3.7-1a.6.6 0 0 1 0-1.3l3.7-1a.8.8 0 0 0 .5-.6l1-3.7a.6.6 0 0 1 1.3 0z"/>
+          <path d="M13.3 1.3v2.6"/>
+          <path d="M14.6 2.6H12"/>
+        </g>
+        <text x="82" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Long term picks</text>
+        <path d="M128 15l3.5 3.5 3.5-3.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+
+      <!-- PILL 4: Track record -->
+      <g transform="translate(474, 0)">
+        <rect width="144" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="#818cf8" stroke-opacity="0.6" stroke-width="1.2"/>
+        <g transform="translate(14, 9)" stroke="#818cf8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="6" cy="6" r="4.5"/>
+          <line x1="9.5" y1="9.5" x2="13" y2="13"/>
+        </g>
+        <text x="80" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Track record</text>
+        <path d="M120 15l3.5 3.5 3.5-3.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+
+      <!-- PILL 5: About Waya -->
+      <g transform="translate(628, 0)">
+        <rect width="138" height="34" rx="17" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="12" y="10" width="14" height="14"/>
+        <text x="76" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1" text-anchor="middle">About Waya</text>
+        <path d="M114 15l3.5 3.5 3.5-3.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+
+    </g>
+  </g>
+</svg>

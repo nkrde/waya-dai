@@ -1,0 +1,126 @@
+<svg width="860" height="430" viewBox="0 0 860 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT CHAT PRESET EXPANDED QUESTIONS BOARD (860px x 430px)
+    Strictly extracted and compiled from the provided React DOM HTML snippet:
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    - Complete SEBI-guided stocks-to-buy 10-query interactive stack
+    - Symmetrical button wells featuring:
+      - Custom glowing indigo bullet indicators
+      - High-fidelity typography matching Inter & JetBrains Mono (Select ->)
+      - Dynamic opacity adjustments matching scrolling presets
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Specular button/border gradients -->
+    <linearGradient id="q-board-border" x1="0" y1="0" x2="860" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Glowing backlight for active buttons -->
+    <filter id="q-btn-glow" x="-10%" y="-15%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ffffff" flood-opacity="0.1"/>
+    </filter>
+
+    <!-- Overall panel shadow -->
+    <filter id="q-panel-shadow" x="-5%" y="-10%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="32" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== LAYER 1: BOARD BACKGROUND CONTAINER ==================== -->
+  <rect x="0" y="4" width="860" height="422" rx="16" fill="#0d0e12" fill-opacity="0.4" stroke="url(#q-board-border)" stroke-width="1.2" filter="url(#q-panel-shadow)"/>
+  
+  <!-- Specular inner edge highlight -->
+  <rect x="0.5" y="4.5" width="859" height="421" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- ==================== LAYER 2: 10-QUERY ADVISORY INTERACTIVE LIST ==================== -->
+  
+  <g transform="translate(16, 18)">
+    
+    <!-- ITEM 1 (Hover state simulated with indigo border) -->
+    <g transform="translate(0, 0)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1.2"/>
+      <circle cx="16" cy="17" r="3.2" fill="#818cf8"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#ffffff">Give me list of stocks I can buy</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="9" fill="#818cf8" text-anchor="end" letter-spacing="0.05em">Select →</text>
+    </g>
+
+    <!-- ITEM 2 -->
+    <g transform="translate(0, 40)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Give me list of stocks that can give 10% returns in 30 days</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- ITEM 3 -->
+    <g transform="translate(0, 80)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Give me 3 stocks in IT sector I can buy today</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- ITEM 4 -->
+    <g transform="translate(0, 120)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Show me Pharma stocks currently in the BUY zone</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- ITEM 5 -->
+    <g transform="translate(0, 160)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Which Capital Goods stocks are in the BUY zone right now?</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- ITEM 6 -->
+    <g transform="translate(0, 200)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Give me 2 Chemicals stocks to buy this week</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- ITEM 7 -->
+    <g transform="translate(0, 240)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Show me FMCG stocks in the BUY zone</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- ITEM 8 -->
+    <g transform="translate(0, 280)">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.6"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Which Metals stocks can I buy right now?</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#475569" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- ITEM 9 (Fading out scroll indicator) -->
+    <g transform="translate(0, 320)" opacity="0.65">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.4"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Give me a diversified portfolio of 10 stocks for 1 year</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#334155" text-anchor="end">Select →</text>
+    </g>
+
+    <!-- ITEM 10 (Fading out scroll indicator) -->
+    <g transform="translate(0, 360)" opacity="0.3">
+      <rect width="828" height="34" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="3" fill="#6366f1" fill-opacity="0.2"/>
+      <text x="28" y="21" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Give me 5 Small Cap stocks with high growth potential</text>
+      <text x="812" y="21" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9" fill="#1e293b" text-anchor="end">Select →</text>
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,101 @@
+<svg width="880" height="176" viewBox="0 0 880 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT PRODUCTION INPUT WELL VECTOR COMPONENT (880px x 176px)
+    Strictly extracted from the provided React DOM structure.
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Top-left glowing light leak border gradient stops from index.css -->
+    <linearGradient id="well-glow-border-exact" x1="0" y1="0" x2="880" y2="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.6"/>
+      <stop offset="12%" stop-color="#77F2E4" stop-opacity="0.4"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- 3px thick outer outline gradient stops -->
+    <linearGradient id="well-outer-glow-exact" x1="0" y1="0" x2="880" y2="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.22"/>
+      <stop offset="15%" stop-color="#77F2E4" stop-opacity="0.12"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+
+    <!-- Glass box-shadow parameters from line 807 of your code -->
+    <filter id="well-shadow-exact" x="-5%" y="-15%" width="110%" height="135%">
+      <feDropShadow dx="0" dy="12" stdDeviation="45" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== LAYER 1: 3PX THICK OUTER GLOW OUTLINE ==================== -->
+  <!-- Rounded-[27px] and p-[3px] as defined in your code -->
+  <rect x="3" y="3" width="874" height="170" rx="27" fill="none" stroke="url(#well-outer-glow-exact)" stroke-width="3"/>
+
+  <!-- ==================== LAYER 2: LIQUID GLASS CARD BODY ==================== -->
+  <!-- Rounded-2xl md:rounded-[24px] border and h-[170px] -->
+  <rect x="3" y="3" width="874" height="170" rx="24" fill="#0d0e12" fill-opacity="0.25" stroke="url(#well-glow-border-exact)" stroke-width="1" filter="url(#well-shadow-exact)"/>
+  
+  <!-- Specular top chamfer highlight line (1px white/10% inset) -->
+  <rect x="3.5" y="3.5" width="873" height="169" rx="23.5" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+
+  <!-- Inner bottom specular shadow line (black 40%) -->
+  <rect x="4" y="4" width="872" height="168" rx="23" fill="none" stroke="#000000" stroke-opacity="0.4" stroke-width="1.2"/>
+
+  <!-- ==================== UPPER BLOCK: GREETING & TEXTAREA ==================== -->
+  
+  <!-- Left Header Tag: "Ask WayaX" uppercase and 40% indigo line -->
+  <g transform="translate(23, 21)">
+    <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="10" fill="#818cf8" letter-spacing="0.1em">ASK WAYAX</text>
+    <line x1="72" y1="6" x2="120" y2="6" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1"/>
+  </g>
+
+  <!-- Textarea content styled as the placeholder text: "Show me long-term multibagger stock picks?" -->
+  <g transform="translate(23, 51)">
+    <!-- Active vertical cursor line matching placeholder typing state -->
+    <line x1="0" y1="2" x2="0" y2="20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="8" y="17" font-family="'Inter', sans-serif" font-weight="500" font-size="14.5" fill="#cbd5e1">Show me long-term multibagger stock picks?</text>
+  </g>
+
+  <!-- Horizontal divider border-t select-none border-white/10 -->
+  <line x1="23" y1="117" x2="857" y2="117" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+
+  <!-- ==================== BOTTOM BLOCK: CONTROL ROW ==================== -->
+
+  <!-- Left Control: Plus Button (w-8 h-8 rounded-full bg-white/[0.04] border-white/10) -->
+  <g transform="translate(23, 129)">
+    <circle cx="16" cy="16" r="16" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+    <!-- Plus Icon vector (lucide-plus) -->
+    <path d="M16 10v12M10 16h12" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Center Control: Show/Hide Presets Button (px-4 py-1.5 border text-[11px] rounded-full) -->
+  <g transform="translate(370, 129)">
+    <!-- Capsule shape frame (bg-white/15 border-white/30) -->
+    <rect width="140" height="32" rx="16" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1"/>
+    
+    <!-- 1:1 Circle Question Mark Icon vector (lucide-circle-question-mark) -->
+    <g transform="translate(12, 8)">
+      <circle cx="8" cy="8" r="6" stroke="#818cf8" stroke-width="1.2" fill="none"/>
+      <path d="M8 6a1.5 1.5 0 0 1 1.5 1.5c0 .7-.5 1-1 1.3v.7" stroke="#818cf8" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="8" cy="11.5" r="0.6" fill="#818cf8" stroke="none"/>
+    </g>
+
+    <!-- Label text: "Hide Presets" -->
+    <text x="76" y="20" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">Hide Presets</text>
+
+    <!-- 1:1 ChevronDown Icon (rotated 180deg) -->
+    <path d="M120 18l3-3 3 3" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Right Control: ArrowUp Send Button (w-9 h-9 rounded-full bg-indigo-600) -->
+  <!-- EXACT CODES: Disabled mode (disabled:opacity-30 disabled:bg-[#151c2f] disabled:border-transparent disabled:text-slate-500) -->
+  <g transform="translate(821, 127)">
+    <circle cx="18" cy="18" r="18" fill="#151c2f" stroke="none" opacity="0.3"/>
+    <!-- ArrowUp Icon vector (w-4 h-4 lucide-arrow-up text-slate-500) -->
+    <path d="M18 25V11m0 0l-4 4m4-4l4 4" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

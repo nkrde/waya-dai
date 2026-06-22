@@ -1,0 +1,49 @@
+<svg width="132" height="48" viewBox="0 0 132 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT SIDEBAR TOGGLE BUTTON (132px x 48px)
+    Strictly extracted and compiled from the provided React DOM HTML snippet:
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    - Frosted glass capsule base (bg-white/[0.06] border-white/[0.08])
+    - Symmetrical layout featuring:
+      - Specular panel-left frame capsule
+      - Mini Waya logo image and Slate brand typography
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Ambient drop-shadow filter -->
+    <filter id="toggle-btn-shadow" x="-10%" y="-15%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== LAYER 1: BASE CAPSULE BACKDROP ==================== -->
+  <!-- Rounded pill base container (124px x 40px, rx=12) -->
+  <rect x="4" y="4" width="124" height="40" rx="12" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2" filter="url(#toggle-btn-shadow)"/>
+  
+  <!-- Specular inner edge highlight -->
+  <rect x="4.5" y="4.5" width="123" height="39" rx="11.5" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- ==================== LAYER 2: PANEL-LEFT ICON FRAME ==================== -->
+  <g transform="translate(10, 10)">
+    <!-- Small box frame -->
+    <rect width="28" height="28" rx="8" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+    
+    <!-- lucide-panel-left -->
+    <g transform="translate(6, 6)" stroke="#cbd5e1" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="12" height="12" rx="1.5"/>
+      <line x1="6" y1="2" x2="6" y2="14"/>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 3: BRAND LOGO + TEXT GROUP ==================== -->
+  <g transform="translate(46, 14)">
+    <!-- Mini branded logo image -->
+    <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="0" y="0" width="20" height="20"/>
+    
+    <!-- Slate title text -->
+    <text x="24" y="14" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#e2e8f0" letter-spacing="-0.01em">WayaX</text>
+  </g>
+</svg>

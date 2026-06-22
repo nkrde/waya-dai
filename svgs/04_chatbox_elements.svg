@@ -1,0 +1,989 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="2000" viewBox="0 0 2600 2000">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080a10"/>
+      <stop offset="100%" stop-color="#0a0c15"/>
+    </linearGradient>
+
+    <!-- Dot grid pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="white" fill-opacity="0.05"/>
+    </pattern>
+
+    <!-- Ambient light blobs -->
+    <radialGradient id="ambientTeal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#77f2e4" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#77f2e4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambientIndigo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambientPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Module card gradients -->
+    <linearGradient id="moduleCardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111318" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d0f14" stop-opacity="0.92"/>
+    </linearGradient>
+
+    <!-- User bubble gradient -->
+    <linearGradient id="userBubbleBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.10"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- AI bubble gradient -->
+    <linearGradient id="aiBubbleBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.00"/>
+    </linearGradient>
+
+    <!-- Table header gradient -->
+    <linearGradient id="tableHeaderBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1d26" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#14161f" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Send button active gradient -->
+    <linearGradient id="sendBtnActive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <!-- Teal glow gradient -->
+    <radialGradient id="tealGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#77f2e4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#77f2e4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Indigo glow -->
+    <radialGradient id="indigoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Search bar glow -->
+    <linearGradient id="searchGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#77f2e4" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Chat viewport glass -->
+    <linearGradient id="chatViewBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#12141c" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#0d0f16" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Top bar gradient -->
+    <linearGradient id="topBarBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16192280"/>
+      <stop offset="100%" stop-color="#12141c00"/>
+    </linearGradient>
+
+    <!-- Blur filter -->
+    <filter id="blur32" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+    <filter id="blur16" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="blur8" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="blur4" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="glow6" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Drop shadow -->
+    <filter id="shadow24" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="shadow12" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="indigoShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#6366f1" flood-opacity="0.7"/>
+    </filter>
+    <filter id="tealShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#77f2e4" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Clip paths -->
+    <clipPath id="chatClip">
+      <rect x="60" y="120" width="880" height="900" rx="14"/>
+    </clipPath>
+    <clipPath id="moduleC-clip">
+      <rect x="1000" y="360" width="1520" height="560" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════
+       CANVAS BACKGROUND
+  ═══════════════════════════════════════════════ -->
+  <rect width="2600" height="2000" fill="url(#bgGrad)"/>
+  <rect width="2600" height="2000" fill="url(#dotGrid)"/>
+
+  <!-- Ambient light blobs -->
+  <ellipse cx="400" cy="600" rx="600" ry="500" fill="url(#ambientIndigo)" filter="url(#blur32)"/>
+  <ellipse cx="1800" cy="300" rx="700" ry="400" fill="url(#ambientTeal)" filter="url(#blur32)"/>
+  <ellipse cx="2400" cy="1200" rx="500" ry="600" fill="url(#ambientPurple)" filter="url(#blur32)"/>
+  <ellipse cx="900" cy="1600" rx="600" ry="400" fill="url(#ambientIndigo)" filter="url(#blur32)"/>
+  <ellipse cx="1400" cy="1000" rx="400" ry="300" fill="url(#ambientTeal)" filter="url(#blur16)"/>
+
+  <!-- ═══════════════════════════════════════════════
+       BOARD HEADER
+  ═══════════════════════════════════════════════ -->
+  <!-- Title -->
+  <text x="60" y="52" font-family="'Sora', sans-serif" font-size="30" font-weight="700" fill="#ffffff" letter-spacing="-0.5">04 · Chat Box — All Elements</text>
+  <!-- Subtitle -->
+  <text x="60" y="78" font-family="'JetBrains Mono', monospace" font-size="11" fill="#77f2e4" letter-spacing="2" fill-opacity="0.8">WAYAX · CHAT VIEWPORT · MESSAGES · TABLES · SURVEYS · SEARCH · ICONS · DROPDOWNS</text>
+  <!-- Header underline -->
+  <rect x="60" y="88" width="700" height="1" fill="white" fill-opacity="0.08"/>
+
+  <!-- ═══════════════════════════════════════════════
+       ROW 1: CHAT VIEWPORT OVERVIEW
+  ═══════════════════════════════════════════════ -->
+
+  <!-- Section label -->
+  <rect x="60" y="104" width="6" height="12" rx="1" fill="#77f2e4"/>
+  <text x="72" y="115" font-family="'JetBrains Mono', monospace" font-size="9" fill="#77f2e4" letter-spacing="2">ROW 1 — CHAT VIEWPORT OVERVIEW</text>
+
+  <!-- ── CHAT VIEWPORT CARD ─────────────────────── -->
+  <rect x="60" y="120" width="880" height="900" rx="14" fill="url(#chatViewBg)" stroke="white" stroke-opacity="0.09" stroke-width="1" filter="url(#shadow24)"/>
+  <!-- Specular top edge -->
+  <rect x="60" y="120" width="880" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- TOP BAR OVERLAY -->
+  <rect x="60" y="120" width="880" height="60" rx="0" fill="url(#topBarBg)"/>
+  <rect x="60" y="120" width="880" height="60" fill="#13151e" fill-opacity="0.7"/>
+  <!-- Top bar border bottom -->
+  <line x1="60" y1="180" x2="940" y2="180" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+  <!-- WayaX shield icon in top bar -->
+  <path d="M 88 142 L 96 138 L 104 142 L 104 152 C 104 156 100 158 96 160 C 92 158 88 156 88 152 Z" fill="none" stroke="#77f2e4" stroke-width="1.5" stroke-opacity="0.8"/>
+  <path d="M 93 149 L 96 152 L 100 146" stroke="#77f2e4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Top bar title -->
+  <text x="118" y="147" font-family="'Sora', sans-serif" font-size="13" font-weight="700" fill="#ffffff">WayaX</text>
+  <text x="118" y="163" font-family="'JetBrains Mono', monospace" font-size="8" fill="#77f2e4" fill-opacity="0.7">Advisory Session #2</text>
+  <!-- Status pill -->
+  <rect x="760" y="138" width="60" height="18" rx="9" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.25" stroke-width="0.8"/>
+  <circle cx="774" cy="147" r="3" fill="#10b981"/>
+  <text x="782" y="151" font-family="'JetBrains Mono', monospace" font-size="8" fill="#34d399">LIVE</text>
+  <!-- SEBI badge -->
+  <rect x="828" y="138" width="100" height="18" rx="9" fill="#6366f1" fill-opacity="0.10" stroke="#6366f1" stroke-opacity="0.20" stroke-width="0.8"/>
+  <text x="836" y="151" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8">RA: INH000010876</text>
+
+  <!-- CHAT MESSAGES AREA -->
+  <!-- Message 1: User bubble (right) -->
+  <rect x="530" y="200" width="380" height="52" rx="14" fill="url(#userBubbleBg)" stroke="white" stroke-opacity="0.12" stroke-width="0.8"/>
+  <rect x="530" y="200" width="380" height="1" fill="white" fill-opacity="0.07"/>
+  <!-- cut top-right corner manually -->
+  <rect x="906" y="200" width="14" height="14" fill="#0d0f14"/>
+  <text x="548" y="220" font-family="'Inter', sans-serif" font-size="11" fill="#f1f5f9">Give me list of stocks I can buy</text>
+  <text x="878" y="242" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" text-anchor="end">10:31 AM</text>
+
+  <!-- Loading indicator -->
+  <rect x="88" y="264" width="90" height="36" rx="14" fill="url(#aiBubbleBg)" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+  <!-- 3 dots -->
+  <circle cx="114" cy="282" r="4" fill="white" fill-opacity="0.45"/>
+  <circle cx="133" cy="282" r="4" fill="white" fill-opacity="0.60"/>
+  <circle cx="152" cy="282" r="4" fill="white" fill-opacity="0.45"/>
+
+  <!-- AI Response Card -->
+  <rect x="88" y="316" width="560" height="260" rx="12" fill="url(#aiBubbleBg)" stroke="white" stroke-opacity="0.05" stroke-width="0.8" filter="url(#shadow12)"/>
+  <rect x="88" y="316" width="560" height="1" fill="white" fill-opacity="0.05"/>
+  <!-- Latency badge -->
+  <rect x="88" y="326" width="130" height="16" rx="8" fill="black" fill-opacity="0.35" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+  <text x="98" y="337" font-family="'JetBrains Mono', monospace" font-size="8" fill="#77f2e4" fill-opacity="0.8">processed in 871 ms</text>
+  <!-- WayaX tiny shield -->
+  <path d="M 92 352 L 96 350 L 100 352 L 100 358 C 100 360 98 361 96 362 C 94 361 92 360 92 358 Z" fill="none" stroke="#77f2e4" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- AI text content -->
+  <text x="108" y="358" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#ffffff">Here are 3 stocks I recommend for you:</text>
+  <text x="108" y="376" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">Based on current market conditions and your profile, these picks</text>
+  <text x="108" y="390" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">offer strong risk-reward ratios with defined entry zones.</text>
+  <!-- Mini table inside AI response -->
+  <rect x="100" y="404" width="536" height="22" rx="4" fill="#1a1d26" fill-opacity="0.9"/>
+  <text x="116" y="418" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#94a3b8">STOCK</text>
+  <text x="260" y="418" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#94a3b8">ENTRY</text>
+  <text x="340" y="418" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#94a3b8">TARGET</text>
+  <text x="420" y="418" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#94a3b8">UPSIDE</text>
+  <text x="490" y="418" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#94a3b8">ACTION</text>
+  <!-- Row 1 -->
+  <rect x="100" y="426" width="536" height="22" rx="2" fill="white" fill-opacity="0.015"/>
+  <text x="116" y="440" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e2e8f0">Gokul Agro</text>
+  <text x="260" y="440" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8">₹234–₹239</text>
+  <text x="340" y="440" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#10b981" font-weight="700">₹308.43</text>
+  <rect x="416" y="430" width="36" height="14" rx="7" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="420" y="440" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#34d399">+30%</text>
+  <rect x="486" y="430" width="30" height="14" rx="7" fill="#6366f1" fill-opacity="0.12" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="490" y="440" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8">BUY</text>
+  <!-- Row 2 -->
+  <rect x="100" y="448" width="536" height="22" rx="2" fill="white" fill-opacity="0.02"/>
+  <text x="116" y="462" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e2e8f0">SKM Egg Products</text>
+  <text x="260" y="462" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8">₹194–₹198</text>
+  <text x="340" y="462" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#10b981" font-weight="700">₹255.58</text>
+  <rect x="416" y="452" width="36" height="14" rx="7" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="420" y="462" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#34d399">+30%</text>
+  <rect x="486" y="452" width="30" height="14" rx="7" fill="#6366f1" fill-opacity="0.12" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="490" y="462" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8">BUY</text>
+  <!-- Row 3 -->
+  <rect x="100" y="470" width="536" height="22" rx="2" fill="white" fill-opacity="0.015"/>
+  <text x="116" y="484" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e2e8f0">Route Mobile</text>
+  <text x="260" y="484" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8">₹515–₹525</text>
+  <text x="340" y="484" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#10b981" font-weight="700">₹676.85</text>
+  <rect x="416" y="474" width="36" height="14" rx="7" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="420" y="484" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#34d399">+30%</text>
+  <rect x="486" y="474" width="30" height="14" rx="7" fill="#6366f1" fill-opacity="0.12" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.5"/>
+  <text x="490" y="484" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8">BUY</text>
+  <!-- Table border bottom -->
+  <line x1="100" y1="492" x2="636" y2="492" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+  <!-- Refresh icon -->
+  <circle cx="112" cy="555" r="8" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+  <path d="M 108 554 A 4 4 0 1 1 116 558" stroke="white" stroke-opacity="0.4" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <polyline points="116,556 116,560 112,558" stroke="white" stroke-opacity="0.4" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- User Message 2 -->
+  <rect x="530" y="596" width="380" height="52" rx="14" fill="url(#userBubbleBg)" stroke="white" stroke-opacity="0.12" stroke-width="0.8"/>
+  <rect x="530" y="596" width="380" height="1" fill="white" fill-opacity="0.07"/>
+  <rect x="906" y="596" width="14" height="14" fill="#0d0f14"/>
+  <text x="548" y="614" font-family="'Inter', sans-serif" font-size="11" fill="#f1f5f9">Which one has the best risk/reward?</text>
+  <text x="878" y="638" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" text-anchor="end">10:33 AM</text>
+
+  <!-- Survey Card -->
+  <rect x="88" y="665" width="500" height="170" rx="12" fill="url(#aiBubbleBg)" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+  <rect x="88" y="665" width="500" height="1" fill="white" fill-opacity="0.05"/>
+  <text x="104" y="688" font-family="'Inter', sans-serif" font-size="10.5" fill="#e2e8f0">Before I dive in — how long are you thinking of staying invested?</text>
+  <!-- Option 1 -->
+  <rect x="100" y="698" width="476" height="26" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="116" y="714" font-family="'Inter', sans-serif" font-size="9.5" fill="#94a3b8">Short Term — quick wins, under 3 months</text>
+  <!-- Option 2 selected -->
+  <rect x="100" y="728" width="476" height="26" rx="8" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.12" stroke-width="0.8"/>
+  <text x="116" y="744" font-family="'Inter', sans-serif" font-size="9.5" fill="#ffffff">Medium Term — steady growth, 3 to 12 months</text>
+  <!-- Option 3 -->
+  <rect x="100" y="758" width="476" height="26" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="116" y="774" font-family="'Inter', sans-serif" font-size="9.5" fill="#94a3b8">Long Term — wealth building, 1 year and beyond</text>
+  <!-- Skip / Back links -->
+  <text x="104" y="808" font-family="'Inter', sans-serif" font-size="8.5" fill="#475569">← Back</text>
+  <text x="540" y="808" font-family="'Inter', sans-serif" font-size="8.5" fill="#475569" text-anchor="end">Skip →</text>
+
+  <!-- CHAT SEARCH BAR (bottom of viewport) -->
+  <!-- Glow ring -->
+  <rect x="68" y="1003" width="864" height="53" rx="26" fill="none" stroke="url(#searchGlow)" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Search bar body -->
+  <rect x="72" y="1006" width="856" height="46" rx="23" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+  <text x="100" y="1033" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">Ask WayaX anything about markets...</text>
+  <!-- Paperclip icon -->
+  <path d="M 850 1022 L 850 1032 A 5 5 0 0 0 860 1032 L 860 1020 A 8 8 0 0 0 844 1020 L 844 1034 A 11 11 0 0 0 866 1034 L 866 1022" stroke="#64748b" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Send button active -->
+  <rect x="878" y="1014" width="42" height="30" rx="10" fill="url(#sendBtnActive)" filter="url(#indigoShadow)"/>
+  <!-- Arrow icon -->
+  <path d="M 891 1029 L 907 1029 M 901 1022 L 908 1029 L 901 1036" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Viewport bottom bar bg -->
+  <rect x="60" y="996" width="880" height="64" fill="#0d0f14" fill-opacity="0.85"/>
+  <line x1="60" y1="996" x2="940" y2="996" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════════════════════
+       ROW 1 ANNOTATION
+  ═══════════════════════════════════════════════ -->
+  <!-- Annotation panel -->
+  <rect x="60" y="1032" width="880" height="0" rx="0" fill="none"/>
+  <!-- Viewport annotation below card -->
+  <text x="60" y="1050" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">COMPONENT</text>
+  <text x="200" y="1050" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">Chat Viewport — Full Conversation Thread</text>
+  <text x="60" y="1064" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">DIMENSIONS</text>
+  <text x="200" y="1064" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">880 × 900 px · rounded-14 · glass backdrop</text>
+  <text x="60" y="1078" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">LAYERS</text>
+  <text x="200" y="1078" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">Top bar · Message thread · Search bar overlay</text>
+  <text x="60" y="1092" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">FILL</text>
+  <text x="200" y="1092" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">#12141c / 98% → #0d0f16 / 95% · border: white/9%</text>
+
+  <!-- ═══════════════════════════════════════════════
+       MODULE A — USER MESSAGE BUBBLE
+  ═══════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <rect x="1000" y="104" width="6" height="12" rx="1" fill="#6366f1"/>
+  <text x="1012" y="115" font-family="'JetBrains Mono', monospace" font-size="9" fill="#818cf8" letter-spacing="2">MODULE A — USER MESSAGE BUBBLE</text>
+
+  <!-- Module A card -->
+  <rect x="1000" y="120" width="700" height="220" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-opacity="0.08" stroke-width="1" filter="url(#shadow24)"/>
+  <rect x="1000" y="120" width="700" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- Bubble variant: Short -->
+  <text x="1016" y="148" font-family="'JetBrains Mono', monospace" font-size="8" fill="#6366f1" letter-spacing="1.5">SHORT VARIANT</text>
+  <rect x="1240" y="155" width="244" height="36" rx="12" fill="url(#userBubbleBg)" stroke="white" stroke-opacity="0.12" stroke-width="0.8"/>
+  <rect x="1240" y="155" width="244" height="1" fill="white" fill-opacity="0.07"/>
+  <!-- cut top-right corner -->
+  <rect x="1480" y="155" width="12" height="12" fill="#111318"/>
+  <text x="1258" y="171" font-family="'Inter', sans-serif" font-size="11" fill="#f1f5f9">Show me today's picks</text>
+  <text x="1472" y="184" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" text-anchor="end">10:29 AM</text>
+  <!-- Profile initial -->
+  <circle cx="1498" cy="170" r="10" fill="#6366f1" fill-opacity="0.25" stroke="#6366f1" stroke-opacity="0.3" stroke-width="0.8"/>
+  <text x="1498" y="174" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#818cf8" text-anchor="middle">A</text>
+
+  <!-- Bubble variant: Medium -->
+  <text x="1016" y="208" font-family="'JetBrains Mono', monospace" font-size="8" fill="#6366f1" letter-spacing="1.5">MEDIUM VARIANT</text>
+  <rect x="1180" y="215" width="304" height="50" rx="12" fill="url(#userBubbleBg)" stroke="white" stroke-opacity="0.12" stroke-width="0.8"/>
+  <rect x="1180" y="215" width="304" height="1" fill="white" fill-opacity="0.07"/>
+  <rect x="1480" y="215" width="12" height="12" fill="#111318"/>
+  <text x="1198" y="232" font-family="'Inter', sans-serif" font-size="11" fill="#f1f5f9">Give me list of stocks I can buy</text>
+  <text x="1198" y="250" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">with good risk/reward ratio</text>
+  <text x="1472" y="258" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" text-anchor="end">10:31 AM</text>
+  <circle cx="1498" cy="230" r="10" fill="#6366f1" fill-opacity="0.25" stroke="#6366f1" stroke-opacity="0.3" stroke-width="0.8"/>
+  <text x="1498" y="234" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#818cf8" text-anchor="middle">A</text>
+
+  <!-- Long variant label -->
+  <text x="1016" y="283" font-family="'JetBrains Mono', monospace" font-size="8" fill="#6366f1" letter-spacing="1.5">LONG VARIANT (TRUNCATED)</text>
+  <rect x="1080" y="290" width="404" height="38" rx="12" fill="url(#userBubbleBg)" stroke="white" stroke-opacity="0.12" stroke-width="0.8"/>
+  <rect x="1080" y="290" width="404" height="1" fill="white" fill-opacity="0.07"/>
+  <rect x="1480" y="290" width="12" height="12" fill="#111318"/>
+  <text x="1098" y="307" font-family="'Inter', sans-serif" font-size="10.5" fill="#f1f5f9">Can you give me 5 stocks in IT and pharma sectors...</text>
+  <text x="1098" y="322" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">...with 30%+ upside and 3–6 month tenure?</text>
+  <text x="1472" y="320" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" text-anchor="end">10:34 AM</text>
+  <circle cx="1498" cy="307" r="10" fill="#6366f1" fill-opacity="0.25" stroke="#6366f1" stroke-opacity="0.3" stroke-width="0.8"/>
+  <text x="1498" y="311" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#818cf8" text-anchor="middle">A</text>
+
+  <!-- Module A annotations -->
+  <line x1="1000" y1="335" x2="1700" y2="335" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="1016" y="350" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">CONTAINER</text>
+  <text x="1130" y="350" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">rounded-2xl rounded-tr-none · backdrop-blur-3xl</text>
+  <text x="1016" y="365" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">FILL</text>
+  <text x="1130" y="365" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">white/10 → white/6 → transparent · shadow-xl</text>
+  <text x="1016" y="380" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">TEXT</text>
+  <text x="1130" y="380" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">Inter 11px · #f1f5f9 · leading-relaxed</text>
+  <text x="1016" y="395" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">TIMESTAMP</text>
+  <text x="1130" y="395" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">JetBrains Mono 8px · #64748b · bottom-right</text>
+
+  <!-- ═══════════════════════════════════════════════
+       MODULE B — AI RESPONSE BUBBLE
+  ═══════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <rect x="1720" y="104" width="6" height="12" rx="1" fill="#77f2e4"/>
+  <text x="1732" y="115" font-family="'JetBrains Mono', monospace" font-size="9" fill="#77f2e4" letter-spacing="2">MODULE B — AI RESPONSE BUBBLE</text>
+
+  <!-- Module B card -->
+  <rect x="1720" y="120" width="820" height="220" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-opacity="0.08" stroke-width="1" filter="url(#shadow24)"/>
+  <rect x="1720" y="120" width="820" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- WayaX logo mark -->
+  <path d="M 1737 145 L 1745 141 L 1753 145 L 1753 155 C 1753 159 1749 161 1745 163 C 1741 161 1737 159 1737 155 Z" fill="none" stroke="#77f2e4" stroke-width="1.5" stroke-opacity="0.8"/>
+  <path d="M 1742 152 L 1745 155 L 1749 149" stroke="#77f2e4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="1758" y="148" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#ffffff">WayaX Advisor</text>
+
+  <!-- AI Bubble body -->
+  <rect x="1736" y="162" width="600" height="130" rx="12" fill="url(#aiBubbleBg)" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+  <rect x="1736" y="162" width="600" height="1" fill="white" fill-opacity="0.05"/>
+  <!-- cut top-left corner -->
+  <rect x="1736" y="162" width="12" height="12" fill="#111318"/>
+  <!-- Latency badge -->
+  <rect x="1750" y="170" width="130" height="16" rx="8" fill="black" fill-opacity="0.35" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+  <text x="1760" y="181" font-family="'JetBrains Mono', monospace" font-size="8" fill="#77f2e4" fill-opacity="0.85">processed in 871 ms</text>
+  <!-- AI text -->
+  <text x="1752" y="200" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#ffffff">Here are 3 stocks I recommend:</text>
+  <text x="1752" y="218" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">Based on your medium-term horizon (3–12 months),</text>
+  <text x="1752" y="233" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">these picks have strong fundamentals.</text>
+  <!-- Refresh button -->
+  <circle cx="1752" cy="278" r="9" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+  <path d="M 1748 277 A 4 4 0 1 1 1756 281" stroke="white" stroke-opacity="0.4" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <polyline points="1756,279 1756,283 1752,281" stroke="white" stroke-opacity="0.4" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1768" y="281" font-family="'Inter', sans-serif" font-size="8" fill="#475569">Regenerate</text>
+
+  <!-- Annotations Module B -->
+  <text x="2360" y="175" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600" text-anchor="end">CONTAINER</text>
+  <text x="2530" y="175" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569" text-anchor="end">rounded-2xl rounded-tl-none</text>
+  <text x="2360" y="190" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600" text-anchor="end">FILL</text>
+  <text x="2530" y="190" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569" text-anchor="end">white/6 → white/2 → transparent</text>
+  <text x="2360" y="205" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600" text-anchor="end">LATENCY</text>
+  <text x="2530" y="205" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569" text-anchor="end">pill · black/30 · teal 8px mono</text>
+  <text x="2360" y="220" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600" text-anchor="end">LOGO</text>
+  <text x="2530" y="220" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569" text-anchor="end">16×16 shield · teal stroke</text>
+
+  <!-- ═══════════════════════════════════════════════
+       MODULE C — STOCK RECOMMENDATION TABLE
+  ═══════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <rect x="1000" y="344" width="6" height="12" rx="1" fill="#10b981"/>
+  <text x="1012" y="355" font-family="'JetBrains Mono', monospace" font-size="9" fill="#34d399" letter-spacing="2">MODULE C — STOCK RECOMMENDATION TABLE</text>
+
+  <!-- Module C card -->
+  <rect x="1000" y="360" width="1520" height="560" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-opacity="0.08" stroke-width="1" filter="url(#shadow24)"/>
+  <rect x="1000" y="360" width="1520" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- Table container -->
+  <rect x="1016" y="376" width="1488" height="460" rx="8" fill="#0d0f14" fill-opacity="0.6" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+
+  <!-- Table header row -->
+  <rect x="1016" y="376" width="1488" height="36" rx="8" fill="url(#tableHeaderBg)"/>
+  <rect x="1016" y="376" width="1488" height="1" fill="white" fill-opacity="0.06"/>
+  <!-- Column headers -->
+  <text x="1036" y="398" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.5">STOCK</text>
+  <text x="1260" y="398" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.5">ENTRY ZONE</text>
+  <text x="1450" y="398" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.5">TARGET</text>
+  <text x="1590" y="398" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.5">STOP LOSS</text>
+  <text x="1740" y="398" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.5">UPSIDE</text>
+  <text x="1844" y="398" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.5">TENURE</text>
+  <text x="1964" y="398" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.5">ACTION</text>
+  <text x="2080" y="398" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.5">SECTOR</text>
+  <!-- Vertical column dividers -->
+  <line x1="1250" y1="412" x2="1250" y2="836" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <line x1="1440" y1="412" x2="1440" y2="836" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <line x1="1580" y1="412" x2="1580" y2="836" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <line x1="1730" y1="412" x2="1730" y2="836" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <line x1="1834" y1="412" x2="1834" y2="836" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <line x1="1954" y1="412" x2="1954" y2="836" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <line x1="2070" y1="412" x2="2070" y2="836" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+
+  <!-- DATA ROW 1 — Gokul Agro -->
+  <rect x="1016" y="412" width="1488" height="70" fill="white" fill-opacity="0.015"/>
+  <line x1="1016" y1="482" x2="2504" y2="482" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <!-- Stock name + sector icon -->
+  <rect x="1030" y="424" width="6" height="42" rx="3" fill="#6366f1" fill-opacity="0.6"/>
+  <text x="1044" y="438" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#ffffff">Gokul Agro Resources</text>
+  <text x="1044" y="456" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b">NSE: GOKULAGRO</text>
+  <!-- Entry zone badge -->
+  <rect x="1260" y="428" width="162" height="20" rx="5" fill="#111520" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+  <text x="1270" y="442" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#94a3b8">₹234.88 – ₹239.62</text>
+  <!-- Target price -->
+  <text x="1450" y="445" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">₹308.43</text>
+  <!-- Stop loss -->
+  <text x="1590" y="445" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#f43f5e">₹166.08</text>
+  <!-- Upside badge -->
+  <rect x="1740" y="430" width="52" height="22" rx="11" fill="#10b981" fill-opacity="0.10" stroke="#10b981" stroke-opacity="0.20" stroke-width="0.8"/>
+  <text x="1747" y="445" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#34d399">+30%</text>
+  <!-- Tenure -->
+  <text x="1844" y="445" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#94a3b8">3–6 mo</text>
+  <!-- Action badge BUY -->
+  <rect x="1964" y="430" width="46" height="22" rx="11" fill="#6366f1" fill-opacity="0.12" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.8"/>
+  <text x="1976" y="445" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#818cf8">BUY</text>
+  <!-- Sector -->
+  <text x="2080" y="445" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">Agriculture</text>
+
+  <!-- DATA ROW 2 — SKM Egg Products (hover state) -->
+  <rect x="1016" y="482" width="1488" height="70" fill="white" fill-opacity="0.025"/>
+  <line x1="1016" y1="552" x2="2504" y2="552" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <!-- Hover indicator -->
+  <rect x="1016" y="482" width="3" height="70" fill="#6366f1" fill-opacity="0.5"/>
+  <rect x="1030" y="494" width="6" height="42" rx="3" fill="#77f2e4" fill-opacity="0.6"/>
+  <text x="1044" y="508" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#ffffff">SKM Egg Products</text>
+  <text x="1044" y="526" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b">NSE: SKMEGGS</text>
+  <rect x="1260" y="498" width="162" height="20" rx="5" fill="#111520" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+  <text x="1270" y="512" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#94a3b8">₹194.63 – ₹198.57</text>
+  <text x="1450" y="515" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">₹255.58</text>
+  <text x="1590" y="515" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#f43f5e">₹137.62</text>
+  <rect x="1740" y="500" width="52" height="22" rx="11" fill="#10b981" fill-opacity="0.10" stroke="#10b981" stroke-opacity="0.20" stroke-width="0.8"/>
+  <text x="1747" y="515" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#34d399">+30%</text>
+  <text x="1844" y="515" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#94a3b8">6mo–1y</text>
+  <rect x="1964" y="500" width="46" height="22" rx="11" fill="#6366f1" fill-opacity="0.12" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.8"/>
+  <text x="1976" y="515" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#818cf8">BUY</text>
+  <text x="2080" y="515" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">FMCG</text>
+
+  <!-- DATA ROW 3 — Route Mobile -->
+  <rect x="1016" y="552" width="1488" height="70" fill="white" fill-opacity="0.015"/>
+  <line x1="1016" y1="622" x2="2504" y2="622" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <rect x="1030" y="564" width="6" height="42" rx="3" fill="#a855f7" fill-opacity="0.6"/>
+  <text x="1044" y="578" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#ffffff">Route Mobile</text>
+  <text x="1044" y="596" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b">NSE: ROUTE</text>
+  <rect x="1260" y="568" width="162" height="20" rx="5" fill="#111520" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+  <text x="1270" y="582" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#94a3b8">₹515.44 – ₹525.86</text>
+  <text x="1450" y="585" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">₹676.85</text>
+  <text x="1590" y="585" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#f43f5e">₹364.46</text>
+  <rect x="1740" y="570" width="52" height="22" rx="11" fill="#10b981" fill-opacity="0.10" stroke="#10b981" stroke-opacity="0.20" stroke-width="0.8"/>
+  <text x="1747" y="585" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#34d399">+30%</text>
+  <text x="1844" y="585" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#94a3b8">3–6 mo</text>
+  <rect x="1964" y="570" width="46" height="22" rx="11" fill="#6366f1" fill-opacity="0.12" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.8"/>
+  <text x="1976" y="585" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#818cf8">BUY</text>
+  <text x="2080" y="585" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">Technology</text>
+
+  <!-- Table summary row -->
+  <rect x="1016" y="622" width="1488" height="40" fill="#6366f1" fill-opacity="0.04"/>
+  <text x="1036" y="646" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">Showing 3 of 8 recommendations · Tap a row to expand · Scroll right for more details</text>
+  <!-- Scroll indicator -->
+  <rect x="2380" y="830" width="100" height="6" rx="3" fill="white" fill-opacity="0.06"/>
+  <rect x="2380" y="830" width="40" height="6" rx="3" fill="white" fill-opacity="0.2"/>
+  <text x="2390" y="856" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">← scroll →</text>
+
+  <!-- Module C annotations -->
+  <line x1="1000" y1="847" x2="2520" y2="847" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="1016" y="862" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">HEADER</text>
+  <text x="1120" y="862" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">bg-gradient #1a1d26→#14161f · JetBrains Mono 10px headers · #64748b</text>
+  <text x="1016" y="877" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">TARGET</text>
+  <text x="1120" y="877" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">#10b981 bold · STOP LOSS: #f43f5e bold · UPSIDE: emerald pill</text>
+  <text x="1016" y="892" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">ROWS</text>
+  <text x="1120" y="892" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">white/1.5% default · white/2.5% hover · 70px height</text>
+  <text x="1016" y="907" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">ACTION</text>
+  <text x="1120" y="907" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">BUY pill · indigo/12% fill · indigo/25% border · #818cf8 text</text>
+
+  <!-- ═══════════════════════════════════════════════
+       MODULE D — SURVEY / INLINE QUESTION CARD
+  ═══════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <rect x="1000" y="934" width="6" height="12" rx="1" fill="#a855f7"/>
+  <text x="1012" y="945" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a855f7" letter-spacing="2">MODULE D — SURVEY / INLINE QUESTION CARD</text>
+
+  <!-- Module D card -->
+  <rect x="1000" y="950" width="700" height="380" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-opacity="0.08" stroke-width="1" filter="url(#shadow24)"/>
+  <rect x="1000" y="950" width="700" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- Survey card variant 1 -->
+  <text x="1016" y="972" font-family="'JetBrains Mono', monospace" font-size="8" fill="#a855f7" letter-spacing="1.5">INVESTMENT HORIZON SURVEY</text>
+  <!-- WayaX label -->
+  <text x="1016" y="988" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#ffffff">WayaX Advisor</text>
+  <!-- Survey glass card -->
+  <rect x="1016" y="994" width="668" height="220" rx="12" fill="url(#aiBubbleBg)" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+  <rect x="1016" y="994" width="668" height="1" fill="white" fill-opacity="0.05"/>
+  <!-- cut top-left corner -->
+  <rect x="1016" y="994" width="12" height="12" fill="#111318"/>
+
+  <!-- Question text -->
+  <text x="1032" y="1014" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Before I dive in — how long are you</text>
+  <text x="1032" y="1030" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">thinking of staying invested?</text>
+
+  <!-- Option 1 — default state -->
+  <rect x="1032" y="1042" width="640" height="34" rx="10" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="1050" y="1063" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Short Term — quick wins, under 3 months</text>
+  <!-- check circle (empty) -->
+  <circle cx="1656" cy="1059" r="7" fill="none" stroke="white" stroke-opacity="0.1" stroke-width="1"/>
+
+  <!-- Option 2 — selected/hover state -->
+  <rect x="1032" y="1080" width="640" height="34" rx="10" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.12" stroke-width="0.8"/>
+  <!-- Selected glow -->
+  <rect x="1032" y="1080" width="640" height="1" fill="white" fill-opacity="0.06"/>
+  <text x="1050" y="1101" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#ffffff">Medium Term — steady growth, 3 to 12 months</text>
+  <!-- check circle (selected) -->
+  <circle cx="1656" cy="1097" r="7" fill="#6366f1" fill-opacity="0.3" stroke="#6366f1" stroke-opacity="0.6" stroke-width="1"/>
+  <path d="M 1652 1097 L 1655 1100 L 1660 1094" stroke="#818cf8" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Option 3 — default state -->
+  <rect x="1032" y="1118" width="640" height="34" rx="10" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="1050" y="1139" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Long Term — wealth building, 1 year and beyond</text>
+  <circle cx="1656" cy="1135" r="7" fill="none" stroke="white" stroke-opacity="0.1" stroke-width="1"/>
+
+  <!-- Skip / Back links -->
+  <text x="1032" y="1200" font-family="'Inter', sans-serif" font-size="8.5" fill="#475569">← Back</text>
+  <text x="1672" y="1200" font-family="'Inter', sans-serif" font-size="8.5" fill="#475569" text-anchor="end">Skip →</text>
+
+  <!-- Survey variant 2 — Risk profile (4 options grid) -->
+  <text x="1016" y="1240" font-family="'JetBrains Mono', monospace" font-size="8" fill="#a855f7" letter-spacing="1.5">RISK PROFILE SURVEY (4-GRID)</text>
+  <!-- Grid 2x2 options -->
+  <!-- Opt 1 -->
+  <rect x="1016" y="1248" width="328" height="54" rx="10" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="1034" y="1268" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Conservative</text>
+  <text x="1034" y="1284" font-family="'Inter', sans-serif" font-size="8.5" fill="#475569">Low risk, stable returns</text>
+  <!-- Opt 2 selected -->
+  <rect x="1352" y="1248" width="328" height="54" rx="10" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.12" stroke-width="0.8"/>
+  <text x="1370" y="1268" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#ffffff">Moderate</text>
+  <text x="1370" y="1284" font-family="'Inter', sans-serif" font-size="8.5" fill="#94a3b8">Balanced growth</text>
+  <!-- Opt 3 -->
+  <rect x="1016" y="1306" width="328" height="54" rx="10" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="1034" y="1326" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Aggressive</text>
+  <text x="1034" y="1342" font-family="'Inter', sans-serif" font-size="8.5" fill="#475569">High risk, high reward</text>
+  <!-- Opt 4 -->
+  <rect x="1352" y="1306" width="328" height="54" rx="10" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="1370" y="1326" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Speculative</text>
+  <text x="1370" y="1342" font-family="'Inter', sans-serif" font-size="8.5" fill="#475569">Maximum upside</text>
+
+  <!-- Module D annotations -->
+  <line x1="1000" y1="1346" x2="1700" y2="1346" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="1016" y="1361" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">OPTION DEFAULT</text>
+  <text x="1200" y="1361" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">bg-white/2 · border-white/4 · text-slate-300</text>
+  <text x="1016" y="1376" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">OPTION SELECTED</text>
+  <text x="1200" y="1376" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">bg-white/8 · border-white/12 · text-white · scale[1.01]</text>
+  <text x="1016" y="1391" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">BUBBLE STYLE</text>
+  <text x="1200" y="1391" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">Same as AI bubble · rounded-tl-none</text>
+  <text x="1016" y="1406" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">VARIANT 2</text>
+  <text x="1200" y="1406" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">2×2 grid · 328×54px cells · same state styling</text>
+
+  <!-- ═══════════════════════════════════════════════
+       MODULE E — CHAT SEARCH BAR
+  ═══════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <rect x="1720" y="934" width="6" height="12" rx="1" fill="#6bb6f3"/>
+  <text x="1732" y="945" font-family="'JetBrains Mono', monospace" font-size="9" fill="#6bb6f3" letter-spacing="2">MODULE E — CHAT SEARCH BAR</text>
+
+  <!-- Module E card -->
+  <rect x="1720" y="950" width="820" height="380" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-opacity="0.08" stroke-width="1" filter="url(#shadow24)"/>
+  <rect x="1720" y="950" width="820" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- ACTIVE STATE LABEL -->
+  <text x="1736" y="976" font-family="'JetBrains Mono', monospace" font-size="8" fill="#6bb6f3" letter-spacing="1.5">ACTIVE / FOCUSED STATE</text>
+
+  <!-- Outer glow ring -->
+  <rect x="1736" y="986" width="788" height="68" rx="27" fill="none" stroke="url(#searchGlow)" stroke-width="2" stroke-opacity="0.5"/>
+  <!-- Glow blob behind -->
+  <ellipse cx="2130" cy="1020" rx="300" ry="30" fill="url(#ambientIndigo)" filter="url(#blur8)"/>
+  <!-- Glass card body -->
+  <rect x="1740" y="990" width="780" height="60" rx="24" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+  <!-- Textarea -->
+  <text x="1770" y="1014" font-family="'Inter', sans-serif" font-size="11" fill="#e2e8f0">Give me stocks with 30% upside in IT sector</text>
+  <!-- Cursor -->
+  <rect x="2012" y="1004" width="1.5" height="14" rx="0.5" fill="#6366f1"/>
+  <!-- Second line -->
+  <text x="1770" y="1030" font-family="'Inter', sans-serif" font-size="11" fill="#94a3b8">for 3–6 months tenure...</text>
+  <!-- Paperclip button -->
+  <circle cx="2390" cy="1020" r="14" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+  <path d="M 2385 1019 L 2385 1025 A 5 5 0 0 0 2395 1025 L 2395 1016 A 8 8 0 0 0 2379 1016 L 2379 1026 A 11 11 0 0 0 2401 1026 L 2401 1019" stroke="#64748b" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Send button ACTIVE -->
+  <rect x="2410" y="1008" width="44" height="34" rx="12" fill="url(#sendBtnActive)" filter="url(#indigoShadow)"/>
+  <path d="M 2424 1025 L 2440 1025 M 2434 1018 L 2441 1025 L 2434 1032" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Sub-element callouts -->
+  <!-- Callout 1: Glow ring -->
+  <line x1="1760" y1="986" x2="1760" y2="1070" stroke="#6bb6f3" stroke-opacity="0.3" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="1736" y="1082" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#6bb6f3">1. GLOW RING</text>
+  <text x="1736" y="1094" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">gradient · active focus</text>
+
+  <!-- Callout 2: Glass body -->
+  <line x1="1910" y1="990" x2="1910" y2="1100" stroke="#94a3b8" stroke-opacity="0.3" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="1880" y="1112" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">2. GLASS BODY</text>
+  <text x="1880" y="1124" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">white/3 blur-xl</text>
+
+  <!-- Callout 3: Textarea -->
+  <line x1="2010" y1="1012" x2="2010" y2="1136" stroke="#e2e8f0" stroke-opacity="0.2" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="1980" y="1148" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#e2e8f0">3. TEXTAREA</text>
+  <text x="1980" y="1160" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">auto-resize</text>
+
+  <!-- Callout 4: Paperclip -->
+  <line x1="2390" y1="1006" x2="2390" y2="1076" stroke="#64748b" stroke-opacity="0.3" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="2358" y="1088" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748b">4. PAPERCLIP</text>
+  <text x="2358" y="1100" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">w-8 h-8 slate-400</text>
+
+  <!-- Callout 5: Send active -->
+  <line x1="2432" y1="1008" x2="2432" y2="1076" stroke="#6366f1" stroke-opacity="0.4" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="2408" y="1088" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8">5. SEND BTN</text>
+  <text x="2408" y="1100" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">indigo glow</text>
+
+  <!-- EMPTY STATE LABEL -->
+  <text x="1736" y="1148" font-family="'JetBrains Mono', monospace" font-size="8" fill="#6bb6f3" letter-spacing="1.5">EMPTY / DISABLED STATE</text>
+
+  <!-- Empty state search bar -->
+  <rect x="1740" y="1158" width="780" height="54" rx="24" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+  <text x="1770" y="1188" font-family="'Inter', sans-serif" font-size="11" fill="#475569">Ask WayaX anything about markets...</text>
+  <!-- Disabled send button -->
+  <rect x="2452" y="1166" width="44" height="34" rx="12" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+  <path d="M 2466 1183 L 2482 1183 M 2476 1176 L 2483 1183 L 2476 1190" stroke="#475569" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Disabled paperclip -->
+  <circle cx="2430" cy="1183" r="14" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <path d="M 2425 1182 L 2425 1188 A 5 5 0 0 0 2435 1188 L 2435 1179 A 8 8 0 0 0 2419 1179 L 2419 1189 A 11 11 0 0 0 2441 1189 L 2441 1182" stroke="#475569" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <!-- Compact mode label -->
+  <text x="1736" y="1236" font-family="'JetBrains Mono', monospace" font-size="8" fill="#6bb6f3" letter-spacing="1.5">COMPACT MODE (isCompact=true)</text>
+  <rect x="1740" y="1244" width="780" height="44" rx="22" fill="white" fill-opacity="0.025" stroke="white" stroke-opacity="0.07" stroke-width="0.8"/>
+  <text x="1764" y="1269" font-family="'Inter', sans-serif" font-size="10" fill="#64748b">Ask WayaX...</text>
+  <rect x="2448" y="1252" width="36" height="28" rx="10" fill="url(#sendBtnActive)" filter="url(#indigoShadow)"/>
+  <path d="M 2458 1266 L 2470 1266 M 2465 1260 L 2471 1266 L 2465 1272" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Module E annotations -->
+  <line x1="1720" y1="1310" x2="2540" y2="1310" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="1736" y="1325" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">GLOW RING</text>
+  <text x="1860" y="1325" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">-inset-[3px] · gradient indigo→teal→purple · active on focus</text>
+  <text x="1736" y="1340" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">GLASS BODY</text>
+  <text x="1860" y="1340" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">bg-white/3 · border-white/8 · backdrop-blur-xl</text>
+  <text x="1736" y="1355" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">SEND ACTIVE</text>
+  <text x="1860" y="1355" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">bg-indigo-600 · rounded-xl · shadow-indigo glow</text>
+  <text x="1736" y="1370" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">COMPACT</text>
+  <text x="1860" y="1370" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">rounded-[22px] · min-h-[36px] max-h-[160px] auto-resize</text>
+
+  <!-- ═══════════════════════════════════════════════
+       ROW 3 SECTION LABEL
+  ═══════════════════════════════════════════════ -->
+  <rect x="60" y="1542" width="6" height="12" rx="1" fill="#77f2e4"/>
+  <text x="72" y="1553" font-family="'JetBrains Mono', monospace" font-size="9" fill="#77f2e4" letter-spacing="2">ROW 3 — SUPPLEMENTARY ELEMENTS</text>
+
+  <!-- ═══════════════════════════════════════════════
+       MODULE F — DROPDOWN PRESET QUESTIONS PANEL
+  ═══════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <rect x="60" y="1543" width="6" height="12" rx="1" fill="#6366f1"/>
+  <text x="72" y="1554" font-family="'JetBrains Mono', monospace" font-size="9" fill="#818cf8" letter-spacing="2">MODULE F — DROPDOWN PRESET QUESTIONS PANEL</text>
+
+  <!-- Module F card -->
+  <rect x="60" y="1560" width="920" height="380" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-opacity="0.08" stroke-width="1" filter="url(#shadow24)"/>
+  <rect x="60" y="1560" width="920" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- Tab buttons row -->
+  <rect x="76" y="1576" width="888" height="36" rx="8" fill="black" fill-opacity="0.2" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <!-- Tab 1 — Buy Stocks (Active) -->
+  <rect x="78" y="1578" width="140" height="32" rx="6" fill="#6366f1" fill-opacity="0.12"/>
+  <text x="148" y="1598" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#818cf8" text-anchor="middle">Buy Stocks</text>
+  <rect x="78" y="1608" width="140" height="2" rx="1" fill="#6366f1"/>
+  <!-- Tab 2 -->
+  <text x="278" y="1598" font-family="'Inter', sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Short</text>
+  <!-- Tab 3 -->
+  <text x="390" y="1598" font-family="'Inter', sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Long</text>
+  <!-- Tab 4 -->
+  <text x="520" y="1598" font-family="'Inter', sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Track Record</text>
+  <!-- Tab 5 -->
+  <text x="660" y="1598" font-family="'Inter', sans-serif" font-size="10" fill="#64748b" text-anchor="middle">About</text>
+
+  <!-- Question pills -->
+  <!-- Q1 -->
+  <rect x="76" y="1622" width="888" height="30" rx="8" fill="white" fill-opacity="0.025" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="94" y="1641" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Give me list of stocks I can buy</text>
+  <text x="940" y="1641" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" text-anchor="end">→</text>
+  <!-- Q2 -->
+  <rect x="76" y="1656" width="888" height="30" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="94" y="1675" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Give me stocks that can give 10% returns in 30 days</text>
+  <text x="940" y="1675" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" text-anchor="end">→</text>
+  <!-- Q3 — hover state -->
+  <rect x="76" y="1690" width="888" height="30" rx="8" fill="white" fill-opacity="0.045" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+  <text x="94" y="1709" font-family="'Inter', sans-serif" font-size="10" fill="#e2e8f0">Give me 3 stocks in IT sector I can buy today</text>
+  <text x="940" y="1709" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8" text-anchor="end">→</text>
+  <!-- Q4 -->
+  <rect x="76" y="1724" width="888" height="30" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="94" y="1743" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">What pharma stocks should I buy for 6-month tenure?</text>
+  <text x="940" y="1743" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" text-anchor="end">→</text>
+  <!-- Q5 -->
+  <rect x="76" y="1758" width="888" height="30" rx="8" fill="white" fill-opacity="0.025" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="94" y="1777" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Show me mid-cap stocks with strong momentum</text>
+  <text x="940" y="1777" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" text-anchor="end">→</text>
+  <!-- Q6 -->
+  <rect x="76" y="1792" width="888" height="30" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="94" y="1811" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Find stocks with upcoming catalysts in next 30 days</text>
+  <text x="940" y="1811" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" text-anchor="end">→</text>
+  <!-- Q7 -->
+  <rect x="76" y="1826" width="888" height="30" rx="8" fill="white" fill-opacity="0.025" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="94" y="1845" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Best FMCG picks for conservative investor?</text>
+  <text x="940" y="1845" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" text-anchor="end">→</text>
+  <!-- Q8 -->
+  <rect x="76" y="1860" width="888" height="30" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.04" stroke-width="0.8"/>
+  <text x="94" y="1879" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Suggest diversified portfolio for ₹50,000 investment</text>
+  <text x="940" y="1879" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" text-anchor="end">→</text>
+
+  <!-- Show more toggle -->
+  <text x="520" y="1924" font-family="'Inter', sans-serif" font-size="9" fill="#6366f1" text-anchor="middle">Show less ↑</text>
+  <line x1="60" y1="1930" x2="980" y2="1930" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+
+  <!-- Module F annotations -->
+  <text x="76" y="1946" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">CONTAINER</text>
+  <text x="200" y="1946" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">rounded-2xl · bg-black/30 · border-white/6 · backdrop-blur-xl</text>
+  <text x="76" y="1960" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">ACTIVE TAB</text>
+  <text x="200" y="1960" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">indigo text · border-b-indigo-500 2px · bg-indigo/12</text>
+  <text x="76" y="1974" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">Q-PILL</text>
+  <text x="200" y="1974" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">py-2 px-3 rounded-xl · hover: bg-white/4 border-white/8 slate-100</text>
+
+  <!-- ═══════════════════════════════════════════════
+       MODULE G — LOADING INDICATOR
+  ═══════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <rect x="1000" y="1543" width="6" height="12" rx="1" fill="#f43f5e"/>
+  <text x="1012" y="1554" font-family="'JetBrains Mono', monospace" font-size="9" fill="#f43f5e" letter-spacing="2">MODULE G — LOADING INDICATOR</text>
+
+  <!-- Module G card -->
+  <rect x="1000" y="1560" width="460" height="220" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-opacity="0.08" stroke-width="1" filter="url(#shadow24)"/>
+  <rect x="1000" y="1560" width="460" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- WayaX label -->
+  <text x="1016" y="1582" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#ffffff">WayaX Advisor</text>
+
+  <!-- Loading bubble -->
+  <rect x="1016" y="1590" width="200" height="60" rx="12" fill="url(#aiBubbleBg)" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+  <rect x="1016" y="1590" width="200" height="1" fill="white" fill-opacity="0.05"/>
+  <rect x="1016" y="1590" width="12" height="12" fill="#111318"/>
+  <!-- Dot 1 -->
+  <circle cx="1052" cy="1620" r="5" fill="white" fill-opacity="0.45"/>
+  <!-- Dot 2 (raised/active) -->
+  <circle cx="1078" cy="1614" r="5" fill="white" fill-opacity="0.70"/>
+  <!-- Dot 3 -->
+  <circle cx="1104" cy="1620" r="5" fill="white" fill-opacity="0.45"/>
+  <!-- Bounce indicators (manual animation state) -->
+  <line x1="1052" y1="1628" x2="1052" y2="1636" stroke="#77f2e4" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="1078" y1="1622" x2="1078" y2="1630" stroke="#77f2e4" stroke-opacity="0.6" stroke-width="1.5"/>
+  <line x1="1104" y1="1628" x2="1104" y2="1636" stroke="#77f2e4" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Hint text -->
+  <text x="1016" y="1670" font-family="'Inter', sans-serif" font-size="9" fill="#475569">WayaX is analyzing your portfolio...</text>
+
+  <!-- Latency spinner -->
+  <circle cx="1016" cy="1700" r="0" fill="none"/>
+  <!-- Spinner ring -->
+  <circle cx="1100" cy="1700" r="14" fill="none" stroke="white" stroke-opacity="0.06" stroke-width="2"/>
+  <path d="M 1100 1686 A 14 14 0 0 1 1114 1700" stroke="#77f2e4" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Spinner center text -->
+  <text x="1100" y="1704" font-family="'JetBrains Mono', monospace" font-size="7" fill="#77f2e4" text-anchor="middle">...</text>
+
+  <!-- Module G annotations -->
+  <line x1="1000" y1="1732" x2="1460" y2="1732" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="1016" y="1747" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">DOTS</text>
+  <text x="1100" y="1747" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">w-2 h-2 rounded-full bg-white/50 animate-bounce stagger</text>
+  <text x="1016" y="1762" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">HINT</text>
+  <text x="1100" y="1762" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">slate-500 9px Inter below bubble</text>
+  <text x="1016" y="1777" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">SPINNER</text>
+  <text x="1100" y="1777" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">circular dashed ring · teal arc · spinning</text>
+
+  <!-- ═══════════════════════════════════════════════
+       MODULE H — MARKDOWN RENDERING
+  ═══════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <rect x="1480" y="1543" width="6" height="12" rx="1" fill="#77f2e4"/>
+  <text x="1492" y="1554" font-family="'JetBrains Mono', monospace" font-size="9" fill="#77f2e4" letter-spacing="2">MODULE H — MARKDOWN RENDERING IN AI MESSAGES</text>
+
+  <!-- Module H card -->
+  <rect x="1480" y="1560" width="560" height="380" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-opacity="0.08" stroke-width="1" filter="url(#shadow24)"/>
+  <rect x="1480" y="1560" width="560" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- Markdown demo bubble -->
+  <rect x="1496" y="1576" width="528" height="316" rx="12" fill="url(#aiBubbleBg)" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+  <rect x="1496" y="1576" width="528" height="1" fill="white" fill-opacity="0.05"/>
+  <rect x="1496" y="1576" width="12" height="12" fill="#111318"/>
+
+  <!-- H3 header -->
+  <text x="1512" y="1598" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#f8fafc">Stock Analysis Summary</text>
+  <!-- HR line -->
+  <line x1="1512" y1="1606" x2="2010" y2="1606" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Bold text -->
+  <text x="1512" y="1624" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#ffffff">Key Recommendation:</text>
+  <text x="1512" y="1640" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">Gokul Agro Resources shows strong momentum with</text>
+  <text x="1512" y="1656" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">a well-defined risk/reward structure.</text>
+
+  <!-- Italic text -->
+  <text x="1512" y="1676" font-family="'Inter', sans-serif" font-size="10" font-style="italic" fill="#94a3b8">Note: Past performance does not guarantee future returns.</text>
+
+  <!-- Space separator -->
+  <line x1="1512" y1="1690" x2="2010" y2="1690" stroke="white" stroke-opacity="0.04" stroke-width="0.5"/>
+
+  <!-- Numbered list -->
+  <text x="1512" y="1706" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#ffffff">Why This Pick?</text>
+  <!-- Item 1 -->
+  <circle cx="1526" cy="1722" r="8" fill="#6366f1" fill-opacity="0.2"/>
+  <text x="1526" y="1726" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8" text-anchor="middle">1</text>
+  <text x="1542" y="1726" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">Strong Q3 earnings with 28% YoY revenue growth</text>
+  <!-- Item 2 -->
+  <circle cx="1526" cy="1742" r="8" fill="#6366f1" fill-opacity="0.2"/>
+  <text x="1526" y="1746" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8" text-anchor="middle">2</text>
+  <text x="1542" y="1746" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">RSI breakout above 55 with volume confirmation</text>
+  <!-- Item 3 -->
+  <circle cx="1526" cy="1762" r="8" fill="#6366f1" fill-opacity="0.2"/>
+  <text x="1526" y="1766" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8" text-anchor="middle">3</text>
+  <text x="1542" y="1766" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">Sector tailwinds: Agri policy reforms incoming</text>
+
+  <!-- Space -->
+  <line x1="1512" y1="1778" x2="2010" y2="1778" stroke="white" stroke-opacity="0.04" stroke-width="0.5"/>
+
+  <!-- Bold highlight inline -->
+  <text x="1512" y="1795" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">Target: </text>
+  <text x="1554" y="1795" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#10b981">₹308.43</text>
+  <text x="1620" y="1795" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1"> · Stop: </text>
+  <text x="1658" y="1795" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#f43f5e">₹166.08</text>
+  <text x="1724" y="1795" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1"> · Hold: </text>
+  <text x="1766" y="1795" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#818cf8">3–6 mo</text>
+
+  <!-- Annotations Module H -->
+  <line x1="1480" y1="1910" x2="2040" y2="1910" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="1496" y="1925" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">H3</text>
+  <text x="1560" y="1925" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">font-size 13px semi-bold · #f8fafc</text>
+  <text x="1496" y="1940" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">BOLD</text>
+  <text x="1560" y="1940" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">font-weight 700 · #ffffff</text>
+  <text x="1496" y="1955" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">ITALIC</text>
+  <text x="1560" y="1955" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">font-style italic · #94a3b8</text>
+  <text x="1496" y="1970" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">HR</text>
+  <text x="1560" y="1970" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">border-t white/10 · my-4</text>
+  <text x="1496" y="1985" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">SPACING</text>
+  <text x="1560" y="1985" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">space-y-4 between blocks</text>
+
+  <!-- ═══════════════════════════════════════════════
+       MODULE I — TIMESTAMP & META BADGES
+  ═══════════════════════════════════════════════ -->
+  <!-- Section label -->
+  <rect x="2060" y="1543" width="6" height="12" rx="1" fill="#a855f7"/>
+  <text x="2072" y="1554" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a855f7" letter-spacing="2">MODULE I — TIMESTAMP &amp; META BADGES</text>
+
+  <!-- Module I card -->
+  <rect x="2060" y="1560" width="480" height="380" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-opacity="0.08" stroke-width="1" filter="url(#shadow24)"/>
+  <rect x="2060" y="1560" width="480" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- Timestamp -->
+  <text x="2076" y="1585" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">CHAT TIMESTAMP</text>
+  <rect x="2076" y="1592" width="480" height="1" fill="white" fill-opacity="0.04"/>
+  <text x="2076" y="1612" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b">10:32 AM</text>
+  <text x="2200" y="1612" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">JetBrains Mono 9px · #64748b · bottom of bubble</text>
+
+  <!-- Latency badge -->
+  <text x="2076" y="1635" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">LATENCY BADGE</text>
+  <rect x="2076" y="1643" width="480" height="1" fill="white" fill-opacity="0.04"/>
+  <rect x="2076" y="1652" width="130" height="18" rx="9" fill="black" fill-opacity="0.30" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+  <text x="2086" y="1664" font-family="'JetBrains Mono', monospace" font-size="8" fill="#77f2e4">processed in 871 ms</text>
+  <text x="2220" y="1664" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">pill · bg-black/30 · teal 8px</text>
+
+  <!-- SEBI compliance badge -->
+  <text x="2076" y="1687" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">SEBI COMPLIANCE BADGE</text>
+  <rect x="2076" y="1695" width="480" height="1" fill="white" fill-opacity="0.04"/>
+  <rect x="2076" y="1704" width="140" height="18" rx="9" fill="#6366f1" fill-opacity="0.10" stroke="#6366f1" stroke-opacity="0.20" stroke-width="0.8"/>
+  <text x="2086" y="1716" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8">RA: INH000010876</text>
+  <text x="2230" y="1716" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">indigo pill 7.5px mono</text>
+
+  <!-- Session counter -->
+  <text x="2076" y="1739" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">SESSION COUNTER</text>
+  <rect x="2076" y="1747" width="480" height="1" fill="white" fill-opacity="0.04"/>
+  <text x="2076" y="1766" font-family="'Inter', sans-serif" font-size="10" fill="#64748b">Advisory Session #2</text>
+  <text x="2260" y="1766" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">slate-400 10px · label</text>
+
+  <!-- Sender label: WayaX Advisor -->
+  <text x="2076" y="1791" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">SENDER LABEL — AI</text>
+  <rect x="2076" y="1799" width="480" height="1" fill="white" fill-opacity="0.04"/>
+  <!-- Shield icon -->
+  <path d="M 2080 1812 L 2086 1809 L 2092 1812 L 2092 1820 C 2092 1823 2089 1825 2086 1826 C 2083 1825 2080 1823 2080 1820 Z" fill="none" stroke="#77f2e4" stroke-width="1" stroke-opacity="0.8"/>
+  <path d="M 2083 1818 L 2086 1821 L 2090 1816" stroke="#77f2e4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="2098" y="1820" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#ffffff">WayaX Advisor</text>
+  <text x="2260" y="1820" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">bold 10px white + shield</text>
+
+  <!-- User label -->
+  <text x="2076" y="1845" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">SENDER LABEL — USER</text>
+  <rect x="2076" y="1853" width="480" height="1" fill="white" fill-opacity="0.04"/>
+  <circle cx="2086" cy="1872" r="10" fill="#6366f1" fill-opacity="0.25" stroke="#6366f1" stroke-opacity="0.3" stroke-width="0.8"/>
+  <text x="2086" y="1876" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#818cf8" text-anchor="middle">A</text>
+  <text x="2104" y="1876" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Amit</text>
+  <text x="2260" y="1876" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">slate-300 10px right-aligned</text>
+
+  <!-- Message read receipt -->
+  <text x="2076" y="1900" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8" font-weight="600">READ RECEIPT</text>
+  <rect x="2076" y="1908" width="480" height="1" fill="white" fill-opacity="0.04"/>
+  <!-- Double check marks -->
+  <path d="M 2080 1924 L 2086 1930 L 2096 1918" stroke="#64748b" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 2087 1924 L 2093 1930 L 2103 1918" stroke="#64748b" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="2112" y="1928" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">Read · gray/blue on seen · 12px icon</text>
+
+  <!-- ═══════════════════════════════════════════════
+       DECORATIVE AMBIENT ELEMENTS
+  ═══════════════════════════════════════════════ -->
+  <!-- Corner decorations -->
+  <rect x="60" y="1940" width="2480" height="1" fill="white" fill-opacity="0.04"/>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <text x="1300" y="1978" font-family="'JetBrains Mono', monospace" font-size="9" fill="#475569" text-anchor="middle" letter-spacing="2">04 · CHAT BOX ALL ELEMENTS · WAYAX DESIGN SYSTEM · MESSAGES · TABLES · SURVEYS · 2600×2000</text>
+  <!-- Footer dots -->
+  <circle cx="60" cy="1978" r="2" fill="#6366f1" fill-opacity="0.4"/>
+  <circle cx="2540" cy="1978" r="2" fill="#77f2e4" fill-opacity="0.4"/>
+  <!-- Bottom glow line -->
+  <rect x="60" y="1990" width="2480" height="1" rx="0.5" fill="url(#searchGlow)" fill-opacity="0.3"/>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION DIVIDERS / GRID LINES
+  ═══════════════════════════════════════════════ -->
+  <!-- Vertical divider between viewport and modules -->
+  <line x1="970" y1="100" x2="970" y2="1540" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <!-- Horizontal divider Row 2 / Row 3 -->
+  <line x1="60" y1="1530" x2="2540" y2="1530" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <!-- Vertical dividers Row 2 -->
+  <line x1="1710" y1="100" x2="1710" y2="945" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <!-- Divider Module D / E -->
+  <line x1="1710" y1="940" x2="1710" y2="1540" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <!-- Row 3 vertical dividers -->
+  <line x1="990" y1="1540" x2="990" y2="1960" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1470" y1="1540" x2="1470" y2="1960" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="2050" y1="1540" x2="2050" y2="1960" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+
+</svg>

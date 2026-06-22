@@ -1,0 +1,1155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1800" viewBox="0 0 2400 1800">
+  <defs>
+    <!-- Main canvas gradient -->
+    <linearGradient id="canvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080a10"/>
+      <stop offset="100%" stop-color="#0a0c15"/>
+    </linearGradient>
+
+    <!-- Radial gradient for dashboard mockup -->
+    <radialGradient id="mockupBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0d1020"/>
+      <stop offset="100%" stop-color="#080a10"/>
+    </radialGradient>
+
+    <!-- Indigo ambient orb gradient -->
+    <radialGradient id="indigoOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Teal ambient orb gradient -->
+    <radialGradient id="tealOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#77f2e4" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#77f2e4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Purple ambient orb -->
+    <radialGradient id="purpleOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glass card gradient -->
+    <linearGradient id="glassCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+
+    <!-- Module card gradient -->
+    <linearGradient id="moduleCardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111318" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d0f14" stop-opacity="0.92"/>
+    </linearGradient>
+
+    <!-- Indigo button gradient -->
+    <linearGradient id="indigoBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+
+    <!-- Indigo glow gradient for search -->
+    <radialGradient id="searchGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Teal center glow for empty state -->
+    <radialGradient id="tealCenterGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#77f2e4" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#77f2e4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Shield gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1f2e"/>
+      <stop offset="100%" stop-color="#111520"/>
+    </linearGradient>
+
+    <!-- Logo teal glow -->
+    <radialGradient id="logoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#77f2e4" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#77f2e4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sidebar gradient -->
+    <linearGradient id="sidebarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111318" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#0d0f14" stop-opacity="0.90"/>
+    </linearGradient>
+
+    <!-- FAQ panel gradient -->
+    <linearGradient id="faqGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131720" stop-opacity="0.97"/>
+      <stop offset="100%" stop-color="#0e1118" stop-opacity="0.94"/>
+    </linearGradient>
+
+    <!-- Light mode gradient -->
+    <linearGradient id="lightModeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+
+    <!-- Dot grid pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="1" fill="white" fill-opacity="0.05"/>
+    </pattern>
+
+    <!-- Small dot grid for mockup -->
+    <pattern id="dotGridSm" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="0.7" fill="white" fill-opacity="0.06"/>
+    </pattern>
+
+    <!-- Blur filters -->
+    <filter id="blur80">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+    <filter id="blur50">
+      <feGaussianBlur stdDeviation="50"/>
+    </filter>
+    <filter id="blur30">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="blur20">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="blur15">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <filter id="blur10">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="blur6">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="blur4">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="dropShadowCard">
+      <feDropShadow dx="0" dy="8" stdDeviation="30" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="indigoGlow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#6366f1" flood-opacity="0.5"/>
+    </filter>
+    <filter id="tealGlowFilter">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#77f2e4" flood-opacity="0.6"/>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="16" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Clip path for mockup -->
+    <clipPath id="mockupClip">
+      <rect x="60" y="120" width="900" height="700" rx="14"/>
+    </clipPath>
+
+    <!-- Clip path for module cards -->
+    <clipPath id="modAClip">
+      <rect x="60" y="880" width="680" height="280" rx="14"/>
+    </clipPath>
+    <clipPath id="modBClip">
+      <rect x="760" y="880" width="680" height="280" rx="14"/>
+    </clipPath>
+    <clipPath id="modCClip">
+      <rect x="1460" y="880" width="880" height="280" rx="14"/>
+    </clipPath>
+    <clipPath id="modDClip">
+      <rect x="60" y="1200" width="740" height="380" rx="14"/>
+    </clipPath>
+    <clipPath id="modEClip">
+      <rect x="820" y="1200" width="660" height="380" rx="14"/>
+    </clipPath>
+    <clipPath id="modFClip">
+      <rect x="1500" y="1200" width="860" height="380" rx="14"/>
+    </clipPath>
+
+    <!-- Teal section label badge -->
+    <linearGradient id="tealBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#77f2e4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#77f2e4" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Indigo section label badge -->
+    <linearGradient id="indigoBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Row separator gradient -->
+    <linearGradient id="sepLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Capsule pill gradient -->
+    <linearGradient id="capsuleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1d26" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#12141c" stop-opacity="0.92"/>
+    </linearGradient>
+
+    <!-- Emerald gradient -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Search input gradient -->
+    <linearGradient id="searchCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+
+    <!-- Light card gradient -->
+    <linearGradient id="lightCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#f1f5f9" stop-opacity="0.70"/>
+    </linearGradient>
+
+    <!-- Indigo pill gradient -->
+    <linearGradient id="indigoPillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MASTER CANVAS BACKGROUND                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <rect width="2400" height="1800" fill="url(#canvasBg)"/>
+  <rect width="2400" height="1800" fill="url(#dotGrid)"/>
+
+  <!-- Global ambient orbs -->
+  <ellipse cx="400" cy="400" rx="600" ry="500" fill="url(#indigoOrb)" filter="url(#blur80)"/>
+  <ellipse cx="2100" cy="300" rx="500" ry="400" fill="url(#tealOrb)" filter="url(#blur80)"/>
+  <ellipse cx="1200" cy="900" rx="700" ry="500" fill="url(#purpleOrb)" filter="url(#blur80)"/>
+  <ellipse cx="1800" cy="1500" rx="500" ry="400" fill="url(#indigoOrb)" filter="url(#blur80)"/>
+  <ellipse cx="300" cy="1600" rx="400" ry="300" fill="url(#tealOrb)" filter="url(#blur50)"/>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- BOARD HEADER                                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(60,50)">
+    <!-- Header accent line -->
+    <rect x="0" y="0" width="3" height="42" rx="1.5" fill="#6366f1"/>
+    <text x="18" y="30" font-family="'Sora', sans-serif" font-size="30" font-weight="700" fill="#f8fafc" letter-spacing="-0.5">03 · Home Page — Dashboard</text>
+    <text x="18" y="52" font-family="'JetBrains Mono', monospace" font-size="11" fill="#77f2e4" letter-spacing="2">WAYAX · MAIN DASHBOARD · EMPTY STATE · SEARCH BAR · PANELS · NAV CAPSULE</text>
+  </g>
+
+  <!-- Row separator -->
+  <rect x="60" y="78" width="2280" height="1" fill="url(#sepLine)"/>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ROW 1: FULL PAGE LAYOUT MOCKUP (y=120)                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Row label -->
+  <g transform="translate(60,96)">
+    <rect x="0" y="0" width="180" height="20" rx="4" fill="url(#tealBadge)" stroke="#77f2e4" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="8" y="14" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#77f2e4" letter-spacing="1.5">ROW 1 — FULL PAGE LAYOUT</text>
+  </g>
+
+  <!-- Right column label -->
+  <g transform="translate(1010,96)">
+    <rect x="0" y="0" width="160" height="20" rx="4" fill="url(#indigoBadge)" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="8" y="14" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#818cf8" letter-spacing="1.5">COMPONENT SPECS</text>
+  </g>
+
+  <!-- ───────────── MAIN DASHBOARD MOCKUP ───────────── -->
+  <!-- Outer shadow -->
+  <rect x="58" y="118" width="904" height="704" rx="16" fill="none" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.15" filter="url(#dropShadowCard)"/>
+
+  <!-- Mockup outer frame -->
+  <rect x="60" y="120" width="900" height="700" rx="14" fill="url(#mockupBg)" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+
+  <!-- Specular top edge -->
+  <rect x="60" y="120" width="900" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+  <!-- Clip group for mockup contents -->
+  <g clip-path="url(#mockupClip)">
+    <!-- Dot grid texture inside mockup -->
+    <rect x="60" y="120" width="900" height="700" fill="url(#dotGridSm)"/>
+
+    <!-- Ambient orbs inside mockup -->
+    <ellipse cx="250" cy="300" rx="280" ry="220" fill="url(#indigoOrb)" filter="url(#blur50)"/>
+    <ellipse cx="700" cy="500" rx="240" ry="200" fill="url(#tealOrb)" filter="url(#blur50)"/>
+    <ellipse cx="500" cy="150" rx="180" ry="140" fill="url(#purpleOrb)" filter="url(#blur30)"/>
+
+    <!-- ─── LEFT SIDEBAR ─── -->
+    <rect x="60" y="120" width="72" height="700" fill="url(#sidebarGrad)" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <rect x="131" y="120" width="0.5" height="700" fill="white" fill-opacity="0.06"/>
+
+    <!-- Sidebar logo area -->
+    <rect x="72" y="136" width="48" height="48" rx="12" fill="#111620" stroke="#77f2e4" stroke-width="0.8" stroke-opacity="0.4"/>
+    <!-- Shield icon simplified -->
+    <path d="M96 148 L96 148 C96 148 108 152 108 162 L108 172 C108 179 103 183 96 187 C89 183 84 179 84 172 L84 162 C84 152 96 148 96 148 Z" fill="none" stroke="#77f2e4" stroke-width="1.5" stroke-opacity="0.8"/>
+    <path d="M92 168 L95 171 L101 165" stroke="#77f2e4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Sidebar nav items (icons) -->
+    <!-- Home icon (active) -->
+    <rect x="72" y="204" width="48" height="38" rx="10" fill="#6366f1" fill-opacity="0.15"/>
+    <rect x="72" y="204" width="48" height="38" rx="10" fill="none" stroke="#6366f1" stroke-width="0.8" stroke-opacity="0.4"/>
+    <path d="M96 214 L86 222 L86 238 L92 238 L92 231 L100 231 L100 238 L106 238 L106 222 Z" fill="none" stroke="#818cf8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Chart/Analyze icon -->
+    <rect x="76" y="252" width="40" height="34" rx="9" fill="white" fill-opacity="0.03"/>
+    <path d="M84 278 L84 266 M90 278 L90 270 M96 278 L96 263 M102 278 L102 268 M108 278 L108 260" stroke="#64748b" stroke-width="1.3" stroke-linecap="round"/>
+
+    <!-- Stocks icon -->
+    <rect x="76" y="296" width="40" height="34" rx="9" fill="white" fill-opacity="0.03"/>
+    <path d="M83 322 L88 314 L94 318 L100 308 L106 312" stroke="#64748b" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Portfolio icon -->
+    <rect x="76" y="340" width="40" height="34" rx="9" fill="white" fill-opacity="0.03"/>
+    <rect x="83" y="347" width="26" height="20" rx="3" fill="none" stroke="#64748b" stroke-width="1.2"/>
+    <line x1="88" y1="352" x2="102" y2="352" stroke="#64748b" stroke-width="1" stroke-opacity="0.6"/>
+    <line x1="88" y1="357" x2="98" y2="357" stroke="#64748b" stroke-width="1" stroke-opacity="0.6"/>
+
+    <!-- Settings icon (bottom) -->
+    <rect x="76" y="748" width="40" height="34" rx="9" fill="white" fill-opacity="0.03"/>
+    <circle cx="96" cy="765" r="5" fill="none" stroke="#64748b" stroke-width="1.2"/>
+    <circle cx="96" cy="765" r="2" fill="#64748b" fill-opacity="0.5"/>
+
+    <!-- Active indicator dot -->
+    <circle cx="135" cy="223" r="2.5" fill="#6366f1"/>
+
+    <!-- ─── TOP RIGHT CAPSULE ─── -->
+    <!-- Capsule pill -->
+    <rect x="700" y="128" width="242" height="36" rx="18" fill="url(#capsuleGrad)" stroke="white" stroke-width="0.7" stroke-opacity="0.1" filter="url(#softShadow)"/>
+    <!-- Capsule specular -->
+    <rect x="700" y="128" width="242" height="1" rx="0.5" fill="white" fill-opacity="0.08"/>
+
+    <!-- Brain button -->
+    <rect x="708" y="134" width="28" height="24" rx="7" fill="white" fill-opacity="0.04" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+    <!-- Brain icon simplified -->
+    <path d="M718 141 C718 139 720 138 722 139 C724 138 726 139 726 141 C727 141 728 142.5 727 143.5 C728 144 728 146 726.5 146.5 C726 148 724 148.5 722 148 C720 148.5 718 148 717.5 146.5 C716 146 716 144 717 143.5 C716 142.5 717 141 718 141 Z" fill="none" stroke="#818cf8" stroke-width="1.1"/>
+    <line x1="722" y1="139" x2="722" y2="148" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.5"/>
+
+    <!-- Compass button -->
+    <rect x="742" y="134" width="28" height="24" rx="7" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <circle cx="756" cy="146" r="5.5" fill="none" stroke="#94a3b8" stroke-width="1.1"/>
+    <path d="M754 143 L755.5 148 L758 143 Z" fill="#94a3b8" fill-opacity="0.6"/>
+
+    <!-- Divider -->
+    <rect x="778" y="137" width="0.8" height="14" fill="white" fill-opacity="0.1"/>
+
+    <!-- Theme toggle -->
+    <rect x="784" y="134" width="28" height="24" rx="7" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <!-- Sun icon -->
+    <circle cx="798" cy="146" r="4" fill="none" stroke="#f59e0b" stroke-width="1.1"/>
+    <line x1="798" y1="140" x2="798" y2="138.5" stroke="#f59e0b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="798" y1="152" x2="798" y2="153.5" stroke="#f59e0b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="802.5" y1="141.5" x2="803.5" y2="140.5" stroke="#f59e0b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="793.5" y1="150.5" x2="792.5" y2="151.5" stroke="#f59e0b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="804" y1="146" x2="805.5" y2="146" stroke="#f59e0b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="792" y1="146" x2="790.5" y2="146" stroke="#f59e0b" stroke-width="1" stroke-linecap="round"/>
+
+    <!-- Help button -->
+    <rect x="818" y="134" width="44" height="24" rx="7" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+    <text x="840" y="148.5" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Help?</text>
+
+    <!-- ─── CENTER EMPTY STATE ─── -->
+    <!-- Ambient teal glow -->
+    <ellipse cx="530" cy="430" rx="200" ry="160" fill="#77f2e4" fill-opacity="0.08" filter="url(#blur30)"/>
+
+    <!-- Shield logo -->
+    <rect x="478" y="318" width="104" height="104" rx="22" fill="url(#shieldGrad)" stroke="#77f2e4" stroke-width="1.5" stroke-opacity="0.5"/>
+    <!-- Glow behind shield -->
+    <rect x="470" y="310" width="120" height="120" rx="26" fill="#77f2e4" fill-opacity="0.08" filter="url(#blur10)"/>
+    <!-- Shield path large -->
+    <path d="M530 330 C530 330 554 338 554 356 L554 374 C554 388 543 397 530 404 C517 397 506 388 506 374 L506 356 C506 338 530 330 530 330 Z" fill="none" stroke="#77f2e4" stroke-width="2" stroke-opacity="0.9"/>
+    <!-- W letter inside shield -->
+    <text x="530" y="376" font-family="'Sora', sans-serif" font-size="22" font-weight="800" fill="#77f2e4" fill-opacity="0.9" text-anchor="middle">W</text>
+
+    <!-- Ask WayaX heading -->
+    <text x="530" y="447" font-family="'Sora', sans-serif" font-size="28" font-weight="800" fill="#f8fafc" text-anchor="middle">Ask WayaX</text>
+    <!-- Subtitle -->
+    <text x="530" y="468" font-family="'Inter', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Your SEBI-registered AI research assistant.</text>
+
+    <!-- SEBI badge -->
+    <rect x="478" y="478" width="104" height="18" rx="9" fill="#6366f1" fill-opacity="0.1" stroke="#6366f1" stroke-width="0.7" stroke-opacity="0.3"/>
+    <text x="530" y="490" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8" text-anchor="middle">RA: INH000010876</text>
+
+    <!-- ─── MAIN SEARCH BAR ─── -->
+    <!-- Glow ring (focus state) -->
+    <rect x="202" y="506" width="656" height="52" rx="26" fill="#6366f1" fill-opacity="0.08" filter="url(#blur10)"/>
+    <!-- Search card -->
+    <rect x="208" y="510" width="644" height="48" rx="24" fill="url(#searchCardGrad)" stroke="white" stroke-width="0.7" stroke-opacity="0.08"/>
+    <rect x="208" y="510" width="644" height="1" rx="0.5" fill="white" fill-opacity="0.07"/>
+    <!-- Input text (placeholder) -->
+    <text x="230" y="539" font-family="'Inter', sans-serif" font-size="12" fill="#64748b">Give me stocks currently in the BUY zone?</text>
+    <!-- Cursor blink -->
+    <rect x="454" y="527" width="1.5" height="16" rx="1" fill="#818cf8" fill-opacity="0.8"/>
+    <!-- Paperclip button -->
+    <rect x="772" y="521" width="28" height="26" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <path d="M781 534 L781 528 C781 525.8 782.8 524 785 524 C787.2 524 789 525.8 789 528 L789 534.5 C789 535.7 788 536.7 786.8 536.7 C785.6 536.7 784.6 535.7 784.6 534.5 L784.6 528.5" fill="none" stroke="#64748b" stroke-width="1.1" stroke-linecap="round"/>
+    <!-- Send button -->
+    <rect x="806" y="519" width="32" height="30" rx="9" fill="url(#indigoBtn)" filter="url(#indigoGlow)"/>
+    <path d="M814 534 L822 534 M819 531 L822 534 L819 537" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- ─── PRESET DROPDOWN (collapsed) ─── -->
+    <rect x="302" y="570" width="456" height="28" rx="14" fill="white" fill-opacity="0.02" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <!-- Indigo dot -->
+    <circle cx="318" cy="584" r="3" fill="#6366f1"/>
+    <text x="326" y="588" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Buy Stocks</text>
+    <!-- chevron down -->
+    <path d="M737 581 L740 584 L743 581" stroke="#475569" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- ─── FAQ PANEL (right edge, 30% visible) ─── -->
+    <rect x="868" y="168" width="92" height="584" rx="12" fill="url(#faqGrad)" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+    <rect x="868" y="168" width="92" height="1" rx="0.5" fill="white" fill-opacity="0.07"/>
+    <!-- FAQ title (truncated) -->
+    <text x="878" y="188" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#f1f5f9">Help &amp; FAQ</text>
+    <line x1="868" y1="196" x2="960" y2="196" stroke="white" stroke-opacity="0.05"/>
+    <!-- FAQ items peek -->
+    <rect x="876" y="206" width="76" height="28" rx="6" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.4" stroke-opacity="0.06"/>
+    <text x="884" y="222" font-family="'Inter', sans-serif" font-size="7.5" fill="#cbd5e1">Buy Zones</text>
+    <rect x="876" y="244" width="76" height="24" rx="6" fill="white" fill-opacity="0.02"/>
+    <text x="884" y="258" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Short Trades</text>
+    <rect x="876" y="278" width="76" height="24" rx="6" fill="white" fill-opacity="0.02"/>
+    <text x="884" y="292" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">About WayaX</text>
+  </g>
+
+  <!-- Mockup frame border (on top) -->
+  <rect x="60" y="120" width="900" height="700" rx="14" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+
+  <!-- ───────────── SPEC PANEL (right of mockup) ───────────── -->
+  <g transform="translate(1010,120)">
+    <!-- Spec panel card -->
+    <rect x="0" y="0" width="330" height="700" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-width="0.5" stroke-opacity="0.07"/>
+    <rect x="0" y="0" width="330" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+    <text x="20" y="32" font-family="'Sora', sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Dashboard Layout</text>
+    <text x="20" y="48" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">Full page composition specs</text>
+
+    <line x1="20" y1="58" x2="310" y2="58" stroke="white" stroke-opacity="0.05"/>
+
+    <!-- Spec rows -->
+    <g font-family="'JetBrains Mono', monospace" font-size="8.5">
+      <text x="20" y="76" fill="#94a3b8" font-weight="600">Canvas bg</text>
+      <text x="160" y="76" fill="#475569">#080a10 → #0a0c15</text>
+
+      <text x="20" y="96" fill="#94a3b8" font-weight="600">Grid pattern</text>
+      <text x="160" y="96" fill="#475569">36px · 1px · 5% white</text>
+
+      <text x="20" y="116" fill="#94a3b8" font-weight="600">Sidebar w</text>
+      <text x="160" y="116" fill="#475569">72px · fixed left</text>
+
+      <text x="20" y="136" fill="#94a3b8" font-weight="600">Sidebar bg</text>
+      <text x="160" y="136" fill="#475569">#111318/96 blur-xl</text>
+
+      <text x="20" y="156" fill="#94a3b8" font-weight="600">Top capsule</text>
+      <text x="160" y="156" fill="#475569">fixed top-4 right-5</text>
+
+      <text x="20" y="176" fill="#94a3b8" font-weight="600">Capsule z-index</text>
+      <text x="160" y="176" fill="#475569">z-[200]</text>
+
+      <text x="20" y="196" fill="#94a3b8" font-weight="600">Logo size</text>
+      <text x="160" y="196" fill="#475569">104×104 rounded-22</text>
+
+      <text x="20" y="216" fill="#94a3b8" font-weight="600">Search bar w</text>
+      <text x="160" y="216" fill="#475569">max-w-[1240px]</text>
+
+      <text x="20" y="236" fill="#94a3b8" font-weight="600">Search radius</text>
+      <text x="160" y="236" fill="#475569">rounded-[24px]</text>
+
+      <text x="20" y="256" fill="#94a3b8" font-weight="600">FAQ panel w</text>
+      <text x="160" y="256" fill="#475569">300px fixed right-4</text>
+
+      <text x="20" y="276" fill="#94a3b8" font-weight="600">FAQ z-index</text>
+      <text x="160" y="276" fill="#475569">z-[200]</text>
+
+      <text x="20" y="296" fill="#94a3b8" font-weight="600">Ambient orbs</text>
+      <text x="160" y="296" fill="#475569">2× blur-[80px] orbs</text>
+
+      <text x="20" y="316" fill="#94a3b8" font-weight="600">Orb 1</text>
+      <text x="160" y="316" fill="#475569">#6366f1/18 top-left</text>
+
+      <text x="20" y="336" fill="#94a3b8" font-weight="600">Orb 2</text>
+      <text x="160" y="336" fill="#475569">#77f2e4/14 bot-right</text>
+    </g>
+
+    <line x1="20" y1="352" x2="310" y2="352" stroke="white" stroke-opacity="0.05"/>
+
+    <!-- Component hierarchy -->
+    <text x="20" y="372" font-family="'Sora', sans-serif" font-size="11" font-weight="700" fill="#f8fafc">Component Hierarchy</text>
+
+    <g font-family="'JetBrains Mono', monospace" font-size="8">
+      <text x="20" y="394" fill="#6366f1">▸ Sidebar</text>
+      <text x="30" y="410" fill="#475569">z-[999] · fixed left</text>
+      <text x="20" y="428" fill="#6366f1">▸ TopCapsule</text>
+      <text x="30" y="444" fill="#475569">z-[200] · fixed top-4 right-5</text>
+      <text x="20" y="462" fill="#6366f1">▸ MainContent</text>
+      <text x="30" y="478" fill="#475569">flex-1 · pl-[80px]</text>
+      <text x="40" y="494" fill="#77f2e4">▸ EmptyState</text>
+      <text x="50" y="510" fill="#475569">center · flex-col</text>
+      <text x="40" y="528" fill="#77f2e4">▸ SearchBar</text>
+      <text x="50" y="544" fill="#475569">w-full max-w-[1240px]</text>
+      <text x="40" y="562" fill="#77f2e4">▸ PresetDropdown</text>
+      <text x="50" y="578" fill="#475569">below search</text>
+      <text x="20" y="596" fill="#6366f1">▸ FAQDrawer</text>
+      <text x="30" y="612" fill="#475569">fixed right-4 z-[200]</text>
+    </g>
+
+    <!-- State indicator -->
+    <rect x="20" y="632" width="290" height="48" rx="8" fill="#6366f1" fill-opacity="0.06" stroke="#6366f1" stroke-width="0.7" stroke-opacity="0.2"/>
+    <text x="34" y="650" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8" font-weight="600">CURRENT STATE</text>
+    <text x="34" y="666" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">EMPTY CHAT · NO MESSAGES · WELCOME VIEW</text>
+    <text x="34" y="675" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">searchQuery="" · messages=[] · faqOpen=false</text>
+  </g>
+
+  <!-- Row separator -->
+  <rect x="60" y="846" width="2280" height="1" fill="url(#sepLine)"/>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ROW 2: ELEMENT BREAKDOWN (y=880)                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Row label -->
+  <g transform="translate(60,858)">
+    <rect x="0" y="0" width="210" height="20" rx="4" fill="url(#indigoBadge)" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="8" y="14" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#818cf8" letter-spacing="1.5">ROW 2 — ELEMENT BREAKDOWN</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE A: TOP BAR CAPSULE NAV (x=60, y=880, 680×280)       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(60,880)">
+    <!-- Module card -->
+    <rect x="0" y="0" width="680" height="280" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-width="0.5" stroke-opacity="0.07" filter="url(#dropShadowCard)"/>
+    <rect x="0" y="0" width="680" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+    <!-- Section label -->
+    <rect x="16" y="14" width="200" height="18" rx="4" fill="url(#tealBadge)" stroke="#77f2e4" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="24" y="26.5" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#77f2e4" letter-spacing="1">TOP BAR CAPSULE NAV</text>
+
+    <!-- Module A content area -->
+    <rect x="16" y="40" width="648" height="148" rx="10" fill="black" fill-opacity="0.2"/>
+    <rect x="16" y="40" width="648" height="148" rx="10" fill="url(#dotGridSm)"/>
+    <!-- Small ambient orb inside -->
+    <ellipse cx="340" cy="114" rx="200" ry="100" fill="#6366f1" fill-opacity="0.06" filter="url(#blur30)"/>
+
+    <!-- THE CAPSULE (2× scale, centered) -->
+    <!-- Default state label -->
+    <text x="72" y="58" font-family="'Inter', sans-serif" font-size="8" fill="#475569">DEFAULT</text>
+
+    <!-- Capsule pill background -->
+    <rect x="72" y="64" width="248" height="40" rx="20" fill="url(#capsuleGrad)" stroke="white" stroke-width="0.7" stroke-opacity="0.1" filter="url(#softShadow)"/>
+    <rect x="72" y="64" width="248" height="1.5" rx="1" fill="white" fill-opacity="0.08"/>
+
+    <!-- 1) Brain icon button -->
+    <rect x="80" y="72" width="36" height="28" rx="9" fill="white" fill-opacity="0.04" stroke="white" stroke-width="0.6" stroke-opacity="0.08"/>
+    <!-- Brain icon -->
+    <path d="M92 80 C92 77.8 93.8 76.5 96 77.5 C98.2 76.5 100 77.8 100 80 C101.2 80 102.5 81.5 101.5 82.8 C102.5 83.5 102.5 85.5 100.8 86 C100.5 88 98.5 88.5 96 88 C93.5 88.5 91.5 88 91.2 86 C89.5 85.5 89.5 83.5 90.5 82.8 C89.5 81.5 90.8 80 92 80 Z" fill="none" stroke="#818cf8" stroke-width="1.2"/>
+    <line x1="96" y1="77.5" x2="96" y2="88" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.4"/>
+
+    <!-- 2) Compass icon button -->
+    <rect x="122" y="72" width="36" height="28" rx="9" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.6" stroke-opacity="0.06"/>
+    <circle cx="140" cy="86" r="7" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+    <path d="M137.5 82.5 L139.5 88 L143 82.5 Z" fill="#94a3b8" fill-opacity="0.7"/>
+    <path d="M138 89 L139.5 84 L142 89 Z" fill="#475569" fill-opacity="0.4"/>
+
+    <!-- Divider -->
+    <rect x="165" y="76" width="1" height="18" fill="white" fill-opacity="0.1"/>
+
+    <!-- 3) Theme toggle (Sun) -->
+    <rect x="173" y="72" width="36" height="28" rx="9" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.6" stroke-opacity="0.06"/>
+    <circle cx="191" cy="86" r="5" fill="none" stroke="#f59e0b" stroke-width="1.3"/>
+    <line x1="191" y1="79" x2="191" y2="77" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="191" y1="93" x2="191" y2="95" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="196.2" y1="80.8" x2="197.6" y2="79.4" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="185.8" y1="91.2" x2="184.4" y2="92.6" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="198" y1="86" x2="200" y2="86" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="184" y1="86" x2="182" y2="86" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- 4) Help button -->
+    <rect x="216" y="72" width="56" height="28" rx="9" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.6" stroke-opacity="0.08"/>
+    <text x="244" y="88.5" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Help?</text>
+
+    <!-- HOVER state label -->
+    <text x="360" y="58" font-family="'Inter', sans-serif" font-size="8" fill="#475569">HOVER: BRAIN</text>
+
+    <!-- Hover state capsule -->
+    <rect x="360" y="64" width="248" height="40" rx="20" fill="url(#capsuleGrad)" stroke="white" stroke-width="0.7" stroke-opacity="0.1" filter="url(#softShadow)"/>
+    <rect x="360" y="64" width="248" height="1.5" rx="1" fill="white" fill-opacity="0.08"/>
+
+    <!-- Brain button HOVER state -->
+    <rect x="368" y="72" width="36" height="28" rx="9" fill="white" fill-opacity="0.08" stroke="white" stroke-width="0.6" stroke-opacity="0.15"/>
+    <path d="M380 80 C380 77.8 381.8 76.5 384 77.5 C386.2 76.5 388 77.8 388 80 C389.2 80 390.5 81.5 389.5 82.8 C390.5 83.5 390.5 85.5 388.8 86 C388.5 88 386.5 88.5 384 88 C381.5 88.5 379.5 88 379.2 86 C377.5 85.5 377.5 83.5 378.5 82.8 C377.5 81.5 378.8 80 380 80 Z" fill="none" stroke="#818cf8" stroke-width="1.4"/>
+    <!-- hover glow -->
+    <rect x="368" y="72" width="36" height="28" rx="9" fill="#6366f1" fill-opacity="0.08"/>
+
+    <!-- Compass (normal in hover capsule) -->
+    <rect x="410" y="72" width="36" height="28" rx="9" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.6" stroke-opacity="0.06"/>
+    <circle cx="428" cy="86" r="7" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+    <path d="M425.5 82.5 L427.5 88 L431 82.5 Z" fill="#94a3b8" fill-opacity="0.7"/>
+
+    <!-- Divider -->
+    <rect x="453" y="76" width="1" height="18" fill="white" fill-opacity="0.1"/>
+
+    <!-- Sun hover -->
+    <rect x="461" y="72" width="36" height="28" rx="9" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.6" stroke-opacity="0.06"/>
+    <circle cx="479" cy="86" r="5" fill="none" stroke="#f59e0b" stroke-width="1.3"/>
+    <line x1="479" y1="79" x2="479" y2="77" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="479" y1="93" x2="479" y2="95" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="484" y1="86" x2="486" y2="86" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="474" y1="86" x2="472" y2="86" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Help -->
+    <rect x="504" y="72" width="56" height="28" rx="9" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.6" stroke-opacity="0.08"/>
+    <text x="532" y="88.5" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Help?</text>
+
+    <!-- ─── Annotation specs ─── -->
+    <line x1="16" y1="198" x2="664" y2="198" stroke="white" stroke-opacity="0.04"/>
+    <g font-family="'JetBrains Mono', monospace" font-size="8.5">
+      <text x="20" y="214" fill="#94a3b8" font-weight="600">Position</text>
+      <text x="130" y="214" fill="#475569">fixed top-4 right-5 z-[200]</text>
+
+      <text x="20" y="230" fill="#94a3b8" font-weight="600">Pill</text>
+      <text x="130" y="230" fill="#475569">rounded-full px-3 py-2 gap-2</text>
+
+      <text x="20" y="246" fill="#94a3b8" font-weight="600">Pill bg</text>
+      <text x="130" y="246" fill="#475569">#111318/90 blur-xl border-white/10</text>
+
+      <text x="350" y="214" fill="#94a3b8" font-weight="600">Icon btn</text>
+      <text x="450" y="214" fill="#475569">w-8 h-8 rounded-xl bg-white/4</text>
+
+      <text x="350" y="230" fill="#94a3b8" font-weight="600">Icon hover</text>
+      <text x="450" y="230" fill="#475569">bg-white/8 border-white/15</text>
+
+      <text x="350" y="246" fill="#94a3b8" font-weight="600">Brain icon</text>
+      <text x="450" y="246" fill="#475569">w-4 text-indigo-400</text>
+
+      <text x="20" y="264" fill="#94a3b8" font-weight="600">Divider</text>
+      <text x="130" y="264" fill="#475569">w-px h-4 bg-white/10</text>
+
+      <text x="350" y="264" fill="#94a3b8" font-weight="600">Help btn</text>
+      <text x="450" y="264" fill="#475569">text-xs px-3 rounded-lg</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE B: EMPTY STATE (x=760, y=880, 680×280)              -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(760,880)">
+    <!-- Module card -->
+    <rect x="0" y="0" width="680" height="280" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-width="0.5" stroke-opacity="0.07" filter="url(#dropShadowCard)"/>
+    <rect x="0" y="0" width="680" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+    <!-- Section label -->
+    <rect x="16" y="14" width="248" height="18" rx="4" fill="url(#tealBadge)" stroke="#77f2e4" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="24" y="26.5" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#77f2e4" letter-spacing="1">EMPTY STATE / WELCOME AREA</text>
+
+    <!-- Content area background -->
+    <rect x="16" y="40" width="412" height="180" rx="10" fill="black" fill-opacity="0.2"/>
+    <rect x="16" y="40" width="412" height="180" rx="10" fill="url(#dotGridSm)"/>
+
+    <!-- Teal ambient glow -->
+    <ellipse cx="222" cy="130" rx="160" ry="100" fill="#77f2e4" fill-opacity="0.06" filter="url(#blur30)"/>
+
+    <!-- Shield logo mockup (larger) -->
+    <!-- glow halo -->
+    <rect x="178" y="52" width="88" height="88" rx="18" fill="#77f2e4" fill-opacity="0.06" filter="url(#blur15)"/>
+    <!-- logo bg -->
+    <rect x="182" y="56" width="80" height="80" rx="16" fill="url(#shieldGrad)" stroke="#77f2e4" stroke-width="1.5" stroke-opacity="0.5"/>
+    <!-- Shield path -->
+    <path d="M222 66 C222 66 240 72 240 84 L240 96 C240 105 232 111 222 116 C212 111 204 105 204 96 L204 84 C204 72 222 66 222 66 Z" fill="none" stroke="#77f2e4" stroke-width="1.8" stroke-opacity="0.9"/>
+    <text x="222" y="100" font-family="'Sora', sans-serif" font-size="18" font-weight="800" fill="#77f2e4" text-anchor="middle">W</text>
+
+    <!-- Ask WayaX text -->
+    <text x="222" y="162" font-family="'Sora', sans-serif" font-size="22" font-weight="800" fill="#f8fafc" text-anchor="middle">Ask WayaX</text>
+    <!-- Subtitle -->
+    <text x="222" y="180" font-family="'Inter', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Your SEBI-registered AI research assistant.</text>
+
+    <!-- SEBI badge -->
+    <rect x="154" y="190" width="136" height="20" rx="10" fill="#6366f1" fill-opacity="0.1" stroke="#6366f1" stroke-width="0.7" stroke-opacity="0.3"/>
+    <text x="222" y="204" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#818cf8" text-anchor="middle">RA: INH000010876</text>
+
+    <!-- Animation spec box -->
+    <rect x="16" y="228" width="412" height="28" rx="6" fill="#77f2e4" fill-opacity="0.05" stroke="#77f2e4" stroke-width="0.5" stroke-opacity="0.2"/>
+    <text x="30" y="238" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77f2e4" font-weight="600">ANIMATION</text>
+    <text x="30" y="250" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">opacity:0 y:8 → opacity:1 y:0 · ease-out · delay:300ms · duration:500ms</text>
+
+    <!-- Spec panel right -->
+    <g font-family="'JetBrains Mono', monospace" font-size="8.5" transform="translate(444, 40)">
+      <text x="0" y="18" fill="#f8fafc" font-size="11" font-weight="700" font-family="'Sora', sans-serif">Empty State Specs</text>
+      <line x1="0" y1="26" x2="220" y2="26" stroke="white" stroke-opacity="0.05"/>
+
+      <text x="0" y="44" fill="#94a3b8" font-weight="600">Layout</text>
+      <text x="80" y="44" fill="#475569">flex-col items-center</text>
+
+      <text x="0" y="62" fill="#94a3b8" font-weight="600">Glow</text>
+      <text x="80" y="62" fill="#475569">#77f2e4/13 blur-[80px]</text>
+
+      <text x="0" y="80" fill="#94a3b8" font-weight="600">Logo size</text>
+      <text x="80" y="80" fill="#475569">120×120 rounded-20</text>
+
+      <text x="0" y="98" fill="#94a3b8" font-weight="600">Logo border</text>
+      <text x="80" y="98" fill="#475569">teal/40 · 1.5px</text>
+
+      <text x="0" y="116" fill="#94a3b8" font-weight="600">Heading</text>
+      <text x="80" y="116" fill="#475569">Sora 800 32px white</text>
+
+      <text x="0" y="134" fill="#94a3b8" font-weight="600">Subtitle</text>
+      <text x="80" y="134" fill="#475569">Inter 400 14px slate-400</text>
+
+      <text x="0" y="152" fill="#94a3b8" font-weight="600">SEBI badge</text>
+      <text x="80" y="152" fill="#475569">pill bg-indigo/10</text>
+
+      <text x="0" y="170" fill="#94a3b8" font-weight="600">Badge border</text>
+      <text x="80" y="170" fill="#475569">indigo-500/20</text>
+
+      <text x="0" y="188" fill="#94a3b8" font-weight="600">Badge text</text>
+      <text x="80" y="188" fill="#475569">JB Mono 10px #818cf8</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE C: SEARCH BAR (x=1460, y=880, 880×280)             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(1460,880)">
+    <!-- Module card -->
+    <rect x="0" y="0" width="880" height="280" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-width="0.5" stroke-opacity="0.07" filter="url(#dropShadowCard)"/>
+    <rect x="0" y="0" width="880" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+    <!-- Section label -->
+    <rect x="16" y="14" width="282" height="18" rx="4" fill="url(#indigoBadge)" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="24" y="26.5" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#818cf8" letter-spacing="1">MAIN SEARCH BAR (EMPTY STATE)</text>
+
+    <!-- STATE: EMPTY -->
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#475569">STATE: EMPTY</text>
+    <!-- Glow ring subtle -->
+    <rect x="14" y="58" width="540" height="56" rx="28" fill="#6366f1" fill-opacity="0.04" filter="url(#blur6)"/>
+    <!-- Search card -->
+    <rect x="16" y="60" width="536" height="52" rx="26" fill="url(#searchCardGrad)" stroke="white" stroke-width="0.7" stroke-opacity="0.08"/>
+    <rect x="16" y="60" width="536" height="1" rx="0.5" fill="white" fill-opacity="0.07"/>
+    <!-- Placeholder text -->
+    <text x="36" y="91" font-family="'Inter', sans-serif" font-size="13" fill="#475569">Ask WayaX anything about markets...</text>
+    <!-- Paperclip -->
+    <rect x="460" y="70" width="30" height="28" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <path d="M469 84 L469 78 C469 76.3 470.3 75 472 75 C473.7 75 475 76.3 475 78 L475 85 C475 86 474.3 86.7 473.3 86.7 C472.3 86.7 471.7 86 471.7 85 L471.7 79" fill="none" stroke="#64748b" stroke-width="1.1" stroke-linecap="round"/>
+    <!-- Send button (empty, dim) -->
+    <rect x="497" y="68" width="34" height="32" rx="9" fill="#1e2030" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <path d="M506 84 L523 84 M519 80 L523 84 L519 88" stroke="#475569" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- STATE: TYPING -->
+    <text x="16" y="132" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#77f2e4">STATE: TYPING</text>
+    <!-- Glow ring focus -->
+    <rect x="12" y="136" width="544" height="60" rx="30" fill="#6366f1" fill-opacity="0.12" filter="url(#blur10)"/>
+    <!-- Search card focus -->
+    <rect x="16" y="140" width="536" height="54" rx="27" fill="url(#searchCardGrad)" stroke="#6366f1" stroke-width="1" stroke-opacity="0.3"/>
+    <rect x="16" y="140" width="536" height="1" rx="0.5" fill="white" fill-opacity="0.09"/>
+    <!-- Typed text partial -->
+    <text x="36" y="172" font-family="'Inter', sans-serif" font-size="13" fill="#f8fafc">Give me stocks currently in the BUY</text>
+    <!-- Cursor blink -->
+    <rect x="344" y="159" width="1.5" height="18" rx="1" fill="#818cf8" fill-opacity="0.9"/>
+    <!-- Paperclip -->
+    <rect x="460" y="150" width="30" height="28" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <path d="M469 164 L469 158 C469 156.3 470.3 155 472 155 C473.7 155 475 156.3 475 158 L475 165 C475 166 474.3 166.7 473.3 166.7 C472.3 166.7 471.7 166 471.7 165 L471.7 159" fill="none" stroke="#6bb6f3" stroke-width="1.1" stroke-linecap="round"/>
+    <!-- Send (still dim, not complete) -->
+    <rect x="497" y="148" width="34" height="32" rx="9" fill="#1e2030" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.2"/>
+    <path d="M506 164 L523 164 M519 160 L523 164 L519 168" stroke="#475569" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- STATE: READY TO SEND -->
+    <text x="16" y="214" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#10b981">STATE: READY-TO-SEND</text>
+    <!-- Glow ring active -->
+    <rect x="12" y="218" width="544" height="56" rx="28" fill="#6366f1" fill-opacity="0.18" filter="url(#blur10)"/>
+    <!-- Search card ready -->
+    <rect x="16" y="220" width="536" height="50" rx="25" fill="url(#searchCardGrad)" stroke="#6366f1" stroke-width="1.2" stroke-opacity="0.5"/>
+    <rect x="16" y="220" width="536" height="1" rx="0.5" fill="white" fill-opacity="0.1"/>
+    <!-- Full text -->
+    <text x="36" y="250" font-family="'Inter', sans-serif" font-size="13" fill="#f8fafc">Give me stocks currently in the BUY zone?</text>
+    <!-- Paperclip ready -->
+    <rect x="460" y="229" width="30" height="28" rx="8" fill="white" fill-opacity="0.04" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+    <path d="M469 243 L469 237 C469 235.3 470.3 234 472 234 C473.7 234 475 235.3 475 237 L475 244 C475 245 474.3 245.7 473.3 245.7 C472.3 245.7 471.7 245 471.7 244 L471.7 238" fill="none" stroke="#6bb6f3" stroke-width="1.1" stroke-linecap="round"/>
+    <!-- Send button ACTIVE with glow -->
+    <rect x="497" y="227" width="34" height="32" rx="9" fill="url(#indigoBtn)" filter="url(#indigoGlow)"/>
+    <path d="M506 243 L523 243 M519 239 L523 243 L519 247" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Right spec panel -->
+    <g font-family="'JetBrains Mono', monospace" font-size="8.5" transform="translate(570, 40)">
+      <text x="0" y="18" fill="#f8fafc" font-size="11" font-weight="700" font-family="'Sora', sans-serif">Search Bar Specs</text>
+      <line x1="0" y1="26" x2="290" y2="26" stroke="white" stroke-opacity="0.05"/>
+
+      <text x="0" y="44" fill="#94a3b8" font-weight="600">Wrapper</text>
+      <text x="100" y="44" fill="#475569">w-full max-w-[1240px]</text>
+
+      <text x="0" y="62" fill="#94a3b8" font-weight="600">Glow ring</text>
+      <text x="100" y="62" fill="#475569">-inset-[3px] rounded-[27px]</text>
+
+      <text x="0" y="80" fill="#94a3b8" font-weight="600">Card radius</text>
+      <text x="100" y="80" fill="#475569">rounded-[24px]</text>
+
+      <text x="0" y="98" fill="#94a3b8" font-weight="600">Card bg</text>
+      <text x="100" y="98" fill="#475569">bg-white/[0.03]</text>
+
+      <text x="0" y="116" fill="#94a3b8" font-weight="600">Card border</text>
+      <text x="100" y="116" fill="#475569">border-white/[0.08]</text>
+
+      <text x="0" y="134" fill="#94a3b8" font-weight="600">Shadow</text>
+      <text x="100" y="134" fill="#475569">0_8px_40px_rgba(0,0,0,0.5)</text>
+
+      <text x="0" y="152" fill="#94a3b8" font-weight="600">Text size</text>
+      <text x="100" y="152" fill="#475569">15px Inter regular</text>
+
+      <text x="0" y="170" fill="#94a3b8" font-weight="600">Padding</text>
+      <text x="100" y="170" fill="#475569">pt-4 pb-3 pl-5 pr-3</text>
+
+      <text x="0" y="188" fill="#94a3b8" font-weight="600">Type speed</text>
+      <text x="100" y="188" fill="#475569">25ms/char</text>
+
+      <text x="0" y="206" fill="#94a3b8" font-weight="600">Hold time</text>
+      <text x="100" y="206" fill="#475569">1500ms</text>
+
+      <text x="0" y="224" fill="#94a3b8" font-weight="600">Erase speed</text>
+      <text x="100" y="224" fill="#475569">10ms/char</text>
+
+      <text x="0" y="242" fill="#94a3b8" font-weight="600">Send btn</text>
+      <text x="100" y="242" fill="#475569">w-10 h-10 rounded-xl</text>
+
+      <text x="0" y="260" fill="#94a3b8" font-weight="600">Send bg</text>
+      <text x="100" y="260" fill="#475569">bg-indigo-600</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE D: PRESET QUESTIONS (x=60, y=1200, 740×380)        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(60,1200)">
+    <!-- Module card -->
+    <rect x="0" y="0" width="740" height="380" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-width="0.5" stroke-opacity="0.07" filter="url(#dropShadowCard)"/>
+    <rect x="0" y="0" width="740" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+    <!-- Section label -->
+    <rect x="16" y="14" width="226" height="18" rx="4" fill="url(#indigoBadge)" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="24" y="26.5" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#818cf8" letter-spacing="1">PRESET QUESTIONS DROPDOWN</text>
+
+    <!-- COLLAPSED STATE -->
+    <text x="16" y="50" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#475569">COLLAPSED STATE</text>
+
+    <!-- Collapsed pill -->
+    <rect x="16" y="56" width="370" height="32" rx="16" fill="white" fill-opacity="0.02" stroke="white" stroke-width="0.6" stroke-opacity="0.07"/>
+    <!-- Indigo indicator dot -->
+    <circle cx="34" cy="72" r="4" fill="#6366f1"/>
+    <text x="46" y="76" font-family="'Inter', sans-serif" font-size="11" fill="#94a3b8">Buy Stocks</text>
+    <!-- Chevron down -->
+    <path d="M372 69 L376 73 L380 69" stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- EXPANDED STATE label -->
+    <text x="16" y="108" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#77f2e4">EXPANDED STATE</text>
+
+    <!-- Tab bar -->
+    <rect x="16" y="114" width="700" height="32" rx="8" fill="black" fill-opacity="0.2"/>
+
+    <!-- Tabs -->
+    <!-- Buy (active) -->
+    <rect x="18" y="116" width="80" height="28" rx="7" fill="white" fill-opacity="0.04"/>
+    <text x="58" y="134.5" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#818cf8" text-anchor="middle">Buy</text>
+    <rect x="38" y="142" width="40" height="2" rx="1" fill="#6366f1"/>
+
+    <!-- Short -->
+    <text x="130" y="134.5" font-family="'Inter', sans-serif" font-size="11" fill="#475569" text-anchor="middle">Short</text>
+
+    <!-- Long -->
+    <text x="200" y="134.5" font-family="'Inter', sans-serif" font-size="11" fill="#475569" text-anchor="middle">Long</text>
+
+    <!-- Track -->
+    <text x="268" y="134.5" font-family="'Inter', sans-serif" font-size="11" fill="#475569" text-anchor="middle">Track</text>
+
+    <!-- About -->
+    <text x="338" y="134.5" font-family="'Inter', sans-serif" font-size="11" fill="#475569" text-anchor="middle">About</text>
+
+    <!-- Questions list (Buy tab active) -->
+    <!-- Q1 -->
+    <rect x="16" y="150" width="700" height="30" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-width="0.4" stroke-opacity="0.05"/>
+    <text x="30" y="169" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Give me stocks currently in the BUY zone?</text>
+    <!-- Arrow -->
+    <path d="M700 164 L705 164" stroke="#475569" stroke-width="1" stroke-linecap="round"/>
+    <path d="M703 161 L706 164 L703 167" stroke="#475569" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Q2 -->
+    <rect x="16" y="186" width="700" height="30" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-width="0.4" stroke-opacity="0.05"/>
+    <text x="30" y="205" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Which large-cap stocks are in accumulation phase?</text>
+
+    <!-- Q3 -->
+    <rect x="16" y="222" width="700" height="30" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-width="0.4" stroke-opacity="0.05"/>
+    <text x="30" y="241" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Show me momentum buys with high RSI strength.</text>
+
+    <!-- Q4 -->
+    <rect x="16" y="258" width="700" height="30" rx="8" fill="white" fill-opacity="0.02" stroke="white" stroke-width="0.4" stroke-opacity="0.05"/>
+    <text x="30" y="277" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">What's the safest entry for NIFTY 50 plays today?</text>
+
+    <!-- Show more toggle -->
+    <text x="370" y="310" font-family="'Inter', sans-serif" font-size="10" fill="#6366f1" text-anchor="middle">+ Show 6 more questions</text>
+    <line x1="16" y1="318" x2="724" y2="318" stroke="white" stroke-opacity="0.04"/>
+
+    <!-- Spec row -->
+    <g font-family="'JetBrains Mono', monospace" font-size="8.5" transform="translate(16, 330)">
+      <text x="0" y="14" fill="#94a3b8" font-weight="600">State</text>
+      <text x="80" y="14" fill="#475569">isDropdownOpen · isQuestionsOpen</text>
+
+      <text x="280" y="14" fill="#94a3b8" font-weight="600">Pill bg</text>
+      <text x="340" y="14" fill="#475569">bg-white/2 border-white/4</text>
+
+      <text x="0" y="30" fill="#94a3b8" font-weight="600">Animation</text>
+      <text x="80" y="30" fill="#475569">AnimatePresence height collapse · ease-in-out · 200ms</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE E: FAQ DRAWER (x=820, y=1200, 660×380)             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(820,1200)">
+    <!-- Module card -->
+    <rect x="0" y="0" width="660" height="380" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-width="0.5" stroke-opacity="0.07" filter="url(#dropShadowCard)"/>
+    <rect x="0" y="0" width="660" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+    <!-- Section label -->
+    <rect x="16" y="14" width="180" height="18" rx="4" fill="url(#tealBadge)" stroke="#77f2e4" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="24" y="26.5" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#77f2e4" letter-spacing="1">FAQ DRAWER PANEL</text>
+
+    <!-- FAQ Panel mockup (300px wide, drawn at scale) -->
+    <rect x="16" y="40" width="300" height="320" rx="14" fill="url(#faqGrad)" stroke="white" stroke-width="0.6" stroke-opacity="0.09" filter="url(#softShadow)"/>
+    <rect x="16" y="40" width="300" height="1.5" rx="1" fill="white" fill-opacity="0.08"/>
+
+    <!-- FAQ Header -->
+    <rect x="16" y="40" width="300" height="44" rx="14" fill="white" fill-opacity="0.03"/>
+    <rect x="16" y="82" width="300" height="1" fill="white" fill-opacity="0.05"/>
+    <text x="34" y="65" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">Help &amp; FAQ</text>
+    <!-- X button -->
+    <rect x="286" y="50" width="20" height="20" rx="6" fill="white" fill-opacity="0.04" stroke="white" stroke-width="0.5" stroke-opacity="0.07"/>
+    <line x1="291" y1="55" x2="301" y2="65" stroke="#64748b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="301" y1="55" x2="291" y2="65" stroke="#64748b" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Section 1: Buy Zones (expanded) -->
+    <rect x="24" y="90" width="284" height="22" rx="6" fill="white" fill-opacity="0.03"/>
+    <path d="M36 99.5 L36 102.5 L39 101 Z" fill="#77f2e4" fill-opacity="0.8"/>
+    <text x="46" y="105" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#f1f5f9">Buy Zones</text>
+    <!-- Expanded indicator -->
+    <path d="M298 98 L302 101.5 L298 105" stroke="#77f2e4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- FAQ Item 1 (expanded) -->
+    <rect x="24" y="116" width="284" height="46" rx="6" fill="white" fill-opacity="0.02"/>
+    <text x="34" y="130" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#cbd5e1">What is a BUY Zone?</text>
+    <text x="34" y="144" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b">A price range where the stock's risk/</text>
+    <text x="34" y="155" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b">reward is favorable for entry.</text>
+
+    <!-- FAQ Item 2 -->
+    <rect x="24" y="166" width="284" height="46" rx="6" fill="white" fill-opacity="0.02"/>
+    <text x="34" y="180" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#cbd5e1">How is the BUY zone calculated?</text>
+    <text x="34" y="194" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b">Using technical + fundamental screens</text>
+    <text x="34" y="205" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b">via SEBI-registered research model.</text>
+
+    <!-- FAQ Item 3 -->
+    <rect x="24" y="216" width="284" height="34" rx="6" fill="white" fill-opacity="0.02"/>
+    <text x="34" y="230" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#cbd5e1">Is WayaX SEBI registered?</text>
+    <text x="34" y="244" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b">Yes. RA No: INH000010876</text>
+
+    <!-- Section 2: Short Trades (collapsed) -->
+    <rect x="24" y="256" width="284" height="22" rx="6" fill="white" fill-opacity="0.02"/>
+    <path d="M36 265 L39 265 L37.5 268 Z" fill="#475569" fill-opacity="0.8"/>
+    <text x="46" y="271" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#64748b">Short Trades</text>
+    <path d="M295 264 L299 267.5 L295 271" stroke="#475569" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Section 3: About WayaX (collapsed) -->
+    <rect x="24" y="284" width="284" height="22" rx="6" fill="white" fill-opacity="0.02"/>
+    <path d="M36 293 L39 293 L37.5 296 Z" fill="#475569" fill-opacity="0.8"/>
+    <text x="46" y="299" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#64748b">About WayaX</text>
+    <path d="M295 292 L299 295.5 L295 299" stroke="#475569" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Scrollbar indicator -->
+    <rect x="308" y="96" width="3" height="240" rx="1.5" fill="white" fill-opacity="0.04"/>
+    <rect x="308" y="96" width="3" height="80" rx="1.5" fill="white" fill-opacity="0.12"/>
+
+    <!-- Right side specs -->
+    <g font-family="'JetBrains Mono', monospace" font-size="8.5" transform="translate(340, 40)">
+      <text x="0" y="18" fill="#f8fafc" font-size="11" font-weight="700" font-family="'Sora', sans-serif">FAQ Drawer Specs</text>
+      <line x1="0" y1="26" x2="300" y2="26" stroke="white" stroke-opacity="0.05"/>
+
+      <text x="0" y="44" fill="#94a3b8" font-weight="600">Position</text>
+      <text x="100" y="44" fill="#475569">fixed top-4 right-4 bottom-4</text>
+
+      <text x="0" y="62" fill="#94a3b8" font-weight="600">Width</text>
+      <text x="100" y="62" fill="#475569">w-[300px]</text>
+
+      <text x="0" y="80" fill="#94a3b8" font-weight="600">z-index</text>
+      <text x="100" y="80" fill="#475569">z-[200]</text>
+
+      <text x="0" y="98" fill="#94a3b8" font-weight="600">Behavior</text>
+      <text x="100" y="98" fill="#475569">floats over chatbox</text>
+
+      <text x="0" y="116" fill="#94a3b8" font-weight="600">Border radius</text>
+      <text x="100" y="116" fill="#475569">rounded-2xl</text>
+
+      <text x="0" y="134" fill="#94a3b8" font-weight="600">BG</text>
+      <text x="100" y="134" fill="#475569">#131720/97 blur-xl</text>
+
+      <text x="0" y="152" fill="#94a3b8" font-weight="600">Sections</text>
+      <text x="100" y="152" fill="#475569">collapsible w/ChevronRight</text>
+
+      <text x="0" y="170" fill="#94a3b8" font-weight="600">Q text</text>
+      <text x="100" y="170" fill="#475569">slate-200 9.5px bold</text>
+
+      <text x="0" y="188" fill="#94a3b8" font-weight="600">A text</text>
+      <text x="100" y="188" fill="#475569">slate-400 8.5px regular</text>
+
+      <text x="0" y="206" fill="#94a3b8" font-weight="600">Scrollbar</text>
+      <text x="100" y="206" fill="#475569">glass-scrollbar 3px w</text>
+
+      <text x="0" y="224" fill="#94a3b8" font-weight="600">Open state</text>
+      <text x="100" y="224" fill="#475569">AnimatePresence height</text>
+
+      <text x="0" y="242" fill="#94a3b8" font-weight="600">Close btn</text>
+      <text x="100" y="242" fill="#475569">top-right X · rounded-lg</text>
+
+      <text x="0" y="264" fill="#94a3b8" font-weight="600">Section icon</text>
+      <text x="100" y="264" fill="#475569">ChevronRight · rotates 90° open</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE F: LIGHT MODE (x=1500, y=1200, 860×380)            -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(1500,1200)">
+    <!-- Module card -->
+    <rect x="0" y="0" width="860" height="380" rx="14" fill="url(#moduleCardBg)" stroke="white" stroke-width="0.5" stroke-opacity="0.07" filter="url(#dropShadowCard)"/>
+    <rect x="0" y="0" width="860" height="1.5" rx="1" fill="white" fill-opacity="0.07"/>
+
+    <!-- Section label -->
+    <rect x="16" y="14" width="220" height="18" rx="4" fill="url(#tealBadge)" stroke="#77f2e4" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="24" y="26.5" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#77f2e4" letter-spacing="1">THEME LIGHT MODE HOME</text>
+
+    <!-- Comparison label: DARK -->
+    <text x="80" y="50" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">DARK MODE</text>
+
+    <!-- Dark mode mini panel -->
+    <rect x="16" y="56" width="380" height="298" rx="12" fill="#080a10" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+    <rect x="16" y="56" width="380" height="1" rx="0.5" fill="white" fill-opacity="0.07"/>
+
+    <!-- Dark ambient orb -->
+    <ellipse cx="110" cy="160" rx="120" ry="90" fill="#6366f1" fill-opacity="0.07" filter="url(#blur30)"/>
+
+    <!-- Dark sidebar -->
+    <rect x="16" y="56" width="50" height="298" rx="12" fill="#111318" fill-opacity="0.9" stroke="white" stroke-width="0.4" stroke-opacity="0.05"/>
+    <!-- Dark sidebar icons -->
+    <rect x="24" y="70" width="34" height="34" rx="8" fill="#1a1d26" stroke="#77f2e4" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="41" y="92" font-family="'Sora', sans-serif" font-size="12" font-weight="800" fill="#77f2e4" text-anchor="middle">W</text>
+    <!-- Nav items -->
+    <rect x="28" y="116" width="26" height="22" rx="6" fill="#6366f1" fill-opacity="0.15"/>
+    <path d="M41 121 L35 126 L35 135 L38 135 L38 131 L44 131 L44 135 L47 135 L47 126 Z" fill="none" stroke="#818cf8" stroke-width="0.9"/>
+    <rect x="28" y="144" width="26" height="22" rx="6" fill="white" fill-opacity="0.02"/>
+    <rect x="28" y="170" width="26" height="22" rx="6" fill="white" fill-opacity="0.02"/>
+    <rect x="28" y="196" width="26" height="22" rx="6" fill="white" fill-opacity="0.02"/>
+
+    <!-- Dark top capsule -->
+    <rect x="246" y="64" width="140" height="26" rx="13" fill="#1a1d26" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+    <rect x="254" y="70" width="18" height="14" rx="5" fill="white" fill-opacity="0.03"/>
+    <path d="M259 75 C259 73.8 260 73.2 263 74 C266 73.2 267 73.8 267 75 C267.7 75 268.5 76 268 77 C268.5 77.5 268.5 79 267.5 79.4 C267.3 80.5 266 80.8 263 80.5 C260 80.8 258.7 80.5 258.5 79.4 C257.5 79 257.5 77.5 258 77 C257.5 76 258.3 75 259 75 Z" fill="none" stroke="#818cf8" stroke-width="0.8"/>
+    <rect x="276" y="70" width="18" height="14" rx="5" fill="white" fill-opacity="0.02"/>
+    <circle cx="285" cy="77" r="4" fill="none" stroke="#94a3b8" stroke-width="0.8"/>
+    <rect x="300" y="70" width="18" height="14" rx="5" fill="white" fill-opacity="0.02"/>
+    <circle cx="309" cy="77" r="3" fill="none" stroke="#f59e0b" stroke-width="0.8"/>
+    <rect x="320" y="70" width="28" height="14" rx="5" fill="white" fill-opacity="0.02"/>
+    <text x="334" y="79.5" font-family="'Inter', sans-serif" font-size="7" fill="#94a3b8" text-anchor="middle">Help?</text>
+
+    <!-- Dark empty state center -->
+    <ellipse cx="207" cy="210" rx="100" ry="70" fill="#77f2e4" fill-opacity="0.05" filter="url(#blur20)"/>
+    <rect x="172" y="158" width="70" height="70" rx="12" fill="#111520" stroke="#77f2e4" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="207" y="200" font-family="'Sora', sans-serif" font-size="14" font-weight="800" fill="#77f2e4" text-anchor="middle">W</text>
+    <text x="207" y="245" font-family="'Sora', sans-serif" font-size="15" font-weight="800" fill="#f8fafc" text-anchor="middle">Ask WayaX</text>
+    <text x="207" y="260" font-family="'Inter', sans-serif" font-size="8.5" fill="#94a3b8" text-anchor="middle">AI research assistant.</text>
+
+    <!-- Dark search bar -->
+    <rect x="75" y="272" width="264" height="30" rx="15" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+    <text x="95" y="291" font-family="'Inter', sans-serif" font-size="9" fill="#475569">Ask anything...</text>
+    <rect x="314" y="277" width="20" height="20" rx="6" fill="url(#indigoBtn)"/>
+    <path d="M319 287 L326 287 M323.5 284 L326 287 L323.5 290" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Light mode panel -->
+    <!-- Comparison label: LIGHT -->
+    <text x="454" y="50" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">LIGHT MODE</text>
+
+    <!-- Light mode mini panel -->
+    <rect x="464" y="56" width="380" height="298" rx="12" fill="url(#lightModeBg)" stroke="#cbd5e1" stroke-width="0.7"/>
+
+    <!-- Light ambient orb subtle -->
+    <ellipse cx="654" cy="160" rx="120" ry="90" fill="#6366f1" fill-opacity="0.04" filter="url(#blur30)"/>
+
+    <!-- Light sidebar -->
+    <rect x="464" y="56" width="50" height="298" rx="12" fill="white" fill-opacity="0.8" stroke="#cbd5e1" stroke-width="0.6"/>
+    <rect x="472" y="70" width="34" height="34" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.8"/>
+    <text x="489" y="92" font-family="'Sora', sans-serif" font-size="12" font-weight="800" fill="#6366f1" text-anchor="middle">W</text>
+    <!-- Light nav items -->
+    <rect x="476" y="116" width="26" height="22" rx="6" fill="#6366f1" fill-opacity="0.08"/>
+    <path d="M489 121 L483 126 L483 135 L486 135 L486 131 L492 131 L492 135 L495 135 L495 126 Z" fill="none" stroke="#6366f1" stroke-width="0.9"/>
+    <rect x="476" y="144" width="26" height="22" rx="6" fill="#f1f5f9"/>
+    <rect x="476" y="170" width="26" height="22" rx="6" fill="#f1f5f9"/>
+    <rect x="476" y="196" width="26" height="22" rx="6" fill="#f1f5f9"/>
+
+    <!-- Light top capsule -->
+    <rect x="694" y="64" width="140" height="26" rx="13" fill="white" fill-opacity="0.85" stroke="#e2e8f0" stroke-width="0.7"/>
+    <rect x="702" y="70" width="18" height="14" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5"/>
+    <path d="M707 75 C707 73.8 708 73.2 711 74 C714 73.2 715 73.8 715 75 C715.7 75 716.5 76 716 77 C716.5 77.5 716.5 79 715.5 79.4 C715.3 80.5 714 80.8 711 80.5 C708 80.8 706.7 80.5 706.5 79.4 C705.5 79 705.5 77.5 706 77 C705.5 76 706.3 75 707 75 Z" fill="none" stroke="#6366f1" stroke-width="0.8"/>
+    <rect x="724" y="70" width="18" height="14" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5"/>
+    <circle cx="733" cy="77" r="4" fill="none" stroke="#64748b" stroke-width="0.8"/>
+    <rect x="748" y="70" width="18" height="14" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5"/>
+    <circle cx="757" cy="77" r="3" fill="none" stroke="#f59e0b" stroke-width="0.8"/>
+    <rect x="768" y="70" width="28" height="14" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="782" y="79.5" font-family="'Inter', sans-serif" font-size="7" fill="#64748b" text-anchor="middle">Help?</text>
+
+    <!-- Light empty state center -->
+    <rect x="619" y="158" width="70" height="70" rx="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="654" y="200" font-family="'Sora', sans-serif" font-size="14" font-weight="800" fill="#6366f1" text-anchor="middle">W</text>
+    <text x="654" y="245" font-family="'Sora', sans-serif" font-size="15" font-weight="800" fill="#0f172a" text-anchor="middle">Ask WayaX</text>
+    <text x="654" y="260" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">AI research assistant.</text>
+
+    <!-- Light search bar -->
+    <rect x="522" y="272" width="264" height="30" rx="15" fill="white" fill-opacity="0.65" stroke="#e2e8f0" stroke-width="0.7"/>
+    <text x="542" y="291" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8">Ask anything...</text>
+    <rect x="762" y="277" width="20" height="20" rx="6" fill="url(#indigoBtn)"/>
+    <path d="M767 287 L774 287 M771.5 284 L774 287 L771.5 290" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Comparison divider line -->
+    <line x1="450" y1="56" x2="450" y2="354" stroke="white" stroke-width="0.5" stroke-opacity="0.1" stroke-dasharray="3 3"/>
+
+    <!-- Light mode spec -->
+    <g font-family="'JetBrains Mono', monospace" font-size="8" transform="translate(16, 362)">
+      <text x="0" y="12" fill="#94a3b8" font-weight="600">Light bg</text>
+      <text x="80" y="12" fill="#475569">slate-100 → slate-50 → #f1f5f9</text>
+
+      <text x="280" y="12" fill="#94a3b8" font-weight="600">Card</text>
+      <text x="340" y="12" fill="#475569">bg-white/65 border-slate-200</text>
+
+      <text x="560" y="12" fill="#94a3b8" font-weight="600">Text</text>
+      <text x="620" y="12" fill="#475569">text-slate-900</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FOOTER                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <rect x="60" y="1762" width="2280" height="1" fill="url(#sepLine)"/>
+
+  <!-- Footer left: page info -->
+  <g transform="translate(60, 1776)">
+    <rect x="0" y="0" width="3" height="16" rx="1.5" fill="#6366f1"/>
+    <text x="14" y="13" font-family="'JetBrains Mono', monospace" font-size="10" fill="#475569" letter-spacing="1.5">03 · HOME PAGE · DASHBOARD · WAYAX DESIGN SYSTEM · 2400×1800</text>
+  </g>
+
+  <!-- Footer right: metadata -->
+  <g transform="translate(1900, 1776)">
+    <text x="0" y="13" font-family="'JetBrains Mono', monospace" font-size="9" fill="#334155">v1.0 · Modules: A B C D E F · Dark/Light Comparison</text>
+  </g>
+
+  <!-- Corner accent dots -->
+  <circle cx="64" cy="1792" r="2" fill="#6366f1" fill-opacity="0.4"/>
+  <circle cx="2336" cy="1792" r="2" fill="#77f2e4" fill-opacity="0.4"/>
+  <circle cx="64" cy="64" r="2" fill="#6366f1" fill-opacity="0.4"/>
+  <circle cx="2336" cy="64" r="2" fill="#77f2e4" fill-opacity="0.4"/>
+
+</svg>

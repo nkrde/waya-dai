@@ -1,0 +1,193 @@
+<svg width="1000" height="800" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 FIGMA-COMPATIBLE STATIC VECTOR EXTRACTION
+    Strict Transformations Applied:
+    - 0% foreignObject Tags (100% Native SVG)
+    - 0% <style> Blocks (100% Inline presentation attributes)
+    - Absolute Coordinates for every node
+    - Exact HSL palette match, clean Figma auto-porting
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Background dotted grid repeating 12px 12px exactly from index.css -->
+    <pattern id="dot-grid-figma" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="0.75" fill="#ffffff" fill-opacity="0.08"/>
+    </pattern>
+
+    <!-- WayaX Brand linear gradient stops -->
+    <linearGradient id="brand-refraction-figma" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#77F2E4"/>
+      <stop offset="100%" stop-color="#6BB6F3"/>
+    </linearGradient>
+
+    <!-- Amit text linear gradient stops -->
+    <linearGradient id="amit-text-gradient-figma" x1="0" y1="0" x2="100" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+
+    <!-- Liquid Glass card fill linear gradient -->
+    <linearGradient id="glass-panel-fill-figma" x1="0" y1="0" x2="860" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.035"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+
+    <!-- Logo underlay cyan blur -->
+    <filter id="logo-blur-cyan-figma" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+
+    <!-- Logo underlay blue blur -->
+    <filter id="logo-blur-blue-figma" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+
+    <!-- Solid panel drop shadow specs -->
+    <filter id="panel-shadow-figma" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- Pitch Black canvas & dotted grid -->
+  <rect width="1000" height="800" fill="#07080b"/>
+  <rect width="1000" height="800" fill="url(#dot-grid-figma)"/>
+
+  <!-- Subsurface Backlight Caustics (Glows behind components) -->
+  <circle cx="500" cy="400" r="300" fill="#6366F1" fill-opacity="0.05" filter="url(#logo-blur-blue-figma)"/>
+
+  <!-- ==================== CENTRAL BRAND LOGO (z-INDEX SANDWICH) ==================== -->
+  <g transform="translate(460, 40)">
+    <!-- Glass Shield Background -->
+    <rect width="80" height="80" rx="20" fill="url(#glass-panel-fill-figma)" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1.2" filter="url(#panel-shadow-figma)"/>
+    <line x1="0" y1="1" x2="80" y2="1" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.2"/>
+    
+    <!-- Sub-surface refraction blurs clip masked -->
+    <g clip-path="url(#logo-clip-path)">
+      <ellipse cx="28" cy="40" rx="24" ry="12" fill="#77F2E4" fill-opacity="0.8" filter="url(#logo-blur-cyan-figma)"/>
+      <ellipse cx="52" cy="41" rx="22" ry="13" fill="#6BB6F3" fill-opacity="0.8" filter="url(#logo-blur-blue-figma)"/>
+    </g>
+    <clipPath id="logo-clip-path">
+      <rect width="80" height="80" rx="20"/>
+    </clipPath>
+
+    <!-- Foreground Central Insignia Emblem Image -->
+    <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="16" y="16" width="48" height="48"/>
+  </g>
+
+  <!-- ==================== HEADER TYPOGRAPHY ==================== -->
+  <text x="500" y="180" font-family="'Sora', sans-serif" font-weight="800" font-size="32" fill="#ffffff" text-anchor="middle">
+    Welcome to WayaX, <tspan fill="url(#amit-text-gradient-figma)">Amit</tspan>
+  </text>
+  <text x="500" y="210" font-family="'Inter', sans-serif" font-weight="500" font-size="13.5" fill="#64748b" text-anchor="middle">
+    Select a preset below or enter a custom query to research breakouts.
+  </text>
+
+  <!-- ==================== MAIN DASHBOARD WORKSPACE PANEL ==================== -->
+  <g transform="translate(70, 250)">
+    <!-- Outer Panel Border Wrapper -->
+    <rect width="860" height="500" rx="36" fill="#ffffff" fill-opacity="0.003" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1.5" filter="url(#panel-shadow-figma)"/>
+
+    <!-- ==================== CARD 1: INPUT WELL PANEL ==================== -->
+    <g transform="translate(20, 24)">
+      <!-- Indented physical well base -->
+      <rect width="820" height="240" rx="28" fill="#000000" fill-opacity="0.24" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2"/>
+      
+      <!-- Input Tag Header -->
+      <text x="24" y="36" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="9.5" fill="#818cf8" letter-spacing="0.15em">ASK WAYAX</text>
+      <line x1="100" y1="32" x2="140" y2="32" stroke="#818cf8" stroke-opacity="0.25" stroke-width="1"/>
+
+      <!-- Input text display -->
+      <text x="24" y="96" font-family="'Inter', sans-serif" font-weight="600" font-size="16.5" fill="#cbd5e1">Show me long-term multibagger stock picks?</text>
+
+      <!-- Horizontal separator line -->
+      <line x1="24" y1="145" x2="796" y2="145" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+
+      <!-- Left Action Plus Button atom -->
+      <g transform="translate(24, 168)">
+        <circle cx="20" cy="20" r="20" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2"/>
+        <path d="M20 12v16M12 20h16" stroke="#cbd5e1" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+
+      <!-- Center Hide Presets glass button -->
+      <g transform="translate(340, 168)">
+        <rect width="140" height="40" rx="20" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.11" stroke-width="1.2"/>
+        <line x1="16" y1="1" x2="124" y2="1" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1.2"/>
+        
+        <!-- Toggle circle icon details -->
+        <circle cx="24" cy="20" r="6" stroke="#818cf8" stroke-width="1.5" fill="none"/>
+        <path d="M24 17v4" stroke="#818cf8" stroke-width="1.5" stroke-linecap="round"/>
+        
+        <text x="82" y="24" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#ffffff" text-anchor="middle">Hide Presets ▲</text>
+      </g>
+
+      <!-- Right Action Send Arrow Button atom -->
+      <g transform="translate(756, 168)">
+        <circle cx="20" cy="20" r="20" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1.2"/>
+        <path d="M20 28V12m0 0l-6 6m6-6l6 6" stroke="#cbd5e1" stroke-dasharray="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+
+    <!-- ==================== CARD 2: PRESETS console ==================== -->
+    <g transform="translate(20, 288)">
+      <!-- Console Base -->
+      <rect width="820" height="188" rx="28" fill="#000000" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1.2"/>
+
+      <!-- Console Header and Badge -->
+      <g transform="translate(24, 28)">
+        <rect width="16" height="16" rx="4" fill="url(#glass-panel-fill-figma)" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1"/>
+        <image href="https://reduced-beige-7hamqau4r6.edgeone.app/a.png" x="2" y="2" width="12" height="12"/>
+        <text x="26" y="12" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="9.5" fill="#818cf8" letter-spacing="0.15em">CHAT PRESET</text>
+      </g>
+
+      <!-- Check All Questions active action button -->
+      <g transform="translate(610, 20)">
+        <rect width="186" height="34" rx="17" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2"/>
+        <circle cx="16" cy="17" r="5.5" stroke="#818cf8" stroke-width="1.5" fill="none"/>
+        <path d="M16 14v4" stroke="#818cf8" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="105" y="21" font-family="'Inter', sans-serif" font-weight="800" font-size="9.5" fill="#a5b4fc" text-anchor="middle">CHECK ALL QUESTIONS</text>
+      </g>
+
+      <line x1="24" y1="72" x2="796" y2="72" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+
+      <!-- Categories filters pills row (1:1 aligned) -->
+      <g transform="translate(24, 92)">
+        <!-- Pill 1: Stocks to Buy -->
+        <g transform="translate(0, 0)">
+          <rect width="138" height="34" rx="12" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+          <path d="M14 21l3-3 2 2 4-4m0 0h-3m3 0v3" stroke="#cbd5e1" stroke-width="1.2" stroke-linecap="round"/>
+          <text x="76" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Stocks to Buy ▾</text>
+        </g>
+
+        <!-- Pill 2: Short Selling -->
+        <g transform="translate(148, 0)">
+          <rect width="138" height="34" rx="12" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+          <path d="M21 13l5 9H16l5-9z" stroke="#64748b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="78" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Short selling ▾</text>
+        </g>
+
+        <!-- Pill 3: Long term picks -->
+        <g transform="translate(296, 0)">
+          <rect width="144" height="34" rx="12" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+          <path d="M14 20l2-4 4-2-4-2-2-4-2 4-4 2 4 2z" stroke="#64748b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="82" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Long term picks ▾</text>
+        </g>
+
+        <!-- Pill 4: Track record -->
+        <g transform="translate(450, 0)">
+          <rect width="132" height="34" rx="12" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+          <circle cx="18" cy="17" r="4.5" fill="#ffffff" fill-opacity="0.08" stroke="none"/>
+          <text x="74" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Track record ▾</text>
+        </g>
+
+        <!-- Pill 5: About Waya -->
+        <g transform="translate(592, 0)">
+          <rect width="126" height="34" rx="12" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+          <path d="M16 20h2m-1-4v4m0-8v.01" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="70" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#cbd5e1" text-anchor="middle">About Waya ▾</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

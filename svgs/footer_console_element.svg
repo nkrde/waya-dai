@@ -1,0 +1,166 @@
+<svg width="860" height="350" viewBox="0 0 860 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT COMPREHENSIVE CONSOLE FOOTER COMPONENT (860px x 350px)
+    Strictly extracted and compiled from the provided React DOM HTML snippet:
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    - Consolidated footer panel with dual segments:
+      - Interactive multi-choice SEBI survey capsule
+      - Compact search input capsule containing paperclip and send icons
+      - Bottom hotkey guidelines and financial advice disclaimer
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Background Satin Panel Glass Gradient -->
+    <linearGradient id="footer-glass-grad" x1="0" y1="0" x2="860" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#111318" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#07080b" stop-opacity="0.25"/>
+    </linearGradient>
+
+    <!-- Specular highlight line chamfer gradients -->
+    <linearGradient id="footer-border-spec" x1="0" y1="0" x2="860" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <linearGradient id="survey-border-spec" x1="0" y1="0" x2="828" y2="194" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <!-- Console Drop Shadow -->
+    <filter id="footer-console-shadow" x="-5%" y="-10%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="32" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== LAYER 1: BASE CONSOLE PANEL ==================== -->
+  <!-- Rounded pill base container (852px x 342px, rx=20) -->
+  <rect x="4" y="4" width="852" height="342" rx="20" fill="url(#footer-glass-grad)" stroke="url(#footer-border-spec)" stroke-width="1.2" filter="url(#footer-console-shadow)"/>
+  
+  <!-- Specular inner edge highlight -->
+  <rect x="4.5" y="4.5" width="851" height="341" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- ==================== LAYER 2: INTERACTIVE ADVISORY SURVEY CARD ==================== -->
+  <g id="footer-survey" transform="translate(16, 16)">
+    <!-- Survey base card -->
+    <rect width="828" height="194" rx="16" fill="#0d0e12" fill-opacity="0.8" stroke="url(#survey-border-spec)" stroke-width="1.2"/>
+    
+    <!-- Specular highlight line chamfer inside survey card -->
+    <rect x="0.5" y="0.5" width="827" height="193" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+    <!-- Header Section -->
+    <g transform="translate(16, 16)">
+      <!-- Question Title -->
+      <text x="0" y="14" font-family="'Inter', sans-serif" font-weight="700" font-size="12" fill="#ffffff">Before I dive in — how long are you thinking of staying invested?</text>
+      
+      <!-- Pager controls -->
+      <g transform="translate(658, 0)">
+        <!-- Prev Button (Disabled status: 20% opacity) -->
+        <g opacity="0.2" transform="translate(0, -6)">
+          <rect width="20" height="20" rx="5" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <path d="m11.5 13-3-3 3-3" stroke="#475569" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </g>
+        
+        <!-- Pager status -->
+        <text x="36" y="8" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="9" fill="#94a3b8" text-anchor="middle">1 / 2</text>
+        
+        <!-- Next Button -->
+        <g transform="translate(52, -6)">
+          <rect width="20" height="20" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <path d="m8.5 13 3-3-3-3" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </g>
+        
+        <!-- Close X Button -->
+        <g transform="translate(86, -6)">
+          <rect width="20" height="20" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <path d="M7 7l6 6M13 7l-6 6" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+        </g>
+      </g>
+
+      <!-- Dividing line (border-white/5) -->
+      <line x1="0" y1="26" x2="796" y2="26" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+    </g>
+
+    <!-- Stack of Multi-choice capsules -->
+    <g transform="translate(16, 58)">
+      <!-- Option 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="796" height="28" rx="8" fill="rgba(255, 255, 255, 0.01)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <rect x="6" y="4" width="20" height="20" rx="5" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+        <text x="16" y="18" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="9" fill="#cbd5e1" text-anchor="middle">1</text>
+        <text x="34" y="18" font-family="'Inter', sans-serif" font-weight="600" font-size="10.5" fill="#cbd5e1">Short Term — quick wins, under 3 months</text>
+      </g>
+      
+      <!-- Option 2 -->
+      <g transform="translate(0, 34)">
+        <rect width="796" height="28" rx="8" fill="rgba(255, 255, 255, 0.01)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <rect x="6" y="4" width="20" height="20" rx="5" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+        <text x="16" y="18" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="9" fill="#cbd5e1" text-anchor="middle">2</text>
+        <text x="34" y="18" font-family="'Inter', sans-serif" font-weight="600" font-size="10.5" fill="#cbd5e1">Medium Term — steady growth, 3 to 12 months</text>
+      </g>
+      
+      <!-- Option 3 -->
+      <g transform="translate(0, 68)">
+        <rect width="796" height="28" rx="8" fill="rgba(255, 255, 255, 0.01)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <rect x="6" y="4" width="20" height="20" rx="5" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+        <text x="16" y="18" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="9" fill="#cbd5e1" text-anchor="middle">3</text>
+        <text x="34" y="18" font-family="'Inter', sans-serif" font-weight="600" font-size="10.5" fill="#cbd5e1">Long Term — wealth building, 1 year and beyond</text>
+      </g>
+    </g>
+
+    <!-- Custom option input row inside survey -->
+    <g transform="translate(16, 162)">
+      <line x1="0" y1="-8" x2="796" y2="-8" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      
+      <!-- input box -->
+      <rect width="708" height="28" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      
+      <!-- lucide-pen-tool -->
+      <g transform="translate(10, 6)" stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+        <path d="m14 8-6-6a2.1 2.1 0 1 0-3 3L9 11"/>
+      </g>
+      <text x="30" y="18" font-family="'Inter', sans-serif" font-weight="500" font-size="10.5" fill="#475569">Something else...</text>
+      
+      <!-- Skip capsule button -->
+      <g transform="translate(718, 0)">
+        <rect width="78" height="28" rx="8" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+        <text x="39" y="18" font-family="'Inter', sans-serif" font-weight="700" font-size="10.5" fill="#cbd5e1" text-anchor="middle">Skip</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 3: COMPACT SEARCH INPUT CAPSULE ==================== -->
+  <g id="footer-search" transform="translate(16, 226)">
+    <!-- Base track pill -->
+    <rect width="828" height="38" rx="19" fill="#0d0e12" fill-opacity="0.5" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1.2"/>
+    
+    <!-- lucide-paperclip -->
+    <g transform="translate(16, 10)">
+      <path d="m14.5 5.5-7.5 7.5a2.1 2.1 0 0 0 3 3l7.5-7.5A4.2 4.2 0 1 0 11.5 2.5l-7.5 7.5a6.3 6.3 0 1 0 9 9l7.5-7.5" stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Input Box placeholder -->
+    <text x="44" y="24" font-family="'Inter', sans-serif" font-weight="650" font-size="11" fill="#475569">Ask WayaX about stocks, entry zones, F&amp;O, portfolio advisory...</text>
+
+    <!-- Send Button (disabled state: bg-[#151c2f] opacity-25) -->
+    <g transform="translate(790, 4)" opacity="0.25">
+      <rect width="30" height="30" rx="9" fill="#151c2f"/>
+      <g transform="translate(7, 7)" stroke="#475569" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12.5 14.5a.5.5 0 0 0 .7 0l4.5-12.5a.5.5 0 0 0-.6-.6L4.6 5.9a.5.5 0 0 0 0 .7l5.4 2.2a2 2 0 0 1 1 1.1z"/>
+        <line x1="16.5" y1="1.5" x2="10" y2="8"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 4: GUIDELINES & DISCLAIMER NOTES ==================== -->
+  <g transform="translate(430, 292)" text-anchor="middle">
+    <!-- Guidelines and SEBI disclaimer row -->
+    <text font-family="'Inter', sans-serif" font-weight="550" font-size="9.5" fill="#475569" letter-spacing="0.02em">
+      Enter to send · Shift+Enter for new line  |  <tspan font-weight="700" fill="#475569">ADVISORY ONLY — NOT DIRECT FINANCIAL ADVICE</tspan>
+    </text>
+  </g>
+</svg>

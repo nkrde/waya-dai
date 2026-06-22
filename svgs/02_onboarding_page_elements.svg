@@ -1,0 +1,1337 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1600" viewBox="0 0 2400 1600">
+  <defs>
+    <!-- Dot Grid Pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="white" fill-opacity="0.05"/>
+    </pattern>
+
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#080a10"/>
+      <stop offset="100%" stop-color="#0a0c15"/>
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111318" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d0f14" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <linearGradient id="indigoBtnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <linearGradient id="tealGlowGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#77f2e4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#6bb6f3" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="logoShieldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c1a2e"/>
+      <stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+
+    <linearGradient id="tealAccentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#77f2e4"/>
+      <stop offset="100%" stop-color="#6bb6f3"/>
+    </linearGradient>
+
+    <linearGradient id="mockupLeftBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#090b12"/>
+      <stop offset="100%" stop-color="#070910"/>
+    </linearGradient>
+
+    <linearGradient id="mockupRightBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0d14"/>
+      <stop offset="100%" stop-color="#090c13"/>
+    </linearGradient>
+
+    <linearGradient id="glassCardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1d26" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#111318" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="selectedBtnGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+
+    <linearGradient id="lightModeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+
+    <linearGradient id="tealOrb1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#77f2e4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#6bb6f3" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <linearGradient id="tealOrb2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <linearGradient id="specularGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0.0"/>
+      <stop offset="30%" stop-color="white" stop-opacity="0.07"/>
+      <stop offset="70%" stop-color="white" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <linearGradient id="focusRingGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <linearGradient id="indigoGlowGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <linearGradient id="sectionLabelGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#77f2e4" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#77f2e4" stop-opacity="0.04"/>
+    </linearGradient>
+
+    <linearGradient id="indigoSectionGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.04"/>
+    </linearGradient>
+
+    <linearGradient id="stepActiveGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <linearGradient id="stepCompletedGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+
+    <linearGradient id="logoLargeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c1a2e"/>
+      <stop offset="100%" stop-color="#091525"/>
+    </linearGradient>
+
+    <linearGradient id="dashBtnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.10"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="tealGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="bigBlur" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+
+    <filter id="medBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+
+    <filter id="smallBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+
+    <filter id="indigoFocusGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#6366f1" flood-opacity="0.25" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feComposite in="SourceGraphic" in2="glow" operator="over"/>
+    </filter>
+
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <filter id="logoGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+
+    <filter id="selectedGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#ffffff" flood-opacity="0.12"/>
+    </filter>
+
+    <filter id="indigoDropGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#6366f1" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Clip paths -->
+    <clipPath id="mockup1Clip">
+      <rect x="60" y="120" width="520" height="700" rx="14"/>
+    </clipPath>
+    <clipPath id="mockup2Clip">
+      <rect x="600" y="120" width="520" height="700" rx="14"/>
+    </clipPath>
+    <clipPath id="mockup3Clip">
+      <rect x="1140" y="120" width="520" height="700" rx="14"/>
+    </clipPath>
+    <clipPath id="mockup4Clip">
+      <rect x="1680" y="120" width="520" height="700" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- CANVAS BACKGROUND -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <rect width="2400" height="1600" fill="url(#bgGrad)"/>
+  <rect width="2400" height="1600" fill="url(#dotGrid)"/>
+
+  <!-- Ambient light blobs -->
+  <ellipse cx="400" cy="500" rx="500" ry="380" fill="url(#tealOrb1)" filter="url(#bigBlur)"/>
+  <ellipse cx="1900" cy="300" rx="450" ry="320" fill="url(#tealOrb2)" filter="url(#bigBlur)"/>
+  <ellipse cx="1200" cy="1300" rx="600" ry="250" fill="url(#indigoGlowGrad)" filter="url(#bigBlur)"/>
+  <ellipse cx="2200" cy="1100" rx="300" ry="200" fill="url(#tealOrb1)" filter="url(#medBlur)"/>
+  <ellipse cx="100" cy="1400" rx="280" ry="180" fill="url(#tealOrb2)" filter="url(#medBlur)"/>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- BOARD HEADER -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(60,50)">
+    <text font-family="'Sora', sans-serif" font-size="30" font-weight="700" fill="#ffffff" letter-spacing="-0.5">02 · Onboarding &amp; Get Started</text>
+    <text y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#77f2e4" letter-spacing="2" font-weight="500">WAYAX · 3-STEP ONBOARDING FLOW · ALL ELEMENTS &amp; STATES</text>
+  </g>
+
+  <!-- ROW 1 SECTION LABEL -->
+  <g transform="translate(60,100)">
+    <rect width="280" height="16" rx="4" fill="url(#sectionLabelGrad)" stroke="#77f2e4" stroke-opacity="0.2" stroke-width="0.5"/>
+    <text x="8" y="11.5" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#77f2e4" letter-spacing="1.5" font-weight="600">ROW 1 · FULL PAGE MOCKUPS</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MOCKUP 1: STEP 0 — PHONE / OTP LOGIN -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g id="mockup1">
+    <!-- Outer glow -->
+    <rect x="60" y="120" width="520" height="700" rx="14" fill="#77f2e4" fill-opacity="0.03" filter="url(#medBlur)"/>
+    <!-- Main frame -->
+    <rect x="60" y="120" width="520" height="700" rx="14" fill="#0b0c10" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+    <!-- Top specular -->
+    <rect x="60" y="120" width="520" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <!-- Step label badge -->
+    <rect x="75" y="130" width="140" height="14" rx="4" fill="url(#sectionLabelGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="83" y="140.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77f2e4" letter-spacing="1.2" font-weight="600">STEP 0 · PHONE / OTP</text>
+
+    <!-- LEFT COLUMN -->
+    <g clip-path="url(#mockup1Clip)">
+      <!-- Left bg -->
+      <rect x="60" y="120" width="260" height="700" fill="url(#mockupLeftBg)"/>
+
+      <!-- Dot grid on left -->
+      <rect x="60" y="120" width="260" height="700" fill="url(#dotGrid)" opacity="0.6"/>
+
+      <!-- Ambient teal orb behind logo -->
+      <ellipse cx="190" cy="430" rx="110" ry="80" fill="#77f2e4" fill-opacity="0.13" filter="url(#bigBlur)"/>
+      <ellipse cx="190" cy="430" rx="60" ry="45" fill="#6bb6f3" fill-opacity="0.10" filter="url(#medBlur)"/>
+
+      <!-- WayaX Logo Shield -->
+      <rect x="150" y="350" width="80" height="80" rx="16" fill="url(#logoShieldGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="1.2"/>
+      <!-- Shield teal glow behind -->
+      <rect x="148" y="348" width="84" height="84" rx="18" fill="#77f2e4" fill-opacity="0.08" filter="url(#logoGlow)"/>
+      <!-- W letterform -->
+      <text x="190" y="402" font-family="'Sora', sans-serif" font-size="36" font-weight="800" fill="url(#tealAccentGrad)" text-anchor="middle">W</text>
+      <!-- Teal accent bar inside shield -->
+      <rect x="165" y="418" width="50" height="2" rx="1" fill="url(#tealAccentGrad)" opacity="0.7"/>
+
+      <!-- WayaX wordmark -->
+      <text x="190" y="455" font-family="'Sora', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.3">WayaX</text>
+
+      <!-- SEBI text -->
+      <text x="190" y="474" font-family="'Inter', sans-serif" font-size="6.5" fill="#64748b" text-anchor="middle">SEBI-compliant AI research assistant</text>
+      <text x="190" y="484" font-family="'JetBrains Mono', monospace" font-size="6" fill="#475569" text-anchor="middle">RA: INH000010876</text>
+
+      <!-- Horizontal ambient glow bar -->
+      <ellipse cx="190" cy="530" rx="120" ry="8" fill="#77f2e4" fill-opacity="0.08" filter="url(#smallBlur)"/>
+    </g>
+
+    <!-- Divider line -->
+    <line x1="320" y1="135" x2="320" y2="805" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+    <!-- RIGHT COLUMN — Glass Card -->
+    <g clip-path="url(#mockup1Clip)">
+      <rect x="320" y="120" width="260" height="700" fill="url(#mockupRightBg)"/>
+      <rect x="320" y="120" width="260" height="700" fill="url(#dotGrid)" opacity="0.3"/>
+
+      <!-- Ambient indigo blob -->
+      <ellipse cx="450" cy="480" rx="100" ry="80" fill="#6366f1" fill-opacity="0.08" filter="url(#medBlur)"/>
+
+      <!-- Glass Card -->
+      <rect x="335" y="270" width="230" height="340" rx="14" fill="url(#glassCardGrad)" stroke="white" stroke-opacity="0.05" stroke-width="1" filter="url(#cardShadow)"/>
+      <rect x="335" y="270" width="230" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+      <!-- Card content -->
+      <!-- Eyebrow -->
+      <text x="350" y="292" font-family="'JetBrains Mono', monospace" font-size="7" fill="#818cf8" letter-spacing="1.5" font-weight="600">SIGN IN WITH WAYA ACCOUNT</text>
+
+      <!-- Title -->
+      <text x="350" y="314" font-family="'Sora', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Get Started</text>
+
+      <!-- Subtitle -->
+      <text x="350" y="330" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8">Access your personalized advisory.</text>
+
+      <!-- Divider -->
+      <line x1="350" y1="342" x2="550" y2="342" stroke="white" stroke-opacity="0.06" stroke-width="0.5"/>
+
+      <!-- Phone Input -->
+      <rect x="350" y="352" width="200" height="30" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+      <text x="363" y="371" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">Phone Number</text>
+      <!-- Phone icon hint -->
+      <rect x="353" y="360" width="6" height="8" rx="1.5" fill="none" stroke="#475569" stroke-width="0.7"/>
+
+      <!-- OTP Input -->
+      <rect x="350" y="390" width="200" height="30" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+      <text x="363" y="409" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">Enter OTP</text>
+
+      <!-- CTA Button -->
+      <rect x="350" y="430" width="200" height="34" rx="10" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.10" stroke-width="0.8"/>
+      <text x="440" y="451" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">Send OTP</text>
+      <!-- Arrow icon -->
+      <g transform="translate(537,443)">
+        <line x1="0" y1="4" x2="8" y2="4" stroke="#818cf8" stroke-width="1.2" stroke-linecap="round"/>
+        <polyline points="5,1 8,4 5,7" fill="none" stroke="#818cf8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Toggle link -->
+      <text x="450" y="477" font-family="'Inter', sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Sign in with Password instead</text>
+
+      <!-- Register ghost btn -->
+      <rect x="385" y="487" width="130" height="24" rx="8" fill="none" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+      <text x="450" y="503" font-family="'Inter', sans-serif" font-size="8.5" fill="#94a3b8" text-anchor="middle">Register</text>
+
+      <!-- Bottom note -->
+      <text x="450" y="590" font-family="'Inter', sans-serif" font-size="6.5" fill="#334155" text-anchor="middle">By continuing you agree to WayaX Terms</text>
+    </g>
+
+    <!-- Mockup 1 border -->
+    <rect x="60" y="120" width="520" height="700" rx="14" fill="none" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+
+    <!-- Step indicator dots at bottom -->
+    <circle cx="175" cy="808" r="3.5" fill="#6366f1"/>
+    <circle cx="190" cy="808" r="2.5" fill="white" fill-opacity="0.2"/>
+    <circle cx="205" cy="808" r="2.5" fill="white" fill-opacity="0.2"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MOCKUP 2: STEP 0b — OTP VERIFICATION -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g id="mockup2">
+    <rect x="600" y="120" width="520" height="700" rx="14" fill="#0b0c10" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+    <rect x="600" y="120" width="520" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="615" y="130" width="155" height="14" rx="4" fill="url(#indigoSectionGrad)" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="623" y="140.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8" letter-spacing="1.2" font-weight="600">STEP 0b · OTP VERIFICATION</text>
+
+    <g clip-path="url(#mockup2Clip)">
+      <!-- Left bg -->
+      <rect x="600" y="120" width="260" height="700" fill="url(#mockupLeftBg)"/>
+      <rect x="600" y="120" width="260" height="700" fill="url(#dotGrid)" opacity="0.6"/>
+      <ellipse cx="730" cy="430" rx="110" ry="80" fill="#77f2e4" fill-opacity="0.12" filter="url(#bigBlur)"/>
+
+      <!-- Logo -->
+      <rect x="690" y="350" width="80" height="80" rx="16" fill="url(#logoShieldGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="1.2"/>
+      <rect x="688" y="348" width="84" height="84" rx="18" fill="#77f2e4" fill-opacity="0.08" filter="url(#logoGlow)"/>
+      <text x="730" y="402" font-family="'Sora', sans-serif" font-size="36" font-weight="800" fill="url(#tealAccentGrad)" text-anchor="middle">W</text>
+      <rect x="705" y="418" width="50" height="2" rx="1" fill="url(#tealAccentGrad)" opacity="0.7"/>
+      <text x="730" y="455" font-family="'Sora', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.3">WayaX</text>
+      <text x="730" y="474" font-family="'Inter', sans-serif" font-size="6.5" fill="#64748b" text-anchor="middle">SEBI-compliant AI research assistant</text>
+      <text x="730" y="484" font-family="'JetBrains Mono', monospace" font-size="6" fill="#475569" text-anchor="middle">RA: INH000010876</text>
+      <ellipse cx="730" cy="530" rx="120" ry="8" fill="#77f2e4" fill-opacity="0.07" filter="url(#smallBlur)"/>
+
+      <!-- Right col -->
+      <rect x="860" y="120" width="260" height="700" fill="url(#mockupRightBg)"/>
+      <rect x="860" y="120" width="260" height="700" fill="url(#dotGrid)" opacity="0.3"/>
+      <ellipse cx="990" cy="480" rx="100" ry="80" fill="#6366f1" fill-opacity="0.08" filter="url(#medBlur)"/>
+    </g>
+
+    <!-- Divider -->
+    <line x1="860" y1="135" x2="860" y2="805" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+    <!-- Glass Card -->
+    <rect x="875" y="265" width="230" height="360" rx="14" fill="url(#glassCardGrad)" stroke="white" stroke-opacity="0.05" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect x="875" y="265" width="230" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <text x="890" y="287" font-family="'JetBrains Mono', monospace" font-size="7" fill="#818cf8" letter-spacing="1.5" font-weight="600">VERIFY YOUR PHONE</text>
+    <text x="890" y="308" font-family="'Sora', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Get Started</text>
+    <text x="890" y="324" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8">We sent a code to your number.</text>
+
+    <line x1="890" y1="336" x2="1090" y2="336" stroke="white" stroke-opacity="0.06" stroke-width="0.5"/>
+
+    <!-- Phone filled input -->
+    <rect x="890" y="346" width="200" height="30" rx="8" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.10" stroke-width="0.8"/>
+    <text x="903" y="365" font-family="'Inter', sans-serif" font-size="9" fill="#f8fafc">98765 43210</text>
+    <!-- Edit icon -->
+    <g transform="translate(1075,356)">
+      <rect x="0" y="0" width="8" height="8" rx="1.5" fill="none" stroke="#6366f1" stroke-width="0.8"/>
+      <line x1="2" y1="5" x2="6" y2="1" stroke="#6366f1" stroke-width="0.7" stroke-linecap="round"/>
+    </g>
+
+    <!-- OTP 4-digit boxes -->
+    <rect x="890" y="384" width="40" height="40" rx="8" fill="white" fill-opacity="0.03" stroke="#6366f1" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="910" y="409" font-family="'JetBrains Mono', monospace" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="600">6</text>
+    <rect x="937" y="384" width="40" height="40" rx="8" fill="white" fill-opacity="0.03" stroke="#6366f1" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="957" y="409" font-family="'JetBrains Mono', monospace" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="600">4</text>
+    <rect x="984" y="384" width="40" height="40" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+    <text x="1004" y="409" font-family="'JetBrains Mono', monospace" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="600">_</text>
+    <rect x="1031" y="384" width="40" height="40" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+
+    <!-- Focus indicator under box 3 -->
+    <rect x="984" y="423" width="40" height="2" rx="1" fill="url(#stepActiveGrad)" opacity="0.8"/>
+
+    <!-- Resend OTP -->
+    <text x="990" y="443" font-family="'Inter', sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Didn't receive? <tspan fill="#818cf8" font-weight="600">Resend OTP</tspan></text>
+
+    <!-- Verify button -->
+    <rect x="890" y="452" width="200" height="34" rx="10" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.10" stroke-width="0.8"/>
+    <text x="990" y="473" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">Verify OTP &amp; Continue</text>
+    <g transform="translate(1075,465)">
+      <line x1="0" y1="4" x2="8" y2="4" stroke="#818cf8" stroke-width="1.2" stroke-linecap="round"/>
+      <polyline points="5,1 8,4 5,7" fill="none" stroke="#818cf8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Step dots -->
+    <circle cx="715" cy="808" r="3.5" fill="#6366f1"/>
+    <circle cx="730" cy="808" r="2.5" fill="white" fill-opacity="0.2"/>
+    <circle cx="745" cy="808" r="2.5" fill="white" fill-opacity="0.2"/>
+
+    <!-- Border -->
+    <rect x="600" y="120" width="520" height="700" rx="14" fill="none" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MOCKUP 3: STEP 1 — NAME ENTRY -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g id="mockup3">
+    <rect x="1140" y="120" width="520" height="700" rx="14" fill="#0b0c10" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+    <rect x="1140" y="120" width="520" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="1155" y="130" width="120" height="14" rx="4" fill="url(#sectionLabelGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="1163" y="140.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77f2e4" letter-spacing="1.2" font-weight="600">STEP 1 · NAME ENTRY</text>
+
+    <g clip-path="url(#mockup3Clip)">
+      <rect x="1140" y="120" width="260" height="700" fill="url(#mockupLeftBg)"/>
+      <rect x="1140" y="120" width="260" height="700" fill="url(#dotGrid)" opacity="0.6"/>
+      <ellipse cx="1270" cy="430" rx="110" ry="80" fill="#77f2e4" fill-opacity="0.12" filter="url(#bigBlur)"/>
+
+      <rect x="1230" y="350" width="80" height="80" rx="16" fill="url(#logoShieldGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="1.2"/>
+      <rect x="1228" y="348" width="84" height="84" rx="18" fill="#77f2e4" fill-opacity="0.08" filter="url(#logoGlow)"/>
+      <text x="1270" y="402" font-family="'Sora', sans-serif" font-size="36" font-weight="800" fill="url(#tealAccentGrad)" text-anchor="middle">W</text>
+      <rect x="1245" y="418" width="50" height="2" rx="1" fill="url(#tealAccentGrad)" opacity="0.7"/>
+      <text x="1270" y="455" font-family="'Sora', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.3">WayaX</text>
+      <text x="1270" y="474" font-family="'Inter', sans-serif" font-size="6.5" fill="#64748b" text-anchor="middle">SEBI-compliant AI research assistant</text>
+      <text x="1270" y="484" font-family="'JetBrains Mono', monospace" font-size="6" fill="#475569" text-anchor="middle">RA: INH000010876</text>
+      <ellipse cx="1270" cy="530" rx="120" ry="8" fill="#77f2e4" fill-opacity="0.07" filter="url(#smallBlur)"/>
+
+      <rect x="1400" y="120" width="260" height="700" fill="url(#mockupRightBg)"/>
+      <rect x="1400" y="120" width="260" height="700" fill="url(#dotGrid)" opacity="0.3"/>
+      <ellipse cx="1530" cy="480" rx="100" ry="80" fill="#a855f7" fill-opacity="0.07" filter="url(#medBlur)"/>
+    </g>
+
+    <line x1="1400" y1="135" x2="1400" y2="805" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+    <!-- Glass Card -->
+    <rect x="1415" y="275" width="230" height="310" rx="14" fill="url(#glassCardGrad)" stroke="white" stroke-opacity="0.05" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect x="1415" y="275" width="230" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <text x="1430" y="297" font-family="'JetBrains Mono', monospace" font-size="7" fill="#818cf8" letter-spacing="1.5" font-weight="600">STEP 1 OF 2</text>
+    <text x="1430" y="320" font-family="'Sora', sans-serif" font-size="16" font-weight="700" fill="#ffffff">What should I call you?</text>
+    <text x="1430" y="336" font-family="'Inter', sans-serif" font-size="8.5" fill="#94a3b8">This helps me personalize your</text>
+    <text x="1430" y="348" font-family="'Inter', sans-serif" font-size="8.5" fill="#94a3b8">advisory experience.</text>
+
+    <line x1="1430" y1="360" x2="1630" y2="360" stroke="white" stroke-opacity="0.06" stroke-width="0.5"/>
+
+    <!-- Name input -->
+    <rect x="1430" y="370" width="200" height="32" rx="8" fill="white" fill-opacity="0.03" stroke="#6366f1" stroke-opacity="0.4" stroke-width="0.8" filter="url(#indigoFocusGlow)"/>
+    <text x="1443" y="390" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">Enter your name</text>
+    <!-- Cursor blink -->
+    <rect x="1443" y="380" width="1.2" height="12" rx="0.6" fill="#818cf8" opacity="0.8"/>
+
+    <!-- Helper text -->
+    <text x="1430" y="413" font-family="'Inter', sans-serif" font-size="7.5" fill="#334155">e.g. Amit, Priya, Rahul…</text>
+
+    <!-- Continue button -->
+    <rect x="1430" y="426" width="200" height="34" rx="10" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.10" stroke-width="0.8"/>
+    <text x="1525" y="447" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">Continue</text>
+    <g transform="translate(1615,439)">
+      <line x1="0" y1="4" x2="8" y2="4" stroke="#818cf8" stroke-width="1.2" stroke-linecap="round"/>
+      <polyline points="5,1 8,4 5,7" fill="none" stroke="#818cf8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Back link -->
+    <text x="1530" y="477" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">← Back</text>
+
+    <!-- Step indicator -->
+    <circle cx="1255" cy="808" r="2.5" fill="#10b981"/>
+    <circle cx="1270" cy="808" r="3.5" fill="#6366f1"/>
+    <circle cx="1285" cy="808" r="2.5" fill="white" fill-opacity="0.2"/>
+
+    <rect x="1140" y="120" width="520" height="700" rx="14" fill="none" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MOCKUP 4: STEP 2 — CONFIGURE MEMORY -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g id="mockup4">
+    <rect x="1680" y="120" width="520" height="700" rx="14" fill="#0b0c10" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+    <rect x="1680" y="120" width="520" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="1695" y="130" width="155" height="14" rx="4" fill="url(#indigoSectionGrad)" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="1703" y="140.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8" letter-spacing="1.2" font-weight="600">STEP 2 · CONFIGURE MEMORY</text>
+
+    <g clip-path="url(#mockup4Clip)">
+      <rect x="1680" y="120" width="260" height="700" fill="url(#mockupLeftBg)"/>
+      <rect x="1680" y="120" width="260" height="700" fill="url(#dotGrid)" opacity="0.6"/>
+      <ellipse cx="1810" cy="430" rx="110" ry="80" fill="#77f2e4" fill-opacity="0.12" filter="url(#bigBlur)"/>
+
+      <rect x="1870" y="350" width="80" height="80" rx="16" fill="url(#logoShieldGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="1.2"/>
+      <rect x="1868" y="348" width="84" height="84" rx="18" fill="#77f2e4" fill-opacity="0.08" filter="url(#logoGlow)"/>
+      <text x="1910" y="402" font-family="'Sora', sans-serif" font-size="36" font-weight="800" fill="url(#tealAccentGrad)" text-anchor="middle">W</text>
+      <rect x="1885" y="418" width="50" height="2" rx="1" fill="url(#tealAccentGrad)" opacity="0.7"/>
+      <text x="1910" y="455" font-family="'Sora', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.3">WayaX</text>
+      <text x="1910" y="474" font-family="'Inter', sans-serif" font-size="6.5" fill="#64748b" text-anchor="middle">SEBI-compliant AI research assistant</text>
+      <text x="1910" y="484" font-family="'JetBrains Mono', monospace" font-size="6" fill="#475569" text-anchor="middle">RA: INH000010876</text>
+      <ellipse cx="1910" cy="530" rx="120" ry="8" fill="#77f2e4" fill-opacity="0.07" filter="url(#smallBlur)"/>
+
+      <rect x="1940" y="120" width="260" height="700" fill="url(#mockupRightBg)"/>
+      <rect x="1940" y="120" width="260" height="700" fill="url(#dotGrid)" opacity="0.3"/>
+      <ellipse cx="2070" cy="450" rx="110" ry="90" fill="#6366f1" fill-opacity="0.07" filter="url(#medBlur)"/>
+    </g>
+
+    <line x1="1940" y1="135" x2="1940" y2="805" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+    <!-- Glass Card — larger for memory config -->
+    <rect x="1952" y="175" width="232" height="475" rx="14" fill="url(#glassCardGrad)" stroke="white" stroke-opacity="0.05" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect x="1952" y="175" width="232" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <!-- Sparkles icon before title -->
+    <g transform="translate(1965,192)">
+      <text font-family="'Inter', sans-serif" font-size="12" fill="#818cf8">✦</text>
+    </g>
+    <text x="1980" y="203" font-family="'Sora', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Configure Memory</text>
+
+    <!-- Subtitle with name highlighted -->
+    <text x="1965" y="221" font-family="'Inter', sans-serif" font-size="8.5" fill="#94a3b8">Hi <tspan fill="#a5b4fc" font-weight="600">Amit</tspan>! Set your AI guidelines.</text>
+
+    <line x1="1965" y1="232" x2="2170" y2="232" stroke="white" stroke-opacity="0.06" stroke-width="0.5"/>
+
+    <!-- RISK TOLERANCE label -->
+    <text x="1965" y="248" font-family="'JetBrains Mono', monospace" font-size="7" fill="#77f2e4" letter-spacing="1">RISK TOLERANCE</text>
+
+    <!-- Risk 2×2 grid -->
+    <!-- Row 1 -->
+    <rect x="1965" y="255" width="100" height="28" rx="7" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.7"/>
+    <text x="2015" y="273" font-family="'Inter', sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Low</text>
+
+    <!-- Moderate SELECTED -->
+    <rect x="2073" y="255" width="100" height="28" rx="7" fill="white" fill-opacity="0.10" stroke="white" stroke-opacity="0.20" stroke-width="0.8" filter="url(#selectedGlow)"/>
+    <text x="2123" y="273" font-family="'Inter', sans-serif" font-size="9" fill="#f8fafc" text-anchor="middle" font-weight="600">Moderate ✓</text>
+
+    <!-- Row 2 -->
+    <rect x="1965" y="289" width="100" height="28" rx="7" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.7"/>
+    <text x="2015" y="307" font-family="'Inter', sans-serif" font-size="9" fill="#64748b" text-anchor="middle">High</text>
+
+    <rect x="2073" y="289" width="100" height="28" rx="7" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.7"/>
+    <text x="2123" y="307" font-family="'Inter', sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Aggressive</text>
+
+    <line x1="1965" y1="326" x2="2170" y2="326" stroke="white" stroke-opacity="0.04" stroke-width="0.5"/>
+
+    <!-- INVESTMENT HORIZON label -->
+    <text x="1965" y="342" font-family="'JetBrains Mono', monospace" font-size="7" fill="#77f2e4" letter-spacing="1">INVESTMENT HORIZON</text>
+
+    <!-- Horizon 2×2 grid -->
+    <rect x="1965" y="349" width="100" height="28" rx="7" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.7"/>
+    <text x="2015" y="367" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">Quick Trade</text>
+
+    <!-- Short-Term SELECTED -->
+    <rect x="2073" y="349" width="100" height="28" rx="7" fill="white" fill-opacity="0.10" stroke="white" stroke-opacity="0.20" stroke-width="0.8" filter="url(#selectedGlow)"/>
+    <text x="2123" y="367" font-family="'Inter', sans-serif" font-size="8.5" fill="#f8fafc" text-anchor="middle" font-weight="600">Short-Term ✓</text>
+
+    <rect x="1965" y="383" width="100" height="28" rx="7" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.7"/>
+    <text x="2015" y="401" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">Medium-Term</text>
+
+    <rect x="2073" y="383" width="100" height="28" rx="7" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.7"/>
+    <text x="2123" y="401" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">Long-Term</text>
+
+    <line x1="1965" y1="420" x2="2170" y2="420" stroke="white" stroke-opacity="0.04" stroke-width="0.5"/>
+
+    <!-- Additional preference hint -->
+    <text x="1965" y="438" font-family="'JetBrains Mono', monospace" font-size="7" fill="#6366f1" letter-spacing="1">FOCUS SECTORS (OPTIONAL)</text>
+    <rect x="1965" y="445" width="208" height="26" rx="7" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.06" stroke-width="0.7"/>
+    <text x="1978" y="462" font-family="'Inter', sans-serif" font-size="8.5" fill="#475569">Tech, BFSI, Pharma…</text>
+
+    <line x1="1965" y1="480" x2="2170" y2="480" stroke="white" stroke-opacity="0.04" stroke-width="0.5"/>
+
+    <!-- Footer: Back + Access Dashboard -->
+    <rect x="1965" y="490" width="62" height="34" rx="9" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="0.7"/>
+    <text x="1996" y="511" font-family="'Inter', sans-serif" font-size="8.5" fill="#94a3b8" text-anchor="middle">Back</text>
+
+    <rect x="2035" y="490" width="138" height="34" rx="9" fill="url(#dashBtnGrad)" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.8" filter="url(#indigoDropGlow)"/>
+    <text x="2104" y="511" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#f8fafc" text-anchor="middle">Access Dashboard →</text>
+
+    <text x="2068" y="538" font-family="'Inter', sans-serif" font-size="7" fill="#334155" text-anchor="middle">You can update these anytime in Settings</text>
+
+    <!-- Step dots -->
+    <circle cx="1895" cy="808" r="2.5" fill="#10b981"/>
+    <circle cx="1910" cy="808" r="2.5" fill="#10b981"/>
+    <circle cx="1925" cy="808" r="3.5" fill="#6366f1"/>
+
+    <rect x="1680" y="120" width="520" height="700" rx="14" fill="none" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ROW 2 SECTION LABEL -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(60,857)">
+    <rect width="320" height="16" rx="4" fill="url(#indigoSectionGrad)" stroke="#6366f1" stroke-opacity="0.2" stroke-width="0.5"/>
+    <text x="8" y="11.5" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#818cf8" letter-spacing="1.5" font-weight="600">ROW 2 · ATOMIC ELEMENT BREAKDOWN</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE A: BRAND MARK SECTION -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(60,880)">
+    <!-- Card bg -->
+    <rect width="500" height="320" rx="14" fill="url(#cardBg)" stroke="white" stroke-opacity="0.07" stroke-width="1"/>
+    <rect width="500" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <!-- Module label -->
+    <rect x="12" y="12" width="136" height="14" rx="4" fill="url(#sectionLabelGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="20" y="22.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77f2e4" letter-spacing="1.5" font-weight="600">MODULE A · BRAND MARK</text>
+
+    <!-- Demo panel -->
+    <rect x="12" y="34" width="230" height="275" rx="10" fill="#0a0c12" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+    <rect x="12" y="34" width="230" height="275" fill="url(#dotGrid)" opacity="0.6"/>
+
+    <!-- Ambient blob in panel -->
+    <ellipse cx="127" cy="160" rx="100" ry="70" fill="#77f2e4" fill-opacity="0.13" filter="url(#bigBlur)"/>
+
+    <!-- Large logo 120×120 -->
+    <rect x="67" y="55" width="120" height="120" rx="24" fill="url(#logoLargeGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="1.5"/>
+    <!-- Teal glow behind -->
+    <rect x="62" y="50" width="130" height="130" rx="28" fill="#77f2e4" fill-opacity="0.09" filter="url(#logoGlow)"/>
+    <!-- W letterform large -->
+    <text x="127" y="128" font-family="'Sora', sans-serif" font-size="60" font-weight="800" fill="url(#tealAccentGrad)" text-anchor="middle">W</text>
+    <!-- Teal bar -->
+    <rect x="92" y="158" width="70" height="3" rx="1.5" fill="url(#tealAccentGrad)" opacity="0.7"/>
+
+    <!-- WayaX wordmark -->
+    <text x="127" y="203" font-family="'Sora', sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">WayaX</text>
+
+    <!-- SEBI badge -->
+    <text x="127" y="222" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">SEBI-compliant AI research assistant</text>
+    <text x="127" y="234" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748b" text-anchor="middle">RA: INH000010876</text>
+
+    <!-- Horizontal glow orb label -->
+    <ellipse cx="127" cy="272" rx="100" ry="5" fill="#77f2e4" fill-opacity="0.09" filter="url(#smallBlur)"/>
+    <text x="127" y="300" font-family="'JetBrains Mono', monospace" font-size="6" fill="#334155" text-anchor="middle">ambient-horizontal-glow-orb</text>
+
+    <!-- Annotation panel -->
+    <g transform="translate(255,34)">
+      <!-- annotation bg -->
+      <rect width="233" height="275" rx="8" fill="white" fill-opacity="0.01" stroke="white" stroke-opacity="0.04" stroke-width="0.5"/>
+
+      <text x="10" y="18" font-family="'JetBrains Mono', monospace" font-size="8" fill="#77f2e4" letter-spacing="1" font-weight="600">BRAND MARK SPECS</text>
+      <line x1="10" y1="24" x2="220" y2="24" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+      <!-- Spec rows -->
+      <g transform="translate(10,36)">
+        <text font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Logo Container</text>
+        <text y="13" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">120×120 · rounded-24</text>
+        <text y="24" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">#0c1a2e → #091525</text>
+        <text y="35" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">border: teal/25 · stroke 1.5px</text>
+
+        <line x1="0" y1="43" x2="210" y2="43" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="55" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Wordmark</text>
+        <text y="67" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">font: Sora · weight 700</text>
+        <text y="78" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">size: 28px · fill #ffffff</text>
+        <text y="89" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">letter-spacing: -0.5</text>
+
+        <line x1="0" y1="97" x2="210" y2="97" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="109" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">SEBI Badge</text>
+        <text y="121" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">font: Inter · size 8px</text>
+        <text y="132" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">fill: #94a3b8 · mono: #64748b</text>
+
+        <line x1="0" y1="140" x2="210" y2="140" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="152" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Ambient Orb</text>
+        <text y="164" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">teal ellipse · blur-[75px]</text>
+        <text y="175" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">opacity: 13–18%</text>
+        <text y="186" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">animate-float keyframe</text>
+
+        <line x1="0" y1="194" x2="210" y2="194" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="206" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Dot Grid Backdrop</text>
+        <text y="218" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">white dots · 1px · 5% opacity</text>
+        <text y="229" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">36px spacing · 60% masked</text>
+        <text y="240" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">radial gradient mask</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE B: LIQUID GLASS CARD -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(580,880)">
+    <rect width="500" height="320" rx="14" fill="url(#cardBg)" stroke="white" stroke-opacity="0.07" stroke-width="1"/>
+    <rect width="500" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="12" y="12" width="160" height="14" rx="4" fill="url(#indigoSectionGrad)" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="20" y="22.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8" letter-spacing="1.5" font-weight="600">MODULE B · LIQUID GLASS CARD</text>
+
+    <!-- Card demo -->
+    <rect x="12" y="34" width="230" height="275" rx="10" fill="#0a0c12" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+    <rect x="12" y="34" width="230" height="275" fill="url(#dotGrid)" opacity="0.4"/>
+    <ellipse cx="127" cy="170" rx="90" ry="65" fill="#6366f1" fill-opacity="0.07" filter="url(#medBlur)"/>
+
+    <!-- The glass card itself -->
+    <rect x="35" y="58" width="185" height="228" rx="16" fill="url(#glassCardGrad)" stroke="white" stroke-opacity="0.05" stroke-width="1" filter="url(#cardShadow)"/>
+    <!-- Specular top edge -->
+    <rect x="35" y="58" width="185" height="1.5" rx="0" fill="url(#specularGrad)"/>
+    <!-- Inner left edge subtle glow -->
+    <rect x="35" y="59" width="1.5" height="226" rx="0" fill="white" fill-opacity="0.025"/>
+
+    <!-- Class label inside card -->
+    <text x="127" y="90" font-family="'JetBrains Mono', monospace" font-size="7" fill="#6366f1" text-anchor="middle" letter-spacing="0.5">liquid-glass-panel</text>
+    <text x="127" y="108" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">backdrop-blur-3xl</text>
+    <text x="127" y="122" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">shadow-2xl · rounded-2xl</text>
+    <text x="127" y="136" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">border-white/[0.05]</text>
+
+    <!-- padding indicator lines -->
+    <rect x="46" y="148" width="162" height="128" rx="6" fill="none" stroke="#6366f1" stroke-opacity="0.2" stroke-width="0.8" stroke-dasharray="3,2"/>
+    <text x="127" y="166" font-family="'JetBrains Mono', monospace" font-size="7" fill="#6366f1" text-anchor="middle" opacity="0.6">p-4.5 sm:p-8</text>
+    <!-- Corner padding indicators -->
+    <line x1="46" y1="148" x2="35" y2="148" stroke="#6366f1" stroke-opacity="0.3" stroke-width="0.6"/>
+    <line x1="46" y1="148" x2="46" y2="58" stroke="#6366f1" stroke-opacity="0.3" stroke-width="0.6"/>
+    <text x="40" y="104" font-family="'JetBrains Mono', monospace" font-size="6" fill="#6366f1" opacity="0.5" transform="rotate(-90,40,104)">p-4.5</text>
+
+    <!-- Specular indicator arrow -->
+    <line x1="50" y1="58" x2="50" y2="72" stroke="#77f2e4" stroke-opacity="0.5" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <text x="55" y="66" font-family="'JetBrains Mono', monospace" font-size="6" fill="#77f2e4" opacity="0.7">specular 7%</text>
+
+    <text x="127" y="220" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">bg: #111318/95% → #0d0f14/98%</text>
+    <text x="127" y="232" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">Inner glow: white 7% · 1.5px</text>
+    <text x="127" y="244" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">saturate(180%) blur(32px)</text>
+    <text x="127" y="260" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">box-shadow: 0 8px 32px #000/0.6</text>
+
+    <!-- Annotation panel -->
+    <g transform="translate(255,34)">
+      <rect width="233" height="275" rx="8" fill="white" fill-opacity="0.01" stroke="white" stroke-opacity="0.04" stroke-width="0.5"/>
+      <text x="10" y="18" font-family="'JetBrains Mono', monospace" font-size="8" fill="#818cf8" letter-spacing="1" font-weight="600">GLASS CARD SPECS</text>
+      <line x1="10" y1="24" x2="220" y2="24" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+      <g transform="translate(10,36)">
+        <text font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Border Radius</text>
+        <text y="13" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">rounded-2xl = 16px</text>
+
+        <line x1="0" y1="22" x2="210" y2="22" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="34" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Background Fill</text>
+        <text y="46" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">#111318 → #0d0f14</text>
+        <text y="57" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">opacity: 92–95%</text>
+
+        <line x1="0" y1="65" x2="210" y2="65" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="77" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Backdrop Filter</text>
+        <text y="89" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">blur(32px) saturate(180%)</text>
+
+        <line x1="0" y1="97" x2="210" y2="97" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="109" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Border</text>
+        <text y="121" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">1px solid white/5%</text>
+        <text y="132" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">border-white/[0.05]</text>
+
+        <line x1="0" y1="140" x2="210" y2="140" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="152" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Specular Top Edge</text>
+        <text y="164" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">1.5px rect · white 7%</text>
+        <text y="175" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">linear-gradient fade to edges</text>
+
+        <line x1="0" y1="183" x2="210" y2="183" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="195" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Shadow</text>
+        <text y="207" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">shadow-2xl</text>
+        <text y="218" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">0 8px 24px #000/0.6</text>
+
+        <line x1="0" y1="226" x2="210" y2="226" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+        <text y="238" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Padding</text>
+        <text y="250" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">p-4.5 = 18px (mobile)</text>
+        <text y="261" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#475569">sm:p-8 = 32px (tablet+)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE C: LIQUID GLASS INPUT — 3 STATES -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(1100,880)">
+    <rect width="500" height="320" rx="14" fill="url(#cardBg)" stroke="white" stroke-opacity="0.07" stroke-width="1"/>
+    <rect width="500" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="12" y="12" width="165" height="14" rx="4" fill="url(#sectionLabelGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="20" y="22.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77f2e4" letter-spacing="1.5" font-weight="600">MODULE C · LIQUID GLASS INPUT</text>
+
+    <!-- State 1: EMPTY -->
+    <g transform="translate(20,48)">
+      <rect x="0" y="0" width="68" height="12" rx="3" fill="white" fill-opacity="0.04"/>
+      <text x="6" y="9" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#64748b" letter-spacing="0.8">STATE 1</text>
+      <text x="76" y="9" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Empty / Default</text>
+
+      <rect x="0" y="18" width="225" height="36" rx="10" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+      <!-- Phone icon -->
+      <rect x="14" y="27" width="8" height="12" rx="2" fill="none" stroke="#475569" stroke-width="0.8"/>
+      <line x1="18" y1="37" x2="18" y2="38" stroke="#475569" stroke-width="0.8"/>
+      <text x="30" y="40" font-family="'Inter', sans-serif" font-size="10" fill="#475569">Phone Number</text>
+
+      <!-- spec tags -->
+      <text x="0" y="70" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">bg: white/3 · border: white/6</text>
+      <text x="0" y="80" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">rounded-lg md:rounded-xl · px-3.5 py-2.5</text>
+      <text x="0" y="90" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">placeholder: #64748b · icon: #475569</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="20" y1="178" x2="480" y2="178" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+    <!-- State 2: FOCUSED / ACTIVE -->
+    <g transform="translate(20,188)">
+      <rect x="0" y="0" width="68" height="12" rx="3" fill="#6366f1" fill-opacity="0.12"/>
+      <text x="6" y="9" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#818cf8" letter-spacing="0.8">STATE 2</text>
+      <text x="76" y="9" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Focused / Active</text>
+
+      <rect x="0" y="18" width="225" height="36" rx="10" fill="white" fill-opacity="0.04" stroke="#6366f1" stroke-opacity="0.55" stroke-width="1.2"/>
+      <!-- Focus glow ring -->
+      <rect x="-3" y="15" width="231" height="42" rx="12" fill="none" stroke="#6366f1" stroke-opacity="0.18" stroke-width="3"/>
+      <rect x="14" y="27" width="8" height="12" rx="2" fill="none" stroke="#6366f1" stroke-width="0.8"/>
+      <text x="30" y="40" font-family="'Inter', sans-serif" font-size="10" fill="#64748b">Phone Number</text>
+      <!-- Cursor -->
+      <rect x="143" y="28" width="1.2" height="14" rx="0.6" fill="#818cf8" opacity="0.8"/>
+
+      <text x="0" y="72" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">border: indigo-500/60 · ring indigo-500/20</text>
+      <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">ring-2 · outline-none · glow rgba(99,102,241)</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="20" y1="285" x2="480" y2="285" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+    <!-- State 3: FILLED -->
+    <g transform="translate(265,48)">
+      <rect x="0" y="0" width="68" height="12" rx="3" fill="#10b981" fill-opacity="0.10"/>
+      <text x="6" y="9" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#34d399" letter-spacing="0.8">STATE 3</text>
+      <text x="76" y="9" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Filled / Value</text>
+
+      <rect x="0" y="18" width="220" height="36" rx="10" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.10" stroke-width="0.8"/>
+      <rect x="14" y="27" width="8" height="12" rx="2" fill="none" stroke="#77f2e4" stroke-width="0.8"/>
+      <text x="30" y="40" font-family="'Inter', sans-serif" font-size="10" fill="#f8fafc">9876543210</text>
+      <!-- Clear X -->
+      <g transform="translate(200,28)">
+        <circle r="7" cx="0" cy="7" fill="white" fill-opacity="0.08"/>
+        <line x1="-3" y1="4" x2="3" y2="10" stroke="#64748b" stroke-width="1" stroke-linecap="round"/>
+        <line x1="3" y1="4" x2="-3" y2="10" stroke="#64748b" stroke-width="1" stroke-linecap="round"/>
+      </g>
+
+      <text x="0" y="70" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">text: white/95% · icon: teal</text>
+      <text x="0" y="80" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">bg: white/5 · border: white/10</text>
+
+      <!-- Class tag -->
+      <rect x="0" y="93" width="220" height="28" rx="6" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+      <text x="10" y="106" font-family="'JetBrains Mono', monospace" font-size="7" fill="#6366f1">class: liquid-glass-input</text>
+      <text x="10" y="117" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155">rounded-lg md:rounded-xl</text>
+    </g>
+
+    <!-- State 4: Error state (bonus) -->
+    <g transform="translate(265,188)">
+      <rect x="0" y="0" width="68" height="12" rx="3" fill="#f43f5e" fill-opacity="0.10"/>
+      <text x="6" y="9" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#f43f5e" letter-spacing="0.8">STATE 4</text>
+      <text x="76" y="9" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Error / Invalid</text>
+
+      <rect x="0" y="18" width="220" height="36" rx="10" fill="#f43f5e" fill-opacity="0.04" stroke="#f43f5e" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="-3" y="15" width="226" height="42" rx="12" fill="none" stroke="#f43f5e" stroke-opacity="0.12" stroke-width="3"/>
+      <rect x="14" y="27" width="8" height="12" rx="2" fill="none" stroke="#f43f5e" stroke-width="0.8"/>
+      <text x="30" y="40" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">987</text>
+      <!-- Error icon -->
+      <circle cx="210" cy="35" r="7" fill="none" stroke="#f43f5e" stroke-width="0.8"/>
+      <text x="210" y="39" font-family="'Inter', sans-serif" font-size="9" fill="#f43f5e" text-anchor="middle">!</text>
+
+      <text x="0" y="68" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#f43f5e" opacity="0.7">Invalid phone number</text>
+      <text x="0" y="78" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">border: rose-500/45 · bg: rose/4</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE D: LIQUID GLASS BUTTON — 3 STATES -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(1620,880)">
+    <rect width="500" height="320" rx="14" fill="url(#cardBg)" stroke="white" stroke-opacity="0.07" stroke-width="1"/>
+    <rect width="500" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="12" y="12" width="170" height="14" rx="4" fill="url(#indigoSectionGrad)" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="20" y="22.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8" letter-spacing="1.5" font-weight="600">MODULE D · LIQUID GLASS BUTTON</text>
+
+    <!-- State 1: Default -->
+    <g transform="translate(20,48)">
+      <rect x="0" y="0" width="68" height="12" rx="3" fill="white" fill-opacity="0.04"/>
+      <text x="6" y="9" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#64748b" letter-spacing="0.8">STATE 1</text>
+      <text x="76" y="9" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Default</text>
+
+      <rect x="0" y="20" width="225" height="42" rx="12" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.10" stroke-width="0.8"/>
+      <rect x="0" y="20" width="225" height="1.5" rx="0" fill="url(#specularGrad)"/>
+      <text x="103" y="46" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">Send OTP</text>
+      <!-- Indigo arrow icon -->
+      <g transform="translate(198,37)">
+        <circle cx="0" cy="5" r="8" fill="#6366f1" fill-opacity="0.18"/>
+        <line x1="-4" y1="5" x2="4" y2="5" stroke="#818cf8" stroke-width="1.3" stroke-linecap="round"/>
+        <polyline points="1,2 4,5 1,8" fill="none" stroke="#818cf8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <text x="0" y="76" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">bg: white/4 · border: white/10</text>
+      <text x="0" y="86" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">specular top · py-2.5 md:py-3.5</text>
+      <text x="0" y="96" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">class: liquid-glass-button · rounded-xl</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="20" y1="165" x2="480" y2="165" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+    <!-- State 2: Disabled -->
+    <g transform="translate(20,175)">
+      <rect x="0" y="0" width="68" height="12" rx="3" fill="white" fill-opacity="0.04"/>
+      <text x="6" y="9" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" letter-spacing="0.8">STATE 2</text>
+      <text x="76" y="9" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Disabled</text>
+
+      <rect x="0" y="20" width="225" height="42" rx="12" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.10" stroke-width="0.8" opacity="0.3"/>
+      <text x="103" y="46" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.3">Send OTP</text>
+      <g transform="translate(198,37)" opacity="0.3">
+        <circle cx="0" cy="5" r="8" fill="#6366f1" fill-opacity="0.18"/>
+        <line x1="-4" y1="5" x2="4" y2="5" stroke="#818cf8" stroke-width="1.3" stroke-linecap="round"/>
+        <polyline points="1,2 4,5 1,8" fill="none" stroke="#818cf8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Slash overlay -->
+      <g opacity="0.3">
+        <circle cx="112" cy="41" r="24" fill="none" stroke="#f43f5e" stroke-width="0.5" opacity="0.4"/>
+        <line x1="95" y1="24" x2="130" y2="58" stroke="#f43f5e" stroke-width="0.5" opacity="0.4"/>
+      </g>
+
+      <text x="0" y="76" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">opacity: 30% · cursor-not-allowed</text>
+      <text x="0" y="86" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">pointer-events: none</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="20" y1="273" x2="480" y2="273" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+    <!-- State 3: Hover -->
+    <g transform="translate(265,48)">
+      <rect x="0" y="0" width="68" height="12" rx="3" fill="#10b981" fill-opacity="0.10"/>
+      <text x="6" y="9" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#34d399" letter-spacing="0.8">STATE 3</text>
+      <text x="76" y="9" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Hover / Active</text>
+
+      <!-- Scale 1.02 visual hint -->
+      <rect x="-2" y="18" width="229" height="46" rx="13" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+      <rect x="0" y="20" width="225" height="42" rx="12" fill="white" fill-opacity="0.07" stroke="white" stroke-opacity="0.15" stroke-width="1"/>
+      <rect x="0" y="20" width="225" height="1.5" rx="0" fill="url(#specularGrad)" opacity="1.5"/>
+      <text x="103" y="46" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">Send OTP</text>
+      <g transform="translate(198,37)">
+        <circle cx="0" cy="5" r="8" fill="#6366f1" fill-opacity="0.3"/>
+        <line x1="-4" y1="5" x2="4" y2="5" stroke="#a5b4fc" stroke-width="1.3" stroke-linecap="round"/>
+        <polyline points="1,2 4,5 1,8" fill="none" stroke="#a5b4fc" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <!-- shadow indication -->
+      <rect x="2" y="65" width="221" height="6" rx="3" fill="black" fill-opacity="0.2" filter="url(#smallBlur)"/>
+
+      <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">scale: 1.02 · shadow-lg</text>
+      <text x="0" y="92" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">bg: white/7 · border: white/15</text>
+      <text x="0" y="102" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">transition: all 200ms ease</text>
+
+      <!-- Class tag -->
+      <rect x="0" y="115" width="225" height="28" rx="6" fill="white" fill-opacity="0.02" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+      <text x="10" y="128" font-family="'JetBrains Mono', monospace" font-size="7" fill="#6366f1">class: liquid-glass-button</text>
+      <text x="10" y="139" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155">w-full · flex items-center</text>
+    </g>
+
+    <!-- Loading state bonus -->
+    <g transform="translate(265,175)">
+      <rect x="0" y="0" width="68" height="12" rx="3" fill="#a855f7" fill-opacity="0.10"/>
+      <text x="6" y="9" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#a855f7" letter-spacing="0.8">STATE 4</text>
+      <text x="76" y="9" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Loading</text>
+
+      <rect x="0" y="20" width="225" height="42" rx="12" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.10" stroke-width="0.8"/>
+      <!-- Spinner dots -->
+      <circle cx="98" cy="41" r="3.5" fill="#6366f1" opacity="1.0"/>
+      <circle cx="112" cy="41" r="3.5" fill="#6366f1" opacity="0.6"/>
+      <circle cx="126" cy="41" r="3.5" fill="#6366f1" opacity="0.3"/>
+
+      <text x="0" y="76" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">animate-pulse · cursor-wait</text>
+      <text x="0" y="86" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155">isLoading: true · disabled true</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE E: RISK TOLERANCE GRID -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(60,1220)">
+    <rect width="560" height="320" rx="14" fill="url(#cardBg)" stroke="white" stroke-opacity="0.07" stroke-width="1"/>
+    <rect width="560" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="12" y="12" width="175" height="14" rx="4" fill="url(#sectionLabelGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="20" y="22.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77f2e4" letter-spacing="1.5" font-weight="600">MODULE E · RISK TOLERANCE GRID</text>
+
+    <!-- Sub-label -->
+    <text x="20" y="50" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" letter-spacing="1">RISK TOLERANCE</text>
+
+    <!-- Grid 2×2 -->
+    <!-- LOW — unselected -->
+    <rect x="20" y="60" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="77" y="84" font-family="'Inter', sans-serif" font-size="11" fill="#64748b" text-anchor="middle" font-weight="500">Low</text>
+    <text x="77" y="97" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155" text-anchor="middle">Capital preservation</text>
+
+    <!-- MODERATE — selected -->
+    <rect x="145" y="60" width="115" height="50" rx="10" fill="white" fill-opacity="0.10" stroke="white" stroke-opacity="0.20" stroke-width="1" filter="url(#selectedGlow)"/>
+    <text x="202" y="81" font-family="'Inter', sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="700">Moderate</text>
+    <!-- Check mark -->
+    <circle cx="236" cy="68" r="7" fill="#6366f1" fill-opacity="0.25"/>
+    <polyline points="233,68 236,72 242,64" fill="none" stroke="#818cf8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="202" y="97" font-family="'JetBrains Mono', monospace" font-size="7" fill="#818cf8" text-anchor="middle">Balanced growth</text>
+
+    <!-- HIGH — unselected -->
+    <rect x="270" y="60" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="327" y="84" font-family="'Inter', sans-serif" font-size="11" fill="#64748b" text-anchor="middle" font-weight="500">High</text>
+    <text x="327" y="97" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155" text-anchor="middle">Growth focused</text>
+
+    <!-- AGGRESSIVE — unselected -->
+    <rect x="395" y="60" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="452" y="84" font-family="'Inter', sans-serif" font-size="11" fill="#64748b" text-anchor="middle" font-weight="500">Aggressive</text>
+    <text x="452" y="97" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155" text-anchor="middle">Max alpha seek</text>
+
+    <!-- Row 2 -->
+    <rect x="20" y="120" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="77" y="150" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#334155" text-anchor="middle">FD / Bonds</text>
+
+    <rect x="145" y="120" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="202" y="150" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#334155" text-anchor="middle">MF / Blue Chip</text>
+
+    <rect x="270" y="120" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="327" y="150" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#334155" text-anchor="middle">Equities / F&amp;O</text>
+
+    <rect x="395" y="120" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="452" y="150" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#334155" text-anchor="middle">Leveraged / Crypto</text>
+
+    <!-- Annotation row -->
+    <line x1="20" y1="183" x2="540" y2="183" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+    <g transform="translate(20,193)">
+      <text font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Unselected</text>
+      <text y="12" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">bg: black/25 · border: white/5</text>
+      <text y="22" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">text: #64748b · rounded-10</text>
+
+      <text x="160" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Selected</text>
+      <text x="160" y="12" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">bg: white/10 · border: white/20</text>
+      <text x="160" y="22" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">scale: 1.02 · shadow glow</text>
+      <text x="160" y="32" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">text: white · font-weight: 700</text>
+
+      <text x="325" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Grid Layout</text>
+      <text x="325" y="12" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">grid grid-cols-2 gap-2</text>
+      <text x="325" y="22" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">sm:grid-cols-4 on desktop</text>
+      <text x="325" y="32" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">transition: all 200ms</text>
+    </g>
+
+    <!-- Indigo check annotation -->
+    <g transform="translate(20,245)">
+      <rect width="520" height="60" rx="8" fill="white" fill-opacity="0.015" stroke="white" stroke-opacity="0.04" stroke-width="0.5"/>
+      <text x="12" y="16" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77f2e4" letter-spacing="0.8">CHECK INDICATOR</text>
+      <text x="12" y="30" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">position: absolute top-2 right-2 · circle r-7 fill #6366f1/25%</text>
+      <text x="12" y="41" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">checkmark: stroke #818cf8 · w1.2 · rounded-linecap</text>
+      <text x="12" y="52" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">animate: fade-in scale(0.8→1) 150ms ease-out on selection</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE F: INVESTMENT HORIZON GRID -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(640,1220)">
+    <rect width="560" height="320" rx="14" fill="url(#cardBg)" stroke="white" stroke-opacity="0.07" stroke-width="1"/>
+    <rect width="560" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="12" y="12" width="195" height="14" rx="4" fill="url(#indigoSectionGrad)" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="20" y="22.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8" letter-spacing="1.5" font-weight="600">MODULE F · INVESTMENT HORIZON GRID</text>
+
+    <text x="20" y="50" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" letter-spacing="1">INVESTMENT HORIZON</text>
+
+    <!-- QUICK TRADE -->
+    <rect x="20" y="60" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="77" y="80" font-family="'Inter', sans-serif" font-size="10" fill="#64748b" text-anchor="middle" font-weight="500">Quick Trade</text>
+    <text x="77" y="94" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155" text-anchor="middle">Intraday / 1-7D</text>
+
+    <!-- SHORT-TERM — selected -->
+    <rect x="145" y="60" width="115" height="50" rx="10" fill="white" fill-opacity="0.10" stroke="white" stroke-opacity="0.20" stroke-width="1" filter="url(#selectedGlow)"/>
+    <text x="202" y="78" font-family="'Inter', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="700">Short-Term</text>
+    <circle cx="236" cy="68" r="7" fill="#6366f1" fill-opacity="0.25"/>
+    <polyline points="233,68 236,72 242,64" fill="none" stroke="#818cf8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="202" y="92" font-family="'JetBrains Mono', monospace" font-size="7" fill="#818cf8" text-anchor="middle">1W – 3M</text>
+
+    <!-- MEDIUM-TERM -->
+    <rect x="270" y="60" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="327" y="80" font-family="'Inter', sans-serif" font-size="10" fill="#64748b" text-anchor="middle" font-weight="500">Medium-Term</text>
+    <text x="327" y="94" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155" text-anchor="middle">3M – 1Y</text>
+
+    <!-- LONG-TERM -->
+    <rect x="395" y="60" width="115" height="50" rx="10" fill="black" fill-opacity="0.25" stroke="white" stroke-opacity="0.05" stroke-width="0.8"/>
+    <text x="452" y="80" font-family="'Inter', sans-serif" font-size="10" fill="#64748b" text-anchor="middle" font-weight="500">Long-Term</text>
+    <text x="452" y="94" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155" text-anchor="middle">1Y – 5Y+</text>
+
+    <!-- Timeline row beneath -->
+    <line x1="20" y1="125" x2="540" y2="125" stroke="#77f2e4" stroke-opacity="0.08" stroke-width="1"/>
+    <!-- Timeline markers -->
+    <circle cx="20" cy="125" r="3" fill="#334155"/>
+    <circle cx="77" cy="125" r="4" fill="#334155"/>
+    <circle cx="202" cy="125" r="6" fill="#6366f1" fill-opacity="0.8"/>
+    <circle cx="327" cy="125" r="4" fill="#334155"/>
+    <circle cx="540" cy="125" r="3" fill="#334155"/>
+    <text x="20" y="140" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">Day</text>
+    <text x="77" y="140" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">1W</text>
+    <text x="202" y="140" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#818cf8" text-anchor="middle" font-weight="600">3M ←</text>
+    <text x="327" y="140" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">1Y</text>
+    <text x="452" y="140" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">3Y</text>
+    <text x="540" y="140" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">5Y+</text>
+
+    <line x1="20" y1="155" x2="540" y2="155" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+    <g transform="translate(20,163)">
+      <text font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Value saved to UserProfile</text>
+      <text y="13" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">field: investmentHorizon: string</text>
+      <text y="24" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">values: 'quick' | 'short' | 'medium' | 'long'</text>
+      <text y="35" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">persisted to WayaX memory profile on Step 2 submit</text>
+
+      <line x1="0" y1="44" x2="520" y2="44" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+      <text y="58" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Interaction</text>
+      <text y="70" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">onClick: setInvestmentHorizon(value) → immediate state update</text>
+      <text y="81" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">previous selection deselects automatically (single-choice)</text>
+
+      <line x1="0" y1="90" x2="520" y2="90" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+      <text y="104" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Accessibility</text>
+      <text y="116" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">role="radiogroup" · aria-label="Investment Horizon"</text>
+      <text y="127" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">each button: role="radio" · aria-checked=true/false</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE G: PROGRESS / STEP INDICATOR -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(1220,1220)">
+    <rect width="560" height="320" rx="14" fill="url(#cardBg)" stroke="white" stroke-opacity="0.07" stroke-width="1"/>
+    <rect width="560" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="12" y="12" width="195" height="14" rx="4" fill="url(#sectionLabelGrad)" stroke="#77f2e4" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="20" y="22.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77f2e4" letter-spacing="1.5" font-weight="600">MODULE G · PROGRESS STEP INDICATOR</text>
+
+    <!-- Step indicator large demo -->
+    <g transform="translate(40,60)">
+      <!-- Connector lines -->
+      <line x1="36" y1="20" x2="170" y2="20" stroke="url(#stepCompletedGrad)" stroke-width="2" stroke-linecap="round"/>
+      <line x1="206" y1="20" x2="340" y2="20" stroke="#6366f1" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+      <line x1="376" y1="20" x2="450" y2="20" stroke="white" stroke-opacity="0.12" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- Step 0 — Completed -->
+      <circle cx="20" cy="20" r="18" fill="url(#stepCompletedGrad)"/>
+      <circle cx="20" cy="20" r="22" fill="none" stroke="#10b981" stroke-opacity="0.2" stroke-width="1.5"/>
+      <!-- Checkmark -->
+      <polyline points="13,20 18,25 28,14" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="20" y="52" font-family="'Inter', sans-serif" font-size="8.5" fill="#34d399" text-anchor="middle" font-weight="600">Phone</text>
+      <text x="20" y="63" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#10b981" text-anchor="middle">DONE</text>
+
+      <!-- Step 1 — Completed -->
+      <circle cx="190" cy="20" r="18" fill="url(#stepCompletedGrad)"/>
+      <circle cx="190" cy="20" r="22" fill="none" stroke="#10b981" stroke-opacity="0.2" stroke-width="1.5"/>
+      <polyline points="183,20 188,25 198,14" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="190" y="52" font-family="'Inter', sans-serif" font-size="8.5" fill="#34d399" text-anchor="middle" font-weight="600">Name</text>
+      <text x="190" y="63" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#10b981" text-anchor="middle">DONE</text>
+
+      <!-- Step 2 — Active -->
+      <circle cx="360" cy="20" r="20" fill="url(#stepActiveGrad)" filter="url(#indigoDropGlow)"/>
+      <circle cx="360" cy="20" r="24" fill="none" stroke="#6366f1" stroke-opacity="0.3" stroke-width="2"/>
+      <text x="360" y="26" font-family="'Sora', sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">2</text>
+      <text x="360" y="52" font-family="'Inter', sans-serif" font-size="8.5" fill="#a5b4fc" text-anchor="middle" font-weight="700">Memory</text>
+      <text x="360" y="63" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#6366f1" text-anchor="middle">ACTIVE</text>
+
+      <!-- Remaining indicator -->
+      <circle cx="470" cy="20" r="14" fill="none" stroke="white" stroke-opacity="0.12" stroke-width="1.5"/>
+      <text x="470" y="26" font-family="'Sora', sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">✓</text>
+      <text x="470" y="52" font-family="'Inter', sans-serif" font-size="8.5" fill="#475569" text-anchor="middle" font-weight="500">Done</text>
+      <text x="470" y="63" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">PENDING</text>
+    </g>
+
+    <!-- Step indicator small variants -->
+    <line x1="20" y1="145" x2="540" y2="145" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+    <text x="20" y="162" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748b" letter-spacing="1">COMPACT STEP DOTS VARIANT</text>
+
+    <!-- Dot variant -->
+    <g transform="translate(60,175)">
+      <circle cx="0" cy="0" r="6" fill="url(#stepCompletedGrad)"/>
+      <polyline points="-3,0 0,3 6,-4" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="6" y1="0" x2="50" y2="0" stroke="url(#stepCompletedGrad)" stroke-width="1.5"/>
+
+      <circle cx="56" cy="0" r="6" fill="url(#stepCompletedGrad)"/>
+      <polyline points="53,0 56,3 62,-4" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="62" y1="0" x2="106" y2="0" stroke="#6366f1" stroke-opacity="0.3" stroke-width="1.5"/>
+
+      <circle cx="112" cy="0" r="8" fill="url(#stepActiveGrad)"/>
+      <text x="112" y="4" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="white" text-anchor="middle">3</text>
+
+      <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">1</text>
+      <text x="56" y="20" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">2</text>
+      <text x="112" y="20" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#6366f1" text-anchor="middle">3</text>
+    </g>
+
+    <!-- Back link demo -->
+    <g transform="translate(280,160)">
+      <text font-family="'Inter', sans-serif" font-size="10" fill="#64748b">← Back</text>
+      <line x1="0" y1="14" x2="50" y2="14" stroke="#64748b" stroke-opacity="0.2" stroke-width="0.5"/>
+      <text y="26" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155">Back link · slate-400 · 11px</text>
+      <text y="36" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155">hover: text-white · underline</text>
+      <text y="46" font-family="'JetBrains Mono', monospace" font-size="7" fill="#334155">onClick: setStep(prev)</text>
+    </g>
+
+    <line x1="20" y1="215" x2="540" y2="215" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+    <g transform="translate(20,225)">
+      <text font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Completed State</text>
+      <text y="12" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">fill: #10b981→#34d399 · checkmark stroke white</text>
+      <text x="200" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Active State</text>
+      <text x="200" y="12" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">fill: #6366f1→#818cf8 · filter indigoGlow</text>
+      <text x="400" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Pending State</text>
+      <text x="400" y="12" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">border: white/12 · text: #475569</text>
+
+      <line x1="0" y1="22" x2="520" y2="22" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+      <text y="34" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Connector Line</text>
+      <text y="46" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">completed → active: teal-green gradient · 2px</text>
+      <text y="57" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">active → pending: indigo/40 · 2px · pending: white/12</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MODULE H: THEME TOGGLE -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(1800,1220)">
+    <rect width="560" height="320" rx="14" fill="url(#cardBg)" stroke="white" stroke-opacity="0.07" stroke-width="1"/>
+    <rect width="560" height="1.5" rx="0" fill="url(#specularGrad)"/>
+
+    <rect x="12" y="12" width="140" height="14" rx="4" fill="url(#indigoSectionGrad)" stroke="#6366f1" stroke-opacity="0.25" stroke-width="0.5"/>
+    <text x="20" y="22.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8" letter-spacing="1.5" font-weight="600">MODULE H · THEME TOGGLE</text>
+
+    <!-- Dark mode card -->
+    <g transform="translate(20,38)">
+      <rect x="0" y="0" width="230" height="140" rx="12" fill="#0b0c10" stroke="white" stroke-opacity="0.06" stroke-width="0.8"/>
+      <rect x="0" y="0" width="230" height="1.5" rx="0" fill="url(#specularGrad)"/>
+      <rect x="0" y="0" width="230" height="140" fill="url(#dotGrid)" opacity="0.5"/>
+      <ellipse cx="115" cy="70" rx="80" ry="50" fill="#6366f1" fill-opacity="0.07" filter="url(#medBlur)"/>
+
+      <text x="115" y="30" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748b" text-anchor="middle" letter-spacing="1">DARK MODE</text>
+
+      <!-- Moon toggle button -->
+      <rect x="78" y="42" width="74" height="32" rx="16" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+      <!-- Moon icon -->
+      <g transform="translate(95,54)">
+        <path d="M8 0 A8 8 0 0 0 0 8 A8 8 0 0 0 8 16 A6 6 0 0 1 2 8 A6 6 0 0 1 8 0Z" fill="#818cf8" transform="translate(-8,-8) scale(0.9)"/>
+      </g>
+      <!-- Stars -->
+      <circle cx="125" cy="50" r="1" fill="#818cf8" fill-opacity="0.6"/>
+      <circle cx="132" cy="58" r="0.8" fill="#818cf8" fill-opacity="0.4"/>
+      <circle cx="120" cy="62" r="0.7" fill="#818cf8" fill-opacity="0.5"/>
+
+      <!-- Toggle indicator pill -->
+      <rect x="78" y="42" width="74" height="32" rx="16" fill="none" stroke="#6366f1" stroke-opacity="0.35" stroke-width="1"/>
+      <circle cx="135" cy="58" r="10" fill="url(#stepActiveGrad)"/>
+      <!-- Moon in pill -->
+      <path d="M132,54 A6,6 0,0,0,128,58 A6,6 0,0,0,134,64 A4.5,4.5 0,0,1,130,58 A4.5,4.5 0,0,1,132,54Z" fill="white" opacity="0.9"/>
+
+      <text x="115" y="100" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">theme: 'dark' · bg-[#0b0c10]</text>
+      <text x="115" y="112" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">icon: Moon · fill #818cf8</text>
+      <text x="115" y="124" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#334155" text-anchor="middle">pill-active: indigo-filled right</text>
+    </g>
+
+    <!-- Light mode card -->
+    <g transform="translate(270,38)">
+      <rect x="0" y="0" width="230" height="140" rx="12" fill="url(#lightModeGrad)" stroke="#e2e8f0" stroke-width="0.8"/>
+      <rect x="0" y="0" width="230" height="1.5" rx="0" fill="white" fill-opacity="0.5"/>
+
+      <text x="115" y="30" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8" text-anchor="middle" letter-spacing="1">LIGHT MODE</text>
+
+      <!-- Sun toggle button -->
+      <rect x="78" y="42" width="74" height="32" rx="16" fill="white" fill-opacity="0.7" stroke="#e2e8f0" stroke-width="0.8"/>
+      <!-- Sun icon -->
+      <circle cx="92" cy="58" r="8" fill="#f59e0b" fill-opacity="0.9"/>
+      <!-- Sun rays -->
+      <g stroke="#f59e0b" stroke-width="1" stroke-linecap="round" opacity="0.7">
+        <line x1="92" y1="46" x2="92" y2="44"/>
+        <line x1="100" y1="50" x2="102" y2="48"/>
+        <line x1="104" y1="58" x2="106" y2="58"/>
+        <line x1="100" y1="66" x2="102" y2="68"/>
+        <line x1="92" y1="70" x2="92" y2="72"/>
+        <line x1="84" y1="66" x2="82" y2="68"/>
+        <line x1="80" y1="58" x2="78" y2="58"/>
+        <line x1="84" y1="50" x2="82" y2="48"/>
+      </g>
+      <!-- Toggle pill -->
+      <rect x="78" y="42" width="74" height="32" rx="16" fill="none" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1"/>
+      <circle cx="92" cy="58" r="10" fill="#f59e0b"/>
+      <circle cx="89" cy="55" r="3" fill="white" fill-opacity="0.3"/>
+
+      <text x="115" y="100" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#94a3b8" text-anchor="middle">theme: 'light'</text>
+      <text x="115" y="112" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#94a3b8" text-anchor="middle">bg: slate-100→slate-50→#f1f5f9</text>
+      <text x="115" y="124" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#94a3b8" text-anchor="middle">icon: Sun · fill #f59e0b (amber)</text>
+    </g>
+
+    <line x1="20" y1="192" x2="540" y2="192" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+    <g transform="translate(20,202)">
+      <text font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Toggle Button Component</text>
+      <text y="14" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">ThemeToggleButton · position: fixed top-4 right-4</text>
+      <text y="25" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">onClick: toggleTheme() → localStorage.theme</text>
+      <text y="36" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">class: liquid-glass-button p-2 rounded-full w-8 h-8</text>
+
+      <line x1="0" y1="45" x2="520" y2="45" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+      <text y="57" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">State Persistence</text>
+      <text y="69" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">useTheme() hook · next-themes / tailwind class strategy</text>
+      <text y="80" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">dark: apply .dark class on html element</text>
+      <text y="91" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">default: 'dark' · system preference respected if no saved pref</text>
+
+      <line x1="0" y1="100" x2="520" y2="100" stroke="white" stroke-opacity="0.05" stroke-width="0.5"/>
+
+      <text y="112" font-family="'Inter', sans-serif" font-size="8" fill="#94a3b8" font-weight="600">Onboarding Page: Light-mode note</text>
+      <text y="124" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">Both panels visible. 2-col layout preserved in light mode.</text>
+      <text y="135" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">Brand col: bg-slate-900 (forced dark). Card col: bg-slate-50.</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FOOTER BAR -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <rect x="0" y="1572" width="2400" height="28" fill="#080a10" fill-opacity="0.95"/>
+  <line x1="0" y1="1572" x2="2400" y2="1572" stroke="white" stroke-opacity="0.06" stroke-width="0.5"/>
+  <text x="1200" y="1590" font-family="'JetBrains Mono', monospace" font-size="9" fill="#334155" text-anchor="middle" letter-spacing="2">02 · ONBOARDING &amp; GET STARTED · WAYAX DESIGN SYSTEM · 3 STEPS · 2400×1600</text>
+
+  <!-- Corner accent marks -->
+  <g opacity="0.4">
+    <line x1="16" y1="16" x2="36" y2="16" stroke="#77f2e4" stroke-width="1" stroke-linecap="round"/>
+    <line x1="16" y1="16" x2="16" y2="36" stroke="#77f2e4" stroke-width="1" stroke-linecap="round"/>
+    <line x1="2384" y1="16" x2="2364" y2="16" stroke="#77f2e4" stroke-width="1" stroke-linecap="round"/>
+    <line x1="2384" y1="16" x2="2384" y2="36" stroke="#77f2e4" stroke-width="1" stroke-linecap="round"/>
+    <line x1="16" y1="1560" x2="36" y2="1560" stroke="#77f2e4" stroke-width="1" stroke-linecap="round"/>
+    <line x1="16" y1="1560" x2="16" y2="1540" stroke="#77f2e4" stroke-width="1" stroke-linecap="round"/>
+    <line x1="2384" y1="1560" x2="2364" y2="1560" stroke="#77f2e4" stroke-width="1" stroke-linecap="round"/>
+    <line x1="2384" y1="1560" x2="2384" y2="1540" stroke="#77f2e4" stroke-width="1" stroke-linecap="round"/>
+  </g>
+
+  <!-- Version / build stamp -->
+  <text x="60" y="1590" font-family="'JetBrains Mono', monospace" font-size="8" fill="#1e293b" letter-spacing="1">v2.0 · 2026-05-28</text>
+  <text x="2340" y="1590" font-family="'JetBrains Mono', monospace" font-size="8" fill="#1e293b" text-anchor="end" letter-spacing="1">DESIGN SYSTEM</text>
+</svg>

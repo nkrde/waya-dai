@@ -1,0 +1,49 @@
+<svg width="860" height="52" viewBox="0 0 860 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT COMPACT SEARCH INPUT CAPSULE (860px x 52px)
+    Strictly extracted and compiled from the provided React DOM HTML snippet:
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    - Compact glass pill capsule base with specular inner highlights
+    - Reconstructed vector paths for Lucide Paperclip and Send icons
+    - Disabled send button state showing opacity-20 and slate-500 coloring
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Ambient drop shadow for the search capsule -->
+    <filter id="capsule-shadow" x="-5%" y="-15%" width="110%" height="135%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== LAYER 1: BASE CAPSULE BACKDROP ==================== -->
+  <!-- Rounded pill base container (852px x 40px, rx=20) -->
+  <rect x="4" y="6" width="852" height="40" rx="20" fill="#0d0e12" fill-opacity="0.5" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1.2" filter="url(#capsule-shadow)"/>
+  
+  <!-- Specular inner edge highlight -->
+  <rect x="4.5" y="6.5" width="851" height="39" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- ==================== LAYER 2: INTERACTIVE CONTROLS ==================== -->
+
+  <!-- PAPERCLIP ATTACHMENT ICON -->
+  <g transform="translate(16, 16)">
+    <!-- lucide-paperclip vector -->
+    <path d="m14.5 5.5-7.5 7.5a2.1 2.1 0 0 0 3 3l7.5-7.5A4.2 4.2 0 1 0 11.5 2.5l-7.5 7.5a6.3 6.3 0 1 0 9 9l7.5-7.5" stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- INPUT PLACEHOLDER WELL -->
+  <text x="44" y="30" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#475569">Ask WayaX about stocks, entry zones, F&amp;O, portfolio advisory...</text>
+
+  <!-- SEND BUTTON (Disabled Status: opacity-20 with bg-[#151c2f]) -->
+  <g transform="translate(818, 10)" opacity="0.25">
+    <rect width="32" height="32" rx="10" fill="#151c2f" stroke="transparent" stroke-width="1"/>
+    
+    <!-- lucide-send -->
+    <g transform="translate(8, 8)" stroke="#475569" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12.5 14.5a.5.5 0 0 0 .7 0l4.5-12.5a.5.5 0 0 0-.6-.6L4.6 5.9a.5.5 0 0 0 0 .7l5.4 2.2a2 2 0 0 1 1 1.1z"/>
+      <line x1="16.5" y1="1.5" x2="10" y2="8"/>
+    </g>
+  </g>
+</svg>

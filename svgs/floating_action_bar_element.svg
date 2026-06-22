@@ -1,0 +1,87 @@
+<svg width="176" height="48" viewBox="0 0 176 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT FLOATING ACTION BAR COMPONENT (176px x 48px)
+    Strictly extracted and compiled from the provided React DOM HTML snippet:
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    - Frosted capsule base (bg-[#0d0e12]/60 border-white/[0.08])
+    - Symmetrical circular buttons containing precise vector paths for:
+      circle-question-mark, sun, and dual refresh-ccw icons
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Premium satin inner shadow & outer drop shadow filters -->
+    <filter id="action-bar-shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== LAYER 1: BASE CAPSULE FRAME ==================== -->
+  <!-- Rounded pill base container (168px x 40px, rx=20) -->
+  <rect x="4" y="4" width="168" height="40" rx="20" fill="#0d0e12" fill-opacity="0.6" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" filter="url(#action-bar-shadow)"/>
+  
+  <!-- Specular inner edge highlight shadow [inset_0_1px_1px_rgba(255,255,255,0.08)] -->
+  <rect x="4.5" y="4.5" width="167" height="39" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- ==================== LAYER 2: INTERACTIVE ACTION BUTTONS ==================== -->
+
+  <!-- BUTTON 1: Toggle FAQ Panel (Indigo CircleQuestionMark) -->
+  <g transform="translate(8, 8)">
+    <circle cx="16" cy="16" r="16" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    
+    <!-- lucide-circle-question-mark (Indigo-400) -->
+    <g transform="translate(8, 8)" stroke="#818cf8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="8" cy="8" r="6.5"/>
+      <path d="M5.5 5.5a2 2 0 0 1 3.4 0c0 1.2-1.7 1.8-1.7 1.8"/>
+      <line x1="7.2" y1="10.8" x2="7.21" y2="10.8"/>
+    </g>
+  </g>
+
+  <!-- BUTTON 2: Switch to Light Mode (Amber Sun) -->
+  <g transform="translate(48, 8)">
+    <circle cx="16" cy="16" r="16" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    
+    <!-- lucide-sun (Amber-400) -->
+    <g transform="translate(8, 8)" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="8" cy="8" r="2.8"/>
+      <!-- Sun Rays -->
+      <line x1="8" y1="1.3" x2="8" y2="2.7"/>
+      <line x1="8" y1="13.3" x2="8" y2="14.7"/>
+      <line x1="3.3" y1="3.3" x2="4.3" y2="4.3"/>
+      <line x1="11.7" y1="11.7" x2="12.7" y2="12.7"/>
+      <line x1="1.3" y1="8" x2="2.7" y2="8"/>
+      <line x1="13.3" y1="8" x2="14.7" y2="8"/>
+      <line x1="4.3" y1="11.7" x2="3.3" y2="12.7"/>
+      <line x1="12.7" y1="4.3" x2="11.7" y2="3.3"/>
+    </g>
+  </g>
+
+  <!-- BUTTON 3: Restart Intro Animation (Cyan Refresh CCW) -->
+  <g transform="translate(88, 8)">
+    <circle cx="16" cy="16" r="16" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    
+    <!-- lucide-refresh-ccw (Teal-Cyan) -->
+    <g transform="translate(8.5, 8.5)" stroke="#77f2e4" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 8a6 6 0 0 0-6-6 6.5 6.5 0 0 0-4.5 1.8L1 5.3"/>
+      <path d="M1 2v3.3h3.3"/>
+      <path d="M1 7a6 6 0 0 0 6 6 6.5 6.5 0 0 0 4.5-1.8l2.5-2.5"/>
+      <path d="M10.7 10.7H14V14"/>
+    </g>
+  </g>
+
+  <!-- BUTTON 4: Reset Config & Profiles (Muted Slate / Red Hover State simulation) -->
+  <g transform="translate(128, 8)">
+    <!-- Red tinted hover state outline simulation -->
+    <circle cx="16" cy="16" r="16" fill="rgba(255, 75, 75, 0.04)" stroke="rgba(255, 75, 75, 0.15)" stroke-width="1"/>
+    
+    <!-- lucide-refresh-ccw (Muted Slate/Rose-400) -->
+    <g transform="translate(8.5, 8.5)" stroke="#f43f5e" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 8a6 6 0 0 0-6-6 6.5 6.5 0 0 0-4.5 1.8L1 5.3"/>
+      <path d="M1 2v3.3h3.3"/>
+      <path d="M1 7a6 6 0 0 0 6 6 6.5 6.5 0 0 0 4.5-1.8l2.5-2.5"/>
+      <path d="M10.7 10.7H14V14"/>
+    </g>
+  </g>
+</svg>

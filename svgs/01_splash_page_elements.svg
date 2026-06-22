@@ -1,0 +1,877 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1400" viewBox="0 0 2000 1400">
+  <defs>
+    <!-- ── Filters ── -->
+    <filter id="blur-xs" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur-sm" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="blur-md" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="blur-lg" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+    <filter id="blur-xl" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="85"/>
+    </filter>
+    <filter id="blur-orb" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="48"/>
+    </filter>
+    <filter id="glow-teal" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-indigo" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="drop-shadow-teal" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#77F2E4" flood-opacity="0.4"/>
+    </filter>
+    <filter id="drop-shadow-blue" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#6BB6F3" flood-opacity="0.35"/>
+    </filter>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- ── Canvas Gradient ── -->
+    <linearGradient id="canvas-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#08090f"/>
+      <stop offset="50%" stop-color="#09080e"/>
+      <stop offset="100%" stop-color="#070810"/>
+    </linearGradient>
+
+    <!-- ── Module Card Gradient ── -->
+    <linearGradient id="module-card-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141620" stop-opacity="0.97"/>
+      <stop offset="100%" stop-color="#0e1018" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- ── Teal → Blue Gradient ── -->
+    <linearGradient id="teal-blue-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#77F2E4"/>
+      <stop offset="100%" stop-color="#6BB6F3"/>
+    </linearGradient>
+
+    <!-- ── Teal → Blue Gradient Vertical ── -->
+    <linearGradient id="teal-blue-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#77F2E4"/>
+      <stop offset="100%" stop-color="#6BB6F3"/>
+    </linearGradient>
+
+    <!-- ── Indigo Gradient ── -->
+    <linearGradient id="indigo-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <!-- ── Purple Gradient ── -->
+    <linearGradient id="purple-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- ── Timeline progress gradient ── -->
+    <linearGradient id="timeline-progress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6BB6F3"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <!-- ── Splash bg glow gradients ── -->
+    <radialGradient id="splash-glow-teal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#77F2E4" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#77F2E4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="splash-glow-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6BB6F3" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#6BB6F3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="splash-glow-indigo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ── Canvas ambient blobs ── -->
+    <radialGradient id="ambient-teal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#77F2E4" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#77F2E4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambient-indigo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambient-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ── Dot Grid Pattern ── -->
+    <pattern id="dot-grid" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="0.5" cy="0.5" r="0.9" fill="white" fill-opacity="0.05"/>
+    </pattern>
+    <pattern id="dot-grid-dense" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="0.5" cy="0.5" r="1" fill="white" fill-opacity="0.24"/>
+    </pattern>
+    <pattern id="dot-grid-splash" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="0.5" cy="0.5" r="0.7" fill="white" fill-opacity="0.10"/>
+    </pattern>
+
+    <!-- ── Radial mask for dot grid ── -->
+    <radialGradient id="dot-grid-mask" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="1"/>
+      <stop offset="70%" stop-color="white" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ── Specular highlight ── -->
+    <linearGradient id="specular" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="20%" stop-color="white" stop-opacity="0.07"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.12"/>
+      <stop offset="80%" stop-color="white" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- ── Section label bg ── -->
+    <linearGradient id="label-teal-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#77F2E4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6BB6F3" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="label-indigo-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- ── Color token swatch gradients ── -->
+    <linearGradient id="swatch-teal-blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#77F2E4"/>
+      <stop offset="100%" stop-color="#6BB6F3"/>
+    </linearGradient>
+    <linearGradient id="swatch-indigo-purple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="canvas-dark-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0c"/>
+      <stop offset="50%" stop-color="#101014"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+
+    <!-- ── Orb Module gradients ── -->
+    <radialGradient id="orb-teal-r" cx="40%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#77F2E4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#77F2E4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb-blue-r" cx="60%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#6BB6F3" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#6BB6F3" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ── Clip paths ── -->
+    <clipPath id="splash-clip">
+      <rect x="60" y="150" width="700" height="500" rx="14"/>
+    </clipPath>
+    <clipPath id="mod1-clip">
+      <rect x="800" y="120" width="460" height="200" rx="14"/>
+    </clipPath>
+    <clipPath id="mod2-clip">
+      <rect x="800" y="340" width="460" height="180" rx="14"/>
+    </clipPath>
+    <clipPath id="mod3-clip">
+      <rect x="800" y="540" width="460" height="160" rx="14"/>
+    </clipPath>
+    <clipPath id="mod4-clip">
+      <rect x="1290" y="120" width="660" height="260" rx="14"/>
+    </clipPath>
+    <clipPath id="mod5-clip">
+      <rect x="1290" y="400" width="660" height="160" rx="14"/>
+    </clipPath>
+    <clipPath id="mod6-clip">
+      <rect x="1290" y="580" width="660" height="120" rx="14"/>
+    </clipPath>
+    <clipPath id="tokens-clip">
+      <rect x="60" y="660" width="1890" height="220" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- ════════════════════════════════════════════
+       CANVAS BACKGROUND
+  ════════════════════════════════════════════ -->
+  <rect width="2000" height="1400" fill="url(#canvas-bg)"/>
+
+  <!-- Dot grid overlay -->
+  <rect width="2000" height="1400" fill="url(#dot-grid)"/>
+
+  <!-- Ambient light blobs (canvas level) -->
+  <ellipse cx="340" cy="380" rx="520" ry="340" fill="url(#ambient-teal)" filter="url(#blur-xl)"/>
+  <ellipse cx="1600" cy="700" rx="600" ry="380" fill="url(#ambient-indigo)" filter="url(#blur-xl)"/>
+  <ellipse cx="950" cy="1100" rx="480" ry="260" fill="url(#ambient-purple)" filter="url(#blur-xl)"/>
+  <ellipse cx="1850" cy="200" rx="360" ry="220" fill="url(#ambient-teal)" filter="url(#blur-lg)"/>
+
+  <!-- ════════════════════════════════════════════
+       BOARD HEADER
+  ════════════════════════════════════════════ -->
+  <g transform="translate(60,50)">
+    <!-- Decorative accent line -->
+    <rect x="0" y="36" width="1880" height="1" fill="white" fill-opacity="0.06"/>
+    <!-- Title -->
+    <text x="0" y="30" font-family="'Sora', 'Inter', system-ui, sans-serif" font-size="30" font-weight="800" fill="#ffffff" letter-spacing="-0.5">01 · Splash Animation Page</text>
+    <!-- Subtitle -->
+    <text x="320" y="30" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500" fill="#77F2E4" letter-spacing="2.5">WAYAX · CINEMATIC INTRO SEQUENCE · ALL ELEMENTS &amp; VARIANTS</text>
+    <!-- Page badge -->
+    <rect x="1760" y="8" width="120" height="24" rx="6" fill="url(#label-teal-bg)" stroke="#77F2E4" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="1820" y="24" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#77F2E4" letter-spacing="1.5">PAGE 01 / 08</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       SECTION 1 — SECTION LABEL
+  ════════════════════════════════════════════ -->
+  <g transform="translate(60, 120)">
+    <rect x="0" y="0" width="230" height="22" rx="5" fill="url(#label-teal-bg)" stroke="#77F2E4" stroke-width="0.6" stroke-opacity="0.35"/>
+    <circle cx="12" cy="11" r="3.5" fill="#77F2E4" fill-opacity="0.8"/>
+    <text x="24" y="15" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#77F2E4" letter-spacing="1.8">FULL SCREEN RENDER · DARK CANVAS</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       SECTION 1 — FULL SPLASH SCREEN MOCKUP
+  ════════════════════════════════════════════ -->
+  <!-- Outer card shadow -->
+  <rect x="60" y="150" width="700" height="500" rx="14" fill="#000000" fill-opacity="0.5" filter="url(#card-shadow)" transform="translate(4,8)"/>
+
+  <!-- Main splash screen frame -->
+  <rect x="60" y="150" width="700" height="500" rx="14" fill="#080a10" stroke="white" stroke-width="0.8" stroke-opacity="0.08"/>
+
+  <!-- Clip group for splash interior -->
+  <g clip-path="url(#splash-clip)">
+    <!-- Dark background gradient -->
+    <rect x="60" y="150" width="700" height="500" fill="url(#canvas-dark-grad)"/>
+
+    <!-- Dot grid texture -->
+    <rect x="60" y="150" width="700" height="500" fill="url(#dot-grid-splash)"/>
+
+    <!-- Breathing glow orbs — teal left-center -->
+    <ellipse cx="300" cy="370" rx="280" ry="200" fill="url(#splash-glow-teal)" filter="url(#blur-lg)"/>
+    <!-- Breathing glow orbs — blue right-center -->
+    <ellipse cx="590" cy="340" rx="240" ry="180" fill="url(#splash-glow-blue)" filter="url(#blur-lg)"/>
+    <!-- Subtle indigo center -->
+    <ellipse cx="430" cy="420" rx="160" ry="120" fill="url(#splash-glow-indigo)" filter="url(#blur-md)"/>
+
+    <!-- Brand text: Waya + X centered -->
+    <!-- 'Waya' in white -->
+    <text x="320" y="410" text-anchor="end" font-family="'Sora', 'Inter', system-ui, sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-3" filter="url(#blur-xs)" fill-opacity="0.15">Waya</text>
+    <text x="320" y="410" text-anchor="end" font-family="'Sora', 'Inter', system-ui, sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-3">Waya</text>
+    <!-- 'X' in teal gradient with glow -->
+    <text x="330" y="410" text-anchor="start" font-family="'Sora', 'Inter', system-ui, sans-serif" font-size="72" font-weight="900" fill="url(#teal-blue-grad)" filter="url(#drop-shadow-teal)" letter-spacing="-2">X</text>
+
+    <!-- Suffix cycling indicator strip -->
+    <g transform="translate(250, 430)">
+      <rect x="0" y="0" width="360" height="28" rx="14" fill="black" fill-opacity="0.35" stroke="white" stroke-width="0.5" stroke-opacity="0.10"/>
+      <!-- Equity -->
+      <text x="18" y="19" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" letter-spacing="0.5">Equity</text>
+      <!-- Arrow -->
+      <text x="72" y="19" font-family="'JetBrains Mono', monospace" font-size="10" fill="#475569">→</text>
+      <!-- FnO -->
+      <text x="88" y="19" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" letter-spacing="0.5">FnO</text>
+      <!-- Arrow -->
+      <text x="116" y="19" font-family="'JetBrains Mono', monospace" font-size="10" fill="#475569">→</text>
+      <!-- McX -->
+      <text x="132" y="19" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" letter-spacing="0.5">McX</text>
+      <!-- Arrow -->
+      <text x="162" y="19" font-family="'JetBrains Mono', monospace" font-size="10" fill="#475569">→</text>
+      <!-- PMS -->
+      <text x="178" y="19" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" letter-spacing="0.5">PMS</text>
+      <!-- Arrow -->
+      <text x="208" y="19" font-family="'JetBrains Mono', monospace" font-size="10" fill="#475569">→</text>
+      <!-- X highlight -->
+      <rect x="222" y="4" width="24" height="20" rx="5" fill="#77F2E4" fill-opacity="0.18" stroke="#77F2E4" stroke-width="0.6" stroke-opacity="0.5"/>
+      <text x="234" y="18" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#77F2E4" letter-spacing="0">X</text>
+      <!-- Progress dots -->
+      <circle cx="272" cy="14" r="2.5" fill="#77F2E4" fill-opacity="0.9"/>
+      <circle cx="282" cy="14" r="2" fill="white" fill-opacity="0.2"/>
+      <circle cx="291" cy="14" r="2" fill="white" fill-opacity="0.2"/>
+      <circle cx="300" cy="14" r="2" fill="white" fill-opacity="0.2"/>
+      <circle cx="309" cy="14" r="2" fill="white" fill-opacity="0.2"/>
+    </g>
+
+    <!-- Playback controller pill — bottom right -->
+    <g transform="translate(484, 600)">
+      <rect x="0" y="0" width="258" height="42" rx="21" fill="black" fill-opacity="0.55" stroke="white" stroke-width="0.7" stroke-opacity="0.10"/>
+      <!-- Backdrop glass shimmer -->
+      <rect x="0" y="0" width="258" height="1.5" rx="1" fill="url(#specular)" opacity="0.6"/>
+      <!-- Pause button -->
+      <circle cx="24" cy="21" r="14" fill="white" fill-opacity="0.05" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+      <!-- Pause bars -->
+      <rect x="18" y="14" width="4.5" height="14" rx="1.5" fill="white" fill-opacity="0.75"/>
+      <rect x="25.5" y="14" width="4.5" height="14" rx="1.5" fill="white" fill-opacity="0.75"/>
+      <!-- Timeline track -->
+      <rect x="48" y="19.5" width="96" height="3" rx="1.5" fill="white" fill-opacity="0.10"/>
+      <rect x="48" y="19.5" width="57.6" height="3" rx="1.5" fill="url(#timeline-progress)"/>
+      <!-- Thumb dot -->
+      <circle cx="105.6" cy="21" r="4.5" fill="white" fill-opacity="0.95" stroke="white" stroke-width="0.5"/>
+      <!-- Counter -->
+      <text x="152" y="25" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#94a3b8" letter-spacing="1">3/5</text>
+      <!-- Skip button -->
+      <rect x="174" y="11" width="74" height="20" rx="10" fill="#6366f1" fill-opacity="0.20" stroke="#818cf8" stroke-width="0.5" stroke-opacity="0.30"/>
+      <text x="188" y="25" font-family="'Inter', system-ui, sans-serif" font-size="9" font-weight="600" fill="#c7d2fe" letter-spacing="1.2">SKIP</text>
+      <!-- Skip chevron symbol -->
+      <path d="M234,16 L240,21 L234,26" stroke="#818cf8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="238" y1="16" x2="238" y2="26" stroke="#818cf8" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Splash screen top specular -->
+  <rect x="60" y="150" width="700" height="1.5" rx="1" fill="url(#specular)"/>
+  <!-- Splash screen border -->
+  <rect x="60" y="150" width="700" height="500" rx="14" fill="none" stroke="white" stroke-width="0.8" stroke-opacity="0.08"/>
+
+  <!-- Device-style corner notch decorations -->
+  <circle cx="60" cy="150" r="3" fill="#111318" fill-opacity="0.8"/>
+  <circle cx="760" cy="150" r="3" fill="#111318" fill-opacity="0.8"/>
+  <circle cx="60" cy="650" r="3" fill="#111318" fill-opacity="0.8"/>
+  <circle cx="760" cy="650" r="3" fill="#111318" fill-opacity="0.8"/>
+
+  <!-- Screen label below -->
+  <text x="410" y="672" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#475569" letter-spacing="2">FULL · 700×500 · DARK CANVAS · CINEMATIC INTRO</text>
+
+  <!-- ════════════════════════════════════════════
+       SECTION 2 LABEL
+  ════════════════════════════════════════════ -->
+  <g transform="translate(800, 100)">
+    <rect x="0" y="0" width="210" height="22" rx="5" fill="url(#label-indigo-bg)" stroke="#6366f1" stroke-width="0.6" stroke-opacity="0.35"/>
+    <circle cx="12" cy="11" r="3.5" fill="#818cf8" fill-opacity="0.8"/>
+    <text x="24" y="15" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#818cf8" letter-spacing="1.8">ELEMENT BREAKDOWN · 3×2</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       MODULE 1 — BRAND TEXT ASSEMBLY
+  ════════════════════════════════════════════ -->
+  <g filter="url(#card-shadow)">
+    <rect x="800" y="120" width="460" height="200" rx="14" fill="url(#module-card-bg)" stroke="white" stroke-width="0.7" stroke-opacity="0.09"/>
+  </g>
+  <g clip-path="url(#mod1-clip)">
+    <!-- Ambient glow inside card -->
+    <ellipse cx="930" cy="220" rx="180" ry="100" fill="#77F2E4" fill-opacity="0.04" filter="url(#blur-md)"/>
+    <ellipse cx="1100" cy="260" rx="120" ry="80" fill="#6366f1" fill-opacity="0.05" filter="url(#blur-md)"/>
+  </g>
+  <!-- Top specular -->
+  <rect x="800" y="120" width="460" height="1.5" rx="1" fill="url(#specular)"/>
+
+  <!-- Module 1 label -->
+  <g transform="translate(818, 135)">
+    <rect x="0" y="0" width="150" height="17" rx="4" fill="#77F2E4" fill-opacity="0.10" stroke="#77F2E4" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="7" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#77F2E4" letter-spacing="1.2">BRAND TEXT ASSEMBLY</text>
+  </g>
+  <!-- Module index -->
+  <text x="1247" y="147" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#6366f1" fill-opacity="0.6" letter-spacing="1">01</text>
+
+  <!-- Brand text: Waya + X large display -->
+  <text x="910" y="225" text-anchor="end" font-family="'Sora', 'Inter', system-ui, sans-serif" font-size="48" font-weight="800" fill="#ffffff" letter-spacing="-2">Waya</text>
+  <text x="918" y="225" text-anchor="start" font-family="'Sora', 'Inter', system-ui, sans-serif" font-size="48" font-weight="900" fill="url(#teal-blue-grad)" filter="url(#drop-shadow-teal)" letter-spacing="-1">X</text>
+
+  <!-- Suffix variant pills -->
+  <g transform="translate(818, 238)">
+    <!-- Equity pill -->
+    <rect x="0" y="0" width="52" height="20" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-width="0.5" stroke-opacity="0.10"/>
+    <text x="26" y="14" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="9" fill="#94a3b8" letter-spacing="0.3">Equity</text>
+    <!-- FnO pill -->
+    <rect x="58" y="0" width="38" height="20" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-width="0.5" stroke-opacity="0.10"/>
+    <text x="77" y="14" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="9" fill="#94a3b8" letter-spacing="0.3">FnO</text>
+    <!-- McX pill -->
+    <rect x="102" y="0" width="40" height="20" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-width="0.5" stroke-opacity="0.10"/>
+    <text x="122" y="14" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="9" fill="#94a3b8" letter-spacing="0.3">McX</text>
+    <!-- PMS pill -->
+    <rect x="148" y="0" width="40" height="20" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-width="0.5" stroke-opacity="0.10"/>
+    <text x="168" y="14" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="9" fill="#94a3b8" letter-spacing="0.3">PMS</text>
+    <!-- X pill — highlighted -->
+    <rect x="194" y="0" width="28" height="20" rx="6" fill="#77F2E4" fill-opacity="0.16" stroke="#77F2E4" stroke-width="0.7" stroke-opacity="0.5"/>
+    <text x="208" y="14" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="9" font-weight="700" fill="#77F2E4" letter-spacing="0.3">X</text>
+  </g>
+
+  <!-- Module 1 specs -->
+  <g transform="translate(818, 275)">
+    <line x1="0" y1="0" x2="424" y2="0" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <!-- Spec row 1 -->
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8" letter-spacing="0.5">initial</text>
+    <text x="48" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">opacity:0 · y:38 · blur:12px</text>
+    <!-- Spec row 2 -->
+    <text x="220" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8" letter-spacing="0.5">animate</text>
+    <text x="272" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">opacity:1 · y:0 · blur:0</text>
+    <!-- Spec row 2 -->
+    <text x="0" y="30" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8" letter-spacing="0.5">duration</text>
+    <text x="55" y="30" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">0.45s</text>
+    <text x="220" y="30" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8" letter-spacing="0.5">ease</text>
+    <text x="248" y="30" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">[0.16, 1, 0.3, 1] · custom spring</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       MODULE 2 — BREATHING GLOW ORB
+  ════════════════════════════════════════════ -->
+  <g filter="url(#card-shadow)">
+    <rect x="800" y="340" width="460" height="180" rx="14" fill="url(#module-card-bg)" stroke="white" stroke-width="0.7" stroke-opacity="0.09"/>
+  </g>
+  <g clip-path="url(#mod2-clip)">
+    <!-- The glow orbs displayed within this module -->
+    <ellipse cx="910" cy="430" rx="130" ry="90" fill="url(#orb-teal-r)" filter="url(#blur-orb)"/>
+    <ellipse cx="1030" cy="420" rx="120" ry="85" fill="url(#orb-blue-r)" filter="url(#blur-orb)"/>
+    <!-- Subtle overlay pattern -->
+    <rect x="800" y="340" width="460" height="180" fill="url(#dot-grid-splash)" opacity="0.4"/>
+  </g>
+  <rect x="800" y="340" width="460" height="1.5" rx="1" fill="url(#specular)"/>
+
+  <!-- Module 2 label -->
+  <g transform="translate(818, 355)">
+    <rect x="0" y="0" width="150" height="17" rx="4" fill="#6BB6F3" fill-opacity="0.10" stroke="#6BB6F3" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="7" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#6BB6F3" letter-spacing="1.2">BREATHING GLOW ORB</text>
+  </g>
+  <text x="1247" y="367" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#6BB6F3" fill-opacity="0.6" letter-spacing="1">02</text>
+
+  <!-- Orb labels -->
+  <text x="893" y="435" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#77F2E4" fill-opacity="0.7" letter-spacing="0.5">#77F2E4</text>
+  <text x="893" y="447" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77F2E4" fill-opacity="0.5">opacity · 0.13</text>
+  <text x="1045" y="425" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#6BB6F3" fill-opacity="0.7" letter-spacing="0.5">#6BB6F3</text>
+  <text x="1045" y="437" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#6BB6F3" fill-opacity="0.5">opacity · 0.18</text>
+
+  <!-- Animation indicators -->
+  <g transform="translate(818, 468)">
+    <line x1="0" y1="0" x2="424" y2="0" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <text x="0" y="15" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">rotate</text>
+    <text x="46" y="15" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">360° · 26s · linear · infinite</text>
+    <text x="220" y="15" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">scale</text>
+    <text x="248" y="15" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">[1.02→1.08→0.96→1.05] · 14s</text>
+    <text x="0" y="30" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">blur</text>
+    <text x="34" y="30" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">95px · rounded-[50%] · gradient 90deg</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       MODULE 3 — DOT GRID BACKDROP
+  ════════════════════════════════════════════ -->
+  <g filter="url(#card-shadow)">
+    <rect x="800" y="540" width="460" height="160" rx="14" fill="url(#module-card-bg)" stroke="white" stroke-width="0.7" stroke-opacity="0.09"/>
+  </g>
+  <g clip-path="url(#mod3-clip)">
+    <!-- Dense dot grid sample -->
+    <rect x="800" y="540" width="460" height="160" fill="url(#dot-grid-dense)"/>
+    <!-- Radial fade mask effect using overlay gradient -->
+    <radialGradient id="radial-fade-mod3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0e1018" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#0e1018" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0e1018" stop-opacity="0.85"/>
+    </radialGradient>
+    <rect x="800" y="540" width="460" height="160" fill="url(#radial-fade-mod3)"/>
+  </g>
+  <rect x="800" y="540" width="460" height="1.5" rx="1" fill="url(#specular)"/>
+
+  <!-- Module 3 label -->
+  <g transform="translate(818, 555)">
+    <rect x="0" y="0" width="148" height="17" rx="4" fill="#a855f7" fill-opacity="0.10" stroke="#a855f7" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="7" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#c084fc" letter-spacing="1.2">DOT GRID BACKDROP</text>
+  </g>
+  <text x="1247" y="567" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a855f7" fill-opacity="0.6" letter-spacing="1">03</text>
+
+  <!-- Radial fade annotation arrow -->
+  <g transform="translate(1010, 600)">
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#a855f7" stroke-width="0.7" stroke-opacity="0.25" stroke-dasharray="3 2"/>
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c084fc" fill-opacity="0.7">center</text>
+  </g>
+
+  <!-- Module 3 specs -->
+  <g transform="translate(818, 663)">
+    <line x1="0" y1="0" x2="424" y2="0" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">pattern</text>
+    <text x="52" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">bg-dotted-grid · dots ø1.5px · 24px gap</text>
+    <text x="220" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">opacity</text>
+    <text x="268" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">0.24 · radial mask 70% fade</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       MODULE 4 — PLAYBACK CONTROLLER PILL
+  ════════════════════════════════════════════ -->
+  <g filter="url(#card-shadow)">
+    <rect x="1290" y="120" width="660" height="260" rx="14" fill="url(#module-card-bg)" stroke="white" stroke-width="0.7" stroke-opacity="0.09"/>
+  </g>
+  <g clip-path="url(#mod4-clip)">
+    <ellipse cx="1500" cy="240" rx="200" ry="100" fill="#6366f1" fill-opacity="0.04" filter="url(#blur-lg)"/>
+  </g>
+  <rect x="1290" y="120" width="660" height="1.5" rx="1" fill="url(#specular)"/>
+
+  <!-- Module 4 label -->
+  <g transform="translate(1308, 135)">
+    <rect x="0" y="0" width="192" height="17" rx="4" fill="#6366f1" fill-opacity="0.12" stroke="#818cf8" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="7" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#818cf8" letter-spacing="1.2">PLAYBACK CONTROLLER PILL</text>
+  </g>
+  <text x="1937" y="147" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#6366f1" fill-opacity="0.6" letter-spacing="1">04</text>
+
+  <!-- STATE labels -->
+  <text x="1360" y="175" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#64748b" letter-spacing="1.5">STATE: PLAYING</text>
+  <text x="1640" y="175" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#64748b" letter-spacing="1.5">STATE: PAUSED</text>
+
+  <!-- PLAYING state controller -->
+  <g transform="translate(1308, 185)">
+    <rect x="0" y="0" width="150" height="44" rx="22" fill="black" fill-opacity="0.50" stroke="white" stroke-width="0.8" stroke-opacity="0.12"/>
+    <rect x="0" y="0" width="150" height="1.5" rx="1" fill="url(#specular)"/>
+    <!-- Pause button -->
+    <circle cx="26" cy="22" r="15" fill="white" fill-opacity="0.06" stroke="white" stroke-width="0.6" stroke-opacity="0.10"/>
+    <rect x="19.5" y="14.5" width="5" height="15" rx="1.5" fill="white" fill-opacity="0.80"/>
+    <rect x="27.5" y="14.5" width="5" height="15" rx="1.5" fill="white" fill-opacity="0.80"/>
+    <!-- Skip button -->
+    <rect x="55" y="12" width="84" height="20" rx="10" fill="#6366f1" fill-opacity="0.22" stroke="#818cf8" stroke-width="0.6" stroke-opacity="0.35"/>
+    <text x="71" y="26" font-family="'Inter', system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#c7d2fe" letter-spacing="1.2">SKIP</text>
+    <path d="M118,15 L126,22 L118,29" stroke="#818cf8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="123" y1="15" x2="123" y2="29" stroke="#818cf8" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- PAUSED state controller (expanded) -->
+  <g transform="translate(1598, 185)">
+    <rect x="0" y="0" width="280" height="44" rx="22" fill="black" fill-opacity="0.55" stroke="white" stroke-width="0.8" stroke-opacity="0.12"/>
+    <rect x="0" y="0" width="280" height="1.5" rx="1" fill="url(#specular)"/>
+    <!-- Pause button -->
+    <circle cx="26" cy="22" r="15" fill="white" fill-opacity="0.06" stroke="white" stroke-width="0.6" stroke-opacity="0.10"/>
+    <rect x="19.5" y="14.5" width="5" height="15" rx="1.5" fill="white" fill-opacity="0.80"/>
+    <rect x="27.5" y="14.5" width="5" height="15" rx="1.5" fill="white" fill-opacity="0.80"/>
+    <!-- Timeline track (expanded) -->
+    <rect x="52" y="20" width="110" height="3.5" rx="1.75" fill="white" fill-opacity="0.10"/>
+    <rect x="52" y="20" width="66" height="3.5" rx="1.75" fill="url(#timeline-progress)"/>
+    <!-- Thumb -->
+    <circle cx="118" cy="21.75" r="5.5" fill="white" fill-opacity="0.95"/>
+    <!-- Counter -->
+    <text x="172" y="26" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" letter-spacing="1">3/5</text>
+    <!-- Skip button -->
+    <rect x="196" y="12" width="74" height="20" rx="10" fill="#6366f1" fill-opacity="0.22" stroke="#818cf8" stroke-width="0.6" stroke-opacity="0.35"/>
+    <text x="212" y="26" font-family="'Inter', system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#c7d2fe" letter-spacing="1.2">SKIP</text>
+    <path d="M254,15 L262,22 L254,29" stroke="#818cf8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="259" y1="15" x2="259" y2="29" stroke="#818cf8" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Expand animation arrow between states -->
+  <g transform="translate(1480, 205)">
+    <line x1="0" y1="2" x2="95" y2="2" stroke="#6366f1" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="4 2"/>
+    <path d="M90,-3 L97,2 L90,7" stroke="#6366f1" stroke-width="1" fill="none" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="30" y="-7" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748b" letter-spacing="0.5">AnimatePresence</text>
+  </g>
+
+  <!-- Module 4 specs -->
+  <g transform="translate(1308, 250)">
+    <line x1="0" y1="0" x2="624" y2="0" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">position</text>
+    <text x="55" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">fixed · bottom-6 · right-6 · z-50</text>
+    <text x="310" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">backdrop</text>
+    <text x="368" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">blur-xl · bg-black/40</text>
+    <text x="0" y="31" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">spring</text>
+    <text x="45" y="31" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">stiffness:300 · damping:25 · timeline expand</text>
+    <text x="310" y="31" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">border</text>
+    <text x="355" y="31" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">white/10 · rounded-full</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       MODULE 5 — EXIT ANIMATION
+  ════════════════════════════════════════════ -->
+  <g filter="url(#card-shadow)">
+    <rect x="1290" y="400" width="660" height="160" rx="14" fill="url(#module-card-bg)" stroke="white" stroke-width="0.7" stroke-opacity="0.09"/>
+  </g>
+  <g clip-path="url(#mod5-clip)">
+    <!-- Fade to black visualization -->
+    <linearGradient id="exit-anim-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a0a14" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <rect x="1290" y="400" width="660" height="160" fill="url(#exit-anim-grad)"/>
+  </g>
+  <rect x="1290" y="400" width="660" height="1.5" rx="1" fill="url(#specular)"/>
+
+  <!-- Module 5 label -->
+  <g transform="translate(1308, 415)">
+    <rect x="0" y="0" width="130" height="17" rx="4" fill="#f43f5e" fill-opacity="0.10" stroke="#f43f5e" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="7" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#f43f5e" letter-spacing="1.2">EXIT ANIMATION</text>
+  </g>
+  <text x="1937" y="427" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#f43f5e" fill-opacity="0.5" letter-spacing="1">05</text>
+
+  <!-- Fade visualization boxes -->
+  <g transform="translate(1308, 442)">
+    <!-- Full opacity frame -->
+    <rect x="0" y="0" width="100" height="64" rx="8" fill="#111318" stroke="white" stroke-width="0.5" stroke-opacity="0.15"/>
+    <text x="50" y="37" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600" fill="white" fill-opacity="0.7">opacity:1</text>
+    <text x="50" y="52" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b">t = 0s</text>
+
+    <!-- Arrow -->
+    <line x1="108" y1="32" x2="148" y2="32" stroke="#f43f5e" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="4 2"/>
+    <path d="M142,26 L150,32 L142,38" stroke="#f43f5e" stroke-width="1.2" fill="none" stroke-opacity="0.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="128" y="22" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#f43f5e" fill-opacity="0.7">0.6s</text>
+    <text x="128" y="50" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#64748b">easeOut</text>
+
+    <!-- Partial opacity frame -->
+    <rect x="156" y="0" width="100" height="64" rx="8" fill="#111318" stroke="white" stroke-width="0.5" stroke-opacity="0.07"/>
+    <rect x="156" y="0" width="100" height="64" rx="8" fill="black" fill-opacity="0.40"/>
+    <text x="206" y="37" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600" fill="white" fill-opacity="0.35">opacity:.4</text>
+    <text x="206" y="52" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b">t = 0.3s</text>
+
+    <!-- Arrow 2 -->
+    <line x1="264" y1="32" x2="304" y2="32" stroke="#f43f5e" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="4 2"/>
+    <path d="M298,26 L306,32 L298,38" stroke="#f43f5e" stroke-width="1.2" fill="none" stroke-opacity="0.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Zero opacity frame -->
+    <rect x="312" y="0" width="100" height="64" rx="8" fill="#000000" stroke="white" stroke-width="0.5" stroke-opacity="0.04"/>
+    <text x="362" y="37" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600" fill="white" fill-opacity="0.08">opacity:0</text>
+    <text x="362" y="52" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">t = 0.6s</text>
+
+    <!-- onComplete label -->
+    <g transform="translate(424, 20)">
+      <rect x="0" y="0" width="148" height="28" rx="6" fill="#f43f5e" fill-opacity="0.08" stroke="#f43f5e" stroke-width="0.5" stroke-opacity="0.3"/>
+      <text x="12" y="12" font-family="'JetBrains Mono', monospace" font-size="8" fill="#f43f5e" letter-spacing="0.3">onComplete() callback</text>
+      <text x="12" y="23" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#64748b">→ navigate to main app</text>
+    </g>
+  </g>
+
+  <!-- Module 5 specs -->
+  <g transform="translate(1308, 524)">
+    <line x1="0" y1="0" x2="624" y2="0" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+    <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">trigger</text>
+    <text x="46" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">AnimatePresence exit · suffix=X final state</text>
+    <text x="310" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">duration</text>
+    <text x="362" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">0.6s · easeOut · opacity:0→1</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       MODULE 6 — SUFFIX WORD SWAP TIMING
+  ════════════════════════════════════════════ -->
+  <g filter="url(#card-shadow)">
+    <rect x="1290" y="580" width="660" height="120" rx="14" fill="url(#module-card-bg)" stroke="white" stroke-width="0.7" stroke-opacity="0.09"/>
+  </g>
+  <rect x="1290" y="580" width="660" height="1.5" rx="1" fill="url(#specular)"/>
+
+  <!-- Module 6 label -->
+  <g transform="translate(1308, 595)">
+    <rect x="0" y="0" width="188" height="17" rx="4" fill="#10b981" fill-opacity="0.10" stroke="#34d399" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="7" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#34d399" letter-spacing="1.2">SUFFIX WORD SWAP TIMING</text>
+  </g>
+  <text x="1937" y="607" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10b981" fill-opacity="0.6" letter-spacing="1">06</text>
+
+  <!-- Timeline strip -->
+  <g transform="translate(1308, 626)">
+    <!-- Track line -->
+    <line x1="14" y1="14" x2="600" y2="14" stroke="white" stroke-width="0.8" stroke-opacity="0.12"/>
+
+    <!-- Node 1: Equity -->
+    <circle cx="14" cy="14" r="5.5" fill="#111318" stroke="#6BB6F3" stroke-width="1.2"/>
+    <circle cx="14" cy="14" r="2.5" fill="#6BB6F3"/>
+    <text x="14" y="34" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="8.5" fill="#94a3b8" letter-spacing="0.3">Equity</text>
+    <!-- Timing badge -->
+    <rect x="-10" y="40" width="48" height="14" rx="4" fill="#6BB6F3" fill-opacity="0.10" stroke="#6BB6F3" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="14" y="51" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#6BB6F3">450ms</text>
+
+    <!-- Arrow -->
+    <path d="M28,14 L106,14" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+
+    <!-- Node 2: FnO -->
+    <circle cx="120" cy="14" r="5.5" fill="#111318" stroke="#6BB6F3" stroke-width="1.2"/>
+    <circle cx="120" cy="14" r="2.5" fill="#6BB6F3"/>
+    <text x="120" y="34" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="8.5" fill="#94a3b8" letter-spacing="0.3">FnO</text>
+    <rect x="96" y="40" width="48" height="14" rx="4" fill="#6BB6F3" fill-opacity="0.10" stroke="#6BB6F3" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="120" y="51" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#6BB6F3">400ms</text>
+
+    <!-- Node 3: McX -->
+    <circle cx="230" cy="14" r="5.5" fill="#111318" stroke="#818cf8" stroke-width="1.2"/>
+    <circle cx="230" cy="14" r="2.5" fill="#818cf8"/>
+    <text x="230" y="34" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="8.5" fill="#94a3b8" letter-spacing="0.3">McX</text>
+    <rect x="206" y="40" width="48" height="14" rx="4" fill="#818cf8" fill-opacity="0.10" stroke="#818cf8" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="230" y="51" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8">350ms</text>
+
+    <!-- Node 4: PMS -->
+    <circle cx="340" cy="14" r="5.5" fill="#111318" stroke="#818cf8" stroke-width="1.2"/>
+    <circle cx="340" cy="14" r="2.5" fill="#818cf8"/>
+    <text x="340" y="34" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="8.5" fill="#94a3b8" letter-spacing="0.3">PMS</text>
+    <rect x="316" y="40" width="48" height="14" rx="4" fill="#818cf8" fill-opacity="0.10" stroke="#818cf8" stroke-width="0.5" stroke-opacity="0.25"/>
+    <text x="340" y="51" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8">350ms</text>
+
+    <!-- Node 5: X (FINAL) — highlighted teal -->
+    <circle cx="460" cy="14" r="7.5" fill="url(#teal-blue-grad)" fill-opacity="0.25" stroke="#77F2E4" stroke-width="1.5"/>
+    <circle cx="460" cy="14" r="3.5" fill="#77F2E4"/>
+    <text x="460" y="34" text-anchor="middle" font-family="'Sora', system-ui, sans-serif" font-size="9.5" font-weight="800" fill="#77F2E4" filter="url(#drop-shadow-teal)" letter-spacing="0">X</text>
+    <rect x="420" y="40" width="80" height="14" rx="4" fill="#77F2E4" fill-opacity="0.12" stroke="#77F2E4" stroke-width="0.6" stroke-opacity="0.4"/>
+    <text x="460" y="51" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77F2E4">1000ms hold</text>
+
+    <!-- Auto-complete label -->
+    <g transform="translate(508, -2)">
+      <rect x="0" y="0" width="92" height="30" rx="5" fill="#77F2E4" fill-opacity="0.06" stroke="#77F2E4" stroke-width="0.5" stroke-opacity="0.3"/>
+      <text x="7" y="12" font-family="'JetBrains Mono', monospace" font-size="7" fill="#77F2E4" letter-spacing="0.3">AUTO-COMPLETE</text>
+      <text x="7" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="#64748b">→ onComplete()</text>
+      <!-- Small arrow from node 5 -->
+      <line x1="-44" y1="16" x2="-4" y2="16" stroke="#77F2E4" stroke-width="0.7" stroke-opacity="0.4" stroke-dasharray="3 2"/>
+    </g>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       SECTION 3 — COLOR & TYPOGRAPHY TOKENS
+  ════════════════════════════════════════════ -->
+  <!-- Section 3 label -->
+  <g transform="translate(60, 645)">
+    <rect x="0" y="0" width="260" height="22" rx="5" fill="url(#label-indigo-bg)" stroke="#6366f1" stroke-width="0.6" stroke-opacity="0.35"/>
+    <circle cx="12" cy="11" r="3.5" fill="#818cf8" fill-opacity="0.8"/>
+    <text x="24" y="15" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#818cf8" letter-spacing="1.8">COLOR &amp; TYPOGRAPHY TOKENS</text>
+  </g>
+
+  <!-- Tokens card -->
+  <g filter="url(#card-shadow)">
+    <rect x="60" y="660" width="1890" height="220" rx="14" fill="url(#module-card-bg)" stroke="white" stroke-width="0.7" stroke-opacity="0.09"/>
+  </g>
+  <g clip-path="url(#tokens-clip)">
+    <ellipse cx="500" cy="770" rx="300" ry="120" fill="#77F2E4" fill-opacity="0.025" filter="url(#blur-lg)"/>
+    <ellipse cx="1500" cy="750" rx="400" ry="150" fill="#6366f1" fill-opacity="0.03" filter="url(#blur-lg)"/>
+  </g>
+  <rect x="60" y="660" width="1890" height="1.5" rx="1" fill="url(#specular)"/>
+
+  <!-- TOKEN COLUMN 1: Typography -->
+  <g transform="translate(90, 680)">
+    <!-- Header -->
+    <text x="0" y="14" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#64748b" letter-spacing="2">TYPOGRAPHY</text>
+    <line x1="0" y1="20" x2="260" y2="20" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+
+    <!-- Sora Display -->
+    <text x="0" y="52" font-family="'Sora', system-ui, sans-serif" font-size="28" font-weight="800" fill="white" letter-spacing="-1">WayaX</text>
+    <text x="0" y="68" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">Sora · 72px · extrabold · display</text>
+
+    <!-- Inter body -->
+    <text x="0" y="90" font-family="'Inter', system-ui, sans-serif" font-size="14" font-weight="500" fill="white" fill-opacity="0.7" letter-spacing="0.2">Inter Regular · UI body</text>
+    <text x="0" y="104" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">Inter · 14–16px · wt 400–600</text>
+
+    <!-- JetBrains Mono -->
+    <text x="0" y="126" font-family="'JetBrains Mono', monospace" font-size="11" fill="#77F2E4" fill-opacity="0.8" letter-spacing="1">mono · code · labels</text>
+    <text x="0" y="140" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">JetBrains Mono · 8.5–11px · tracking+</text>
+
+    <!-- Letter sizes spec -->
+    <text x="0" y="162" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#94a3b8">display</text>
+    <text x="50" y="162" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">72px / 48px · Sora extrabold</text>
+    <text x="0" y="174" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#94a3b8">heading</text>
+    <text x="50" y="174" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">24–30px · Sora bold 800</text>
+    <text x="0" y="186" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#94a3b8">label</text>
+    <text x="50" y="186" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569">8.5–11px · JetBrains Mono 600–700</text>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="380" y1="675" x2="380" y2="868" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+
+  <!-- TOKEN COLUMN 2: Color Swatches -->
+  <g transform="translate(400, 680)">
+    <text x="0" y="14" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#64748b" letter-spacing="2">COLOR TOKENS</text>
+    <line x1="0" y1="20" x2="600" y2="20" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+
+    <!-- Row 1: primary brand colors -->
+    <!-- Teal -->
+    <rect x="0" y="30" width="50" height="50" rx="10" fill="#77F2E4"/>
+    <text x="25" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">#77F2E4</text>
+    <text x="25" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">teal · primary</text>
+
+    <!-- Blue -->
+    <rect x="64" y="30" width="50" height="50" rx="10" fill="#6BB6F3"/>
+    <text x="89" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">#6BB6F3</text>
+    <text x="89" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">blue · secondary</text>
+
+    <!-- Teal→Blue gradient -->
+    <rect x="128" y="30" width="50" height="50" rx="10" fill="url(#teal-blue-grad)"/>
+    <text x="153" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">teal→blue</text>
+    <text x="153" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">glow · X text</text>
+
+    <!-- Indigo -->
+    <rect x="192" y="30" width="50" height="50" rx="10" fill="#6366f1"/>
+    <text x="217" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">#6366f1</text>
+    <text x="217" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">indigo · accent</text>
+
+    <!-- Purple -->
+    <rect x="256" y="30" width="50" height="50" rx="10" fill="#a855f7"/>
+    <text x="281" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">#a855f7</text>
+    <text x="281" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">purple · accent</text>
+
+    <!-- Emerald -->
+    <rect x="320" y="30" width="50" height="50" rx="10" fill="#10b981"/>
+    <text x="345" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">#10b981</text>
+    <text x="345" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">emerald · buy</text>
+
+    <!-- Rose -->
+    <rect x="384" y="30" width="50" height="50" rx="10" fill="#f43f5e"/>
+    <text x="409" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">#f43f5e</text>
+    <text x="409" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">rose · danger</text>
+
+    <!-- White -->
+    <rect x="448" y="30" width="50" height="50" rx="10" fill="#ffffff"/>
+    <text x="473" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">#ffffff</text>
+    <text x="473" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">white · text</text>
+
+    <!-- Canvas dark -->
+    <rect x="512" y="30" width="50" height="50" rx="10" fill="#080a10" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+    <text x="537" y="95" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#94a3b8">#080a10</text>
+    <text x="537" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">canvas · base</text>
+
+    <!-- Row 2 specs -->
+    <text x="0" y="128" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">bg-gradient</text>
+    <text x="72" y="128" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">from-[#0a0a0c] via-[#101014] to-[#000000] · gradient-to-b</text>
+    <text x="0" y="142" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">glow-orb</text>
+    <text x="60" y="142" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">linear 90deg #77F2E4→#6BB6F3 · blur-[95px] · opacity-0.13 · rounded-[50%]</text>
+    <text x="0" y="156" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">panel-glass</text>
+    <text x="70" y="156" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">#111318 / 90% · blur(32px) · saturate(180%) · border white/[0.08]</text>
+  </g>
+
+  <!-- Vertical divider 2 -->
+  <line x1="1050" y1="675" x2="1050" y2="868" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+
+  <!-- TOKEN COLUMN 3: Animation Tokens -->
+  <g transform="translate(1070, 680)">
+    <text x="0" y="14" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#64748b" letter-spacing="2">ANIMATION TOKENS</text>
+    <line x1="0" y1="20" x2="840" y2="20" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+
+    <!-- Easing curves visual -->
+    <g transform="translate(0, 30)">
+      <!-- Ease custom curve box -->
+      <rect x="0" y="0" width="90" height="60" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+      <!-- Curve path (cubic bezier approximation visual) -->
+      <path d="M10,50 C14,48 20,12 80,8" stroke="url(#teal-blue-grad)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <!-- Dot at start -->
+      <circle cx="10" cy="50" r="2.5" fill="#77F2E4"/>
+      <!-- Dot at end -->
+      <circle cx="80" cy="8" r="2.5" fill="#6BB6F3"/>
+      <text x="45" y="74" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#77F2E4">[0.16,1,0.3,1]</text>
+      <text x="45" y="84" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">brand entrance</text>
+
+      <!-- EaseOut box -->
+      <rect x="104" y="0" width="90" height="60" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+      <path d="M114,50 C118,14 160,8 184,8" stroke="url(#indigo-grad)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="114" cy="50" r="2.5" fill="#6366f1"/>
+      <circle cx="184" cy="8" r="2.5" fill="#818cf8"/>
+      <text x="149" y="74" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#818cf8">easeOut</text>
+      <text x="149" y="84" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">exit fade</text>
+
+      <!-- Spring box -->
+      <rect x="208" y="0" width="90" height="60" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-width="0.5" stroke-opacity="0.08"/>
+      <path d="M218,50 C222,4 252,56 270,8 L278,12 L280,10" stroke="#a855f7" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="218" cy="50" r="2.5" fill="#a855f7"/>
+      <circle cx="280" cy="10" r="2.5" fill="#c084fc"/>
+      <text x="253" y="74" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c084fc">spring</text>
+      <text x="253" y="84" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#475569">s:300 d:25</text>
+    </g>
+
+    <!-- Duration tokens -->
+    <text x="0" y="140" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">entrance</text>
+    <text x="62" y="140" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">0.45s · opacity+y+blur · stagger 0.12s per element</text>
+    <text x="0" y="154" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">word-swap</text>
+    <text x="72" y="154" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">450→400→350→350→1000ms · AnimatePresence key swap</text>
+    <text x="0" y="168" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">glow-orb</text>
+    <text x="58" y="168" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">rotate 26s linear · scale 14s ease · infinite loop</text>
+    <text x="0" y="182" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94a3b8">exit</text>
+    <text x="32" y="182" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#475569">0.6s easeOut · fullscreen black overlay · onComplete()</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════
+       FOOTER WATERMARK
+  ════════════════════════════════════════════ -->
+  <line x1="60" y1="1362" x2="1940" y2="1362" stroke="white" stroke-width="0.5" stroke-opacity="0.06"/>
+  <text x="1000" y="1385" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2d3748" letter-spacing="2.5">01 · SPLASH ANIMATION PAGE · WAYAX DESIGN SYSTEM · DOM EXTRACTED · 2000×1400</text>
+
+  <!-- Corner dots decorative -->
+  <circle cx="60" cy="1390" r="2" fill="#77F2E4" fill-opacity="0.3"/>
+  <circle cx="1940" cy="1390" r="2" fill="#6366f1" fill-opacity="0.3"/>
+  <circle cx="60" cy="40" r="2" fill="#6366f1" fill-opacity="0.3"/>
+  <circle cx="1940" cy="40" r="2" fill="#77F2E4" fill-opacity="0.3"/>
+
+</svg>

@@ -1,0 +1,137 @@
+<svg width="680" height="340" viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ======================================================================
+    WAYAX 1:1 EXACT ADVISORY HORIZON SURVEY BOARD (680px x 340px)
+    Strictly extracted and compiled from the provided React DOM HTML snippet:
+    - 0% <style> Blocks (Inlined presentation attributes)
+    - 0% foreignObject Tags (Figma native compatible)
+    - Specular liquid-glass-panel base with 1px highlight line
+    - 1:1 exact vector recreations of all Lucide Icons:
+      chevron-left, chevron-right, x, pen-tool
+    - Symmetrical multi-choice buttons, custom input well, and Skip capsules
+    ======================================================================
+  -->
+
+  <defs>
+    <!-- Light leak glowing border gradient -->
+    <linearGradient id="survey-glass-border" x1="0" y1="0" x2="680" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <!-- Overall panel shadow -->
+    <filter id="survey-panel-shadow" x="-5%" y="-10%" width="110%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="28" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== LAYER 1: GLASS CARD BACKGROUND ==================== -->
+  <rect x="4" y="4" width="672" height="300" rx="20" fill="#0d0e12" fill-opacity="0.8" stroke="url(#survey-glass-border)" stroke-width="1.2" filter="url(#survey-panel-shadow)"/>
+  
+  <!-- Specular inner edge highlight -->
+  <rect x="4.5" y="4.5" width="671" height="299" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- ==================== LAYER 2: HEADER ROWS ==================== -->
+  <g id="survey-header" transform="translate(16, 16)">
+    <!-- Question Text Paragraph (Wrapped over two lines) -->
+    <text x="0" y="16" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff">
+      Before I dive in — how long are you thinking of staying invested? Whether it's a
+    </text>
+    <text x="0" y="32" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#ffffff">
+      quick trade or the long game, this shapes everything I suggest for you.
+    </text>
+
+    <!-- Header Pager Controls -->
+    <g transform="translate(488, 6)">
+      <!-- Prev Button (Disabled) -->
+      <g opacity="0.2">
+        <rect width="24" height="24" rx="6" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+        <path d="m14 16-4-4 4-4" stroke="#475569" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+
+      <!-- Status Pager -->
+      <text x="46" y="15" font-family="'JetBrains Mono', 'Fira Code', monospace" font-weight="700" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.05em">1 / 2</text>
+
+      <!-- Next Button -->
+      <g transform="translate(68, 0)">
+        <rect width="24" height="24" rx="6" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+        <path d="m10 16 4-4-4-4" stroke="#cbd5e1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+
+      <!-- Vertical divider -->
+      <line x1="100" y1="5" x2="100" y2="19" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+
+      <!-- Dismiss Button (X Icon) -->
+      <g transform="translate(108, 0)">
+        <rect width="24" height="24" rx="6" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+        <!-- lucide-x -->
+        <path d="M8 8l8 8M16 8l-8 8" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <!-- Header dividing line separating question from options -->
+    <line x1="0" y1="44" x2="648" y2="44" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+  </g>
+
+  <!-- ==================== LAYER 3: OPTIONS CAPSULES ROW ==================== -->
+  <g id="survey-options" transform="translate(16, 76)">
+    <!-- Option 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="648" height="36" rx="12" fill="rgba(255, 255, 255, 0.01)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <!-- Number badge -->
+      <rect x="8" y="6" width="24" height="24" rx="6" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <text x="20" y="21" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10.5" fill="#cbd5e1" text-anchor="middle">1</text>
+      <!-- Label -->
+      <text x="42" y="22" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1">Short Term — quick wins, under 3 months</text>
+    </g>
+
+    <!-- Option 2 -->
+    <g transform="translate(0, 44)">
+      <rect width="648" height="36" rx="12" fill="rgba(255, 255, 255, 0.01)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <rect x="8" y="6" width="24" height="24" rx="6" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <text x="20" y="21" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10.5" fill="#cbd5e1" text-anchor="middle">2</text>
+      <text x="42" y="22" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1">Medium Term — steady growth, 3 to 12 months</text>
+    </g>
+
+    <!-- Option 3 -->
+    <g transform="translate(0, 88)">
+      <rect width="648" height="36" rx="12" fill="rgba(255, 255, 255, 0.01)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <rect x="8" y="6" width="24" height="24" rx="6" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <text x="20" y="21" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10.5" fill="#cbd5e1" text-anchor="middle">3</text>
+      <text x="42" y="22" font-family="'Inter', sans-serif" font-weight="600" font-size="11.5" fill="#cbd5e1">Long Term — wealth building, 1 year and beyond</text>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 4: BOTTOM INPUT & SKIP SECTION ==================== -->
+  <g id="survey-footer" transform="translate(16, 212)">
+    <!-- Dividing line -->
+    <line x1="0" y1="0" x2="648" y2="0" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+
+    <!-- Custom choice input well -->
+    <g transform="translate(0, 12)">
+      <rect width="560" height="38" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      
+      <!-- lucide-pen-tool inside -->
+      <g transform="translate(12, 10)" stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 16a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+        <path d="m14 12-8.5-8.5a2.1 2.1 0 1 0-3 3L11 15"/>
+        <line x1="2" y1="2" x2="7.5" y2="7.5"/>
+      </g>
+      
+      <text x="38" y="23" font-family="'Inter', sans-serif" font-weight="500" font-size="11.5" fill="#475569">Something else...</text>
+    </g>
+
+    <!-- Skip Button -->
+    <g transform="translate(572, 12)">
+      <rect width="76" height="38" rx="10" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+      <text x="38" y="23" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#cbd5e1" text-anchor="middle">Skip</text>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 5: OUTSIDE FOOTER LABELS ==================== -->
+  <g transform="translate(340, 324)" text-anchor="middle">
+    <!-- Capsule border indicator -->
+    <rect x="-64" y="-12" width="128" height="18" rx="9" fill="rgba(0,0,0,0.1)" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+    <text y="0" font-family="'JetBrains Mono', 'Fira Code', monospace" font-weight="800" font-size="8.5" fill="#475569" letter-spacing="0.08em">OR REPLY DIRECTLY...</text>
+  </g>
+</svg>
