@@ -3119,12 +3119,18 @@ Alternatively, how can I advise you on specific investment choices today?`;
         userProfile={userProfile}
         isOpen={isSidebarOpen}
         isRightPanelOpen={isFaqOpen || isPortfolioOpen}
+        isPortfolioOpen={isPortfolioOpen}
         onChangeProfile={saveProfileToLocalStorage}
         onSelectChat={handleSelectChat}
         onCreateNewChat={handleCreateNewChat}
         onRenameChat={handleRenameChat}
         onDeleteChat={handleDeleteChat}
         onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
+        onTogglePortfolio={() => {
+          setIsPortfolioOpen(!isPortfolioOpen);
+          setIsFaqOpen(false);
+          setIsSidebarOpen(false);
+        }}
         theme={theme}
         onSignOut={handleSignOut}
         onGoHome={handleGoHome}
@@ -3164,6 +3170,19 @@ Alternatively, how can I advise you on specific investment choices today?`;
               <Plus className="w-4 h-4 text-white" strokeWidth={3} />
             </button>
 
+            {/* Portfolio Button */}
+            <button
+              onClick={() => {
+                setIsPortfolioOpen(true);
+                setIsFaqOpen(false);
+                setIsSidebarOpen(false);
+              }}
+              className="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-white hover:bg-[#2BE08C]/10 active:scale-95 cursor-pointer"
+              title="Portfolio"
+            >
+              <Wallet className="w-4 h-4 text-[#2BE08C]" />
+            </button>
+
             {/* User Profile */}
             <button
               onClick={() => setIsSidebarOpen(true)}
@@ -3174,7 +3193,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
             </button>
           </div>
 
-          {/* Right Side: FAQ and Portfolio Buttons */}
+          {/* Right Side: FAQ Button */}
           <div className="flex items-center gap-1">
             {/* FAQ Button */}
             <button
@@ -3189,22 +3208,6 @@ Alternatively, how can I advise you on specific investment choices today?`;
               <HelpCircle className="w-3.5 h-3.5 text-[#5B6BFF]" />
               <span className="hidden min-[370px]:inline text-xs font-bold tracking-wide uppercase font-sans">
                 FAQ
-              </span>
-            </button>
-
-            {/* Portfolio Button */}
-            <button
-              onClick={() => {
-                setIsPortfolioOpen(true);
-                setIsFaqOpen(false);
-                setIsSidebarOpen(false);
-              }}
-              className="h-8 px-2.5 rounded-xl flex items-center justify-center gap-1 transition-all duration-200 border border-transparent bg-transparent text-slate-400 hover:text-white hover:bg-[#2BE08C]/10 hover:border-[#2BE08C]/25 hover:shadow-[0_0_12px_rgba(43,224,140,0.15)] active:scale-95 cursor-pointer"
-              title="Portfolio"
-            >
-              <Wallet className="w-3.5 h-3.5 text-[#2BE08C]" />
-              <span className="hidden min-[370px]:inline text-xs font-bold tracking-wide uppercase font-sans">
-                Portfolio
               </span>
             </button>
           </div>
@@ -3256,8 +3259,10 @@ Alternatively, how can I advise you on specific investment choices today?`;
             style={
               window.innerWidth >= 768
                 ? {
-                    left: isSidebarOpen ? '296px' : '64px',
-                    right: (isFaqOpen || isPortfolioOpen) ? 'calc(30% + 16px)' : '0px',
+                    left: isPortfolioOpen
+                      ? 'calc(30% + 16px)'
+                      : (isSidebarOpen ? '296px' : '64px'),
+                    right: isFaqOpen ? 'calc(30% + 16px)' : '0px',
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     bottom: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     height: (isFaqOpen || isPortfolioOpen) ? 'calc(100vh - 16px)' : '100vh',
@@ -3587,8 +3592,10 @@ Alternatively, how can I advise you on specific investment choices today?`;
             style={
               window.innerWidth >= 768
                 ? {
-                    left: isSidebarOpen ? '296px' : '64px',
-                    right: (isFaqOpen || isPortfolioOpen) ? 'calc(30% + 16px)' : '0px',
+                    left: isPortfolioOpen
+                      ? 'calc(30% + 16px)'
+                      : (isSidebarOpen ? '296px' : '64px'),
+                    right: isFaqOpen ? 'calc(30% + 16px)' : '0px',
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     bottom: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     height: (isFaqOpen || isPortfolioOpen) ? 'calc(100vh - 16px)' : '100vh',
@@ -4002,16 +4009,16 @@ Alternatively, how can I advise you on specific investment choices today?`;
 
 
 
-      {/* Right Unified Drawer Panel (FAQ + Portfolio + Collapsed Toggle Bar) */}
+      {/* Right FAQ Drawer Panel */}
       <motion.div
         ref={rightPanelRef}
         animate={{
-          width: (isFaqOpen || isPortfolioOpen) 
-            ? (window.innerWidth < 768 ? "100%" : "30%") 
-            : 260,
-          height: (isFaqOpen || isPortfolioOpen) 
-            ? (window.innerWidth < 768 ? "100vh" : "calc(100vh - 16px)") 
-            : 52,
+          width: isFaqOpen
+            ? (window.innerWidth < 768 ? "100%" : "30%")
+            : 0,
+          height: isFaqOpen
+            ? (window.innerWidth < 768 ? "100vh" : "calc(100vh - 16px)")
+            : 0,
         }}
         transition={{
           type: "spring",
@@ -4019,105 +4026,109 @@ Alternatively, how can I advise you on specific investment choices today?`;
           damping: 24,
         }}
         className={`fixed z-[1010] flex select-none overflow-hidden transition-all duration-300 ${
-          (isFaqOpen || isPortfolioOpen)
+          isFaqOpen
             ? 'bg-[#12131a] border border-white/5 shadow-[0_8px_40px_rgba(0,0,0,0.5)] flex-col top-0 right-0 bottom-0 h-screen rounded-none border-y-0 border-r-0 md:top-2 md:right-2 md:bottom-2 md:h-[calc(100vh-16px)] md:rounded-xl md:border'
-            : 'hidden md:flex flex-row top-3 right-0 rounded-l-xl p-1.5 items-center border border-r-0 border-transparent bg-transparent shadow-none hover:bg-[#12131a] hover:border-white/5 hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] hover:backdrop-blur-2xl'
+            : 'hidden'
         }`}
         style={{
-          backdropFilter: (isFaqOpen || isPortfolioOpen) ? 'blur(32px) saturate(180%)' : undefined,
-          WebkitBackdropFilter: (isFaqOpen || isPortfolioOpen) ? 'blur(32px) saturate(180%)' : undefined,
+          backdropFilter: isFaqOpen ? 'blur(32px) saturate(180%)' : undefined,
+          WebkitBackdropFilter: isFaqOpen ? 'blur(32px) saturate(180%)' : undefined,
         }}
       >
-        <AnimatePresence mode="wait">
-          {(isFaqOpen || isPortfolioOpen) ? (
-            <motion.div
-              key="drawer-panels-slider"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25, ease: 'easeInOut' }}
-              className="w-full h-full overflow-hidden"
-            >
-              <motion.div 
-                className="flex flex-row w-[200%] h-full"
-                animate={{ x: isFaqOpen ? '0%' : '-50%' }}
-                transition={{ type: "spring", stiffness: 260, damping: 28 }}
-              >
-                <div className="w-1/2 h-full flex-shrink-0">
-                  <FAQDrawer
-                    isOpen={isFaqOpen}
-                    onToggle={() => setIsFaqOpen(false)}
-                    onQuestionClick={handleFaqClick}
-                    theme={theme}
-                    isPortfolioOpen={isPortfolioOpen}
-                    onTogglePortfolio={() => {
-                      setIsPortfolioOpen(true);
-                      setIsFaqOpen(false);
-                      setIsSidebarOpen(false);
-                    }}
-                  />
-                </div>
-                <div className="w-1/2 h-full flex-shrink-0">
-                  <PortfolioPanel
-                    isOpen={isPortfolioOpen}
-                    onClose={() => setIsPortfolioOpen(false)}
-                    stocks={portfolioStocks}
-                    onRemoveStock={handleRemovePortfolioStock}
-                    onAddStockManual={handleManualAddStock}
-                    isFaqOpen={isFaqOpen}
-                    onToggleFaq={() => {
-                      setIsFaqOpen(true);
-                      setIsPortfolioOpen(false);
-                      setIsSidebarOpen(false);
-                    }}
-                  />
-                </div>
-              </motion.div>
-            </motion.div>
-          ) : (
-            <motion.div
-              key="collapsed-right"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25, ease: 'easeInOut' }}
-              className="flex flex-row items-center gap-1.5 w-full h-full py-1 px-1 overflow-hidden"
-            >
-              {/* FAQ Button */}
-              <button
-                onClick={() => {
-                  setIsFaqOpen(true);
-                  setIsPortfolioOpen(false);
-                  setIsSidebarOpen(false);
-                }}
-                className="h-10 px-5 flex-1 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 border border-transparent bg-transparent text-slate-400 hover:text-white hover:bg-[#5B6BFF]/10 hover:border-[#5B6BFF]/25 hover:shadow-[0_0_12px_rgba(91,107,255,0.15)] hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
-                title="Open FAQ Panel"
-              >
-                <HelpCircle className="w-4 h-4 text-[#5B6BFF]" />
-                <span className="text-xs font-bold tracking-wide uppercase font-sans">
-                  FAQ
-                </span>
-              </button>
-
-              {/* Portfolio Button */}
-              <button
-                onClick={() => {
-                  setIsPortfolioOpen(true);
-                  setIsFaqOpen(false);
-                  setIsSidebarOpen(false);
-                }}
-                className="h-10 px-5 flex-1 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 border border-transparent bg-transparent text-slate-400 hover:text-white hover:bg-[#2BE08C]/10 hover:border-[#2BE08C]/25 hover:shadow-[0_0_12px_rgba(43,224,140,0.15)] hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
-                title="Open Portfolio Panel"
-              >
-                <Wallet className="w-4 h-4 text-[#2BE08C]" />
-                <span className="text-xs font-bold tracking-wide uppercase font-sans">
-                  Portfolio
-                </span>
-              </button>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isFaqOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="w-full h-full"
+          >
+            <FAQDrawer
+              isOpen={isFaqOpen}
+              onToggle={() => setIsFaqOpen(false)}
+              onQuestionClick={handleFaqClick}
+              theme={theme}
+              isPortfolioOpen={isPortfolioOpen}
+              onTogglePortfolio={() => {
+                setIsPortfolioOpen(true);
+                setIsFaqOpen(false);
+                setIsSidebarOpen(false);
+              }}
+            />
+          </motion.div>
+        )}
       </motion.div>
+
+      {/* Left Portfolio Drawer Panel */}
+      <motion.div
+        animate={{
+          width: isPortfolioOpen
+            ? (window.innerWidth < 768 ? "100%" : "30%")
+            : 0,
+          height: isPortfolioOpen
+            ? (window.innerWidth < 768 ? "100vh" : "calc(100vh - 16px)")
+            : 0,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 180,
+          damping: 24,
+        }}
+        className={`fixed z-[1010] flex select-none overflow-hidden transition-all duration-300 ${
+          isPortfolioOpen
+            ? 'bg-[#12131a] border border-white/5 shadow-[0_8px_40px_rgba(0,0,0,0.5)] flex-col top-0 left-0 bottom-0 h-screen rounded-none border-y-0 border-l-0 md:top-2 md:left-2 md:bottom-2 md:h-[calc(100vh-16px)] md:rounded-xl md:border'
+            : 'hidden'
+        }`}
+        style={{
+          backdropFilter: isPortfolioOpen ? 'blur(32px) saturate(180%)' : undefined,
+          WebkitBackdropFilter: isPortfolioOpen ? 'blur(32px) saturate(180%)' : undefined,
+        }}
+      >
+        {isPortfolioOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="w-full h-full"
+          >
+            <PortfolioPanel
+              isOpen={isPortfolioOpen}
+              onClose={() => setIsPortfolioOpen(false)}
+              stocks={portfolioStocks}
+              onRemoveStock={handleRemovePortfolioStock}
+              onAddStockManual={handleManualAddStock}
+              isFaqOpen={isFaqOpen}
+              onToggleFaq={() => {
+                setIsFaqOpen(true);
+                setIsPortfolioOpen(false);
+                setIsSidebarOpen(false);
+              }}
+            />
+          </motion.div>
+        )}
+      </motion.div>
+
+      {/* Collapsed floating right toggle button for FAQ */}
+      {!isFaqOpen && (
+        <motion.div
+          key="collapsed-faq-trigger"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 20 }}
+          className="hidden md:flex fixed top-3 right-0 z-[990] p-1.5 items-center justify-center rounded-l-xl border border-r-0 border-white/5 bg-[#12131a]/80 backdrop-blur-md shadow-lg"
+        >
+          <button
+            onClick={() => {
+              setIsFaqOpen(true);
+              setIsPortfolioOpen(false);
+              setIsSidebarOpen(false);
+            }}
+            className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 text-slate-400 hover:text-white hover:bg-[#5B6BFF]/10 active:scale-95 cursor-pointer"
+            title="Open FAQ Panel"
+          >
+            <HelpCircle className="w-4 h-4 text-[#5B6BFF]" />
+          </button>
+        </motion.div>
+      )}
       </>
       )}
     </div>

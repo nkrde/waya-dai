@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
   Plus, CandlestickChart, Trash2, Edit3, Check, X, Search, 
   Brain, ShieldCheck, HelpCircle, ChevronRight, ChevronLeft, ChevronDown, Settings,
-  PanelLeft, User, Home
+  PanelLeft, User, Home, Wallet
 } from 'lucide-react';
 import { ChatHistory, UserProfile } from '../types';
 
@@ -23,6 +23,8 @@ interface SidebarProps {
   setTheme?: (theme: 'dark' | 'light') => void;
   onSignOut?: () => void;
   onGoHome?: () => void;
+  isPortfolioOpen?: boolean;
+  onTogglePortfolio?: () => void;
 }
 
 export default function Sidebar({
@@ -40,7 +42,9 @@ export default function Sidebar({
   theme = 'dark',
   setTheme,
   onSignOut,
-  onGoHome
+  onGoHome,
+  isPortfolioOpen = false,
+  onTogglePortfolio
 }: SidebarProps) {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -182,6 +186,19 @@ export default function Sidebar({
                 >
                   <Plus className="w-4 h-4 text-white font-bold" />
                   New Chat
+                </button>
+
+                <button
+                  onClick={onTogglePortfolio}
+                  className={`w-full py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 rounded-xl border transition-all cursor-pointer shadow-sm select-none ${
+                    isPortfolioOpen
+                      ? 'border-[#2BE08C] bg-[#2BE08C]/15 text-white font-bold'
+                      : 'border-halo-border bg-white/[0.04] text-halo-on-surface hover:text-white hover:bg-[#2BE08C]/10 hover:border-[#2BE08C]/20'
+                  }`}
+                  title="Open Portfolio Panel"
+                >
+                  <Wallet className="w-4 h-4 text-[#2BE08C]" />
+                  Portfolio
                 </button>
 
                 {/* Search */}
@@ -439,6 +456,19 @@ export default function Sidebar({
                   title="New Chat"
                 >
                   <Plus className="w-4 h-4 text-white" strokeWidth={3} />
+                </button>
+
+                {/* 3.5. Portfolio Button */}
+                <button
+                  onClick={onTogglePortfolio}
+                  className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer ${
+                    isPortfolioOpen
+                      ? 'bg-[#2BE08C] text-white shadow-md'
+                      : 'text-slate-400 hover:text-white hover:bg-white/[0.04]'
+                  }`}
+                  title="Portfolio"
+                >
+                  <Wallet className="w-4 h-4 text-[#2BE08C]" />
                 </button>
               </div>
 
