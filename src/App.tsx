@@ -3260,7 +3260,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
                     left: isPortfolioOpen
                       ? (isSidebarOpen ? 'calc(30% + 296px)' : 'calc(30% + 64px)')
                       : (isSidebarOpen ? '288px' : '56px'),
-                    right: isFaqOpen ? 'calc(30% + 8px)' : ((isFaqOpen || isPortfolioOpen) ? '8px' : '0px'),
+                    right: isFaqOpen ? 'calc(30% + 16px)' : ((isFaqOpen || isPortfolioOpen) ? '8px' : '0px'),
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     bottom: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     height: (isFaqOpen || isPortfolioOpen) ? 'calc(100vh - 16px)' : '100vh',
@@ -3593,7 +3593,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
                     left: isPortfolioOpen
                       ? (isSidebarOpen ? 'calc(30% + 296px)' : 'calc(30% + 64px)')
                       : (isSidebarOpen ? '288px' : '56px'),
-                    right: isFaqOpen ? 'calc(30% + 8px)' : ((isFaqOpen || isPortfolioOpen) ? '8px' : '0px'),
+                    right: isFaqOpen ? 'calc(30% + 16px)' : ((isFaqOpen || isPortfolioOpen) ? '8px' : '0px'),
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     bottom: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     height: (isFaqOpen || isPortfolioOpen) ? 'calc(100vh - 16px)' : '100vh',
