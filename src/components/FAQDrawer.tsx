@@ -17,7 +17,14 @@ export default function FAQDrawer({
 }: FAQDrawerProps) {
   const isLight = theme === 'light';
 
-  const [expandedSections, setExpandedSections] = useState<{ [key: number]: boolean }>({ 0: true });
+  const [expandedSections, setExpandedSections] = useState<{ [key: number]: boolean }>({
+    0: true,
+    1: true,
+    2: true,
+    3: true,
+    4: true
+  });
+  const [showAllQuestions, setShowAllQuestions] = useState<{ [key: number]: boolean }>({});
 
   const toggleSection = (index: number) => {
     setExpandedSections(prev => ({ ...prev, [index]: !prev[index] }));
@@ -155,17 +162,40 @@ export default function FAQDrawer({
                     transition={{ duration: 0.25, ease: 'easeOut' }}
                     className="overflow-hidden space-y-2 pl-1 pt-1"
                   >
-                    {section.questions.map((question, qIdx) => (
-                      <button
-                        key={qIdx}
-                        onClick={() => onQuestionClick(question)}
-                        className="group relative w-full text-left rounded-xl px-4 py-3 text-xs font-sans transition-all duration-200 cursor-pointer flex items-start justify-between border bg-halo-surface/40 hover:bg-[#5B6BFF]/5 border-halo-border/50 hover:border-[#5B6BFF]/40 text-slate-300 hover:text-white hover:scale-[1.01] active:scale-[0.99] shadow-sm"
-                        title={question}
-                      >
-                        <span className="flex-1 pr-2 leading-relaxed whitespace-normal">{question}</span>
-                        <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-[#5B6BFF] flex-shrink-0 mt-0.5" />
-                      </button>
-                    ))}
+                    {(() => {
+                      const displayedQuestions = showAllQuestions[idx]
+                        ? section.questions
+                        : section.questions.slice(0, 5);
+                      return (
+                        <>
+                          {displayedQuestions.map((question, qIdx) => (
+                            <button
+                              key={qIdx}
+                              onClick={() => onQuestionClick(question)}
+                              className="group relative w-full text-left rounded-xl px-4 py-3 text-xs font-sans transition-all duration-200 cursor-pointer flex items-start justify-between border bg-halo-surface/40 hover:bg-[#5B6BFF]/5 border-halo-border/50 hover:border-[#5B6BFF]/40 text-slate-300 hover:text-white hover:scale-[1.01] active:scale-[0.99] shadow-sm"
+                              title={question}
+                            >
+                              <span className="flex-1 pr-2 leading-relaxed whitespace-normal">{question}</span>
+                              <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-[#5B6BFF] flex-shrink-0 mt-0.5" />
+                            </button>
+                          ))}
+                          
+                          {section.questions.length > 5 && (
+                            <button
+                              onClick={() => setShowAllQuestions(prev => ({ ...prev, [idx]: !prev[idx] }))}
+                              className="w-full mt-1 flex items-center justify-between px-4 py-2.5 rounded-xl border border-halo-border/40 bg-white/[0.01] hover:bg-[#5B6BFF]/5 text-[10.5px] font-bold text-[#5B6BFF] hover:text-white transition-all cursor-pointer select-none"
+                            >
+                              <span>{showAllQuestions[idx] ? 'Show less' : 'Show more'}</span>
+                              {showAllQuestions[idx] ? (
+                                <ChevronUp className="w-3.5 h-3.5 text-slate-400" />
+                              ) : (
+                                <ChevronDown className="w-3.5 h-3.5 text-[#5B6BFF]" />
+                              )}
+                            </button>
+                          )}
+                        </>
+                      );
+                    })()}
                   </motion.div>
                 )}
               </AnimatePresence>

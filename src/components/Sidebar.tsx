@@ -201,7 +201,7 @@ export default function Sidebar({
                   }`}
                   title="Open Portfolio Panel"
                 >
-                  <Wallet className="w-4 h-4 text-[#2BE08C]" />
+                  <Wallet className={`w-4 h-4 ${isPortfolioOpen ? 'text-white' : 'text-[#2BE08C]'}`} />
                   Portfolio
                 </button>
 
@@ -214,7 +214,7 @@ export default function Sidebar({
                   }`}
                   title="Open FAQ Panel"
                 >
-                  <HelpCircle className="w-4 h-4 text-[#5B6BFF]" />
+                  <HelpCircle className={`w-4 h-4 ${isFaqOpen ? 'text-white' : 'text-[#5B6BFF]'}`} />
                   FAQ
                 </button>
 
@@ -485,7 +485,7 @@ export default function Sidebar({
                   }`}
                   title="Portfolio"
                 >
-                  <Wallet className="w-4 h-4 text-[#2BE08C]" />
+                  <Wallet className={`w-4 h-4 ${isPortfolioOpen ? 'text-white' : 'text-[#2BE08C]'}`} />
                 </button>
 
                 {/* 3.6. FAQ Button */}
@@ -498,7 +498,7 @@ export default function Sidebar({
                   }`}
                   title="FAQ"
                 >
-                  <HelpCircle className="w-4 h-4 text-[#5B6BFF]" />
+                  <HelpCircle className={`w-4 h-4 ${isFaqOpen ? 'text-white' : 'text-[#5B6BFF]'}`} />
                 </button>
               </div>
 
