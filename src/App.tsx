@@ -3129,13 +3129,9 @@ Alternatively, how can I advise you on specific investment choices today?`;
         onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
         onTogglePortfolio={() => {
           setIsPortfolioOpen(!isPortfolioOpen);
-          setIsFaqOpen(false);
-          setIsSidebarOpen(false);
         }}
         onToggleFaq={() => {
           setIsFaqOpen(!isFaqOpen);
-          setIsPortfolioOpen(false);
-          setIsSidebarOpen(false);
         }}
         theme={theme}
         onSignOut={handleSignOut}
@@ -3179,9 +3175,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
             {/* Portfolio Button */}
             <button
               onClick={() => {
-                setIsPortfolioOpen(true);
-                setIsFaqOpen(false);
-                setIsSidebarOpen(false);
+                setIsPortfolioOpen(!isPortfolioOpen);
               }}
               className="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-white hover:bg-[#2BE08C]/10 active:scale-95 cursor-pointer"
               title="Portfolio"
@@ -3204,9 +3198,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
             {/* FAQ Button */}
             <button
               onClick={() => {
-                setIsFaqOpen(true);
-                setIsPortfolioOpen(false);
-                setIsSidebarOpen(false);
+                setIsFaqOpen(!isFaqOpen);
               }}
               className="h-8 px-2.5 rounded-xl flex items-center justify-center gap-1 transition-all duration-200 border border-transparent bg-transparent text-slate-400 hover:text-white hover:bg-[#5B6BFF]/10 hover:border-[#5B6BFF]/25 hover:shadow-[0_0_12px_rgba(91,107,255,0.15)] active:scale-95 cursor-pointer"
               title="FAQ"
@@ -3268,7 +3260,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
                     left: isPortfolioOpen
                       ? (isSidebarOpen ? 'calc(30% + 296px)' : 'calc(30% + 64px)')
                       : (isSidebarOpen ? '288px' : '56px'),
-                    right: isFaqOpen ? 'calc(30% + 8px)' : '0px',
+                    right: isFaqOpen ? 'calc(30% + 8px)' : ((isFaqOpen || isPortfolioOpen) ? '8px' : '0px'),
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     bottom: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     height: (isFaqOpen || isPortfolioOpen) ? 'calc(100vh - 16px)' : '100vh',
@@ -3601,7 +3593,7 @@ Alternatively, how can I advise you on specific investment choices today?`;
                     left: isPortfolioOpen
                       ? (isSidebarOpen ? 'calc(30% + 296px)' : 'calc(30% + 64px)')
                       : (isSidebarOpen ? '288px' : '56px'),
-                    right: isFaqOpen ? 'calc(30% + 8px)' : '0px',
+                    right: isFaqOpen ? 'calc(30% + 8px)' : ((isFaqOpen || isPortfolioOpen) ? '8px' : '0px'),
                     top: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     bottom: (isFaqOpen || isPortfolioOpen) ? '8px' : '0px',
                     height: (isFaqOpen || isPortfolioOpen) ? 'calc(100vh - 16px)' : '100vh',
@@ -4118,8 +4110,6 @@ Alternatively, how can I advise you on specific investment choices today?`;
           <button
             onClick={() => {
               setIsFaqOpen(true);
-              setIsPortfolioOpen(false);
-              setIsSidebarOpen(false);
             }}
             className="h-8 px-3.5 rounded-lg flex items-center justify-center gap-2 transition-all duration-200 text-slate-400 hover:text-white hover:bg-[#5B6BFF]/10 border border-transparent hover:border-[#5B6BFF]/25 hover:shadow-[0_0_12px_rgba(91,107,255,0.15)] cursor-pointer"
             title="Open FAQ Panel"
